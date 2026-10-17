@@ -109,6 +109,15 @@
                   <span>Cartes mémoires : <strong id="kpi-cards-count">0 / 52</strong></span>
                 </div>
               </div>
+
+              <div style="margin-top:1.25rem; display:flex; gap:0.75rem; flex-wrap:wrap;">
+                <button class="btn-primary" onclick="openVideoLesson('m1-c1');" style="background:linear-gradient(135deg, #D4AF37, #B8860B); color:#0F172A; border:none; font-weight:700; padding:0.6rem 1.25rem; border-radius:var(--radius-pill); cursor:pointer; display:inline-flex; align-items:center; gap:0.5rem; box-shadow:0 4px 14px rgba(212,175,55,0.4);">
+                  <i class="fa-solid fa-play"></i> Regarder la Vidéo E-Learning (Chapitre 1)
+                </button>
+                <button class="btn-secondary" onclick="switchTab('course')" style="color:#FFFFFF; border:1px solid rgba(255,255,255,0.3); background:rgba(255,255,255,0.08); padding:0.6rem 1.15rem; border-radius:var(--radius-pill); cursor:pointer; display:inline-flex; align-items:center; gap:0.5rem;">
+                  <i class="fa-solid fa-book-open"></i> Parcourir les Cours
+                </button>
+              </div>
             </div>
 
             <!-- Readiness Ring -->
@@ -714,9 +723,17 @@
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toast-container" aria-live="polite"></div>
 
+  <!-- Interactive E-Learning Video Player Modal -->
+  <div class="modal-overlay video-modal-overlay" id="video-player-modal" role="dialog" aria-modal="true" aria-label="Lecteur Vidéo E-Learning" onclick="if(event.target === this) closeVideoLesson()">
+    <div class="video-player-container" id="video-player-content">
+      <!-- Populated dynamically by video_player.js -->
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="js/app.js"></script>
   <script src="js/course.js"></script>
+  <script src="js/video_player.js"></script>
   <script src="js/quiz.js"></script>
   <script src="js/flashcards.js"></script>
   <script src="js/interview.js"></script>

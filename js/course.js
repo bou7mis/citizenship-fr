@@ -50,7 +50,10 @@ function renderCourseSidebar(filterQuery = "") {
 
             return `
               <button class="chapter-nav-item ${isCurrent ? 'active' : ''}" onclick="selectChapter('${mod.id}', '${chap.id}')">
-                <span>${chap.title}</span>
+                <span style="display:flex; align-items:center; gap:0.4rem;">
+                  ${chap.id === 'm1-c1' ? '<i class="fa-solid fa-circle-play" style="color:var(--fr-gold); font-size:0.75rem;" title="Capsule Vidéo E-Learning Disponible"></i>' : ''}
+                  ${chap.title}
+                </span>
                 <span class="chapter-status-dot ${isRead ? 'completed' : ''}" title="${isRead ? 'Chapitre lu' : 'Non lu'}"></span>
               </button>
             `;
@@ -117,14 +120,43 @@ function renderChapter(modId, chapId) {
         <div class="reader-tags">
           <span class="reader-pill"><i class="fa-regular fa-clock"></i> ${chap.readTime}</span>
           ${chap.badge ? `<span class="reader-pill badge-pill"><i class="fa-solid fa-certificate"></i> ${chap.badge}</span>` : ''}
+          ${chap.id === 'm1-c1' ? `<span class="reader-pill" style="background:rgba(212,175,55,0.15); color:var(--fr-gold); border:1px solid rgba(212,175,55,0.3); font-weight:600;"><i class="fa-solid fa-circle-play"></i> Vidéo E-Learning B2</span>` : ''}
         </div>
-        <button id="btn-audio-listen" class="reader-audio-btn" onclick="toggleAudioReading()">
-          <i class="fa-solid fa-volume-high"></i>
-          <span id="audio-btn-label">Écouter la leçon (B2)</span>
-        </button>
+        <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+          <button class="reader-video-btn" onclick="openVideoLesson('${chap.id}')" title="Regarder la capsule vidéo animée avec voix et sous-titres">
+            <i class="fa-solid fa-play"></i>
+            <span>Vidéo E-Learning</span>
+          </button>
+          <button id="btn-audio-listen" class="reader-audio-btn" onclick="toggleAudioReading()">
+            <i class="fa-solid fa-volume-high"></i>
+            <span id="audio-btn-label">Écouter la leçon (B2)</span>
+          </button>
+        </div>
       </div>
     </div>
   `;
+
+  // Video E-Learning Capsule Banner Callout for Chapter 1
+  if (chap.id === 'm1-c1') {
+    html += `
+      <div class="chapter-video-callout" onclick="openVideoLesson('${chap.id}')">
+        <div class="video-callout-left">
+          <div class="video-play-pulse-btn">
+            <i class="fa-solid fa-play"></i>
+          </div>
+          <div>
+            <div class="video-callout-badge"><i class="fa-solid fa-sparkles"></i> Capsule E-Learning & Checkpoint Civique</div>
+            <h4 class="video-callout-title">Regarder la Vidéo du Cours : ${chap.title}</h4>
+            <p class="video-callout-desc">Animation 16:9 interactive avec voix off en français, repères visuels clés, sous-titres synchronisés et validation par mini-quiz.</p>
+          </div>
+        </div>
+        <button class="btn-watch-video">
+          <span>Lancer la vidéo</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    `;
+  }
 
   // Highlights ("À Retenir pour l'Entretien")
   if (chap.highlights && chap.highlights.length > 0) {

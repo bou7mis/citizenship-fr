@@ -75,6 +75,11 @@ function switchTab(tabId) {
     sec.classList.toggle('active', sec.id === `view-${tabId}`);
   });
 
+  // Stop lesson audio if leaving course
+  if (tabId !== 'course' && window.stopAudioReading) {
+    window.stopAudioReading();
+  }
+
   // Scroll to top
   window.scrollTo({ top: 0, behavior: 'smooth' });
 

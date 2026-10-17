@@ -83,7 +83,8 @@
               "answer": "En France, les femmes et les hommes ont rigoureusement les mêmes droits et devoirs : même liberté de choix professionnel, même autorité parentale sur les enfants, même salaire pour un même travail, et droit égal au respect.",
               "tip": "C'est un point éliminatoire si l'examinateur perçoit la moindre réserve."
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m1-c1.mp3"
         },
         {
           "id": "m1-c2",
@@ -157,7 +158,8 @@
               "answer": "Elle porte le bonnet phrygien, qui symbolise la liberté et l'émancipation (porté par les esclaves affranchis dans l'Antiquité).",
               "tip": "Question très fréquente lors des entretiens en préfecture."
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m1-c2.mp3"
         },
         {
           "id": "m1-c3",
@@ -224,7 +226,8 @@
               "answer": "Non, en vertu du principe de neutralité du service public, les agents publics ont l'interdiction totale de manifester leurs convictions religieuses dans leurs fonctions.",
               "tip": "Cela vaut pour les enseignants, policiers, agents administratifs, soignants du secteur public."
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m1-c3.mp3"
         }
       ]
     },
@@ -293,7 +296,8 @@
               "answer": "L'Exécutif (Président et Gouvernement), le Législatif (Assemblée nationale et Sénat) et le Judiciaire (les tribunaux et magistrats).",
               "tip": "Répondez avec précision et clarté."
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m2-c1.mp3"
         },
         {
           "id": "m2-c2",
@@ -352,7 +356,8 @@
               "answer": "Le Président du Sénat assure l'intérim.",
               "tip": "C'est déjà arrivé avec Alain Poher en 1969 et 1974."
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m2-c2.mp3"
         },
         {
           "id": "m2-c3",
@@ -417,7 +422,8 @@
               "answer": "Le Préfet est le représentant de l'État dans le département ou la région. Il est responsable de la sécurité publique, de l'ordre public, de la gestion des crises et de l'application des lois.",
               "tip": "Rappelez-vous que c'est en préfecture que se déroule votre entretien !"
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m2-c3.mp3"
         },
         {
           "id": "m2-c4",
@@ -472,7 +478,8 @@
               "answer": "L'Ode à la joie, extrait de la 9e symphonie de Ludwig van Beethoven.",
               "tip": "Connaître aussi la date de la journée de l'Europe : le 9 mai."
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m2-c4.mp3"
         }
       ]
     },
@@ -543,7 +550,8 @@
               "answer": "C'est la loi qui garantit la liberté d'association à but non lucratif en France.",
               "tip": "Plus d'un million d'associations existent en France grâce à cette loi."
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m3-c1.mp3"
         },
         {
           "id": "m3-c2",
@@ -602,7 +610,8 @@
               "answer": "Non, c'est une obligation civique citoyenne. On ne peut être dispensé que pour des motifs graves prévus par la loi (âge de plus de 70 ans, maladie invalidante, motif professionnel exceptionnel reconnu par la cour).",
               "tip": "Réponse ferme : c'est un devoir direct de souveraineté populaire."
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m3-c2.mp3"
         }
       ]
     },
@@ -694,7 +703,8 @@
               "answer": "Voltaire, Jean-Jacques Rousseau, Montesquieu (ou Denis Diderot).",
               "tip": "Sachez qu'ils défendaient la raison, la liberté et l'esprit critique."
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m4-c1.mp3"
         },
         {
           "id": "m4-c2",
@@ -744,7 +754,8 @@
               "answer": "Le 8 mai commémore la fin de la Seconde Guerre mondiale en Europe (victoire des Alliés en 1945). Le 11 novembre commémore l'armistice de la Première Guerre mondiale (1918).",
               "tip": "Ne confondez jamais les deux conflits !"
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m4-c2.mp3"
         },
         {
           "id": "m4-c3",
@@ -833,7 +844,8 @@
               "answer": "Sous Valéry Giscard d'Estaing en 1974.",
               "tip": "Auparavant, la majorité civile était fixée à 21 ans."
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m4-c3.mp3"
         },
         {
           "id": "m4-c4",
@@ -892,7 +904,8 @@
               "answer": "L'Espagne, l'Italie, la Suisse, l'Allemagne, la Belgique, le Luxembourg, Monaco et Andorre.",
               "tip": "Mentionnez également le Brésil et le Suriname si l'on prend en compte la Guyane !"
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m4-c4.mp3"
         },
         {
           "id": "m4-c5",
@@ -952,7 +965,8 @@
               "answer": "Victor Hugo, Molière, Voltaire (ou Albert Camus, Émile Zola).",
               "tip": "Donnez aussi le titre d'une œuvre (ex: Les Misérables de Victor Hugo)."
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m4-c5.mp3"
         }
       ]
     },
@@ -1041,7 +1055,8 @@
               "answer": "Le 112.",
               "tip": "Fonctionne gratuitement depuis n'importe quel téléphone fixe ou mobile."
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m5-c1.mp3"
         },
         {
           "id": "m5-c2",
@@ -1085,7 +1100,8 @@
               "answer": "5 semaines de congés payés par an.",
               "tip": "Acquis en 1982 sous la présidence de François Mitterrand."
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m5-c2.mp3"
         },
         {
           "id": "m5-c3",
@@ -1143,7 +1159,8 @@
               "answer": "Non, la polygamie est strictement interdite en France. Un citoyen ne peut être marié qu'à une seule personne à la fois.",
               "tip": "Répondre avec fermeté."
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m5-c3.mp3"
         }
       ]
     },
@@ -1189,7 +1206,8 @@
               "answer": "Pour m'engager pleinement dans la Nation, partager ses valeurs de liberté, d'égalité et de laïcité, participer à la vie démocratique par le vote et construire mon avenir et celui de ma famille dans cette communauté nationale.",
               "tip": "Exprimez une adhésion sincère aux valeurs et un projet de vie durable."
             }
-          ]
+          ],
+          "audioSrc": "audio/chapters/m6-c1.mp3"
         }
       ]
     }

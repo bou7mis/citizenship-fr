@@ -7,6 +7,10 @@ let currentModuleId = "module-1";
 let currentChapterId = "m1-c1";
 let isSpeaking = false;
 let speechUtterance = null;
+let currentChapterAudio = null;
+let currentChapterAudioSrc = null;
+let audioPlaybackRate = 1.0;
+let isAudioPlaying = false;
 
 function initCourseView() {
   if (!APP_STATE.courseData) return;
@@ -127,9 +131,51 @@ function renderChapter(modId, chapId) {
             <i class="fa-solid fa-play"></i>
             <span>Vidéo E-Learning</span>
           </button>
-          <button id="btn-audio-listen" class="reader-audio-btn" onclick="toggleAudioReading()">
-            <i class="fa-solid fa-volume-high"></i>
+          <button id="btn-audio-listen" class="reader-audio-btn" onclick="toggleAudioReading()" title="Écouter la leçon complète lue par voix IA studio">
+            <i id="audio-btn-icon" class="fa-solid fa-volume-high"></i>
             <span id="audio-btn-label">Écouter la leçon (B2)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Neural Studio Voice Player Bar -->
+    <div id="chapter-audio-player" class="chapter-audio-player" style="display:none;">
+      <div class="audio-player-inner">
+        <div class="audio-player-meta">
+          <div class="audio-meta-left">
+            <div class="audio-pulse-indicator">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="audio-meta-text">
+              <span class="audio-meta-title"><i class="fa-solid fa-headphones"></i> Écoute audio du cours (B2)</span>
+            </div>
+          </div>
+          <span class="audio-meta-voice"><i class="fa-solid fa-sparkles"></i> Voix IA Vivienne • Studio B2</span>
+        </div>
+        
+        <div class="audio-player-controls-row">
+          <button class="audio-mini-btn" onclick="seekAudioRelative(-10)" title="Reculer de 10s">
+            <i class="fa-solid fa-rotate-left"></i> -10s
+          </button>
+          <button id="audio-mini-play-btn" class="audio-mini-play-btn" onclick="toggleAudioReading()" title="Lecture / Pause">
+            <i id="audio-mini-play-icon" class="fa-solid fa-play"></i>
+          </button>
+          <button class="audio-mini-btn" onclick="seekAudioRelative(10)" title="Avancer de 10s">
+            +10s <i class="fa-solid fa-rotate-right"></i>
+          </button>
+
+          <span id="audio-time-current" class="audio-time-display">0:00</span>
+          <div class="audio-scrubber-track" onclick="seekAudioFromBar(event)" title="Cliquer pour naviguer dans l'audio">
+            <div id="audio-scrubber-progress" class="audio-scrubber-progress"></div>
+          </div>
+          <span id="audio-time-total" class="audio-time-display">0:00</span>
+
+          <button id="audio-rate-btn" class="audio-rate-btn" onclick="cycleAudioRate()" title="Modifier la vitesse de lecture">
+            1.0x
+          </button>
+          <button class="audio-mini-btn" style="color:var(--danger);" onclick="stopAudioReading()" title="Arrêter l'audio">
+            <i class="fa-solid fa-stop"></i>
           </button>
         </div>
       </div>
@@ -310,53 +356,191 @@ function toggleChapterComplete(chapId) {
   renderChapter(currentModuleId, currentChapterId);
 }
 
-// Text-to-Speech (Web Speech API) in French
-function toggleAudioReading() {
-  if (!('speechSynthesis' in window)) {
-    showToast("La synthèse vocale n'est pas supportée par votre navigateur", 'info');
-    return;
-  }
+// Format seconds to mm:ss
+function formatAudioTime(seconds) {
+  if (isNaN(seconds) || seconds < 0) return "0:00";
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+}
 
+// Update UI states for audio player and buttons
+function updateAudioUI(playing) {
+  isAudioPlaying = playing;
   const btn = document.getElementById('btn-audio-listen');
   const label = document.getElementById('audio-btn-label');
+  const icon = document.getElementById('audio-btn-icon');
+  const miniPlayIcon = document.getElementById('audio-mini-play-icon');
+  const playerBar = document.getElementById('chapter-audio-player');
 
-  if (isSpeaking) {
-    stopAudioReading();
+  if (playing) {
+    if (btn) {
+      btn.classList.add('playing');
+      btn.classList.remove('speaking');
+    }
+    if (label) label.textContent = 'Mettre en pause';
+    if (icon) icon.className = 'fa-solid fa-pause';
+    if (miniPlayIcon) miniPlayIcon.className = 'fa-solid fa-pause';
+    if (playerBar) {
+      playerBar.style.display = 'block';
+      playerBar.classList.remove('paused');
+    }
   } else {
-    // Collect text from chapter reader
-    const readerElement = document.getElementById('chapter-content-display');
-    if (!readerElement) return;
-
-    // Extract text ignoring buttons
-    const textToRead = readerElement.innerText
-      .replace(/Écouter la leçon/g, '')
-      .replace(/Arrêter la lecture/g, '')
-      .replace(/Marquer comme lu/g, '');
-
-    speechUtterance = new SpeechSynthesisUtterance(textToRead);
-    speechUtterance.lang = 'fr-FR';
-    speechUtterance.rate = 0.95; // Clear natural French reading pace
-
-    speechUtterance.onend = () => stopAudioReading();
-    speechUtterance.onerror = () => stopAudioReading();
-
-    window.speechSynthesis.speak(speechUtterance);
-    isSpeaking = true;
-
-    if (btn) btn.classList.add('speaking');
-    if (label) label.textContent = 'Arrêter la lecture';
+    if (btn) {
+      btn.classList.remove('playing');
+      btn.classList.remove('speaking');
+    }
+    const hasPosition = currentChapterAudio && currentChapterAudio.currentTime > 0;
+    if (label) label.textContent = hasPosition ? 'Reprendre la lecture' : 'Écouter la leçon (B2)';
+    if (icon) icon.className = hasPosition ? 'fa-solid fa-play' : 'fa-solid fa-volume-high';
+    if (miniPlayIcon) miniPlayIcon.className = 'fa-solid fa-play';
+    if (playerBar) {
+      playerBar.classList.add('paused');
+    }
   }
 }
 
+// Play or toggle Studio Neural AI voice for current chapter
+function toggleAudioReading() {
+  const mod = APP_STATE.courseData?.modules?.find(m => m.id === currentModuleId);
+  const chap = mod?.chapters?.find(c => c.id === currentChapterId);
+  const audioSrc = (chap && chap.audioSrc) ? chap.audioSrc : `audio/chapters/${currentChapterId}.mp3`;
+
+  // 1. If currently playing this audio, pause
+  if (currentChapterAudio && !currentChapterAudio.paused) {
+    currentChapterAudio.pause();
+    updateAudioUI(false);
+    return;
+  }
+
+  // 2. If paused on this audio, resume
+  if (currentChapterAudio && currentChapterAudioSrc === audioSrc && currentChapterAudio.paused) {
+    currentChapterAudio.play().then(() => {
+      updateAudioUI(true);
+    }).catch(err => {
+      console.warn("Resume failed, trying fallback:", err);
+      fallbackSpeechSynthesis();
+    });
+    return;
+  }
+
+  // 3. New playback: stop any existing audio
+  stopAudioReading();
+  const playerBar = document.getElementById('chapter-audio-player');
+  if (playerBar) playerBar.style.display = 'block';
+
+  currentChapterAudio = new Audio(audioSrc);
+  currentChapterAudioSrc = audioSrc;
+  currentChapterAudio.playbackRate = audioPlaybackRate;
+
+  const btn = document.getElementById('btn-audio-listen');
+  if (btn) btn.classList.add('loading');
+
+  currentChapterAudio.addEventListener('loadedmetadata', () => {
+    const totalEl = document.getElementById('audio-time-total');
+    if (totalEl) totalEl.textContent = formatAudioTime(currentChapterAudio.duration);
+  });
+
+  currentChapterAudio.addEventListener('timeupdate', () => {
+    const curEl = document.getElementById('audio-time-current');
+    const progEl = document.getElementById('audio-scrubber-progress');
+    if (curEl) curEl.textContent = formatAudioTime(currentChapterAudio.currentTime);
+    if (progEl && currentChapterAudio.duration) {
+      const pct = (currentChapterAudio.currentTime / currentChapterAudio.duration) * 100;
+      progEl.style.width = `${pct}%`;
+    }
+  });
+
+  currentChapterAudio.addEventListener('ended', () => {
+    stopAudioReading();
+    showToast('Lecture de la leçon terminée !', 'success');
+  });
+
+  currentChapterAudio.addEventListener('error', () => {
+    console.warn("Could not load AI audio file:", audioSrc, "- Falling back to browser speech synthesis.");
+    if (btn) btn.classList.remove('loading');
+    fallbackSpeechSynthesis();
+  });
+
+  currentChapterAudio.play().then(() => {
+    if (btn) btn.classList.remove('loading');
+    updateAudioUI(true);
+  }).catch(err => {
+    console.warn("HTML5 audio playback error:", err);
+    if (btn) btn.classList.remove('loading');
+    fallbackSpeechSynthesis();
+  });
+}
+
+function seekAudioRelative(seconds) {
+  if (!currentChapterAudio) return;
+  const target = Math.max(0, Math.min(currentChapterAudio.duration || 0, currentChapterAudio.currentTime + seconds));
+  currentChapterAudio.currentTime = target;
+}
+
+function seekAudioFromBar(e) {
+  if (!currentChapterAudio || !currentChapterAudio.duration) return;
+  const bar = e.currentTarget;
+  const rect = bar.getBoundingClientRect();
+  const clickX = e.clientX - rect.left;
+  const pct = Math.max(0, Math.min(1, clickX / rect.width));
+  currentChapterAudio.currentTime = pct * currentChapterAudio.duration;
+}
+
+function cycleAudioRate() {
+  const rates = [1.0, 1.15, 1.25, 0.9];
+  const idx = rates.indexOf(audioPlaybackRate);
+  audioPlaybackRate = rates[(idx + 1) % rates.length];
+  if (currentChapterAudio) {
+    currentChapterAudio.playbackRate = audioPlaybackRate;
+  }
+  const rateBtn = document.getElementById('audio-rate-btn');
+  if (rateBtn) rateBtn.textContent = `${audioPlaybackRate}x`;
+}
+
 function stopAudioReading() {
+  if (currentChapterAudio) {
+    currentChapterAudio.pause();
+    currentChapterAudio.currentTime = 0;
+    currentChapterAudio = null;
+    currentChapterAudioSrc = null;
+  }
   if ('speechSynthesis' in window) {
     window.speechSynthesis.cancel();
   }
+  isAudioPlaying = false;
   isSpeaking = false;
-  const btn = document.getElementById('btn-audio-listen');
-  const label = document.getElementById('audio-btn-label');
-  if (btn) btn.classList.remove('speaking');
-  if (label) label.textContent = 'Écouter la leçon (B2)';
+  updateAudioUI(false);
+  const playerBar = document.getElementById('chapter-audio-player');
+  if (playerBar) playerBar.style.display = 'none';
+  const progEl = document.getElementById('audio-scrubber-progress');
+  if (progEl) progEl.style.width = '0%';
+  const curEl = document.getElementById('audio-time-current');
+  if (curEl) curEl.textContent = '0:00';
+}
+
+function fallbackSpeechSynthesis() {
+  if (!('speechSynthesis' in window)) {
+    showToast("Impossible de lire l'audio sur ce navigateur", 'error');
+    return;
+  }
+  const readerElement = document.getElementById('chapter-content-display');
+  if (!readerElement) return;
+
+  const textToRead = readerElement.innerText
+    .replace(/Écouter la leçon/g, '')
+    .replace(/Arrêter la lecture/g, '')
+    .replace(/Marquer comme lu/g, '');
+
+  speechUtterance = new SpeechSynthesisUtterance(textToRead);
+  speechUtterance.lang = 'fr-FR';
+  speechUtterance.rate = 0.95;
+  speechUtterance.onend = () => stopAudioReading();
+  speechUtterance.onerror = () => stopAudioReading();
+
+  window.speechSynthesis.speak(speechUtterance);
+  isSpeaking = true;
+  updateAudioUI(true);
 }
 
 // Search filter in sidebar
@@ -375,3 +559,7 @@ window.openModuleChapter = openModuleChapter;
 window.toggleModuleAccordion = toggleModuleAccordion;
 window.toggleChapterComplete = toggleChapterComplete;
 window.toggleAudioReading = toggleAudioReading;
+window.seekAudioRelative = seekAudioRelative;
+window.seekAudioFromBar = seekAudioFromBar;
+window.cycleAudioRate = cycleAudioRate;
+window.stopAudioReading = stopAudioReading;

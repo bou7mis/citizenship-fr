@@ -720,6 +720,61 @@
 
   </main>
 
+  <!-- Floating Sticky Audio Reader Dock (accessible anywhere on long lessons) -->
+  <aside id="floating-audio-dock" class="floating-audio-dock" role="region" aria-label="Lecteur audio de cours flottant">
+    <div class="floating-dock-content">
+      <!-- Left: Equalizer + Chapter Title -->
+      <div class="floating-dock-left" onclick="scrollToAudioPlayer()" title="Remonter au lecteur principal du chapitre">
+        <div class="audio-pulse-indicator">
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="floating-dock-meta">
+          <span id="floating-audio-chap-title" class="floating-dock-title">Leçon en cours</span>
+          <span class="floating-dock-badge"><i class="fa-solid fa-sparkles"></i> Voix IA Vivienne B2</span>
+        </div>
+      </div>
+
+      <!-- Center: Controls + Timeline Scrubber -->
+      <div class="floating-dock-center">
+        <div class="floating-dock-btns">
+          <button class="dock-btn-secondary" onclick="seekAudioRelative(-10)" title="Reculer de 10s">
+            <i class="fa-solid fa-rotate-left"></i> -10s
+          </button>
+          <button id="floating-play-btn" class="dock-play-btn" onclick="toggleAudioReading()" title="Mettre en pause ou reprendre (Barre Espace)">
+            <i id="floating-play-icon" class="fa-solid fa-pause"></i>
+          </button>
+          <button class="dock-btn-secondary" onclick="seekAudioRelative(10)" title="Avancer de 10s">
+            +10s <i class="fa-solid fa-rotate-right"></i>
+          </button>
+        </div>
+
+        <div class="floating-dock-timeline">
+          <span id="floating-time-current" class="dock-time-text">0:00</span>
+          <div class="dock-scrubber-track" onclick="seekAudioFromBar(event)" title="Cliquer pour naviguer dans l'audio">
+            <div id="floating-scrubber-progress" class="dock-scrubber-progress"></div>
+          </div>
+          <span id="floating-time-total" class="dock-time-text">0:00</span>
+        </div>
+      </div>
+
+      <!-- Right: Speed, Space Hint, Scroll to Top, Stop -->
+      <div class="floating-dock-right">
+        <button id="floating-rate-btn" class="dock-rate-btn" onclick="cycleAudioRate()" title="Vitesse de lecture">
+          1.0x
+        </button>
+        <span class="dock-shortcut-hint" title="Raccourci clavier : touche Espace pour Pause / Lecture">
+          <kbd>Espace</kbd>
+        </span>
+        <button class="dock-icon-btn" onclick="scrollToAudioPlayer()" title="Remonter en haut de la leçon">
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+        <button class="dock-icon-btn dock-btn-danger" onclick="stopAudioReading()" title="Arrêter l'audio">
+          <i class="fa-solid fa-stop"></i>
+        </button>
+      </div>
+    </div>
+  </aside>
+
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toast-container" aria-live="polite"></div>
 

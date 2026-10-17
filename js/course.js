@@ -364,7 +364,7 @@ function formatAudioTime(seconds) {
   return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
 }
 
-// Update UI states for audio player and buttons
+// Update UI states for audio player and buttons (top player & floating dock)
 function updateAudioUI(playing) {
   isAudioPlaying = playing;
   const btn = document.getElementById('btn-audio-listen');
@@ -372,6 +372,15 @@ function updateAudioUI(playing) {
   const icon = document.getElementById('audio-btn-icon');
   const miniPlayIcon = document.getElementById('audio-mini-play-icon');
   const playerBar = document.getElementById('chapter-audio-player');
+  const floatingDock = document.getElementById('floating-audio-dock');
+  const floatingPlayIcon = document.getElementById('floating-play-icon');
+  const floatingTitle = document.getElementById('floating-audio-chap-title');
+
+  const mod = APP_STATE.courseData?.modules?.find(m => m.id === currentModuleId);
+  const chap = mod?.chapters?.find(c => c.id === currentChapterId);
+  if (floatingTitle && chap) {
+    floatingTitle.textContent = chap.title;
+  }
 
   if (playing) {
     if (btn) {
@@ -381,9 +390,13 @@ function updateAudioUI(playing) {
     if (label) label.textContent = 'Mettre en pause';
     if (icon) icon.className = 'fa-solid fa-pause';
     if (miniPlayIcon) miniPlayIcon.className = 'fa-solid fa-pause';
+    if (floatingPlayIcon) floatingPlayIcon.className = 'fa-solid fa-pause';
     if (playerBar) {
       playerBar.style.display = 'block';
       playerBar.classList.remove('paused');
+    }
+    if (floatingDock) {
+      floatingDock.classList.remove('paused');
     }
   } else {
     if (btn) {
@@ -394,9 +407,53 @@ function updateAudioUI(playing) {
     if (label) label.textContent = hasPosition ? 'Reprendre la lecture' : 'Écouter la leçon (B2)';
     if (icon) icon.className = hasPosition ? 'fa-solid fa-play' : 'fa-solid fa-volume-high';
     if (miniPlayIcon) miniPlayIcon.className = 'fa-solid fa-play';
+    if (floatingPlayIcon) floatingPlayIcon.className = 'fa-solid fa-play';
     if (playerBar) {
       playerBar.classList.add('paused');
     }
+    if (floatingDock) {
+      floatingDock.classList.add('paused');
+    }
+  }
+
+  checkFloatingDockVisibility();
+}
+
+// Check if floating dock should be visible based on scroll position & audio status
+function checkFloatingDockVisibility() {
+  const dock = document.getElementById('floating-audio-dock');
+  if (!dock) return;
+
+  // Only show if audio session is active on course tab
+  if (!currentChapterAudio || APP_STATE.currentTab !== 'course') {
+    dock.classList.remove('active');
+    return;
+  }
+
+  // Check if user has scrolled past top player
+  const topBtn = document.getElementById('btn-audio-listen');
+  let scrolledPast = false;
+  if (topBtn) {
+    const rect = topBtn.getBoundingClientRect();
+    scrolledPast = rect.bottom < 80;
+  } else {
+    scrolledPast = window.scrollY > 200;
+  }
+
+  if (scrolledPast) {
+    dock.classList.add('active');
+  } else {
+    dock.classList.remove('active');
+  }
+}
+
+// Smooth scroll to main audio player
+function scrollToAudioPlayer() {
+  const target = document.getElementById('chapter-audio-player') || document.getElementById('btn-audio-listen');
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
 
@@ -437,17 +494,26 @@ function toggleAudioReading() {
   if (btn) btn.classList.add('loading');
 
   currentChapterAudio.addEventListener('loadedmetadata', () => {
+    const formatted = formatAudioTime(currentChapterAudio.duration);
     const totalEl = document.getElementById('audio-time-total');
-    if (totalEl) totalEl.textContent = formatAudioTime(currentChapterAudio.duration);
+    if (totalEl) totalEl.textContent = formatted;
+    const floatingTotalEl = document.getElementById('floating-time-total');
+    if (floatingTotalEl) floatingTotalEl.textContent = formatted;
   });
 
   currentChapterAudio.addEventListener('timeupdate', () => {
+    const formatted = formatAudioTime(currentChapterAudio.currentTime);
     const curEl = document.getElementById('audio-time-current');
-    const progEl = document.getElementById('audio-scrubber-progress');
-    if (curEl) curEl.textContent = formatAudioTime(currentChapterAudio.currentTime);
-    if (progEl && currentChapterAudio.duration) {
+    if (curEl) curEl.textContent = formatted;
+    const floatingCurEl = document.getElementById('floating-time-current');
+    if (floatingCurEl) floatingCurEl.textContent = formatted;
+
+    if (currentChapterAudio.duration) {
       const pct = (currentChapterAudio.currentTime / currentChapterAudio.duration) * 100;
-      progEl.style.width = `${pct}%`;
+      const progEl = document.getElementById('audio-scrubber-progress');
+      if (progEl) progEl.style.width = `${pct}%`;
+      const floatingProgEl = document.getElementById('floating-scrubber-progress');
+      if (floatingProgEl) floatingProgEl.style.width = `${pct}%`;
     }
   });
 
@@ -496,6 +562,8 @@ function cycleAudioRate() {
   }
   const rateBtn = document.getElementById('audio-rate-btn');
   if (rateBtn) rateBtn.textContent = `${audioPlaybackRate}x`;
+  const floatingRateBtn = document.getElementById('floating-rate-btn');
+  if (floatingRateBtn) floatingRateBtn.textContent = `${audioPlaybackRate}x`;
 }
 
 function stopAudioReading() {
@@ -511,12 +579,23 @@ function stopAudioReading() {
   isAudioPlaying = false;
   isSpeaking = false;
   updateAudioUI(false);
+
   const playerBar = document.getElementById('chapter-audio-player');
   if (playerBar) playerBar.style.display = 'none';
   const progEl = document.getElementById('audio-scrubber-progress');
   if (progEl) progEl.style.width = '0%';
   const curEl = document.getElementById('audio-time-current');
   if (curEl) curEl.textContent = '0:00';
+
+  const floatingDock = document.getElementById('floating-audio-dock');
+  if (floatingDock) {
+    floatingDock.classList.remove('active');
+    floatingDock.classList.remove('paused');
+  }
+  const floatingProgEl = document.getElementById('floating-scrubber-progress');
+  if (floatingProgEl) floatingProgEl.style.width = '0%';
+  const floatingCurEl = document.getElementById('floating-time-current');
+  if (floatingCurEl) floatingCurEl.textContent = '0:00';
 }
 
 function fallbackSpeechSynthesis() {
@@ -553,6 +632,30 @@ function setupCourseSearch() {
   }
 }
 
+// Global scroll listener for floating audio dock
+window.addEventListener('scroll', checkFloatingDockVisibility, { passive: true });
+
+// Keyboard shortcut: Spacebar to toggle Pause / Unpause while reading lessons
+window.addEventListener('keydown', (e) => {
+  // Ignore inside inputs, textareas or contenteditable
+  const activeTag = document.activeElement ? document.activeElement.tagName.toLowerCase() : '';
+  if (activeTag === 'input' || activeTag === 'textarea' || (document.activeElement && document.activeElement.isContentEditable)) {
+    return;
+  }
+  // Ignore if modal dialog is open
+  const videoModal = document.getElementById('video-player-modal');
+  if (videoModal && videoModal.classList.contains('active')) {
+    return;
+  }
+  // If on course tab and chapter audio is loaded
+  if (APP_STATE.currentTab === 'course' && currentChapterAudio) {
+    if (e.code === 'Space' || e.key === ' ') {
+      e.preventDefault(); // Prevent standard page scroll down on spacebar
+      toggleAudioReading();
+    }
+  }
+});
+
 window.initCourseView = initCourseView;
 window.selectChapter = selectChapter;
 window.openModuleChapter = openModuleChapter;
@@ -563,3 +666,5 @@ window.seekAudioRelative = seekAudioRelative;
 window.seekAudioFromBar = seekAudioFromBar;
 window.cycleAudioRate = cycleAudioRate;
 window.stopAudioReading = stopAudioReading;
+window.scrollToAudioPlayer = scrollToAudioPlayer;
+window.checkFloatingDockVisibility = checkFloatingDockVisibility;

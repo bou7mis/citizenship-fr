@@ -1224,6 +1224,259 @@ img {
   color: var(--fr-blue);
 }
 
+/* Floating Sticky Audio Reader Dock */
+.floating-audio-dock {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(140%);
+  width: calc(100% - 2.5rem);
+  max-width: 860px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(0, 85, 165, 0.22);
+  border-radius: var(--radius-xl);
+  box-shadow: 0 16px 40px rgba(0, 35, 73, 0.16), 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding: 0.7rem 1.25rem;
+  z-index: 1500;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+
+[data-theme="dark"] .floating-audio-dock {
+  background: rgba(20, 26, 40, 0.94);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55), 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.floating-audio-dock.active {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.floating-dock-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Left: Info */
+.floating-dock-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 170px;
+  max-width: 240px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.floating-dock-meta {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.floating-dock-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.25;
+}
+
+.floating-dock-badge {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--fr-blue);
+  line-height: 1.2;
+}
+
+.floating-audio-dock.paused .audio-pulse-indicator span {
+  animation-play-state: paused;
+  height: 4px !important;
+}
+
+/* Center: Controls + Timeline */
+.floating-dock-center {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  min-width: 220px;
+}
+
+.floating-dock-btns {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.dock-play-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--fr-blue) 0%, #003e7e 100%);
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 85, 165, 0.35);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.dock-play-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 18px rgba(0, 85, 165, 0.45);
+}
+
+.dock-btn-secondary {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: all var(--transition-fast);
+}
+
+.dock-btn-secondary:hover {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--border-medium);
+}
+
+.floating-dock-timeline {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.dock-time-text {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+  min-width: 32px;
+}
+
+.dock-scrubber-track {
+  flex: 1;
+  height: 5px;
+  background: var(--border-subtle);
+  border-radius: 3px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.dock-scrubber-progress {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--fr-blue), var(--fr-gold));
+  border-radius: 3px;
+  transition: width 0.1s linear;
+}
+
+/* Right: Tools */
+.floating-dock-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.dock-rate-btn {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  min-width: 42px;
+}
+
+.dock-rate-btn:hover {
+  border-color: var(--fr-blue);
+  color: var(--fr-blue);
+}
+
+.dock-shortcut-hint {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.dock-shortcut-hint kbd {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.dock-icon-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.dock-icon-btn:hover {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--border-medium);
+}
+
+.dock-icon-btn.dock-btn-danger:hover {
+  background: var(--danger-bg);
+  color: var(--danger);
+  border-color: var(--danger);
+}
+
+/* Responsive Dock */
+@media (max-width: 768px) {
+  .floating-audio-dock {
+    bottom: 4.8rem;
+    padding: 0.6rem 0.85rem;
+  }
+  .floating-dock-left {
+    display: none;
+  }
+  .dock-shortcut-hint {
+    display: none;
+  }
+}
+
 /* Highlights Box ("À Retenir") */
 .highlights-card {
   background: linear-gradient(135deg, rgba(0, 85, 165, 0.04) 0%, rgba(0, 35, 73, 0.08) 100%);

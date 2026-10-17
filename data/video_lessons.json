@@ -135,6 +135,2286 @@
           "audioSrc": "audio/video_lessons/m1-c1/scene_6.mp3"
         }
       ]
+    },
+    "m1-c2": {
+      "chapterId": "m1-c2",
+      "moduleId": "module-1",
+      "title": "Les Symboles de la République Française",
+      "subtitle": "Drapeau tricolore, Marseillaise, Marianne, 14 Juillet et Coq gaulois",
+      "totalScenes": 6,
+      "estimatedDuration": "1 min 55",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "Introduction : Les Emblèmes Nationaux",
+          "badge": "Article 2 Constitution",
+          "durationSeconds": 18,
+          "visualTheme": "tricolore",
+          "heading": "Les Grands Symboles de la France",
+          "subheading": "L'incarnation vivante de la République",
+          "icon": "fa-flag",
+          "keyPoints": [
+            "Fixés par la Constitution de 1958 en son article 2",
+            "Rassemblement de tous les citoyens au-delà des origines",
+            "Présents dans tous les édifices publics et cérémonies",
+            "Questions systématiques lors de l'entretien préfectoral"
+          ],
+          "narrationText": "Bienvenue dans cette capsule vidéo dédiée aux symboles républicains. Fixés par la Constitution, ils incarnent l'histoire de France et l'unité de tous les citoyens. Maîtriser leur origine est indispensable le jour de l'entretien.",
+          "takeaway": "L'agent vous demandera de citer au moins 3 ou 4 symboles républicains.",
+          "audioSrc": "audio/video_lessons/m1-c2/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "Le Drapeau Tricolore & La Marseillaise",
+          "badge": "Emblème & Hymne",
+          "durationSeconds": 22,
+          "visualTheme": "liberte",
+          "heading": "Drapeau Tricolore et Hymne National",
+          "subheading": "Bleu, Blanc, Rouge et le chant de Rouget de Lisle",
+          "icon": "fa-music",
+          "keyPoints": [
+            "Drapeau tricolore : Bleu et Rouge (Paris), Blanc (le Roi)",
+            "Né lors de la Révolution française en 1789",
+            "La Marseillaise : écrite en 1792 par Rouget de Lisle à Strasbourg",
+            "Chant de guerre pour l'armée du Rhin devenu hymne national"
+          ],
+          "narrationText": "Le drapeau tricolore associe le blanc de la monarchie au bleu et rouge de la ville de Paris. L'hymne national, la Marseillaise, a été composé à Strasbourg en 1792 par Rouget de Lisle avant d'être popularisé par les volontaires marseillais.",
+          "takeaway": "Retenez bien le nom de Rouget de Lisle et l'année 1792.",
+          "audioSrc": "audio/video_lessons/m1-c2/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "Marianne & Le 14 Juillet",
+          "badge": "Allégorie & Fête",
+          "durationSeconds": 20,
+          "visualTheme": "egalite",
+          "heading": "Marianne et la Fête Nationale",
+          "subheading": "Le bonnet phrygien et la commémoration républicaine",
+          "icon": "fa-person",
+          "keyPoints": [
+            "Marianne : allégorie de la République et de la Liberté",
+            "Coiffée du bonnet phrygien (affranchissement des esclaves)",
+            "14 Juillet : fête nationale instaurée par la loi en 1880",
+            "Commémore la prise de la Bastille (1789) et la Fédération (1790)"
+          ],
+          "narrationText": "Marianne représente la République et la liberté. Son bonnet phrygien symbolise l'émancipation des citoyens. La fête nationale du 14 juillet commémore à la fois la prise de la Bastille de 1789 et la Fête de la Fédération de 1790.",
+          "takeaway": "La fête nationale a été officialisée en 1880.",
+          "audioSrc": "audio/video_lessons/m1-c2/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "Autres Symboles : Coq, Sceau & Faisceau",
+          "badge": "Symboles Complémentaires",
+          "durationSeconds": 18,
+          "visualTheme": "fraternite",
+          "heading": "Le Coq Gaulois et les Sceaux",
+          "subheading": "Des repères historiques séculaires",
+          "icon": "fa-feather",
+          "keyPoints": [
+            "Le Coq gaulois : symbole de vigilance et fierté sportive",
+            "Le grand Sceau de France : apposé sur les textes constitutionnels",
+            "Le Faisceau de licteur : symbole d'autorité et d'union civique",
+            "La langue française : seule langue officielle de la République"
+          ],
+          "narrationText": "D'autres symboles complètent ce patrimoine : le Coq gaulois, emblème de vigilance et d'enthousiasme populaire, ainsi que la langue française, seule langue officielle de la République selon l'article 2 de notre Constitution.",
+          "takeaway": "L'article 2 stipule : « La langue de la République est le français ».",
+          "audioSrc": "audio/video_lessons/m1-c2/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : Questions Pièges",
+          "badge": "Préparation Préfecture",
+          "durationSeconds": 18,
+          "visualTheme": "interview",
+          "heading": "Les Questions Fréquentes de l'Agent",
+          "subheading": "« Que commémore le 14 juillet ? »",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "Piège classique : ne citez pas seulement la prise de la Bastille",
+            "Mentionnez aussi la Fête de la Fédération de 1790 (union nationale)",
+            "Sachez chanter ou réciter le premier couplet de la Marseillaise",
+            "Indiquez où se trouve le buste de Marianne (dans votre mairie)"
+          ],
+          "narrationText": "Lors de l'entretien, l'agent peut vous demander ce que commémore le 14 juillet. Montrez votre niveau en précisant qu'il commémore aussi la Fête de la Fédération de 1790, marquant l'union de la Nation.",
+          "takeaway": "Citer la Fête de la Fédération démontre une excellente culture civique.",
+          "audioSrc": "audio/video_lessons/m1-c2/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Testez votre maîtrise des symboles nationaux",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "Qui a écrit les paroles de La Marseillaise en 1792 ?",
+            "options": [
+              "Victor Hugo à Paris",
+              "Claude Joseph Rouget de Lisle à Strasbourg",
+              "Jean de La Fontaine à Versailles"
+            ],
+            "correctIndex": 1,
+            "explanation": "La Marseillaise a été écrite en avril 1792 par Claude Joseph Rouget de Lisle, officier du génie en garnison à Strasbourg."
+          },
+          "narrationText": "Vérifions vos connaissances : qui a écrit les paroles de la Marseillaise en 1792 ? Cliquez sur la bonne réponse pour valider cette leçon.",
+          "takeaway": "Bravo pour la validation de ce chapitre clé !",
+          "audioSrc": "audio/video_lessons/m1-c2/scene_6.mp3"
+        }
+      ]
+    },
+    "m1-c3": {
+      "chapterId": "m1-c3",
+      "moduleId": "module-1",
+      "title": "Les 4 Principes Fondamentaux de la République",
+      "subtitle": "Indivisible, Laïque, Démocratique et Sociale (Article 1er)",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "L'Article 1er de la Constitution",
+          "badge": "Fondement Constitutionnel",
+          "durationSeconds": 18,
+          "visualTheme": "tricolore",
+          "heading": "Les 4 Piliers Républicains",
+          "subheading": "L'ossature de l'État républicain moderne",
+          "icon": "fa-landmark",
+          "keyPoints": [
+            "« La France est une République indivisible, laïque, démocratique et sociale »",
+            "Article 1er de la Constitution de la Ve République (1958)",
+            "Définit l'équilibre entre unité, liberté et protection de tous",
+            "Question fondamentale et récurrente à l'entretien de naturalisation"
+          ],
+          "narrationText": "L'article premier de notre Constitution proclame que la France est une République indivisible, laïque, démocratique et sociale. Ces quatre piliers définissent la nature même de la citoyenneté française.",
+          "takeaway": "Vous devez savoir réciter sans hésiter ces 4 qualificatifs.",
+          "audioSrc": "audio/video_lessons/m1-c3/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "Indivisible & Démocratique",
+          "badge": "Unité & Souveraineté",
+          "durationSeconds": 20,
+          "visualTheme": "liberte",
+          "heading": "Une République Indivisible et Démocratique",
+          "subheading": "Une seule loi et la souveraineté du peuple",
+          "icon": "fa-check-to-slot",
+          "keyPoints": [
+            "Indivisible : une seule loi pour tous sur l'ensemble du territoire",
+            "Rejet de tout communautarisme et de tout séparatisme",
+            "Démocratique : gouvernement du peuple, par le peuple et pour le peuple",
+            "Suffrage universel direct et égalité absolue de chaque vote"
+          ],
+          "narrationText": "Indivisible signifie que les mêmes lois s'appliquent sur tout le territoire et qu'aucune distinction ethnique ou religieuse n'est reconnue par l'État. Démocratique signifie que le pouvoir émane des citoyens par le suffrage universel.",
+          "takeaway": "La souveraineté nationale appartient au peuple.",
+          "audioSrc": "audio/video_lessons/m1-c3/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "Le Principe de Laïcité",
+          "badge": "Loi du 9 décembre 1905",
+          "durationSeconds": 24,
+          "visualTheme": "egalite",
+          "heading": "La Laïcité : Pierre Angulaire Républicaine",
+          "subheading": "Séparation des Églises et de l'État",
+          "icon": "fa-scale-balanced",
+          "keyPoints": [
+            "Loi fondamentale du 9 décembre 1905",
+            "L'État ne salarie ni ne subventionne aucun culte",
+            "Neutralité absolue des services publics et des fonctionnaires",
+            "Liberté totale de conscience : croire, ne pas croire ou changer de religion",
+            "L'espace public et l'école protégés des pressions prosélytes"
+          ],
+          "narrationText": "La laïcité, instituée par la loi du 9 décembre 1905, garantit la liberté de culte tout en séparant strictement l'État des religions. Les agents du service public doivent respecter une neutralité absolue, et les lois de la République sont toujours supérieures aux règles religieuses.",
+          "takeaway": "La date du 9 décembre 1905 est incontournable.",
+          "audioSrc": "audio/video_lessons/m1-c3/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "La République Sociale",
+          "badge": "Solidarité & Protection",
+          "durationSeconds": 18,
+          "visualTheme": "fraternite",
+          "heading": "Une République Sociale et Protectrice",
+          "subheading": "L'assurance que nul n'est laissé pour compte",
+          "icon": "fa-hand-holding-heart",
+          "keyPoints": [
+            "Création de la Sécurité sociale en 1945",
+            "Accès garanti aux soins, aux retraites et aux aides d'urgence",
+            "Éducation gratuite, laïque et obligatoire de 3 à 16 ans",
+            "Solidarité nationale financée par l'impôt et les cotisations"
+          ],
+          "narrationText": "Enfin, la République est sociale : elle protège les plus vulnérables grâce à la Sécurité sociale créée en 1945, à l'accès universel aux soins de santé et à l'école gratuite et obligatoire pour tous les enfants.",
+          "takeaway": "La Sécurité sociale a été fondée en 1945 sous le général de Gaulle.",
+          "audioSrc": "audio/video_lessons/m1-c3/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : Question sur la Laïcité",
+          "badge": "Question Décisive",
+          "durationSeconds": 20,
+          "visualTheme": "interview",
+          "heading": "La Question la Plus Posée à l'Entretien",
+          "subheading": "« Qu'est-ce que la laïcité pour vous ? »",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "Ne dites pas que la laïcité interdit les religions",
+            "Précisez qu'elle garantit la liberté de croire ou de ne pas croire",
+            "Rappelez que dans l'espace civil, la loi de la République prévaut",
+            "Insistez sur la neutralité des agents de l'État et de l'école républicaine"
+          ],
+          "narrationText": "Attention, l'agent instructeur vous demandera avec certitude ce que représente la laïcité. Expliquez qu'elle ne combat pas les religions, mais protège la liberté de chacun tout en imposant la neutralité à l'État et le respect des lois communes.",
+          "takeaway": "La laïcité est une liberté avant d'être une règle de neutralité.",
+          "audioSrc": "audio/video_lessons/m1-c3/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Vérifiez votre compréhension de l'Article 1er",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "En quelle année a été adoptée la loi historique de séparation des Églises et de l'État instituant la laïcité ?",
+            "options": [
+              "1789",
+              "1905",
+              "1958"
+            ],
+            "correctIndex": 1,
+            "explanation": "La grande loi de séparation des Églises et de l'État a été promulguée le 9 décembre 1905 sous l'impulsion notamment d'Aristide Briand."
+          },
+          "narrationText": "Testez vos connaissances : en quelle année a été adoptée la loi historique de séparation des Églises et de l'État ? Choisissez la réponse exacte pour valider la leçon.",
+          "takeaway": "Excellente réponse ! Chapitre validé.",
+          "audioSrc": "audio/video_lessons/m1-c3/scene_6.mp3"
+        }
+      ]
+    },
+    "m2-c1": {
+      "chapterId": "m2-c1",
+      "moduleId": "module-2",
+      "title": "La Séparation des Pouvoirs et l'État de Droit",
+      "subtitle": "Pouvoirs exécutif, législatif, judiciaire et hiérarchie des normes",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "Le Principe de Séparation des Pouvoirs",
+          "badge": "Fondement Démocratique",
+          "durationSeconds": 18,
+          "visualTheme": "tricolore",
+          "heading": "L'Équilibre Démocratique",
+          "subheading": "Théorisé par Montesquieu dans l'Esprit des Lois (1748)",
+          "icon": "fa-scale-balanced",
+          "keyPoints": [
+            "Éviter la concentration du pouvoir entre les mains d'un seul homme",
+            "Trois branches distinctes et indépendantes les unes des autres",
+            "Garantie fondamentale contre l'arbitraire et la tyrannie",
+            "Inscrit à l'article 16 de la Déclaration des Droits de 1789"
+          ],
+          "narrationText": "Bienvenue dans cette leçon sur les institutions françaises. Pour empêcher tout abus de pouvoir, la démocratie repose sur la séparation stricte de trois pouvoirs indépendants : le pouvoir législatif, le pouvoir exécutif et le pouvoir judiciaire.",
+          "takeaway": "L'article 16 de la DDHC affirme qu'une société sans séparation des pouvoirs n'a point de Constitution.",
+          "audioSrc": "audio/video_lessons/m2-c1/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "Le Pouvoir Législatif : Le Parlement",
+          "badge": "Assemblée & Sénat",
+          "durationSeconds": 22,
+          "visualTheme": "liberte",
+          "heading": "Le Parlement Français",
+          "subheading": "Assemblée nationale et Sénat : voter la loi et contrôler l'exécutif",
+          "icon": "fa-landmark",
+          "keyPoints": [
+            "Assemblée nationale : 577 députés élus au suffrage universel direct pour 5 ans",
+            "Siège : Palais Bourbon à Paris. Députés représentent la Nation entière",
+            "Sénat : 348 sénateurs élus au suffrage indirect pour 6 ans (renouvelé par moitié)",
+            "Siège : Palais du Luxembourg à Paris. Représente les collectivités locales"
+          ],
+          "narrationText": "Le pouvoir législatif appartient au Parlement, composé de deux chambres. L'Assemblée nationale réunit cinq cent soixante-dix-sept députés élus au suffrage universel direct. Le Sénat réunit trois cent quarante-huit sénateurs élus au suffrage indirect. Ensemble, ils débattent et votent les lois.",
+          "takeaway": "En cas de désaccord final entre les deux chambres, l'Assemblée nationale a le dernier mot.",
+          "audioSrc": "audio/video_lessons/m2-c1/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "Le Pouvoir Exécutif & Le Pouvoir Judiciaire",
+          "badge": "Exécutif & Justice",
+          "durationSeconds": 20,
+          "visualTheme": "egalite",
+          "heading": "Exécutif et Indépendance de la Justice",
+          "subheading": "Appliquer la loi et protéger les libertés fondamentales",
+          "icon": "fa-gavel",
+          "keyPoints": [
+            "Pouvoir exécutif : Président de la République et Premier ministre avec son gouvernement",
+            "Dirige l'administration, promulgue les lois et conduit les affaires de l'État",
+            "Pouvoir judiciaire : magistrats du siège et du parquet indépendants",
+            "Garantit le respect des lois et tranche les litiges en toute impartialité"
+          ],
+          "narrationText": "Le pouvoir exécutif, incarné par le Président et le Gouvernement, veille à l'application des lois et conduit la politique nationale. Le pouvoir judiciaire, composé de juges indépendants, protège les libertés fondamentales et applique les sanctions prévues par le Code civil et pénal.",
+          "takeaway": "Nul n'est au-dessus des lois dans un État de droit.",
+          "audioSrc": "audio/video_lessons/m2-c1/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "L'État de Droit & Le Conseil Constitutionnel",
+          "badge": "Hiérarchie des Normes",
+          "durationSeconds": 20,
+          "visualTheme": "fraternite",
+          "heading": "L'État de Droit et la Constitution",
+          "subheading": "La Constitution de 1958 au sommet de la hiérarchie des lois",
+          "icon": "fa-shield-halved",
+          "keyPoints": [
+            "État de droit : l'État lui-même est soumis aux règles de droit",
+            "Conseil constitutionnel : 9 membres nommés + anciens Présidents de la République",
+            "Contrôle la conformité des lois à la Constitution avant leur promulgation",
+            "Veille à la régularité des élections présidentielles et législatives"
+          ],
+          "narrationText": "Dans un État de droit, même les dirigeants doivent se conformer strictement à la loi. Le Conseil constitutionnel veille à ce qu'aucune loi votée par le Parlement ne contredise la Constitution de 1958 ou les droits fondamentaux.",
+          "takeaway": "Le siège du Conseil constitutionnel se situe au Palais-Royal à Paris.",
+          "audioSrc": "audio/video_lessons/m2-c1/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : Député vs Sénateur",
+          "badge": "Question d'Entretien",
+          "durationSeconds": 18,
+          "visualTheme": "interview",
+          "heading": "Question Piège de l'Instructeur",
+          "subheading": "« Quelle est la différence entre un député et un sénateur ? »",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "Le député est élu par tous les citoyens (suffrage direct) au Palais Bourbon",
+            "Le sénateur est élu par les grands électeurs / maires (suffrage indirect) au Luxembourg",
+            "L'Assemblée peut être dissoute par le Président, mais pas le Sénat",
+            "En cas de désaccord sur une loi, l'Assemblée nationale a le dernier mot"
+          ],
+          "narrationText": "Question classique à l'entretien : quelle est la différence entre un député et un sénateur ? Répondez clairement que les députés sont élus directement par le peuple pour cinq ans au Palais Bourbon, tandis que les sénateurs représentent les territoires.",
+          "takeaway": "Préciser que l'Assemblée nationale a le dernier mot impressionne l'agent.",
+          "audioSrc": "audio/video_lessons/m2-c1/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Vérifiez vos acquis sur la séparation des pouvoirs",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "Où siège l'Assemblée nationale à Paris ?",
+            "options": [
+              "Au Palais de l'Élysée",
+              "Au Palais Bourbon",
+              "Au Palais du Luxembourg"
+            ],
+            "correctIndex": 1,
+            "explanation": "L'Assemblée nationale siège au Palais Bourbon dans le 7e arrondissement de Paris, tandis que le Sénat siège au Palais du Luxembourg."
+          },
+          "narrationText": "Vérifions vos acquis : où siège l'Assemblée nationale à Paris ? Cliquez sur la bonne réponse pour valider ce chapitre.",
+          "takeaway": "Parfait ! Vous maîtrisez les fondements de nos institutions.",
+          "audioSrc": "audio/video_lessons/m2-c1/scene_6.mp3"
+        }
+      ]
+    },
+    "m2-c2": {
+      "chapterId": "m2-c2",
+      "moduleId": "module-2",
+      "title": "Le Président de la République et le Gouvernement",
+      "subtitle": "Rôle du Chef de l'État, du Premier ministre et compétences de l'Élysée et Matignon",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min 05",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "Le Président de la République",
+          "badge": "Chef de l'État",
+          "durationSeconds": 20,
+          "visualTheme": "tricolore",
+          "heading": "La Clé de Voûte des Institutions",
+          "subheading": "Élu pour 5 ans au suffrage universel direct",
+          "icon": "fa-building-columns",
+          "keyPoints": [
+            "Résidence officielle : Palais de l'Élysée à Paris",
+            "Élu pour un mandat de 5 ans (quinquennat depuis 2002)",
+            "Chef suprême des armées et garant de l'indépendance nationale",
+            "Nomme le Premier ministre et préside le Conseil des ministres"
+          ],
+          "narrationText": "Le Président de la République est la clé de voûte de la Cinquième République. Élu pour cinq ans au suffrage universel direct, il réside au Palais de l'Élysée, commande les armées et veille au respect de la Constitution.",
+          "takeaway": "Le mandat présidentiel est fixé à 5 ans, renouvelable une seule fois consécutivement.",
+          "audioSrc": "audio/video_lessons/m2-c2/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "Les Pouvoirs Propres du Président",
+          "badge": "Pouvoirs Constitutionnels",
+          "durationSeconds": 22,
+          "visualTheme": "liberte",
+          "heading": "Les Pouvoirs Spécifiques du Chef de l'État",
+          "subheading": "Des compétences majeures sans contreseing ministériel",
+          "icon": "fa-stamp",
+          "keyPoints": [
+            "Droit de dissolution de l'Assemblée nationale (Article 12)",
+            "Pouvoirs exceptionnels en cas de crise majeure (Article 16)",
+            "Droit de grâce présidentielle individuelle",
+            "Négociation et ratification des traités internationaux"
+          ],
+          "narrationText": "Le Président dispose de pouvoirs propres très puissants : il peut dissoudre l'Assemblée nationale, soumettre une loi à référendum, et en cas de crise nationale grave, activer les pouvoirs exceptionnels prévus par l'article 16.",
+          "takeaway": "Le Président de la République ne peut pas dissoudre le Sénat.",
+          "audioSrc": "audio/video_lessons/m2-c2/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "Le Premier Ministre & Le Gouvernement",
+          "badge": "Hôtel de Matignon",
+          "durationSeconds": 20,
+          "visualTheme": "egalite",
+          "heading": "Le Premier Ministre et Matignon",
+          "subheading": "Chef du gouvernement et responsable devant le Parlement",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "Résidence officielle : Hôtel de Matignon (Paris 7e)",
+            "Dirige l'action du Gouvernement et coordonne les ministères",
+            "Responsable devant l'Assemblée nationale (motion de censure)",
+            "Assure l'exécution concrète des lois et dispose de l'administration"
+          ],
+          "narrationText": "Le Premier ministre réside à l'Hôtel de Matignon. Il dirige l'action du gouvernement, coordonne le travail des ministres et assure l'exécution des lois. Il est politiquement responsable devant l'Assemblée nationale.",
+          "takeaway": "Connaître le nom du Premier ministre en fonction est obligatoire pour l'entretien.",
+          "audioSrc": "audio/video_lessons/m2-c2/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "La Cohabitation Politique",
+          "badge": "Régime Mixte",
+          "durationSeconds": 18,
+          "visualTheme": "fraternite",
+          "heading": "Le Phénomène de Cohabitation",
+          "subheading": "Quand le Président et le Premier ministre sont de bords opposés",
+          "icon": "fa-handshake",
+          "keyPoints": [
+            "Se produit lorsque la majorité à l'Assemblée est opposée au Président",
+            "Exemples historiques : Mitterrand/Chirac (1986), Chirac/Jospin (1997)",
+            "Le Premier ministre conduit alors la politique intérieure du pays",
+            "Le Président conserve la politique étrangère et la défense"
+          ],
+          "narrationText": "La cohabitation survient lorsque le Président et la majorité de l'Assemblée nationale appartiennent à des partis opposés. Dans ce cas, le Premier ministre conduit la politique intérieure, tandis que le Président représente la France à l'étranger.",
+          "takeaway": "La France a connu trois cohabitations sous la Ve République.",
+          "audioSrc": "audio/video_lessons/m2-c2/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : Noms et Fonctions",
+          "badge": "Indispensable le Jour J",
+          "durationSeconds": 18,
+          "visualTheme": "interview",
+          "heading": "Questions Types de l'Instructeur",
+          "subheading": "« Qui nomme le Premier ministre ? Où réside le Chef de l'État ? »",
+          "icon": "fa-circle-question",
+          "keyPoints": [
+            "Sachez nommer immédiatement le Président actuel et le Premier ministre",
+            "Précisez leurs résidences : Élysée pour le Président, Matignon pour le Premier ministre",
+            "Rappelez la durée du mandat : quinquennat (5 ans)",
+            "Préparez le nom de votre Ministre de l'Intérieur (ministère de la naturalisation)"
+          ],
+          "narrationText": "Avant votre entretien, vérifiez impérativement l'actualité politique récente. L'agent vous demandera qui est le Président actuel, qui est le Premier ministre, ainsi que le nom du Ministre de l'Intérieur qui supervise la naturalisation.",
+          "takeaway": "Une hésitation sur les noms des dirigeants actuels est pénalisante.",
+          "audioSrc": "audio/video_lessons/m2-c2/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Testez votre Compréhension",
+          "subheading": "Validez vos repères sur l'exécutif",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "Quelle est la durée du mandat du Président de la République en France ?",
+            "options": [
+              "4 ans",
+              "5 ans (quinquennat)",
+              "7 ans (septennat)"
+            ],
+            "correctIndex": 1,
+            "explanation": "Depuis la réforme constitutionnelle de l'an 2000 entrée en vigueur en 2002, le mandat présidentiel est de 5 ans (quinquennat)."
+          },
+          "narrationText": "Testez votre compréhension : quelle est la durée du mandat du Président de la République ? Cliquez sur la bonne réponse pour valider votre leçon.",
+          "takeaway": "Excellent ! Retenez bien le terme de quinquennat.",
+          "audioSrc": "audio/video_lessons/m2-c2/scene_6.mp3"
+        }
+      ]
+    },
+    "m2-c3": {
+      "chapterId": "m2-c3",
+      "moduleId": "module-2",
+      "title": "L'Organisation Territoriale de la France",
+      "subtitle": "Communes, Départements, Régions et Territoires d'Outre-mer",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "Le Découpage Administratif de la France",
+          "badge": "Décentralisation",
+          "durationSeconds": 18,
+          "visualTheme": "tricolore",
+          "heading": "Les 3 Échelons Territoriaux",
+          "subheading": "Commune, Département et Région",
+          "icon": "fa-map-location-dot",
+          "keyPoints": [
+            "Environ 35 000 communes en France métropolitaine et outre-mer",
+            "101 départements (96 métropolitains et 5 d'outre-mer)",
+            "18 régions administratives (13 métropolitaines et 5 d'outre-mer)",
+            "Principe constitutionnel : organisation décentralisée de la République"
+          ],
+          "narrationText": "Bienvenue dans cette leçon consacrée aux territoires français. Pour administrer le pays au plus près des citoyens, la France s'organise en trois niveaux de collectivités territoriales : les communes, les départements et les régions.",
+          "takeaway": "La France compte 101 départements et 18 régions.",
+          "audioSrc": "audio/video_lessons/m2-c3/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "La Commune & Le Maire",
+          "badge": "Échelon de Proximité",
+          "durationSeconds": 20,
+          "visualTheme": "liberte",
+          "heading": "La Mairie et le Rôle du Maire",
+          "subheading": "Le premier contact de la citoyenneté au quotidien",
+          "icon": "fa-house-flag",
+          "keyPoints": [
+            "Élus au suffrage direct tous les 6 ans (Conseil municipal)",
+            "Le maire est à la fois agent de la commune et représentant de l'État",
+            "Officier d'état civil (mariages, naissances, décès) et officier de police",
+            "Gère les écoles primaires, l'urbanisme local et la vie associative"
+          ],
+          "narrationText": "La commune est la cellule de base de notre démocratie. Le maire, élu par les conseillers municipaux pour six ans, célèbre les mariages, gère les écoles primaires et représente l'État dans sa ville ou son village.",
+          "takeaway": "Vous devez impérativement connaître le nom du maire de votre commune.",
+          "audioSrc": "audio/video_lessons/m2-c3/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "Le Département & Le Préfet",
+          "badge": "Solidarités & État Local",
+          "durationSeconds": 20,
+          "visualTheme": "egalite",
+          "heading": "Département, Conseil Départemental et Préfet",
+          "subheading": "L'action sociale et l'autorité républicaine",
+          "icon": "fa-shield",
+          "keyPoints": [
+            "Créés en 1790 sous la Révolution française (101 départements)",
+            "Conseil départemental : gère l'action sociale (RSA, enfance, personnes âgées) et les collèges",
+            "Le Préfet : haut fonctionnaire nommé par le Président en Conseil des ministres",
+            "Représente l'État, garantit la sécurité publique et instruit les dossiers de naturalisation"
+          ],
+          "narrationText": "Créé sous la Révolution, le département gère la solidarité sociale et les collèges. Dans chaque département, le Préfet représente le gouvernement, veille à l'ordre public et prend la décision sur votre dossier de naturalisation.",
+          "takeaway": "Le préfet est le représentant direct de l'État dans votre département.",
+          "audioSrc": "audio/video_lessons/m2-c3/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "La Région & La France d'Outre-Mer",
+          "badge": "Développement & Outre-mer",
+          "durationSeconds": 22,
+          "visualTheme": "fraternite",
+          "heading": "Régions et Territoires Ultramarins",
+          "subheading": "Lycées, transports et les 5 DROM d'outre-mer",
+          "icon": "fa-globe",
+          "keyPoints": [
+            "La Région : gère le développement économique, les transports régionaux (TER) et les lycées",
+            "Les 5 DROM d'Outre-mer : Guadeloupe, Martinique, Guyane, La Réunion, Mayotte",
+            "Monnaie : l'Euro (sauf en Polynésie, Nouvelle-Calédonie, Wallis-et-Futuna : franc pacifique)",
+            "Partie intégrante de la République et de l'Union européenne"
+          ],
+          "narrationText": "La région assure le développement économique et la gestion des lycées. La France compte également des territoires d'outre-mer exceptionnels, dont cinq départements et régions : la Guadeloupe, la Martinique, la Guyane, La Réunion et Mayotte.",
+          "takeaway": "Sachez citer les 5 départements d'outre-mer sans hésiter.",
+          "audioSrc": "audio/video_lessons/m2-c3/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : Connaître son Territoire",
+          "badge": "Questions Locales",
+          "durationSeconds": 18,
+          "visualTheme": "interview",
+          "heading": "Les Questions sur Votre Ville et Région",
+          "subheading": "« Dans quel département et région habitez-vous ? Qui est votre maire ? »",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "Connaître le numéro et le nom de votre département (ex: 75 Paris, 69 Rhône)",
+            "Nom de votre région administrative (ex: Île-de-France, Auvergne-Rhône-Alpes)",
+            "Nom du maire de votre commune de résidence",
+            "Nom de la préfecture ou sous-préfecture dont vous dépendez"
+          ],
+          "narrationText": "L'agent vérifie systématiquement votre ancrage local : il vous demandera le nom de votre maire, le numéro de votre département et le nom de votre région. Préparez ces quatre informations indispensables.",
+          "takeaway": "Une bonne connaissance de votre commune prouve votre intégration.",
+          "audioSrc": "audio/video_lessons/m2-c3/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Vérifiez vos repères territoriaux",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "Combien y a-t-il de départements en France au total (métropole et outre-mer) ?",
+            "options": [
+              "96 départements",
+              "101 départements",
+              "120 départements"
+            ],
+            "correctIndex": 1,
+            "explanation": "La France compte 101 départements : 96 en métropole et 5 d'outre-mer (Guadeloupe, Martinique, Guyane, La Réunion et Mayotte)."
+          },
+          "narrationText": "Testez vos repères territoriaux : combien y a-t-il de départements en France au total ? Cliquez sur la bonne réponse pour valider la leçon.",
+          "takeaway": "Bravo ! Vous maîtrisez la géographie administrative de la France.",
+          "audioSrc": "audio/video_lessons/m2-c3/scene_6.mp3"
+        }
+      ]
+    },
+    "m2-c4": {
+      "chapterId": "m2-c4",
+      "moduleId": "module-2",
+      "title": "La France dans l'Union Européenne",
+      "subtitle": "Traité de Rome, Parlement de Strasbourg, Euro et citoyenneté européenne",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "La Construction Européenne",
+          "badge": "Pères Fondateurs",
+          "durationSeconds": 20,
+          "visualTheme": "tricolore",
+          "heading": "La France au Cœur de l'Europe",
+          "subheading": "La déclaration Schuman de 1950 et le Traité de Rome de 1957",
+          "icon": "fa-flag-usa",
+          "keyPoints": [
+            "Projet né après la Seconde Guerre mondiale pour garantir une paix durable",
+            "Déclaration de Robert Schuman le 9 mai 1950 (Fête de l'Europe)",
+            "Jean Monnet et Robert Schuman : pères fondateurs français",
+            "1957 : Traité de Rome fondant la Communauté Économique Européenne (CEE)"
+          ],
+          "narrationText": "Après les ravages de la Seconde Guerre mondiale, la France a joué un rôle moteur dans la création de l'Union européenne. Initiée par Robert Schuman et Jean Monnet en 1950, l'aventure européenne vise à préserver une paix durable sur notre continent.",
+          "takeaway": "La Fête de l'Europe est célébrée chaque année le 9 mai.",
+          "audioSrc": "audio/video_lessons/m2-c4/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "Les Symboles Européens",
+          "badge": "Emblèmes de l'UE",
+          "durationSeconds": 18,
+          "visualTheme": "liberte",
+          "heading": "Les Symboles de l'Union Européenne",
+          "subheading": "Drapeau, Hymne, Devise et Monnaie",
+          "icon": "fa-star",
+          "keyPoints": [
+            "Drapeau européen : cercle de 12 étoiles dorées sur fond bleu (symbole de perfection et d'union)",
+            "Hymne européen : L'Ode à la joie de Beethoven (Neuvième Symphonie)",
+            "Devise de l'UE : « Unie dans la diversité »",
+            "Monnaie unique : L'Euro (€), mise en circulation en 2002"
+          ],
+          "narrationText": "L'Union européenne possède ses propres symboles : un drapeau bleu à douze étoiles dorées, un hymne sans parole tiré de la Neuvième symphonie de Beethoven, la devise « Unie dans la diversité » et la monnaie unique, l'Euro.",
+          "takeaway": "Les 12 étoiles ne représentent pas le nombre de pays, mais la perfection et l'unité.",
+          "audioSrc": "audio/video_lessons/m2-c4/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "Institutions de l'UE & Siège à Strasbourg",
+          "badge": "Strasbourg & Bruxelles",
+          "durationSeconds": 20,
+          "visualTheme": "egalite",
+          "heading": "Le Parlement Européen à Strasbourg",
+          "subheading": "La France accueille l'une des capitales de l'Europe",
+          "icon": "fa-building-columns",
+          "keyPoints": [
+            "Parlement européen : siège officiel situé à Strasbourg en France",
+            "Élu au suffrage universel direct tous les 5 ans par tous les citoyens de l'UE",
+            "Commission européenne et Conseil de l'UE : siègent à Bruxelles",
+            "Cour de justice de l'UE : siège à Luxembourg"
+          ],
+          "narrationText": "La France héberge le Parlement européen, dont le siège officiel se trouve à Strasbourg. Les députés européens y sont élus au suffrage universel direct tous les cinq ans pour voter le budget et les directives européennes avec le Conseil.",
+          "takeaway": "Le siège officiel du Parlement européen est bien à Strasbourg, en France.",
+          "audioSrc": "audio/video_lessons/m2-c4/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "La Citoyenneté Européenne",
+          "badge": "Traité de Maastricht 1992",
+          "durationSeconds": 20,
+          "visualTheme": "fraternite",
+          "heading": "Citoyen Français et Citoyen Européen",
+          "subheading": "Des droits nouveaux attachés à la nationalité française",
+          "icon": "fa-passport",
+          "keyPoints": [
+            "Instaurée par le Traité de Maastricht de 1992",
+            "Toute personne ayant la nationalité française est automatiquement citoyenne de l'UE",
+            "Libre circulation, séjour et travail dans les 27 pays membres",
+            "Droit de vote et d'éligibilité aux élections municipales et européennes"
+          ],
+          "narrationText": "En devenant citoyen français, vous devenez automatiquement citoyen de l'Union européenne. Cela vous accorde le droit de circuler, résider et travailler librement dans les vingt-sept pays membres sans visa ni titre de séjour.",
+          "takeaway": "L'Union européenne compte aujourd'hui 27 États membres.",
+          "audioSrc": "audio/video_lessons/m2-c4/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : Questions sur l'Europe",
+          "badge": "Questions Fréquentes",
+          "durationSeconds": 18,
+          "visualTheme": "interview",
+          "heading": "Questions Types de l'Instructeur",
+          "subheading": "« Combien de pays dans l'UE ? Où siège le Parlement ? »",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "Nombre d'États membres : 27 (depuis le départ du Royaume-Uni / Brexit)",
+            "Le siège du Parlement européen : Strasbourg",
+            "Nommez au moins 2 ou 3 pères fondateurs : Robert Schuman, Jean Monnet",
+            "La date de la Fête de l'Europe : le 9 mai"
+          ],
+          "narrationText": "L'agent instructeur vous interrogera sur l'Europe : combien de pays composent l'Union ? Où siège le Parlement européen ? Répondez avec assurance : vingt-sept pays, et le Parlement siège à Strasbourg.",
+          "takeaway": "Le chiffre 27 est indispensable à retenir après le Brexit.",
+          "audioSrc": "audio/video_lessons/m2-c4/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Vérifiez vos repères sur l'Europe",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "Dans quelle ville française se situe le siège officiel du Parlement européen ?",
+            "options": [
+              "Paris",
+              "Strasbourg",
+              "Lyon"
+            ],
+            "correctIndex": 1,
+            "explanation": "Le siège officiel du Parlement européen est situé à Strasbourg en France, où se tiennent les sessions plénières."
+          },
+          "narrationText": "Testez vos connaissances sur l'Europe : dans quelle ville française se trouve le siège du Parlement européen ? Cliquez sur la bonne réponse.",
+          "takeaway": "Parfait ! Vous maîtrisez la dimension européenne de la France.",
+          "audioSrc": "audio/video_lessons/m2-c4/scene_6.mp3"
+        }
+      ]
+    },
+    "m3-c1": {
+      "chapterId": "m3-c1",
+      "moduleId": "module-3",
+      "title": "Les Droits Fondamentaux et Libertés Individuelles",
+      "subtitle": "Libertés publiques, droit de vote, égalité femmes-hommes et justice",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "Les Textes Fondateurs des Droits de l'Homme",
+          "badge": "DDHC 1789",
+          "durationSeconds": 18,
+          "visualTheme": "tricolore",
+          "heading": "La France, Terre des Droits de l'Homme",
+          "subheading": "« Les hommes naissent et demeurent libres et égaux en droits »",
+          "icon": "fa-scroll",
+          "keyPoints": [
+            "Déclaration des Droits de l'Homme et du Citoyen du 26 août 1789",
+            "Préambule de la Constitution de 1946 (droits économiques et sociaux)",
+            "Convention Européenne des Droits de l'Homme (CEDH)",
+            "Charte de l'environnement de 2004 adossée à la Constitution"
+          ],
+          "narrationText": "Bienvenue dans cette leçon consacrée à vos droits fondamentaux. Proclamée en 1789, la Déclaration des Droits de l'Homme et du Citoyen affirme que tous les hommes naissent et demeurent libres et égaux en droits, fondement universel de notre démocratie.",
+          "takeaway": "L'article 1er de la DDHC de 1789 est le plus célèbre de l'histoire française.",
+          "audioSrc": "audio/video_lessons/m3-c1/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "Les Libertés Individuelles et Publiques",
+          "badge": "Libertés Républicaines",
+          "durationSeconds": 20,
+          "visualTheme": "liberte",
+          "heading": "L'Étendue des Libertés Publiques",
+          "subheading": "Opinion, presse, réunion, association et culte",
+          "icon": "fa-dove",
+          "keyPoints": [
+            "Liberté d'opinion et de culte : croire ou ne pas croire en toute sérénité",
+            "Liberté de la presse et d'expression (grande loi du 29 juillet 1881)",
+            "Liberté d'association (loi du 1er juillet 1901)",
+            "Droit de grève et liberté syndicale garantis par la Constitution"
+          ],
+          "narrationText": "En France, vous bénéficiez de libertés fondamentales protégées par les tribunaux : liberté d'expression, liberté de la presse, liberté de culte, et liberté d'association issue de la célèbre loi de 1901.",
+          "takeaway": "La loi de 1901 régit encore aujourd'hui la création de toutes les associations.",
+          "audioSrc": "audio/video_lessons/m3-c1/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "L'Égalité Femmes-Hommes",
+          "badge": "Grande Cause Nationale",
+          "durationSeconds": 22,
+          "visualTheme": "egalite",
+          "heading": "Une Égalité Stricte et Inconditionnelle",
+          "subheading": "Droits politiques, professionnels et intégrité personnelle",
+          "icon": "fa-venus-mars",
+          "keyPoints": [
+            "Droit de vote des femmes obtenu en 1944 (ordonnance du général de Gaulle)",
+            "Premier vote des femmes aux élections municipales d'avril 1945",
+            "Égalité salariale et parité en politique inscrites dans la loi",
+            "Tolérance zéro pour les violences conjugales et discriminations"
+          ],
+          "narrationText": "L'égalité absolue entre les femmes et les hommes est un principe intangible. Les femmes françaises ont obtenu le droit de vote en 1944. Elles disposent exactement des mêmes droits politiques, économiques et civils que les hommes.",
+          "takeaway": "Retenez bien l'année 1944 pour le droit de vote des femmes.",
+          "audioSrc": "audio/video_lessons/m3-c1/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "Le Droit de Vote et d'Éligibilité",
+          "badge": "Suffrage Universel",
+          "durationSeconds": 18,
+          "visualTheme": "fraternite",
+          "heading": "Le Vote : Cœur de la Souveraineté",
+          "subheading": "Une voix égale pour chaque citoyen majeur",
+          "icon": "fa-check-to-slot",
+          "keyPoints": [
+            "Suffrage universel masculin instauré en 1848, universel complet en 1944",
+            "Scrutin secret sous isoloir pour garantir l'indépendance de chaque électeur",
+            "Éligibilité : tout citoyen peut se présenter aux élections s'il remplit les critères",
+            "Le vote est un droit civique précieux et un devoir moral"
+          ],
+          "narrationText": "En acquérant la nationalité française, vous obtenez le droit de vote et d'éligibilité pour tous les scrutins nationaux et locaux. Voter sous l'isoloir garantit le secret et la liberté absolue de votre choix.",
+          "takeaway": "Le vote est un droit civique fondamental acquis avec la naturalisation.",
+          "audioSrc": "audio/video_lessons/m3-c1/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : Égalité et Valeurs",
+          "badge": "Question Décisive",
+          "durationSeconds": 18,
+          "visualTheme": "interview",
+          "heading": "Questions Types de l'Instructeur",
+          "subheading": "« Que pensez-vous de l'égalité femmes-hommes ? »",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "Affirmez sans la moindre ambiguïté votre attachement à cette égalité",
+            "Précisez qu'aucune coutume ou tradition ne peut justifier une inégalité",
+            "Mentionnez des exemples concrets dans l'éducation et la vie de famille",
+            "Rappelez que la loi française protège la liberté de chaque femme"
+          ],
+          "narrationText": "L'agent portera une attention particulière à vos réponses sur l'égalité femmes-hommes et la liberté de conscience. Montrez que ces principes républicains guident votre quotidien et votre vie familiale en France.",
+          "takeaway": "L'égalité femmes-hommes est non négociable pour obtenir la nationalité.",
+          "audioSrc": "audio/video_lessons/m3-c1/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Vérifiez vos repères sur les droits fondamentaux",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "En quelle année les femmes ont-elles obtenu le droit de vote en France ?",
+            "options": [
+              "1789",
+              "1944",
+              "1968"
+            ],
+            "correctIndex": 1,
+            "explanation": "Le droit de vote a été accordé aux femmes en France par ordonnance du 21 avril 1944 signée par le général de Gaulle à Alger."
+          },
+          "narrationText": "Testez vos connaissances : en quelle année les femmes ont-elles obtenu le droit de vote en France ? Choisissez la bonne réponse pour valider la leçon.",
+          "takeaway": "Bravo ! L'année 1944 est un repère historique capital.",
+          "audioSrc": "audio/video_lessons/m3-c1/scene_6.mp3"
+        }
+      ]
+    },
+    "m3-c2": {
+      "chapterId": "m3-c2",
+      "moduleId": "module-3",
+      "title": "Les Devoirs et Obligations Civiques",
+      "subtitle": "Respect des lois, impôt républicain, défense et fraternité active",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "Les Droits Ont pour Corollaire les Devoirs",
+          "badge": "Le Pacte Républicain",
+          "durationSeconds": 18,
+          "visualTheme": "tricolore",
+          "heading": "Être Citoyen : Droits et Devoirs",
+          "subheading": "La citoyenneté n'est pas seulement un statut, c'est un engagement",
+          "icon": "fa-handshake-angle",
+          "keyPoints": [
+            "Pas de droits républicains durables sans respect des devoirs communs",
+            "Respect inconditionnel des lois de la République",
+            "Contribution aux charges publiques par l'impôt",
+            "Participation à la défense et à la justice (juré d'assises)"
+          ],
+          "narrationText": "La citoyenneté française forme un équilibre indissociable : chaque droit accordé par la République a pour contrepartie des devoirs civiques essentiels que chaque citoyen s'engage à respecter loyalement.",
+          "takeaway": "Nul n'est censé ignorer la loi (adage fondamental du droit français).",
+          "audioSrc": "audio/video_lessons/m3-c2/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "Le Respect de la Loi et de l'Ordre Public",
+          "badge": "Légalité Républicaine",
+          "durationSeconds": 20,
+          "visualTheme": "liberte",
+          "heading": "La Primauté de la Loi Républicaine",
+          "subheading": "L'expression de la volonté générale au-dessus des règles particulières",
+          "icon": "fa-gavel",
+          "keyPoints": [
+            "La loi est votée par les représentants élus de la Nation",
+            "Elle s'applique uniformément à tous, sans privilège ni exemption",
+            "Interdiction stricte de faire justice soi-même",
+            "Respect des symboles de la République et des agents de l'autorité"
+          ],
+          "narrationText": "Le premier devoir civique est d'obéir aux lois votées par le Parlement. La loi républicaine est la même pour tous : elle protège les faibles et s'impose à toutes les convictions personnelles ou religieuses.",
+          "takeaway": "Les règles civiles et pénales prévalent toujours sur les coutumes ou règles religieuses.",
+          "audioSrc": "audio/video_lessons/m3-c2/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "L'Impôt : Devoir Républicain et Solidarité",
+          "badge": "Article 13 DDHC",
+          "durationSeconds": 20,
+          "visualTheme": "egalite",
+          "heading": "La Contribution Commune aux Charges Publiques",
+          "subheading": "Financer les hôpitaux, écoles, routes et la sécurité",
+          "icon": "fa-receipt",
+          "keyPoints": [
+            "Article 13 de la DDHC de 1789 : contribution également répartie selon les facultés",
+            "Financement des services publics gratuits : écoles, hôpitaux, police, justice",
+            "Impôt sur le revenu progressif et Taxe sur la Valeur Ajoutée (TVA)",
+            "Obligation de déclaration et de transparence fiscale"
+          ],
+          "narrationText": "Payer ses impôts est un devoir fondamental fondé sur l'article 13 de la Déclaration de 1789. Chacun contribue selon ses capacités financières pour faire vivre nos services publics, nos écoles et notre système de santé.",
+          "takeaway": "L'exemplarité fiscale est un critère scrupuleusement vérifié pour la naturalisation.",
+          "audioSrc": "audio/video_lessons/m3-c2/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "La Défense Nationale & Être Juré d'Assises",
+          "badge": "Engagement Civique",
+          "durationSeconds": 20,
+          "visualTheme": "fraternite",
+          "heading": "Participer à la Défense et à la Justice",
+          "subheading": "Journée Défense et Citoyenneté (JDC) et cour d'assises",
+          "icon": "fa-shield",
+          "keyPoints": [
+            "Recensement citoyen obligatoire à 16 ans pour tous les jeunes français",
+            "Journée Défense et Citoyenneté (JDC) pour sensibiliser aux enjeux de défense",
+            "Possibilité d'intégrer la réserve opérationnelle militaire ou citoyenne",
+            "Devoir de siéger comme juré d'assises tiré au sort sur les listes électorales"
+          ],
+          "narrationText": "Le citoyen participe à la défense de la Nation par le recensement obligatoire et la Journée Défense et Citoyenneté. En outre, tout citoyen peut être tiré au sort pour siéger comme juré populaire dans une cour d'assises et rendre la justice au nom du peuple.",
+          "takeaway": "Le rôle de juré d'assises est un devoir civique obligatoire.",
+          "audioSrc": "audio/video_lessons/m3-c2/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : Légalité et Devoirs",
+          "badge": "Préparation Préfecture",
+          "durationSeconds": 18,
+          "visualTheme": "interview",
+          "heading": "Question Type de l'Instructeur",
+          "subheading": "« Pourquoi paye-t-on des impôts en France ? »",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "Expliquez que l'impôt finance la solidarité nationale et les infrastructures",
+            "Donnez des exemples : éducation gratuite, hôpitaux publics, secours d'urgence",
+            "Soulignez que vous êtes à jour de vos obligations fiscales et déclaratives",
+            "Affirmez votre fierté de contribuer à la prospérité commune"
+          ],
+          "narrationText": "Si l'agent vous demande pourquoi les citoyens payent des impôts, répondez avec clarté : l'impôt permet de financer les services publics, de protéger les plus démunis et d'assurer le fonctionnement de la justice et de la sécurité.",
+          "takeaway": "Lier l'impôt à la solidarité nationale démontre une excellente maturité citoyenne.",
+          "audioSrc": "audio/video_lessons/m3-c2/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Vérifiez vos acquis sur les devoirs civiques",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "Quel article de la DDHC de 1789 établit la nécessité de la contribution publique (l'impôt) selon les capacités de chacun ?",
+            "options": [
+              "Article 1er",
+              "Article 4",
+              "Article 13"
+            ],
+            "correctIndex": 2,
+            "explanation": "L'article 13 de la DDHC de 1789 dispose qu'une contribution commune est indispensable et doit être également répartie entre tous les citoyens, en raison de leurs facultés."
+          },
+          "narrationText": "Testez vos connaissances : quel article de la Déclaration de 1789 établit l'obligation fiscale commune ? Choisissez la bonne réponse.",
+          "takeaway": "Bravo ! Vous comprenez le lien indissociable entre droits et devoirs.",
+          "audioSrc": "audio/video_lessons/m3-c2/scene_6.mp3"
+        }
+      ]
+    },
+    "m4-c1": {
+      "chapterId": "m4-c1",
+      "moduleId": "module-4",
+      "title": "Les Grandes Périodes et Rois de France",
+      "subtitle": "De la Gaule à la Révolution de 1789, Clovis, Charlemagne, Henri IV et Louis XIV",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min 10",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "Les Origines : Gaulois et Gallo-Romains",
+          "badge": "Antiquité & Moyen Âge",
+          "durationSeconds": 20,
+          "visualTheme": "tricolore",
+          "heading": "Des Gaulois à Clovis",
+          "subheading": "Vercingétorix, Alésia (-52) et le baptême de Clovis (496)",
+          "icon": "fa-monument",
+          "keyPoints": [
+            "52 avant J.-C. : défaite de Vercingétorix à Alésia face à Jules César",
+            "Période gallo-romaine : développement des villes, des aqueducs et des voies romaines",
+            "496 : baptême de Clovis, premier roi chrétien des Francs à Reims",
+            "Naissance du royaume des Francs qui donnera le nom de France"
+          ],
+          "narrationText": "L'histoire de France prend racine dans la rencontre entre les Gaulois et la civilisation romaine après la bataille d'Alésia en cinquante-deux avant Jésus-Christ. En quatre cent quatre-vingt-seize, Clovis, roi des Francs, se fait baptiser à Reims, scellant les débuts du royaume.",
+          "takeaway": "Retenez l'année 496 pour le baptême de Clovis à Reims.",
+          "audioSrc": "audio/video_lessons/m4-c1/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "Charlemagne & La Renaissance",
+          "badge": "Moyen Âge & Renaissance",
+          "durationSeconds": 22,
+          "visualTheme": "liberte",
+          "heading": "Charlemagne et François Ier",
+          "subheading": "Couronnement de l'an 800 et ordonnance de Villers-Cotterêts (1539)",
+          "icon": "fa-crown",
+          "keyPoints": [
+            "An 800 : Charlemagne couronné Empereur d'Occident à Rome, développement des écoles",
+            "Guerre de Cent Ans : épopée de Jeanne d'Arc qui délivre Orléans en 1429",
+            "François Ier : roi de la Renaissance, protecteur des arts et de Léonard de Vinci",
+            "1539 : Ordonnance de Villers-Cotterêts imposant le français dans tous les actes officiels"
+          ],
+          "narrationText": "En l'an huit cents, Charlemagne est couronné empereur et unifie l'Occident. Plus tard, sous la Renaissance, le roi François Premier adopte en quinze cent trente-neuf l'ordonnance de Villers-Cotterêts, faisant du français la langue juridique et administrative officielle du pays.",
+          "takeaway": "L'ordonnance de Villers-Cotterêts de 1539 a fondé l'usage officiel du français.",
+          "audioSrc": "audio/video_lessons/m4-c1/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "Henri IV & L'Édit de Nantes",
+          "badge": "Tolérance Religieuse",
+          "durationSeconds": 20,
+          "visualTheme": "egalite",
+          "heading": "Henri IV et la Pacification",
+          "subheading": "L'Édit de Nantes de 1598 met fin aux guerres de religion",
+          "icon": "fa-feather-pointed",
+          "keyPoints": [
+            "Guerres de religion tragiques entre catholiques et protestants (Saint-Barthélemy 1572)",
+            "1598 : Henri IV promulgue l'Édit de Nantes accordant la liberté de culte aux protestants",
+            "Souverain populaire surnommé « le Bon Roi Henri », assassiné par Ravaillac en 1610",
+            "Premier grand pas historique vers la tolérance et la paix civile"
+          ],
+          "narrationText": "Après de sanglantes guerres de religion, le roi Henri Quatre rétablit la paix civile en signant l'Édit de Nantes en quinze cent quatre-vingt-dix-huit, accordant aux protestants la liberté de conscience et de culte.",
+          "takeaway": "1598 : signature de l'Édit de Nantes par Henri IV.",
+          "audioSrc": "audio/video_lessons/m4-c1/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "Louis XIV & Le Siècle des Lumières",
+          "badge": "Monarchie & Lumières",
+          "durationSeconds": 22,
+          "visualTheme": "fraternite",
+          "heading": "Le Roi-Soleil et les Philosophes",
+          "subheading": "De Versailles (1682) aux idées des Lumières (Voltaire, Rousseau)",
+          "icon": "fa-sun",
+          "keyPoints": [
+            "Louis XIV (1643-1715) : apogée de la monarchie absolue, construction du château de Versailles",
+            "Le XVIIIe siècle : Siècle des Lumières incarné par Voltaire, Rousseau, Montesquieu et Diderot",
+            "Critique de l'absolutisme, promotion de la raison, de la liberté et de l'égalité",
+            "Inspiration intellectuelle directe de la Révolution française de 1789"
+          ],
+          "narrationText": "Au dix-septième siècle, Louis Quatorze, le Roi-Soleil, installe la cour à Versailles. Au siècle suivant, les philosophes des Lumières comme Voltaire, Rousseau et Diderot diffusent les idéaux de raison, de tolérance et d'égalité qui conduiront à la Révolution.",
+          "takeaway": "Sachez citer au moins trois philosophes des Lumières (Voltaire, Rousseau, Montesquieu).",
+          "audioSrc": "audio/video_lessons/m4-c1/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : Rois & Personnages",
+          "badge": "Questions d'Histoire",
+          "durationSeconds": 18,
+          "visualTheme": "interview",
+          "heading": "Questions Fréquentes de l'Instructeur",
+          "subheading": "« Citez un roi de France et son action majeure »",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "Clovis : premier roi des Francs baptisé en 496",
+            "Charlemagne : empereur d'Occident en 800, réformateur des écoles",
+            "Henri IV : signataire de l'Édit de Nantes en 1598 (paix religieuse)",
+            "Louis XIV : le Roi-Soleil, constructeur de Versailles et souverain absolu"
+          ],
+          "narrationText": "L'agent vous demandera de citer deux ou trois rois de France et ce qu'ils ont accompli. Privilégiez Henri Quatre et l'Édit de Nantes, ou François Premier et la langue française à Villers-Cotterêts.",
+          "takeaway": "Associez toujours le roi à son événement marquant pour une réponse parfaite.",
+          "audioSrc": "audio/video_lessons/m4-c1/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Testez vos repères sur l'histoire royale",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "Quel roi de France a signé l'Édit de Nantes en 1598 pour pacifier les guerres de religion ?",
+            "options": [
+              "Clovis",
+              "Henri IV",
+              "Louis XIV"
+            ],
+            "correctIndex": 1,
+            "explanation": "C'est Henri IV qui a signé l'Édit de Nantes en avril 1598, accordant la liberté de culte aux protestants et pacifiant le royaume."
+          },
+          "narrationText": "Testez votre culture historique : quel roi de France a signé l'Édit de Nantes en quinze cent quatre-vingt-dix-huit ? Cliquez sur la bonne réponse.",
+          "takeaway": "Bravo ! Vos connaissances historiques sont solides.",
+          "audioSrc": "audio/video_lessons/m4-c1/scene_6.mp3"
+        }
+      ]
+    },
+    "m4-c2": {
+      "chapterId": "m4-c2",
+      "moduleId": "module-4",
+      "title": "Du XIXe Siècle aux Deux Guerres Mondiales",
+      "subtitle": "Révolution de 1789, Napoléon, République, 1914-1918 et la Résistance (1939-1945)",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min 10",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "La Révolution Française (1789)",
+          "badge": "Rupture Historique",
+          "durationSeconds": 20,
+          "visualTheme": "tricolore",
+          "heading": "1789 : La Naissance de la Nation Moderne",
+          "subheading": "Prise de la Bastille, abolition des privilèges et DDHC",
+          "icon": "fa-fire",
+          "keyPoints": [
+            "14 juillet 1789 : Prise de la forteresse de la Bastille par le peuple parisien",
+            "Nuit du 4 août 1789 : Abolition des privilèges de la noblesse et du clergé",
+            "26 août 1789 : Déclaration des Droits de l'Homme et du Citoyen",
+            "1792 : Proclamation de la Première République (chute de la royauté)"
+          ],
+          "narrationText": "L'année dix-sept cent quatre-vingt-neuf marque la rupture fondatrice de notre histoire contemporaine. Le quatorze juillet, la prise de la Bastille renverse l'arbitraire royal, avant l'abolition des privilèges et la Déclaration des Droits de l'Homme.",
+          "takeaway": "L'année 1789 est le repère le plus important de l'histoire de France.",
+          "audioSrc": "audio/video_lessons/m4-c2/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "Napoléon Bonaparte & Le Code Civil",
+          "badge": "Consulat & Empire",
+          "durationSeconds": 20,
+          "visualTheme": "liberte",
+          "heading": "Napoléon et la Modernisation de l'État",
+          "subheading": "Le Code civil de 1804 et les préfets",
+          "icon": "fa-landmark-dome",
+          "keyPoints": [
+            "Coup d'État du 18 Brumaire (1799) et sacre comme Empereur en 1804",
+            "Création du Code civil des Français (1804), base juridique du droit civil actuel",
+            "Création des préfets, des lycées, du baccalauréat et de la Banque de France",
+            "Chute définitive à Waterloo en 1815 et exil à Sainte-Hélène"
+          ],
+          "narrationText": "Arrivé au pouvoir en dix-sept cent quatre-vingt-dix-neuf, Napoléon Premier réorganise profondément l'État. Il promulgue le Code civil en dix-huit cent quatre, institue les préfets et fonde les lycées et la Banque de France.",
+          "takeaway": "Le Code civil des Français date de 1804.",
+          "audioSrc": "audio/video_lessons/m4-c2/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "La Première Guerre Mondiale (1914-1918)",
+          "badge": "Grande Guerre",
+          "durationSeconds": 20,
+          "visualTheme": "egalite",
+          "heading": "La Grande Guerre et le Devoir de Mémoire",
+          "subheading": "Bataille de Verdun (1916) et armistice du 11 Novembre 1918",
+          "icon": "fa-helmet-safety",
+          "keyPoints": [
+            "Conflit mondial dévastateur : 1,4 million de soldats français morts",
+            "1916 : Bataille héroïque de Verdun opposant Français et Allemands",
+            "Georges Clemenceau surnommé « le Tigre » ou « le Père la Victoire »",
+            "11 novembre 1918 : Signature de l'Armistice à Rethondes (commémoration nationale)"
+          ],
+          "narrationText": "De dix-neuf cent quatorze à dix-neuf cent dix-huit, la France traverse l'épreuve tragique de la Première Guerre mondiale. Après l'enfer des tranchées de Verdun, l'armistice est signé le onze novembre dix-neuf cent dix-huit, jour férié de commémoration de tous les morts pour la France.",
+          "takeaway": "Le 11 novembre commémore l'Armistice de 1918.",
+          "audioSrc": "audio/video_lessons/m4-c2/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "La Seconde Guerre Mondiale (1939-1945)",
+          "badge": "Appel du 18 Juin & Libération",
+          "durationSeconds": 22,
+          "visualTheme": "fraternite",
+          "heading": "De Gaulle, la Résistance et la Victoire",
+          "subheading": "L'Appel du 18 juin 1940 et la capitulation du 8 Mai 1945",
+          "icon": "fa-medal",
+          "keyPoints": [
+            "18 juin 1940 : Appel à la Résistance lancé de Londres par le général de Gaulle sur la BBC",
+            "Jean Moulin : héros qui unifie la Résistance intérieure au sein du CNR",
+            "Régime collaborationniste de Vichy dirigé par le maréchal Pétain",
+            "6 juin 1944 : Débarquement allié en Normandie et 8 mai 1945 : Victoire alliée en Europe"
+          ],
+          "narrationText": "Envahie en dix-neuf cent quarante, la France refuse la capitulation grâce à l'Appel du dix-huit juin lancé depuis Londres par le général de Gaulle. Avec Jean Moulin et les héros de la Résistance, la France participe à la Libération jusqu'à la victoire du huit mai dix-neuf cent quarante-cinq.",
+          "takeaway": "Le 8 mai célèbre la fin de la Seconde Guerre mondiale en Europe.",
+          "audioSrc": "audio/video_lessons/m4-c2/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : Dates Commémoratives",
+          "badge": "Questions Incontournables",
+          "durationSeconds": 18,
+          "visualTheme": "interview",
+          "heading": "Les 3 Dates Clés Posées à l'Entretien",
+          "subheading": "« Que célèbrent le 14 juillet, le 8 mai et le 11 novembre ? »",
+          "icon": "fa-calendar-days",
+          "keyPoints": [
+            "14 Juillet : Fête nationale (prise de la Bastille et Fête de la Fédération)",
+            "8 Mai : Victoire de 1945 mettant fin à la Seconde Guerre mondiale",
+            "11 Novembre : Armistice de 1918 mettant fin à la Première Guerre mondiale",
+            "Connaître le nom de Jean Moulin (président du Conseil National de la Résistance)"
+          ],
+          "narrationText": "Ne confondez jamais le huit mai et le onze novembre lors de votre entretien. Le onze novembre commémore l'armistice de dix-neuf cent dix-huit, tandis que le huit mai célèbre la capitulation nazie et la victoire de dix-neuf cent quarante-cinq.",
+          "takeaway": "Distinguer clairement le 11 novembre et le 8 mai est capital.",
+          "audioSrc": "audio/video_lessons/m4-c2/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Testez vos repères sur les deux guerres",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "Que commémore le jour férié national du 8 mai en France ?",
+            "options": [
+              "L'armistice de la Première Guerre mondiale (1918)",
+              "La fin de la Seconde Guerre mondiale en Europe (1945)",
+              "La prise de la Bastille (1789)"
+            ],
+            "correctIndex": 1,
+            "explanation": "Le 8 mai commémore la capitulation sans condition de l'Allemagne nazie en 1945 et la victoire des Alliés marquant la fin de la Seconde Guerre mondiale en Europe."
+          },
+          "narrationText": "Testez votre culture civique : que commémore le jour férié du 8 mai en France ? Cliquez sur la bonne réponse.",
+          "takeaway": "Parfait ! Vous maîtrisez les commémorations républicaines.",
+          "audioSrc": "audio/video_lessons/m4-c2/scene_6.mp3"
+        }
+      ]
+    },
+    "m4-c3": {
+      "chapterId": "m4-c3",
+      "moduleId": "module-4",
+      "title": "La Ve République et ses Présidents",
+      "subtitle": "De Charles de Gaulle à Emmanuel Macron : 1958 à nos jours",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min 10",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "La Naissance de la Ve République (1958)",
+          "badge": "Constitution Actuelle",
+          "durationSeconds": 20,
+          "visualTheme": "tricolore",
+          "heading": "1958 : Le Retour du Général de Gaulle",
+          "subheading": "Adoption de la Constitution du 4 octobre 1958",
+          "icon": "fa-landmark",
+          "keyPoints": [
+            "Crise de la guerre d'Algérie provoquant l'instabilité de la IVe République",
+            "Charles de Gaulle rédige une nouvelle Constitution avec Michel Debré",
+            "Approuvée par référendum à plus de 82 % le 28 septembre 1958",
+            "Régime stable renforçant les pouvoirs de l'exécutif face au Parlement"
+          ],
+          "narrationText": "En mille neuf cent cinquante-huit, pour surmonter l'instabilité de la Quatrième République et la crise d'Algérie, le général de Gaulle donne à la France la Constitution de la Cinquième République, adoptée par référendum le quatre octobre mille neuf cent cinquante-huit.",
+          "takeaway": "Notre Constitution actuelle est celle du 4 octobre 1958.",
+          "audioSrc": "audio/video_lessons/m4-c3/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "De Gaulle et Pompidou",
+          "badge": "Les Pionniers",
+          "durationSeconds": 20,
+          "visualTheme": "liberte",
+          "heading": "Charles de Gaulle et Georges Pompidou",
+          "subheading": "Souveraineté, élection au suffrage universel et modernisation",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "Charles de Gaulle (1958-1969) : réforme de 1962 instaurant l'élection du Président au suffrage direct",
+            "Développement de la dissuasion nucléaire et décolonisation",
+            "Georges Pompidou (1969-1974) : grande modernisation industrielle (Concorde, TGV, Airbus)",
+            "Création du Centre d'art moderne Georges Pompidou à Beaubourg (Paris)"
+          ],
+          "narrationText": "Charles de Gaulle dote la France d'une stature internationale forte et instaure en mille neuf cent soixante-deux l'élection du Président au suffrage universel direct. Georges Pompidou lui succède et accélère la modernisation industrielle du pays.",
+          "takeaway": "L'élection directe du Président par les citoyens date du référendum de 1962.",
+          "audioSrc": "audio/video_lessons/m4-c3/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "Giscard d'Estaing & Mitterrand",
+          "badge": "Grandes Réformes de Société",
+          "durationSeconds": 22,
+          "visualTheme": "egalite",
+          "heading": "Majorité à 18 ans et Abolition de la Peine de Mort",
+          "subheading": "Les grandes avancées démocratiques et sociales",
+          "icon": "fa-scale-balanced",
+          "keyPoints": [
+            "Valéry Giscard d'Estaing (1974-1981) : abaissement de la majorité à 18 ans (1974) et loi Veil (1975)",
+            "François Mitterrand (1981-1995) : premier Président socialiste de la Ve République (2 septennats)",
+            "Abolition historique de la peine de mort en 1981 défendue par Robert Badinter",
+            "Semaine de 39 heures, 5e semaine de congés payés et retraite à 60 ans"
+          ],
+          "narrationText": "Sous Valéry Giscard d'Estaing, la majorité passe à dix-huit ans et Simone Veil légalise l'IVG. Élu en dix-neuf cent quatre-vingt-un, François Mitterrand abolit la peine de mort grâce au combat historique de Robert Badinter.",
+          "takeaway": "L'abolition de la peine de mort en France date de 1981.",
+          "audioSrc": "audio/video_lessons/m4-c3/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "Chirac, Sarkozy, Hollande & Macron",
+          "badge": "Histoire Contemporaine",
+          "durationSeconds": 22,
+          "visualTheme": "fraternite",
+          "heading": "De Jacques Chirac à Emmanuel Macron",
+          "subheading": "Le passage au quinquennat et les défis du XXIe siècle",
+          "icon": "fa-clock-rotate-left",
+          "keyPoints": [
+            "Jacques Chirac (1995-2007) : fin du service militaire obligatoire, passage au quinquennat (5 ans)",
+            "Nicolas Sarkozy (2007-2012) : révision constitutionnelle de 2008 renforçant le Parlement",
+            "François Hollande (2012-2017) : loi sur le mariage pour tous (2013) et accords de Paris sur le climat",
+            "Emmanuel Macron (élu en 2017, réélu en 2022) : plus jeune Président de la République"
+          ],
+          "narrationText": "Jacques Chirac instaure le mandat présidentiel de cinq ans. Nicolas Sarkozy puis François Hollande lui succèdent, marquant notamment l'adoption du mariage pour tous en deux mille treize. Emmanuel Macron est élu en deux mille dix-sept puis réélu en deux mille vingt-deux.",
+          "takeaway": "Sachez citer dans l'ordre chronologique les Présidents de la Ve République.",
+          "audioSrc": "audio/video_lessons/m4-c3/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : L'Ordre des Présidents",
+          "badge": "Classique Préfecture",
+          "durationSeconds": 18,
+          "visualTheme": "interview",
+          "heading": "La Question Classique de l'Instructeur",
+          "subheading": "« Citez trois Présidents de la Ve République »",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "Réciter de mémoire : De Gaulle, Pompidou, Giscard d'Estaing, Mitterrand, Chirac, Sarkozy, Hollande, Macron",
+            "Indiquer qui a fondé la Ve République : le général de Gaulle en 1958",
+            "Mentionner qui a aboli la peine de mort : François Mitterrand en 1981",
+            "Préciser qui est le Président actuel en exercice"
+          ],
+          "narrationText": "L'agent vous demandera de citer plusieurs Présidents de la Cinquième République ou de dire qui a aboli la peine de mort. Entraînez-vous à citer la chronologie exacte pour démontrer votre solide culture politique.",
+          "takeaway": "Une récitation fluide des Présidents inspire une confiance immédiate.",
+          "audioSrc": "audio/video_lessons/m4-c3/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Testez vos repères sur la Ve République",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "Sous la présidence de quel Chef de l'État la peine de mort a-t-elle été abolie en France en 1981 ?",
+            "options": [
+              "Charles de Gaulle",
+              "François Mitterrand",
+              "Jacques Chirac"
+            ],
+            "correctIndex": 1,
+            "explanation": "La peine de mort a été abolie sous la présidence de François Mitterrand par la loi du 9 octobre 1981 portée avec courage par son ministre de la Justice Robert Badinter."
+          },
+          "narrationText": "Testez vos acquis : sous quel Président la peine de mort a-t-elle été abolie en mille neuf cent quatre-vingt-un ? Choisissez la bonne réponse pour valider la leçon.",
+          "takeaway": "Bravo ! Vous connaissez parfaitement les grands repères de la Ve République.",
+          "audioSrc": "audio/video_lessons/m4-c3/scene_6.mp3"
+        }
+      ]
+    },
+    "m4-c4": {
+      "chapterId": "m4-c4",
+      "moduleId": "module-4",
+      "title": "Géographie, Reliefs et Territoire Français",
+      "subtitle": "L'Hexagone, fleuves, massifs montagneux, mers et pays frontaliers",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "L'Hexagone et sa Superficie",
+          "badge": "Le Territoire National",
+          "durationSeconds": 18,
+          "visualTheme": "tricolore",
+          "heading": "L'Hexagone Français",
+          "subheading": "Un carrefour géographique majeur au cœur de l'Europe",
+          "icon": "fa-mountain-sun",
+          "keyPoints": [
+            "Surnommée « l'Hexagone » en raison de sa forme géométrique à six côtés",
+            "Plus grand pays d'Europe occidentale par sa superficie (environ 643 000 km² avec l'outre-mer)",
+            "Population : environ 68 millions d'habitants",
+            "Deuxième domaine maritime mondial grâce aux territoires d'outre-mer"
+          ],
+          "narrationText": "Bienvenue dans cette leçon de géographie. Surnommée l'Hexagone par sa forme à six côtés, la France est le plus vaste pays de l'Union européenne, avec environ soixante-huit millions d'habitants et le deuxième espace maritime de la planète.",
+          "takeaway": "La France est bordée par 4 façades maritimes.",
+          "audioSrc": "audio/video_lessons/m4-c4/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "Les 5 Grands Fleuves de France",
+          "badge": "Hydrographie",
+          "durationSeconds": 22,
+          "visualTheme": "liberte",
+          "heading": "Les Cinq Grands Fleuves Français",
+          "subheading": "La Seine, la Loire, le Rhône, la Garonne et le Rhin",
+          "icon": "fa-water",
+          "keyPoints": [
+            "La Loire : le plus long fleuve de France (1 006 km), célèbre pour ses châteaux",
+            "La Seine : traverse Paris et Rouen avant de se jeter dans la Manche au Havre",
+            "Le Rhône : fleuve le plus puissant, prend sa source en Suisse et se jette en Méditerranée",
+            "La Garonne : traverse Toulouse et Bordeaux, formant l'estuaire de la Gironde",
+            "Le Rhin : fleuve frontière naturel entre la France et l'Allemagne"
+          ],
+          "narrationText": "La France est irriguée par cinq grands fleuves : la Loire, le plus long avec plus de mille kilomètres, la Seine qui traverse Paris, le puissant Rhône qui descend vers la Méditerranée, la Garonne dans le Sud-Ouest, et le Rhin à la frontière allemande.",
+          "takeaway": "La Loire est le plus long fleuve entièrement situé en France.",
+          "audioSrc": "audio/video_lessons/m4-c4/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "Les Massifs Montagneux & Le Mont Blanc",
+          "badge": "Reliefs & Sommets",
+          "durationSeconds": 20,
+          "visualTheme": "egalite",
+          "heading": "Les Chaînes de Montagnes et le Toit de l'Europe",
+          "subheading": "Alpes, Pyrénées, Massif central, Jura et Vosges",
+          "icon": "fa-mountain",
+          "keyPoints": [
+            "Les Alpes : abritent le Mont Blanc, plus haut sommet d'Europe occidentale (4 807 mètres)",
+            "Les Pyrénées : barrière naturelle séparant la France de l'Espagne",
+            "Le Massif central : plus grand massif montagneux au centre de la France (volcans d'Auvergne)",
+            "Le Jura et les Vosges : massifs bordant l'Est et les frontières suisse et allemande"
+          ],
+          "narrationText": "Le relief français comprend cinq grands massifs montagneux : les Alpes, qui culminent au sommet du Mont Blanc à quatre mille huit cent sept mètres, les Pyrénées à la frontière espagnole, le Massif central et ses volcans, le Jura et les Vosges.",
+          "takeaway": "Le Mont Blanc culmine à 4 807 mètres d'altitude.",
+          "audioSrc": "audio/video_lessons/m4-c4/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "Les Mers et Pays Frontaliers",
+          "badge": "Frontières & Littoraux",
+          "durationSeconds": 20,
+          "visualTheme": "fraternite",
+          "heading": "Frontières Terrestres et Façades Maritimes",
+          "subheading": "4 mers et 8 pays frontaliers en métropole",
+          "icon": "fa-compass",
+          "keyPoints": [
+            "4 façades maritimes : La Manche, la mer du Nord, l'océan Atlantique et la mer Méditerranée",
+            "8 pays frontaliers terrestres : Belgique, Luxembourg, Allemagne, Suisse, Italie, Monaco, Espagne, Andorre",
+            "Frontières ultramarines : Le Brésil et le Suriname sont frontaliers de la Guyane française",
+            "Plus longue frontière terrestre de la France : avec le Brésil (environ 730 km)"
+          ],
+          "narrationText": "La métropole est bordée par quatre mers et huit pays voisins, dont l'Espagne, l'Italie, l'Allemagne et la Belgique. Anecdote majeure : la plus longue frontière terrestre française est partagée en Amérique du Sud entre la Guyane et le Brésil.",
+          "takeaway": "La plus longue frontière terrestre de la France est celle avec le Brésil.",
+          "audioSrc": "audio/video_lessons/m4-c4/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : Fleuves & Villes",
+          "badge": "Questions Fréquentes",
+          "durationSeconds": 18,
+          "visualTheme": "interview",
+          "heading": "Questions Types de l'Instructeur",
+          "subheading": "« Citez trois fleuves et deux massifs montagneux »",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "Citer sans hésiter : Seine, Loire, Rhône ou Garonne",
+            "Citer les Alpes et les Pyrénées et mentionner le Mont Blanc",
+            "Préciser le fleuve qui traverse votre propre ville ou département",
+            "Savoir citer trois grandes métropoles françaises (Paris, Marseille, Lyon, Toulouse, Nice)"
+          ],
+          "narrationText": "L'agent vous demandera de citer des fleuves ou les montagnes de France. Répondez naturellement : la Seine et la Loire pour les fleuves, les Alpes et les Pyrénées pour les montagnes, en précisant que le Mont Blanc culmine à quatre mille huit cent sept mètres.",
+          "takeaway": "Donner l'altitude du Mont Blanc (4 807 m) valorise votre préparation.",
+          "audioSrc": "audio/video_lessons/m4-c4/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Testez vos repères géographiques",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "Quel est le plus long fleuve coulant entièrement sur le territoire français ?",
+            "options": [
+              "La Seine (777 km)",
+              "La Loire (1 006 km)",
+              "Le Rhône (812 km)"
+            ],
+            "correctIndex": 1,
+            "explanation": "La Loire est le plus long fleuve de France avec une longueur de 1 006 kilomètres, prenant sa source au mont Gerbier-de-Jonc."
+          },
+          "narrationText": "Vérifions vos connaissances : quel est le plus long fleuve de France ? Cliquez sur la bonne réponse pour valider la leçon.",
+          "takeaway": "Bravo ! Vous maîtrisez la géographie française.",
+          "audioSrc": "audio/video_lessons/m4-c4/scene_6.mp3"
+        }
+      ]
+    },
+    "m4-c5": {
+      "chapterId": "m4-c5",
+      "moduleId": "module-4",
+      "title": "Culture, Patrimoine, Gastronomie et Sciences",
+      "subtitle": "Écrivains, peintres, scientifiques, monuments et art de vivre français",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min 05",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "Le Rayonnement Culturel de la France",
+          "badge": "Patrimoine Mondial",
+          "durationSeconds": 18,
+          "visualTheme": "tricolore",
+          "heading": "La France et le Rayonnement Culturel",
+          "subheading": "Un patrimoine littéraire, artistique et architectural d'exception",
+          "icon": "fa-palette",
+          "keyPoints": [
+            "Première destination touristique mondiale (monuments, musées, paysages)",
+            "Musée du Louvre : plus grand musée d'art du monde (La Joconde, Vénus de Milo)",
+            "Monuments emblématiques : Tour Eiffel (1889), Arc de Triomphe, Notre-Dame de Paris",
+            "Châteaux de la Loire et château de Versailles classés à l'UNESCO"
+          ],
+          "narrationText": "Bienvenue dans cette leçon consacrée à la culture française. Reconnue dans le monde entier pour ses écrivains, ses peintres, son architecture et sa gastronomie, la France cultive un attachement passionné à la création et à l'esprit critique.",
+          "takeaway": "La Tour Eiffel a été construite par Gustave Eiffel pour l'Exposition universelle de 1889.",
+          "audioSrc": "audio/video_lessons/m4-c5/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "Les Grands Écrivains et Dramaturges",
+          "badge": "Littérature & Théâtre",
+          "durationSeconds": 22,
+          "visualTheme": "liberte",
+          "heading": "De Molière à Victor Hugo",
+          "subheading": "Les géants des lettres françaises",
+          "icon": "fa-book",
+          "keyPoints": [
+            "Molière (XVIIe siècle) : le génie du théâtre comique (Le Malade imaginaire, Tartuffe)",
+            "Jean de La Fontaine : Les Fables (morale populaire et intemporelle)",
+            "Victor Hugo (XIXe siècle) : Les Misérables, Notre-Dame de Paris, député républicain",
+            "Émile Zola : Germinal, et son célèbre « J'accuse » pour défendre Dreyfus"
+          ],
+          "narrationText": "La langue française est souvent appelée la « langue de Molière » en hommage au célèbre dramaturge du dix-septième siècle. Au dix-neuvième siècle, Victor Hugo incarne le génie romantique et l'engagement républicain avec Les Misérables.",
+          "takeaway": "Le français est surnommé la « langue de Molière ».",
+          "audioSrc": "audio/video_lessons/m4-c5/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "Les Savants et Scientifiques Illustres",
+          "badge": "Sciences & Progrès",
+          "durationSeconds": 20,
+          "visualTheme": "egalite",
+          "heading": "Pasteur et Marie Curie : Le Progrès Médical",
+          "subheading": "Des découvertes qui ont sauvé des millions de vies",
+          "icon": "fa-flask",
+          "keyPoints": [
+            "Louis Pasteur : inventeur du vaccin contre la rage en 1885 et de la pasteurisation",
+            "Marie Curie : deux prix Nobel (Physique et Chimie) pour ses travaux sur la radioactivité",
+            "Première femme inhumée au Panthéon pour ses propres mérites",
+            "Le Panthéon à Paris : « Aux grands hommes, la Patrie reconnaissante »"
+          ],
+          "narrationText": "La France est une terre de science. Louis Pasteur invente le vaccin contre la rage en dix-huit cent quatre-vingt-cinq, révolutionnant la médecine. Marie Curie, double prix Nobel de physique et chimie, repose au Panthéon au côté des plus illustres personnalités de la Nation.",
+          "takeaway": "Marie Curie est la première femme honorée au Panthéon pour ses mérites scientifiques.",
+          "audioSrc": "audio/video_lessons/m4-c5/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "La Gastronomie et l'Art de Vivre",
+          "badge": "Patrimoine Immatériel UNESCO",
+          "durationSeconds": 18,
+          "visualTheme": "fraternite",
+          "heading": "Le Repas Gastronomique des Français",
+          "subheading": "Classé au patrimoine culturel immatériel de l'humanité",
+          "icon": "fa-utensils",
+          "keyPoints": [
+            "Repas gastronomique français inscrit au patrimoine de l'UNESCO depuis 2010",
+            "Art du bien manger et de la convivialité : entrée, plat, fromages et dessert",
+            "Plats emblématiques : bœuf bourguignon, pot-au-feu, quiche lorraine, ratatouille",
+            "La baguette de pain française : inscrite elle aussi à l'UNESCO en 2022"
+          ],
+          "narrationText": "En France, la gastronomie est bien plus qu'une cuisine : c'est un art de vivre et un moment de partage inscrit à l'UNESCO. De la baguette traditionnelle aux grands fromages et vins de terroir, elle fait la fierté de nos régions.",
+          "takeaway": "La baguette de pain et le repas gastronomique sont tous deux inscrits à l'UNESCO.",
+          "audioSrc": "audio/video_lessons/m4-c5/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : Auteurs & Peintres",
+          "badge": "Culture Générale",
+          "durationSeconds": 18,
+          "visualTheme": "interview",
+          "heading": "Questions Types de l'Instructeur",
+          "subheading": "« Citez un écrivain, un scientifique et un monument français »",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "Écrivains sûrs à citer : Victor Hugo (Les Misérables), Molière, Émile Zola",
+            "Scientifiques incontournables : Louis Pasteur (vaccin contre la rage), Marie Curie",
+            "Peintres : Claude Monet (Les Nymphéas), Auguste Renoir (impressionnisme)",
+            "Plat français préféré : ayez un exemple personnel prêt à partager avec enthousiasme"
+          ],
+          "narrationText": "L'agent instructeur vous demandera de citer vos auteurs préférés, un scientifique ou un plat français. Citez Victor Hugo, Louis Pasteur ou Claude Monet, et exprimez avec sincérité ce que vous appréciez dans la culture française.",
+          "takeaway": "Parler avec passion d'un livre ou d'un lieu français plaît énormément à l'agent.",
+          "audioSrc": "audio/video_lessons/m4-c5/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Testez vos acquis sur la culture française",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "Quel scientifique français a découvert le vaccin contre la rage en 1885 ?",
+            "options": [
+              "Louis Pasteur",
+              "Marie Curie",
+              "René Descartes"
+            ],
+            "correctIndex": 0,
+            "explanation": "Louis Pasteur a mis au point le vaccin contre la rage en 1885 et a fondé l'Institut Pasteur, pionnier mondial de la recherche microbiologique."
+          },
+          "narrationText": "Testez vos connaissances : quel scientifique français a inventé le vaccin contre la rage en mille huit cent quatre-vingt-cinq ? Choisissez la bonne réponse.",
+          "takeaway": "Bravo ! Vous maîtrisez les grandes figures de la culture et de la science françaises.",
+          "audioSrc": "audio/video_lessons/m4-c5/scene_6.mp3"
+        }
+      ]
+    },
+    "m5-c1": {
+      "chapterId": "m5-c1",
+      "moduleId": "module-5",
+      "title": "La Vie Quotidienne, Santé et Sécurité",
+      "subtitle": "Numéros d'urgence (15, 17, 18, 112), Carte Vitale, Sécurité sociale et civisme",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "Les Numéros d'Urgence Gratuits",
+          "badge": "Sécurité au Quotidien",
+          "durationSeconds": 20,
+          "visualTheme": "tricolore",
+          "heading": "Les Services d'Urgence en France",
+          "subheading": "Accessibles 24h/24 et 7j/7 gratuitement depuis tout téléphone",
+          "icon": "fa-phone-volume",
+          "keyPoints": [
+            "15 : Le SAMU (urgence médicale vitale, médecin régulateur)",
+            "17 : Police Secours et Gendarmerie (infraction, danger immédiat)",
+            "18 : Les Sapeurs-Pompiers (incendies, accidents de la route, secours)",
+            "112 : Numéro d'urgence européen unique (fonctionne sans carte SIM)"
+          ],
+          "narrationText": "Bienvenue dans cette leçon consacrée à la vie quotidienne et à la santé. En France, quatre numéros d'urgence gratuits sauvent des vies au quotidien : le 15 pour le SAMU, le 17 pour la police, le 18 pour les pompiers, et le 112 pour toute l'Europe.",
+          "takeaway": "L'agent vous demandera très souvent à quoi correspondent le 15, le 17 et le 18.",
+          "audioSrc": "audio/video_lessons/m5-c1/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "La Santé & L'Assurance Maladie",
+          "badge": "Protection Sociale",
+          "durationSeconds": 20,
+          "visualTheme": "liberte",
+          "heading": "L'Accès Universel aux Soins",
+          "subheading": "Protection Universelle Maladie (PUMA) et Carte Vitale",
+          "icon": "fa-heart-pulse",
+          "keyPoints": [
+            "PUMA : toute personne résidant en France de manière stable a droit aux soins",
+            "Carte Vitale : carte électronique personnelle attestant des droits ouverts",
+            "Médecin traitant : garantit un parcours de soins coordonné et un meilleur remboursement",
+            "Complémentaire santé solidaire (CSS) : pour les personnes aux revenus modestes"
+          ],
+          "narrationText": "Le système de santé français est fondé sur la solidarité universelle. Grâce à la Protection Universelle Maladie et à la Carte Vitale, toute personne résidant régulièrement en France a droit à la prise en charge de ses dépenses de santé.",
+          "takeaway": "Le médecin traitant permet d'être remboursé au taux maximal de la Sécurité sociale.",
+          "audioSrc": "audio/video_lessons/m5-c1/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "La Sécurité Publique & Les Forces de l'Ordre",
+          "badge": "Police & Gendarmerie",
+          "durationSeconds": 20,
+          "visualTheme": "egalite",
+          "heading": "Protéger la Population et Maintenir l'Ordre",
+          "subheading": "Police nationale en zone urbaine et Gendarmerie en zone rurale",
+          "icon": "fa-shield-halved",
+          "keyPoints": [
+            "Police nationale : fonctionnaires civils opérant dans les grandes villes et agglomérations",
+            "Gendarmerie nationale : militaires rattachés au ministère de l'Intérieur en zone rurale et périurbaine",
+            "Police municipale : agents de proximité placés sous l'autorité directe du maire",
+            "Toutes les forces de l'ordre sont soumises à un code de déontologie strict"
+          ],
+          "narrationText": "La sécurité publique est assurée conjointement par la Police nationale dans les grandes villes et la Gendarmerie nationale dans les zones rurales et périurbaines. Elles agissent sous l'autorité des lois pour garantir la tranquillité de tous.",
+          "takeaway": "La gendarmerie a un statut militaire, tandis que la police est civile.",
+          "audioSrc": "audio/video_lessons/m5-c1/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "Le Civisme et le Vivre-Ensemble",
+          "badge": "Tranquillité Publique",
+          "durationSeconds": 18,
+          "visualTheme": "fraternite",
+          "heading": "Le Respect d'Autrui dans l'Espace Public",
+          "subheading": "Tranquillité du voisinage, propreté et écocitoyenneté",
+          "icon": "fa-people-roof",
+          "keyPoints": [
+            "Respect de la tranquillité nocturne et interdiction du tapage injurieux",
+            "Respect de la propreté urbaine et tri sélectif des déchets ménagers",
+            "Courtoisie et respect mutuel dans les transports en commun et commerces",
+            "Signalement des maltraitances et solidarité avec les aînés et personnes fragiles"
+          ],
+          "narrationText": "Vivre en France implique un attachement quotidien au civisme : respect de la tranquillité des voisins, propreté des espaces partagés, protection de l'environnement et politesse dans les relations de voisinage.",
+          "takeaway": "Le civisme est la traduction concrète du respect républicain au quotidien.",
+          "audioSrc": "audio/video_lessons/m5-c1/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : Numéros & Urgences",
+          "badge": "Questions Pratiques",
+          "durationSeconds": 18,
+          "visualTheme": "interview",
+          "heading": "La Question Incontournable de l'Agent",
+          "subheading": "« Quel numéro appelez-vous en cas d'incendie ou d'urgence médicale ? »",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "15 pour le SAMU (malaise, accident cardiaque, détresse respiratoire)",
+            "18 pour les pompiers (incendie, accident de la route)",
+            "17 pour la police (cambriolage, agression, vol)",
+            "112 pour toute urgence depuis un portable partout dans l'Union européenne"
+          ],
+          "narrationText": "L'instructeur vous demandera à coup sûr quel numéro vous composez pour appeler les pompiers ou le SAMU. Donnez immédiatement le dix-huit pour les pompiers et le quinze pour le SAMU pour prouver vos réflexes citoyens.",
+          "takeaway": "Connaître le 15, le 17 et le 18 est indispensable pour réussir l'entretien.",
+          "audioSrc": "audio/video_lessons/m5-c1/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Testez vos réflexes d'urgence",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "Quel numéro d'urgence devez-vous composer pour joindre le SAMU en cas d'urgence médicale vitale ?",
+            "options": [
+              "Le 15",
+              "Le 17",
+              "Le 18"
+            ],
+            "correctIndex": 0,
+            "explanation": "Le 15 est le numéro d'urgence médical national qui permet de joindre directement le Service d'Aide Médicale Urgente (SAMU)."
+          },
+          "narrationText": "Testez vos réflexes : quel numéro devez-vous composer pour joindre le SAMU en cas d'urgence médicale ? Choisissez la bonne réponse.",
+          "takeaway": "Bravo ! Vos réflexes de sécurité sont au point.",
+          "audioSrc": "audio/video_lessons/m5-c1/scene_6.mp3"
+        }
+      ]
+    },
+    "m5-c2": {
+      "chapterId": "m5-c2",
+      "moduleId": "module-5",
+      "title": "Travailler en France et Droits des Salariés",
+      "subtitle": "Contrat de travail, CDI/CDD, SMIC, temps de travail (35h) et formation",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "Le Droit du Travail en France",
+          "badge": "Code du Travail",
+          "durationSeconds": 18,
+          "visualTheme": "tricolore",
+          "heading": "Le Travail : Valeur d'Émancipation et d'Intégration",
+          "subheading": "Encadré par le Code du travail et les conventions collectives",
+          "icon": "fa-briefcase",
+          "keyPoints": [
+            "Le travail permet l'indépendance financière et l'insertion sociale",
+            "Le Code du travail protège la santé et les droits de chaque salarié",
+            "Interdiction stricte de toute discrimination à l'embauche (origine, sexe, âge, handicap)",
+            "Obligation d'un contrat de travail écrit ou d'une déclaration préalable"
+          ],
+          "narrationText": "Bienvenue dans cette leçon consacrée au travail. En France, le travail est un droit et un facteur majeur d'intégration républicaine. Les relations entre employeurs et employés sont rigoureusement encadrées par le Code du travail.",
+          "takeaway": "L'intégration professionnelle par le travail est un critère d'assimilation essentiel.",
+          "audioSrc": "audio/video_lessons/m5-c2/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "Les Types de Contrats : CDI & CDD",
+          "badge": "Contrats de Travail",
+          "durationSeconds": 20,
+          "visualTheme": "liberte",
+          "heading": "CDI, CDD et Période d'Essai",
+          "subheading": "Le contrat à durée indéterminée comme norme générale",
+          "icon": "fa-file-signature",
+          "keyPoints": [
+            "CDI (Contrat à Durée Indéterminée) : la forme normale et générale de l'emploi",
+            "CDD (Contrat à Durée Déterminée) : réservé à des missions temporaires et précises",
+            "Période d'essai : permet d'évaluer les compétences du salarié",
+            "Protection contre le licenciement abusif : motif réel et sérieux obligatoire"
+          ],
+          "narrationText": "La loi française privilégie le Contrat à Durée Indéterminée, ou CDI, garantissant la stabilité de l'emploi. Le CDD ne peut être conclu que pour des motifs temporaires légaux comme le remplacement d'un salarié ou un surcroît d'activité.",
+          "takeaway": "Le CDI est la forme normale d'embauche en France.",
+          "audioSrc": "audio/video_lessons/m5-c2/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "Le SMIC et la Durée Légale du Travail",
+          "badge": "Rémunération & 35 Heures",
+          "durationSeconds": 20,
+          "visualTheme": "egalite",
+          "heading": "Le SMIC et les 35 Heures",
+          "subheading": "Salaire minimum interprofessionnel de croissance et repos obligatoire",
+          "icon": "fa-coins",
+          "keyPoints": [
+            "SMIC : salaire horaire minimal en dessous duquel aucun salarié ne peut être payé",
+            "Revalorisé automatiquement chaque année en fonction de l'inflation",
+            "Durée légale du travail fixée à 35 heures par semaine (au-delà : heures supplémentaires majorées)",
+            "Droit à 5 semaines de congés payés par an pour tout salarié à temps plein"
+          ],
+          "narrationText": "Tout travailleur en France bénéficie du Salaire Minimum de Croissance, ou SMIC, qui garantit un seuil de rémunération décent. La durée légale du travail est de trente-cinq heures hebdomadaires, avec cinq semaines de congés payés annuels.",
+          "takeaway": "Les 5 semaines de congés payés et les 35 heures sont des acquis sociaux emblématiques.",
+          "audioSrc": "audio/video_lessons/m5-c2/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "La Liberté Syndicale et le Dialogue Social",
+          "badge": "Droit Syndical & Grève",
+          "durationSeconds": 20,
+          "visualTheme": "fraternite",
+          "heading": "Représentation du Personnel et Dialogue Social",
+          "subheading": "Comité Social et Économique (CSE) et syndicats",
+          "icon": "fa-users-gear",
+          "keyPoints": [
+            "Liberté syndicale reconnue depuis la loi Waldeck-Rousseau de 1884",
+            "Droit de grève garanti par le préambule de la Constitution de 1946",
+            "Comité Social et Économique (CSE) obligatoire dès 11 salariés",
+            "Formation professionnelle continue accessible tout au long de la carrière via le CPF"
+          ],
+          "narrationText": "Chaque travailleur a le droit d'adhérer au syndicat de son choix et d'exercer le droit de grève dans le respect de la loi. Dans les entreprises, les représentants élus du personnel veillent aux conditions de travail et à la sécurité des salariés.",
+          "takeaway": "La liberté syndicale a été reconnue en France en 1884.",
+          "audioSrc": "audio/video_lessons/m5-c2/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : Situation Professionnelle",
+          "badge": "Parcours Personnel",
+          "durationSeconds": 18,
+          "visualTheme": "interview",
+          "heading": "Questions sur Votre Emploi",
+          "subheading": "« Que faites-vous en France ? Quel est votre parcours professionnel ? »",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "Décrivez votre métier avec précision et valorisez vos compétences",
+            "Expliquez en quoi votre activité est utile à la société et à vos collègues",
+            "Montrez votre autonomie financière et votre stabilité résidentielle",
+            "Évoquez vos perspectives d'évolution ou vos projets professionnels futurs"
+          ],
+          "narrationText": "L'instructeur vous demandera de décrire votre travail actuel. Soyez précis, fier de votre parcours et montrez que votre activité professionnelle vous permet de subvenir à vos besoins et de contribuer activement à l'économie française.",
+          "takeaway": "Montrer que vous êtes inséré et autonome financièrement est décisif.",
+          "audioSrc": "audio/video_lessons/m5-c2/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Testez vos repères sur le monde du travail",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "Combien de semaines de congés payés par an un salarié à temps plein acquiert-il en France ?",
+            "options": [
+              "3 semaines",
+              "4 semaines",
+              "5 semaines"
+            ],
+            "correctIndex": 2,
+            "explanation": "En France, tout salarié bénéficie d'au moins 5 semaines de congés payés par an (soit 30 jours ouvrables ou 25 jours ouvrés)."
+          },
+          "narrationText": "Testez vos connaissances : combien de semaines de congés payés un salarié à temps plein a-t-il droit en France chaque année ? Cliquez sur la bonne réponse.",
+          "takeaway": "Bravo ! Vous connaissez les droits fondamentaux des salariés en France.",
+          "audioSrc": "audio/video_lessons/m5-c2/scene_6.mp3"
+        }
+      ]
+    },
+    "m5-c3": {
+      "chapterId": "m5-c3",
+      "moduleId": "module-5",
+      "title": "La Famille, l'Éducation et la Protection de l'Enfance",
+      "subtitle": "École obligatoire de 3 à 16 ans, autorité parentale partagée et laïcité scolaire",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "L'École de la République",
+          "badge": "Les Lois Jules Ferry",
+          "durationSeconds": 20,
+          "visualTheme": "tricolore",
+          "heading": "L'École Publique : Gratuite, Laïque et Obligatoire",
+          "subheading": "Les lois historiques de Jules Ferry (1881-1882)",
+          "icon": "fa-graduation-cap",
+          "keyPoints": [
+            "Lois de 1881 et 1882 : école primaire publique gratuite et laïque pour tous",
+            "Instruction obligatoire de 3 à 16 ans pour tous les enfants résidant en France",
+            "L'école transmet les savoirs fondamentaux et les valeurs de la République",
+            "L'égalité des chances : l'ascenseur républicain fondé sur le mérite"
+          ],
+          "narrationText": "Bienvenue dans cette leçon consacrée à la famille et à l'éducation. L'école républicaine, fondée par Jules Ferry à la fin du dix-neuvième siècle, est gratuite, laïque et obligatoire pour tous les enfants de trois à seize ans.",
+          "takeaway": "L'instruction est obligatoire dès l'âge de 3 ans.",
+          "audioSrc": "audio/video_lessons/m5-c3/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "La Laïcité à l'École",
+          "badge": "Loi du 15 mars 2004",
+          "durationSeconds": 20,
+          "visualTheme": "liberte",
+          "heading": "La Laïcité dans les Écoles Publiques",
+          "subheading": "Protéger les élèves de toute pression et préserver la neutralité",
+          "icon": "fa-school",
+          "keyPoints": [
+            "Loi du 15 mars 2004 : interdiction des signes religieux ostensibles dans les écoles, collèges et lycées publics",
+            "Charte de la laïcité à l'école affichée dans tous les établissements scolaires",
+            "Respect du programme national : assiduité obligatoire à tous les cours (dont sport et sciences)",
+            "L'école est un espace d'émancipation, de tolérance et d'esprit critique"
+          ],
+          "narrationText": "À l'école publique, la loi du quinze mars deux mille quatre interdit le port de signes ou tenues par lesquels les élèves manifestent ostensiblement une appartenance religieuse. Cette règle garantit la neutralité de l'enseignement et protège les enfants de toute pression.",
+          "takeaway": "La loi du 15 mars 2004 s'applique aux écoles, collèges et lycées publics.",
+          "audioSrc": "audio/video_lessons/m5-c3/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "L'Autorité Parentale Conjointe",
+          "badge": "Droit de la Famille",
+          "durationSeconds": 20,
+          "visualTheme": "egalite",
+          "heading": "L'Égalité des Parents dans l'Éducation",
+          "subheading": "Autorité parentale conjointe et protection de l'intérêt supérieur de l'enfant",
+          "icon": "fa-children",
+          "keyPoints": [
+            "Le père et la mère ont exactement les mêmes droits et les mêmes devoirs envers leurs enfants",
+            "Obligation d'éducation, de scolarisation, d'entretien et de surveillance",
+            "Les décisions importantes (santé, scolarité, religion) sont prises d'un commun accord",
+            "En cas de séparation, l'autorité parentale reste conjointe pour le bien de l'enfant"
+          ],
+          "narrationText": "En droit français, l'autorité parentale appartient conjointement au père et à la mère jusqu'à la majorité de l'enfant. Les parents ont le devoir partagé de nourrir, protéger, surveiller et instruire leurs enfants.",
+          "takeaway": "L'autorité parentale est strictement conjointe et égale entre père et mère.",
+          "audioSrc": "audio/video_lessons/m5-c3/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "La Protection de l'Enfance & Le 119",
+          "badge": "Protection des Mineurs",
+          "durationSeconds": 18,
+          "visualTheme": "fraternite",
+          "heading": "Protéger les Enfants contre les Violences",
+          "subheading": "Le numéro d'urgence 119 (Enfance en Danger)",
+          "icon": "fa-hands-holding-child",
+          "keyPoints": [
+            "Interdiction formelle des violences physiques, des châtiments corporels et des humiliations",
+            "119 : numéro national gratuit d'appel d'urgence pour l'Enfance en Danger",
+            "Aide Sociale à l'Enfance (ASE) gérée par les conseils départementaux",
+            "Juge des enfants : magistrat spécialisé chargé de protéger les mineurs en danger"
+          ],
+          "narrationText": "La République protège rigoureusement chaque enfant contre toute forme de maltraitance, de négligence ou de violence physique. Le cent dix-neuf est le numéro d'urgence gratuit et anonyme dédié à l'enfance en danger.",
+          "takeaway": "Le 119 est le numéro d'urgence dédié à l'Enfance en Danger.",
+          "audioSrc": "audio/video_lessons/m5-c3/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Entretien : Éducation des Enfants",
+          "badge": "Questions Éducatives",
+          "durationSeconds": 18,
+          "visualTheme": "interview",
+          "heading": "Question Type de l'Instructeur",
+          "subheading": "« Quel âge a l'école obligatoire ? Comment élevez-vous vos enfants ? »",
+          "icon": "fa-user-tie",
+          "keyPoints": [
+            "Âges de l'école obligatoire : de 3 ans à 16 ans",
+            "Précisez que vos enfants sont assidus à tous les cours scolaires",
+            "Affirmez votre volonté de leur transmettre la langue française et l'esprit républicain",
+            "Mentionnez la participation aux réunions parents-professeurs et aux devoirs"
+          ],
+          "narrationText": "L'agent vous demandera à quel âge commence l'école obligatoire et comment vous suivez la scolarité de vos enfants. Répondez que l'instruction commence dès trois ans et montrez votre investissement dans leur réussite scolaire.",
+          "takeaway": "Retenez l'âge de 3 ans fixé depuis la rentrée 2019.",
+          "audioSrc": "audio/video_lessons/m5-c3/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Testez vos repères sur l'instruction obligatoire",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "En France, à partir de quel âge l'instruction est-elle obligatoire pour tous les enfants ?",
+            "options": [
+              "Dès l'âge de 3 ans",
+              "Dès l'âge de 6 ans",
+              "Dès l'âge de 7 ans"
+            ],
+            "correctIndex": 0,
+            "explanation": "Depuis la loi pour une école de la confiance entrée en vigueur à la rentrée 2019, l'instruction est obligatoire dès l'âge de 3 ans (école maternelle)."
+          },
+          "narrationText": "Vérifions vos acquis : à partir de quel âge l'instruction est-elle obligatoire pour les enfants en France ? Cliquez sur la bonne réponse.",
+          "takeaway": "Bravo ! L'instruction obligatoire dès 3 ans est un repère essentiel.",
+          "audioSrc": "audio/video_lessons/m5-c3/scene_6.mp3"
+        }
+      ]
+    },
+    "m6-c1": {
+      "chapterId": "m6-c1",
+      "moduleId": "module-6",
+      "title": "La Réforme 2026 : Examen Civique et Niveau B2",
+      "subtitle": "Nouveau test civique standardisé, exigence linguistique B2 et déroulement de l'entretien",
+      "totalScenes": 6,
+      "estimatedDuration": "2 min 10",
+      "scenes": [
+        {
+          "id": "scene-1",
+          "number": 1,
+          "title": "La Réforme Historique de la Naturalisation 2026",
+          "badge": "Nouveautés Réglementaires 2026",
+          "durationSeconds": 20,
+          "visualTheme": "tricolore",
+          "heading": "Les 2 Changements Majeurs de 2026",
+          "subheading": "Examen civique standardisé et exigence de français au niveau B2",
+          "icon": "fa-certificate",
+          "keyPoints": [
+            "1. Examen civique obligatoire : QCM standardisé de 40 questions sur ordinateur",
+            "Seuil de réussite fixé à 80 % (32 bonnes réponses sur 40 exigées)",
+            "2. Niveau de langue française relevé au niveau B2 (au lieu de B1 auparavant)",
+            "L'entretien individuel en préfecture valide l'assimilation globale"
+          ],
+          "narrationText": "Bienvenue dans cette capsule cruciale consacrée à la Réforme deux mille vingt-six de la naturalisation. Deux exigences majeures s'appliquent désormais : la réussite à un examen civique officiel de quarante questions et la maîtrise du français au niveau B2.",
+          "takeaway": "L'examen civique 2026 exige au minimum 32 bonnes réponses sur 40 (80 %).",
+          "audioSrc": "audio/video_lessons/m6-c1/scene_1.mp3"
+        },
+        {
+          "id": "scene-2",
+          "number": 2,
+          "title": "L'Examen Civique Standardisé (QCM)",
+          "badge": "Format de l'Examen",
+          "durationSeconds": 22,
+          "visualTheme": "liberte",
+          "heading": "Modalités de l'Examen Civique Officiel",
+          "subheading": "40 questions aléatoires en 45 minutes chrono",
+          "icon": "fa-desktop",
+          "keyPoints": [
+            "Répartition équilibrée : Principes républicains, Institutions, Histoire, Géographie et Société",
+            "Passé dans un centre d'examen agréé ou en préfecture sur tablette sécurisée",
+            "Attestation de réussite valable 2 ans pour la complétude du dossier",
+            "Notre simulateur d'examen 2026 vous entraîne exactement dans ces conditions"
+          ],
+          "narrationText": "L'examen civique comporte quarante questions à choix multiples tirées au sort, à compléter en quarante-cinq minutes. Il évalue votre compréhension des valeurs républicaines, des institutions, de l'histoire et de la société française.",
+          "takeaway": "Entraînez-vous régulièrement sur notre simulateur d'examen blanc pour atteindre 80 %.",
+          "audioSrc": "audio/video_lessons/m6-c1/scene_2.mp3"
+        },
+        {
+          "id": "scene-3",
+          "number": 3,
+          "title": "Le Niveau B2 en Langue Française",
+          "badge": "Exigence B2",
+          "durationSeconds": 20,
+          "visualTheme": "egalite",
+          "heading": "Comprendre et S'Exprimer avec Aisance (B2)",
+          "subheading": "Compréhension orale, écrite et expression spontanée",
+          "icon": "fa-comments",
+          "keyPoints": [
+            "Niveau B2 : utilisateur indépendant capable de participer activement à une discussion",
+            "Comprendre l'essentiel d'émissions de radio, d'articles de presse et de discours civiques",
+            "Justification par diplôme français ou attestation officielle (TCF, TEF, DELF B2)",
+            "L'agent instructeur évalue votre spontanéité et la richesse de votre vocabulaire"
+          ],
+          "narrationText": "Le passage au niveau B2 exige de pouvoir exprimer son opinion avec clarté, comprendre l'actualité et échanger spontanément en français. Vous devez fournir une attestation linguistique reconnue ou un diplôme d'études supérieures françaises.",
+          "takeaway": "Le niveau B2 remplace définitivement l'ancien niveau B1 pour la naturalisation.",
+          "audioSrc": "audio/video_lessons/m6-c1/scene_3.mp3"
+        },
+        {
+          "id": "scene-4",
+          "number": 4,
+          "title": "Le Déroulement de l'Entretien en Préfecture",
+          "badge": "L'Entretien Individuel",
+          "durationSeconds": 22,
+          "visualTheme": "fraternite",
+          "heading": "L'Entretien d'Assimilation",
+          "subheading": "30 à 45 minutes d'échange face à un agent de l'État",
+          "icon": "fa-user-check",
+          "keyPoints": [
+            "Vérification de la loyauté, de l'adhésion aux valeurs et des motivations",
+            "Questions sur votre parcours personnel, professionnel, associatif et familial",
+            "Questions précises de culture générale et d'actualité française",
+            "Signature finale de la Charte des droits et devoirs du citoyen français"
+          ],
+          "narrationText": "L'entretien d'assimilation en préfecture dure entre trente et quarante-cinq minutes. L'agent évalue votre loyauté envers la République, vos motivations personnelles à devenir français et votre adhésion sincère aux principes de liberté, d'égalité et de laïcité.",
+          "takeaway": "La motivation personnelle et l'adhésion aux valeurs sont au cœur de l'entretien.",
+          "audioSrc": "audio/video_lessons/m6-c1/scene_4.mp3"
+        },
+        {
+          "id": "scene-5",
+          "number": 5,
+          "title": "Conseils Clés pour le Jour de l'Entretien",
+          "badge": "Conseils Stratégiques",
+          "durationSeconds": 20,
+          "visualTheme": "interview",
+          "heading": "Les 4 Règles d'Or pour Réussir",
+          "subheading": "Ponctualité, tenue correcte, franchise et sérénité",
+          "icon": "fa-star",
+          "keyPoints": [
+            "Arrivez 15 minutes à l'avance avec votre dossier original et vos pièces d'identité",
+            "Adoptez une tenue soignée et professionnelle témoignant de votre respect pour l'institution",
+            "Répondez avec franchise et bienveillance, sans arrogance ni précipitation",
+            "Si vous hésitez sur une question, restez calme et expliquez votre raisonnement"
+          ],
+          "narrationText": "Pour le jour J, préparez soigneusement vos originaux et arrivez en avance. Restez souriant, posé et confiant. Montrez votre fierté de rejoindre la communauté nationale et votre engagement à faire vivre les valeurs de la République.",
+          "takeaway": "La sérénité et la clarté d'expression font la différence auprès de l'agent.",
+          "audioSrc": "audio/video_lessons/m6-c1/scene_5.mp3"
+        },
+        {
+          "id": "scene-6",
+          "number": 6,
+          "title": "Checkpoint : Mini-Quiz Vidéo",
+          "badge": "Auto-Évaluation",
+          "durationSeconds": 16,
+          "visualTheme": "quiz",
+          "heading": "Validez vos Connaissances",
+          "subheading": "Testez vos repères sur la Réforme 2026",
+          "icon": "fa-circle-check",
+          "quiz": {
+            "question": "Quel est le seuil de réussite exigé à l'examen civique officiel de 40 questions introduit par la Réforme 2026 ?",
+            "options": [
+              "50 % (20 bonnes réponses sur 40)",
+              "65 % (26 bonnes réponses sur 40)",
+              "80 % (32 bonnes réponses sur 40)"
+            ],
+            "correctIndex": 2,
+            "explanation": "L'examen civique officiel standardisé de 40 questions requiert un score minimal de 80 % de bonnes réponses (soit 32/40) pour être validé."
+          },
+          "narrationText": "Testez votre connaissance de la Réforme deux mille vingt-six : quel est le score minimal requis à l'examen civique ? Choisissez la bonne réponse pour valider cette ultime leçon.",
+          "takeaway": "Félicitations ! Vous avez validé l'ensemble des capsules e-learning du Livret du Citoyen 2026.",
+          "audioSrc": "audio/video_lessons/m6-c1/scene_6.mp3"
+        }
+      ]
     }
   }
 }

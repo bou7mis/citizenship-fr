@@ -27,7 +27,8 @@
             "Repère commun indispensable du vivre-ensemble"
           ],
           "narrationText": "Bienvenue dans ce cours vidéo officiel de préparation à la naturalisation. La devise de la France est « Liberté, Égalité, Fraternité ». Gravée au fronton des mairies et des préfectures, elle consacre les trois valeurs fondatrices et indissociables de notre République.",
-          "takeaway": "La devise est la première question fréquemment posée le jour de l'entretien."
+          "takeaway": "La devise est la première question fréquemment posée le jour de l'entretien.",
+          "audioSrc": "audio/video_lessons/m1-c1/scene_1.mp3"
         },
         {
           "id": "scene-2",
@@ -46,7 +47,8 @@
             "Proclamée par la Déclaration des Droits de l'Homme de 1789"
           ],
           "narrationText": "Premier pilier : la Liberté. L'article 4 de la Déclaration des Droits de l'Homme de 1789 dispose que la liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui. Elle garantit à chacun la liberté d'opinion, de religion et d'expression, encadrée par la loi pour protéger les droits de tous.",
-          "takeaway": "Mémorisez la citation de l'article 4 de la DDHC de 1789."
+          "takeaway": "Mémorisez la citation de l'article 4 de la DDHC de 1789.",
+          "audioSrc": "audio/video_lessons/m1-c1/scene_2.mp3"
         },
         {
           "id": "scene-3",
@@ -65,7 +67,8 @@
             "Lutte pénale contre les discriminations, le racisme et le sexisme"
           ],
           "narrationText": "Deuxième pilier : l'Égalité. En France, tous les citoyens sont égaux devant la loi, sans distinction d'origine, de religion ou de sexe. L'égalité entre les femmes et les hommes est absolue et garantie par la Constitution depuis 1946. Les discriminations sont sévèrement réprimées par la justice.",
-          "takeaway": "L'égalité femmes-hommes est un point non négociable lors de l'entretien."
+          "takeaway": "L'égalité femmes-hommes est un point non négociable lors de l'entretien.",
+          "audioSrc": "audio/video_lessons/m1-c1/scene_3.mp3"
         },
         {
           "id": "scene-4",
@@ -84,7 +87,8 @@
             "Force de l'engagement associatif et bénévole citoyen"
           ],
           "narrationText": "Troisième pilier : la Fraternité. Elle exprime la solidarité qui unit les membres de la communauté nationale. Elle se traduit concrètement par notre système de Sécurité sociale fondé en 1945, la redistribution par l'impôt et la vitalité du tissu associatif.",
-          "takeaway": "Sachez donner un exemple d'entraide citoyenne qui vous tient à cœur."
+          "takeaway": "Sachez donner un exemple d'entraide citoyenne qui vous tient à cœur.",
+          "audioSrc": "audio/video_lessons/m1-c1/scene_4.mp3"
         },
         {
           "id": "scene-5",
@@ -103,7 +107,8 @@
             "Montrez votre volonté de transmettre ces principes à vos enfants"
           ],
           "narrationText": "Attention, question classique lors de l'entretien : l'agent instructeur vous demandera quelle valeur de la devise vous touche le plus. Ne vous contentez pas d'une réponse scolaire : illustrez votre attachement avec un exemple personnel de votre quotidien en France.",
-          "takeaway": "Une réponse incarnée et sincère fait toute la différence !"
+          "takeaway": "Une réponse incarnée et sincère fait toute la différence !",
+          "audioSrc": "audio/video_lessons/m1-c1/scene_5.mp3"
         },
         {
           "id": "scene-6",
@@ -126,7 +131,8 @@
             "explanation": "L'article 4 de la Déclaration des Droits de l'Homme et du Citoyen de 1789 précise : « La liberté consiste à pouvoir faire tout ce qui ne nuit pas à autrui »."
           },
           "narrationText": "Vérifions maintenant vos connaissances avec ce mini-test de fin de vidéo. Selon la Déclaration des Droits de l'Homme de 1789, en quoi consiste la liberté ? Cliquez sur la bonne réponse pour valider votre leçon.",
-          "takeaway": "Bravo pour avoir complété cette première capsule e-learning !"
+          "takeaway": "Bravo pour avoir complété cette première capsule e-learning !",
+          "audioSrc": "audio/video_lessons/m1-c1/scene_6.mp3"
         }
       ]
     }

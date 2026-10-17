@@ -20,6 +20,7 @@ const VIDEO_STATE = {
   elapsedSeconds: 0,
   totalDurationSeconds: 110,
   timerInterval: null,
+  currentAudio: null,
   currentUtterance: null
 };
 
@@ -73,6 +74,7 @@ async function openVideoLesson(chapterId = "m1-c1") {
 // Close Video Player Modal
 function closeVideoLesson() {
   pauseVideo();
+  stopAudioPlayback();
   const modal = document.getElementById('video-player-modal');
   if (modal) {
     modal.classList.remove('active');
@@ -94,7 +96,10 @@ function renderVideoPlayerUI() {
     <!-- Video Stage Header -->
     <div class="video-stage-header">
       <div class="video-title-wrap">
-        <span class="video-badge"><i class="fa-solid fa-play"></i> Capsule Vidéo E-Learning</span>
+        <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+          <span class="video-badge"><i class="fa-solid fa-play"></i> Capsule Vidéo E-Learning</span>
+          <span class="video-badge" style="background:rgba(16,185,129,0.15); color:#10B981; border-color:rgba(16,185,129,0.3);"><i class="fa-solid fa-wand-magic-sparkles"></i> Voix IA Studio HD</span>
+        </div>
         <h3 class="video-lesson-title">${lesson.title}</h3>
       </div>
       <button class="video-close-btn" onclick="closeVideoLesson()" title="Fermer la vidéo" aria-label="Fermer">
@@ -270,31 +275,67 @@ function loadScene(index) {
 
   updateScrubberUI();
 
-  // Speak Narration if playing
+  // Speak Narration using Neural AI Audio or fallback
   if (VIDEO_STATE.isPlaying) {
-    speakSceneNarration(scene.narrationText);
+    playSceneAudio(scene);
   }
 }
 
-// Speak Narration using Web Speech API
-function speakSceneNarration(text) {
+// Play Scene Audio using Studio Neural AI MP3
+function playSceneAudio(scene) {
+  stopAudioPlayback();
+  if (VIDEO_STATE.isMuted || !scene) return;
+
+  if (scene.audioSrc) {
+    const audio = new Audio(scene.audioSrc);
+    audio.playbackRate = VIDEO_STATE.playbackSpeed;
+    audio.muted = VIDEO_STATE.isMuted;
+    VIDEO_STATE.currentAudio = audio;
+
+    audio.onended = () => {
+      // Auto-advance to next scene after 600ms if playing
+      if (VIDEO_STATE.isPlaying && VIDEO_STATE.currentSceneIndex < VIDEO_STATE.lessonData.scenes.length - 1) {
+        setTimeout(() => {
+          if (VIDEO_STATE.isPlaying) nextScene();
+        }, 600);
+      }
+    };
+
+    audio.play().catch(err => {
+      console.warn("AI Audio autoplay issue, using fallback:", err);
+      speakFallbackNarration(scene.narrationText);
+    });
+  } else {
+    speakFallbackNarration(scene.narrationText);
+  }
+}
+
+// Stop current audio playback
+function stopAudioPlayback() {
+  if (VIDEO_STATE.currentAudio) {
+    VIDEO_STATE.currentAudio.pause();
+    VIDEO_STATE.currentAudio.currentTime = 0;
+    VIDEO_STATE.currentAudio = null;
+  }
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+  }
+}
+
+// Fallback Speech Synthesis if audio file unavailable
+function speakFallbackNarration(text) {
   if (!('speechSynthesis' in window) || VIDEO_STATE.isMuted) return;
-
   window.speechSynthesis.cancel();
-
   VIDEO_STATE.currentUtterance = new SpeechSynthesisUtterance(text);
   VIDEO_STATE.currentUtterance.lang = 'fr-FR';
   VIDEO_STATE.currentUtterance.rate = VIDEO_STATE.playbackSpeed * 0.95;
-
   VIDEO_STATE.currentUtterance.onend = () => {
-    // When scene narration ends, auto-advance to next scene after 1s
     if (VIDEO_STATE.isPlaying && VIDEO_STATE.currentSceneIndex < VIDEO_STATE.lessonData.scenes.length - 1) {
       setTimeout(() => {
         if (VIDEO_STATE.isPlaying) nextScene();
-      }, 1000);
+      }, 800);
     }
   };
-
   window.speechSynthesis.speak(VIDEO_STATE.currentUtterance);
 }
 
@@ -316,7 +357,14 @@ function playVideo() {
   }, 1000 / VIDEO_STATE.playbackSpeed);
 
   const scene = VIDEO_STATE.lessonData.scenes[VIDEO_STATE.currentSceneIndex];
-  if (scene) speakSceneNarration(scene.narrationText);
+  if (scene) {
+    if (VIDEO_STATE.currentAudio && VIDEO_STATE.currentAudio.paused) {
+      VIDEO_STATE.currentAudio.playbackRate = VIDEO_STATE.playbackSpeed;
+      VIDEO_STATE.currentAudio.play().catch(() => playSceneAudio(scene));
+    } else {
+      playSceneAudio(scene);
+    }
+  }
 }
 
 function pauseVideo() {
@@ -325,6 +373,9 @@ function pauseVideo() {
   if (icon) icon.className = "fa-solid fa-play";
 
   clearInterval(VIDEO_STATE.timerInterval);
+  if (VIDEO_STATE.currentAudio) {
+    VIDEO_STATE.currentAudio.pause();
+  }
   if ('speechSynthesis' in window) {
     window.speechSynthesis.cancel();
   }
@@ -413,8 +464,19 @@ function cyclePlaybackSpeed() {
   const btn = document.getElementById('btn-video-speed');
   if (btn) btn.textContent = `${VIDEO_STATE.playbackSpeed}x`;
 
+  if (VIDEO_STATE.currentAudio) {
+    VIDEO_STATE.currentAudio.playbackRate = VIDEO_STATE.playbackSpeed;
+  }
+
   if (VIDEO_STATE.isPlaying) {
-    playVideo(); // Restart interval with new speed
+    clearInterval(VIDEO_STATE.timerInterval);
+    VIDEO_STATE.timerInterval = setInterval(() => {
+      VIDEO_STATE.elapsedSeconds++;
+      updateScrubberUI();
+      if (VIDEO_STATE.elapsedSeconds >= VIDEO_STATE.totalDurationSeconds) {
+        pauseVideo();
+      }
+    }, 1000 / VIDEO_STATE.playbackSpeed);
   }
 }
 
@@ -425,11 +487,14 @@ function toggleMute() {
   if (icon) {
     icon.className = `fa-solid ${VIDEO_STATE.isMuted ? 'fa-volume-xmark' : 'fa-volume-high'}`;
   }
-  if (VIDEO_STATE.isMuted && 'speechSynthesis' in window) {
-    window.speechSynthesis.cancel();
-  } else if (!VIDEO_STATE.isMuted && VIDEO_STATE.isPlaying) {
+  if (VIDEO_STATE.currentAudio) {
+    VIDEO_STATE.currentAudio.muted = VIDEO_STATE.isMuted;
+  }
+  if (VIDEO_STATE.isMuted) {
+    stopAudioPlayback();
+  } else if (VIDEO_STATE.isPlaying) {
     const scene = VIDEO_STATE.lessonData.scenes[VIDEO_STATE.currentSceneIndex];
-    if (scene) speakSceneNarration(scene.narrationText);
+    if (scene) playSceneAudio(scene);
   }
 }
 

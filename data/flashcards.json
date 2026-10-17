@@ -1,0 +1,432 @@
+{
+  "version": "2026.1",
+  "totalCards": 52,
+  "categories": [
+    "Culture & Sciences",
+    "Géographie",
+    "Histoire",
+    "Institutions",
+    "Principes Républicains",
+    "Réforme 2026",
+    "Société & Quotidien",
+    "Symboles & Valeurs"
+  ],
+  "cards": [
+    {
+      "id": "fc-1",
+      "category": "Symboles & Valeurs",
+      "tag": "Devise",
+      "front": "Quelle est la devise officielle de la République française ?",
+      "back": "« Liberté, Égalité, Fraternité ».\n\nInscrite à l'article 2 de la Constitution de 1958 et au fronton des mairies et bâtiments officiels.",
+      "tip": "Sachez expliquer ce que représente pour vous chacune de ces trois valeurs."
+    },
+    {
+      "id": "fc-2",
+      "category": "Symboles & Valeurs",
+      "tag": "Drapeau",
+      "front": "Quelles sont les couleurs du drapeau français et que signifient-elles ?",
+      "back": "Bleu, Blanc, Rouge.\n\nLe bleu et le rouge sont les couleurs de Paris ; le blanc était la couleur de la monarchie. Il est né sous la Révolution française (1789).",
+      "tip": "C'est l'emblème national unique défini par l'article 2 de la Constitution."
+    },
+    {
+      "id": "fc-3",
+      "category": "Symboles & Valeurs",
+      "tag": "Marianne",
+      "front": "Que représente Marianne et quel symbole porte-t-elle sur la tête ?",
+      "back": "Marianne incarne la République et la Liberté.\n\nElle est coiffée du bonnet phrygien, symbole des esclaves affranchis dans l'Antiquité romaine.",
+      "tip": "Son buste est présent dans chaque mairie de France."
+    },
+    {
+      "id": "fc-4",
+      "category": "Symboles & Valeurs",
+      "tag": "Hymne",
+      "front": "Quel est l'hymne national de la France, qui l'a écrit et quand ?",
+      "back": "La Marseillaise, écrite par Claude Joseph Rouget de Lisle à Strasbourg en 1792.",
+      "tip": "Elle s'appelait initialement 'Chant de guerre pour l'armée du Rhin'."
+    },
+    {
+      "id": "fc-5",
+      "category": "Symboles & Valeurs",
+      "tag": "Fête nationale",
+      "front": "Que célèbre la France chaque 14 juillet lors de la fête nationale ?",
+      "back": "1. La prise de la Bastille (14 juillet 1789).\n2. La Fête de la Fédération (14 juillet 1790) unissant la Nation.",
+      "tip": "Instituée fête nationale en 1880 sous la IIIe République."
+    },
+    {
+      "id": "fc-6",
+      "category": "Symboles & Valeurs",
+      "tag": "Coq",
+      "front": "Pourquoi le coq est-il un symbole de la France ?",
+      "back": "En latin, le mot 'gallus' signifie à la fois 'coq' et 'gaulois'.\n\nIl incarne la fierté, la vigilance et le courage.",
+      "tip": "Fréquemment arboré par les sportifs et sur les monuments aux morts."
+    },
+    {
+      "id": "fc-7",
+      "category": "Principes Républicains",
+      "tag": "Article 1er",
+      "front": "Quels sont les 4 principes de la République proclamés à l'article 1er de la Constitution ?",
+      "back": "La France est une République :\n1. Indivisible\n2. Laïque\n3. Démocratique\n4. Sociale",
+      "tip": "À savoir impérativement par cœur !"
+    },
+    {
+      "id": "fc-8",
+      "category": "Principes Républicains",
+      "tag": "Laïcité",
+      "front": "Que prévoit la loi du 9 décembre 1905 sur la séparation des Églises et de l'État ?",
+      "back": "« La République ne reconnaît, ne salarie ni ne subventionne aucun culte ».\n\nElle garantit le libre exercice des cultes et la neutralité religieuse de l'État.",
+      "tip": "La laïcité protège la liberté de croire ou de ne pas croire."
+    },
+    {
+      "id": "fc-9",
+      "category": "Principes Républicains",
+      "tag": "Agents publics",
+      "front": "Quelle est l'obligation des fonctionnaires et agents du service public concernant la religion ?",
+      "back": "Une obligation stricte de neutralité religieuse, philosophique et politique pendant leur service.",
+      "tip": "Interdiction absolue de porter des signes religieux ostensibles."
+    },
+    {
+      "id": "fc-10",
+      "category": "Principes Républicains",
+      "tag": "École",
+      "front": "Que dispose la loi du 15 mars 2004 dans les écoles publiques ?",
+      "back": "Elle interdit aux élèves le port de signes ou de tenues manifestant ostensiblement une appartenance religieuse dans les écoles, collèges et lycées publics.",
+      "tip": "L'école publique est un espace d'émancipation et d'esprit critique."
+    },
+    {
+      "id": "fc-11",
+      "category": "Principes Républicains",
+      "tag": "Blasphème",
+      "front": "Existe-t-il un délit de blasphème en France ?",
+      "back": "Non. Le blasphème n'est pas un délit en France : on peut critiquer, caricaturer ou débattre des religions.\n\nEn revanche, l'injure ou la haine contre les croyants est punie par la loi.",
+      "tip": "C'est l'essence même de la liberté d'expression."
+    },
+    {
+      "id": "fc-12",
+      "category": "Principes Républicains",
+      "tag": "Égalité",
+      "front": "Quelle est la règle concernant l'égalité entre les femmes et les hommes ?",
+      "back": "L'égalité absolue en droits, en devoirs, dans la famille, au travail, dans la société et en politique (garantie constitutionnelle depuis 1946).",
+      "tip": "Aucun prétexte culturel ou religieux ne peut justifier une inégalité."
+    },
+    {
+      "id": "fc-13",
+      "category": "Institutions",
+      "tag": "Séparation des pouvoirs",
+      "front": "Quels sont les trois pouvoirs et qui les exerce en France ?",
+      "back": "• Pouvoir exécutif : Président de la République et Gouvernement\n• Pouvoir législatif : Parlement (Assemblée nationale + Sénat)\n• Pouvoir judiciaire : Juges et tribunaux indépendants",
+      "tip": "Théorisé par Montesquieu en 1748."
+    },
+    {
+      "id": "fc-14",
+      "category": "Institutions",
+      "tag": "Président",
+      "front": "Pour combien de temps le Président de la République est-il élu et comment ?",
+      "back": "Pour 5 ans (quinquennat) au suffrage universel direct au scrutin majoritaire uninominal à 2 tours.\n\nLimité à deux mandats consécutifs.",
+      "tip": "Résidence : Le Palais de l'Élysée."
+    },
+    {
+      "id": "fc-15",
+      "category": "Institutions",
+      "tag": "Premier Ministre",
+      "front": "Qui nomme le Premier ministre et où réside-t-il ?",
+      "back": "Le Premier ministre est nommé par le Président de la République.\n\nIl réside à l'Hôtel de Matignon à Paris.",
+      "tip": "Il dirige l'action du Gouvernement et est responsable devant le Parlement."
+    },
+    {
+      "id": "fc-16",
+      "category": "Institutions",
+      "tag": "Assemblée Nationale",
+      "front": "Combien y a-t-il de députés à l'Assemblée nationale et où siègent-ils ?",
+      "back": "577 députés élus pour 5 ans au suffrage universel direct.\n\nIls siègent au Palais Bourbon à Paris.",
+      "tip": "L'Assemblée a le dernier mot sur le Sénat en cas de désaccord sur une loi."
+    },
+    {
+      "id": "fc-17",
+      "category": "Institutions",
+      "tag": "Sénat",
+      "front": "Combien y a-t-il de sénateurs et où siègent-ils ?",
+      "back": "348 sénateurs élus pour 6 ans au suffrage universel indirect par les grands électeurs.\n\nIls siègent au Palais du Luxembourg à Paris.",
+      "tip": "Le Président du Sénat assure l'intérim de la présidence de la République."
+    },
+    {
+      "id": "fc-18",
+      "category": "Institutions",
+      "tag": "Conseil constitutionnel",
+      "front": "Combien de membres composent le Conseil constitutionnel et quelle est leur mission ?",
+      "back": "9 membres nommés pour 9 ans (3 par le Président, 3 par le président de l'Assemblée, 3 par le président du Sénat).\n\nMission : vérifier la conformité des lois à la Constitution.",
+      "tip": "Les anciens présidents de la République en sont membres de droit."
+    },
+    {
+      "id": "fc-19",
+      "category": "Institutions",
+      "tag": "Territoire",
+      "front": "Combien y a-t-il de départements et de régions en France ?",
+      "back": "• 101 départements (96 en métropole + 5 en outre-mer)\n• 18 régions administratives (13 métropolitaines + 5 d'outre-mer)",
+      "tip": "Connaître le numéro et le chef-lieu de votre propre département."
+    },
+    {
+      "id": "fc-20",
+      "category": "Institutions",
+      "tag": "Outre-Mer",
+      "front": "Quels sont les 5 Départements et Régions d'Outre-Mer (DROM) ?",
+      "back": "1. Guadeloupe\n2. Martinique\n3. Guyane\n4. La Réunion\n5. Mayotte",
+      "tip": "Ils sont soumis aux mêmes lois qu'en métropole."
+    },
+    {
+      "id": "fc-21",
+      "category": "Institutions",
+      "tag": "Union Européenne",
+      "front": "Combien de pays compte l'UE et où siège le Parlement européen ?",
+      "back": "27 pays membres.\n\nLe Parlement européen siège à Strasbourg en France.",
+      "tip": "La monnaie unique Euro (€) est entrée en vigueur le 1er janvier 2002."
+    },
+    {
+      "id": "fc-22",
+      "category": "Histoire",
+      "tag": "Antiquité",
+      "front": "Qui était Vercingétorix et que s'est-il passé à Alésia en 52 av. J.-C. ?",
+      "back": "Vercingétorix était le chef gaulois ayant unifié les tribus contre Rome.\n\nEn 52 av. J.-C., il est vaincu à Alésia par Jules César, marquant le début de la Gaule romaine.",
+      "tip": "Premier grand héros de l'histoire sur le sol français."
+    },
+    {
+      "id": "fc-23",
+      "category": "Histoire",
+      "tag": "Moyen Âge",
+      "front": "Qui est Clovis et pourquoi son baptême en 496 est-il marquant ?",
+      "back": "Clovis est le premier roi des Francs à se convertir au christianisme à Reims vers 496.\n\nIl unifie la Gaule sous la dynastie mérovingienne.",
+      "tip": "Reims deviendra la ville du sacre de presque tous les rois de France."
+    },
+    {
+      "id": "fc-24",
+      "category": "Histoire",
+      "tag": "Moyen Âge",
+      "front": "En quelle année Charlemagne a-t-il été sacré empereur ?",
+      "back": "En l'an 800 à Rome par le pape Léon III.\n\nIl a développé l'administration et encouragé les écoles.",
+      "tip": "Couronné empereur d'Occident."
+    },
+    {
+      "id": "fc-25",
+      "category": "Histoire",
+      "tag": "Moyen Âge",
+      "front": "Qui était Jeanne d'Arc et quel exploit a-t-elle accompli en 1429 ?",
+      "back": "Jeanne d'Arc a délivré Orléans assiégée par les Anglais pendant la guerre de Cent Ans et a fait sacrer Charles VII à Reims.",
+      "tip": "Brûlée vive à Rouen en 1431, elle est une héroïne nationale."
+    },
+    {
+      "id": "fc-26",
+      "category": "Histoire",
+      "tag": "Renaissance",
+      "front": "Quelle est l'importance de l'ordonnance de Villers-Cotterêts signée par François Ier en 1539 ?",
+      "back": "Elle a imposé la langue française comme langue officielle unique pour tous les actes administratifs et juridiques à la place du latin.",
+      "tip": "Acte fondateur de la langue française dans l'État."
+    },
+    {
+      "id": "fc-27",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "Qui a signé l'Édit de Nantes en 1598 et que prévoyait-il ?",
+      "back": "Le roi Henri IV.\n\nIl accordait la liberté de culte aux protestants, mettant fin aux sanglantes guerres de religion.",
+      "tip": "Révoqué plus tard par Louis XIV en 1685."
+    },
+    {
+      "id": "fc-28",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "Quel roi a fait construire le château de Versailles et quel était son surnom ?",
+      "back": "Louis XIV, surnommé le « Roi-Soleil » (règne de 1643 à 1715).\n\nSymbole absolu de la monarchie de droit divin.",
+      "tip": "Plus long règne de l'histoire de France (72 ans)."
+    },
+    {
+      "id": "fc-29",
+      "category": "Histoire",
+      "tag": "Lumières",
+      "front": "Citez 3 philosophes majeurs du Siècle des Lumières (XVIIIe siècle).",
+      "back": "1. Voltaire (tolérance, liberté de pensée)\n2. Jean-Jacques Rousseau (contrat social, égalité)\n3. Montesquieu (séparation des pouvoirs)\n(ou Denis Diderot pour l'Encyclopédie).",
+      "tip": "Leurs idées ont inspiré la Révolution française."
+    },
+    {
+      "id": "fc-30",
+      "category": "Histoire",
+      "tag": "Révolution 1789",
+      "front": "Quelles sont les 3 dates clés de l'été 1789 ?",
+      "back": "• 14 juillet 1789 : Prise de la Bastille\n• 4 août 1789 : Abolition des privilèges féodaux\n• 26 août 1789 : Déclaration des Droits de l'Homme et du Citoyen (DDHC)",
+      "tip": "Marque la fin de l'Ancien Régime."
+    },
+    {
+      "id": "fc-31",
+      "category": "Histoire",
+      "tag": "Empire",
+      "front": "Quelles grandes créations de Napoléon Ier structurent encore la France aujourd'hui ?",
+      "back": "• Le Code civil (1804)\n• Les préfets et préfectures\n• Les lycées publics\n• La Légion d'honneur\n• La Banque de France et le franc germinal",
+      "tip": "Napoléon est sacré empereur à Notre-Dame le 2 décembre 1804."
+    },
+    {
+      "id": "fc-32",
+      "category": "Histoire",
+      "tag": "XIXe siècle",
+      "front": "En quelle année l'esclavage a-t-il été définitivement aboli en France et par qui ?",
+      "back": "En 1848 sous la IIe République, grâce au décret rédigé par Victor Schœlcher.",
+      "tip": "1848 instaure aussi le suffrage universel masculin."
+    },
+    {
+      "id": "fc-33",
+      "category": "Histoire",
+      "tag": "IIIe République",
+      "front": "Quelles lois scolaires majeures ont été votées par Jules Ferry en 1881-1882 ?",
+      "back": "L'école primaire publique est devenue :\n1. Gratuite\n2. Laïque\n3. Obligatoire pour tous les enfants.",
+      "tip": "Fondement de l'école républicaine."
+    },
+    {
+      "id": "fc-34",
+      "category": "Histoire",
+      "tag": "14-18",
+      "front": "Quelle grande bataille a marqué l'année 1916 et que célèbre-t-on le 11 novembre ?",
+      "back": "• La bataille de Verdun (1916)\n• Le 11 novembre commémore l'Armistice de 1918 mettant fin à la Première Guerre mondiale.",
+      "tip": "Jour férié national."
+    },
+    {
+      "id": "fc-35",
+      "category": "Histoire",
+      "tag": "39-45",
+      "front": "Que s'est-il passé le 18 juin 1940 et qui était Jean Moulin ?",
+      "back": "• 18 juin 1940 : Appel du général de Gaulle sur la BBC à Londres fondant la Résistance.\n• Jean Moulin : Préfet unificateur des réseaux de la Résistance (CNR), mort pour la France.",
+      "tip": "Les cendres de Jean Moulin reposent au Panthéon."
+    },
+    {
+      "id": "fc-36",
+      "category": "Histoire",
+      "tag": "Vote des femmes",
+      "front": "Quand les femmes ont-elles obtenu le droit de vote en France ?",
+      "back": "Par l'ordonnance du 21 avril 1944 signée par le général de Gaulle.\n\nPremier vote des femmes en avril 1945.",
+      "tip": "Question quasi-systématique en entretien !"
+    },
+    {
+      "id": "fc-37",
+      "category": "Histoire",
+      "tag": "Ve République",
+      "front": "En quelle année la Ve République a-t-elle été instaurée et qui était son premier président ?",
+      "back": "En 1958, avec la Constitution du 4 octobre 1958.\n\nPremier président : Le général Charles de Gaulle (1958-1969).",
+      "tip": "Régime constitutionnel toujours en vigueur."
+    },
+    {
+      "id": "fc-38",
+      "category": "Histoire",
+      "tag": "Présidents",
+      "front": "Nommez les 8 Présidents de la Ve République dans l'ordre chronologique.",
+      "back": "1. Charles de Gaulle\n2. Georges Pompidou\n3. Valéry Giscard d'Estaing\n4. François Mitterrand\n5. Jacques Chirac\n6. Nicolas Sarkozy\n7. François Hollande\n8. Emmanuel Macron",
+      "tip": "Connaître cette liste complète est un atout majeur !"
+    },
+    {
+      "id": "fc-39",
+      "category": "Histoire",
+      "tag": "Peine de mort",
+      "front": "En quelle année et sous qui la peine de mort a-t-elle été abolie en France ?",
+      "back": "En 1981, sous la présidence de François Mitterrand, plaidée par le garde des Sceaux Robert Badinter.",
+      "tip": "Inscrite à l'article 66-1 de la Constitution."
+    },
+    {
+      "id": "fc-40",
+      "category": "Géographie",
+      "tag": "Fleuves",
+      "front": "Citez les 5 grands fleuves français et indiquez le plus long.",
+      "back": "1. La Loire (le plus long : 1 006 km)\n2. La Seine (traverse Paris)\n3. Le Rhône (le plus puissant, vers la Méditerranée)\n4. La Garonne (vers l'Atlantique)\n5. Le Rhin (frontière avec l'Allemagne)",
+      "tip": "Question géographique très courante."
+    },
+    {
+      "id": "fc-41",
+      "category": "Géographie",
+      "tag": "Montagnes",
+      "front": "Quels sont les 5 principaux massifs montagneux de France métropolitaine ?",
+      "back": "1. Les Alpes (Mont Blanc, 4 807 m)\n2. Les Pyrénées (frontière Espagne)\n3. Le Massif central\n4. Le Jura (frontière Suisse)\n5. Les Vosges",
+      "tip": "Le Mont Blanc est le plus haut sommet d'Europe de l'Ouest."
+    },
+    {
+      "id": "fc-42",
+      "category": "Géographie",
+      "tag": "Frontières",
+      "front": "Quels sont les 8 pays frontaliers terrestres de la France métropolitaine ?",
+      "back": "Belgique, Luxembourg, Allemagne, Suisse, Italie, Monaco, Espagne, Andorre.\n\n(+ Brésil et Suriname via la Guyane).",
+      "tip": "La frontière terrestre la plus longue de France est avec le Brésil (730 km) !"
+    },
+    {
+      "id": "fc-43",
+      "category": "Culture & Sciences",
+      "tag": "Sciences",
+      "front": "Qui était Marie Curie et quels honneurs a-t-elle reçus ?",
+      "back": "Scientifique naturalisée française d'origine polonaise, pionnière de la radioactivité.\n\nSeule personne double lauréate du prix Nobel dans deux disciplines scientifiques (Physique et Chimie). Repose au Panthéon.",
+      "tip": "Exemple d'intégration et de rayonnement mondial."
+    },
+    {
+      "id": "fc-44",
+      "category": "Culture & Sciences",
+      "tag": "Pasteur",
+      "front": "Pour quelle découverte majeure Louis Pasteur est-il mondialement reconnu ?",
+      "back": "La mise au point du vaccin contre la rage en 1885 et le procédé de pasteurisation.",
+      "tip": "Fondateur de l'Institut Pasteur."
+    },
+    {
+      "id": "fc-45",
+      "category": "Culture & Sciences",
+      "tag": "Littérature",
+      "front": "Citez 3 grands écrivains français classiques et une œuvre pour chacun.",
+      "back": "• Victor Hugo ('Les Misérables')\n• Molière ('L'Avare', 'Le Bourgeois gentilhomme')\n• Albert Camus ('L'Étranger', Prix Nobel)\n(ou Émile Zola, Voltaire, La Fontaine).",
+      "tip": "Ayez toujours au moins un titre en mémoire."
+    },
+    {
+      "id": "fc-46",
+      "category": "Culture & Sciences",
+      "tag": "Patrimoine",
+      "front": "Citez 3 monuments français majeurs classés au patrimoine mondial de l'UNESCO.",
+      "back": "1. Le Mont-Saint-Michel\n2. Le Château de Versailles\n3. La Cathédrale Notre-Dame de Paris\n(ou la Tour Eiffel, les Châteaux de la Loire).",
+      "tip": "La gastronomie française est aussi inscrite au patrimoine de l'UNESCO."
+    },
+    {
+      "id": "fc-47",
+      "category": "Société & Quotidien",
+      "tag": "Numéros d'urgence",
+      "front": "Quels sont les 4 numéros d'urgence vitale à connaître par cœur ?",
+      "back": "• 15 : SAMU (urgence médicale)\n• 17 : Police / Gendarmerie\n• 18 : Sapeurs-pompiers\n• 112 : Numéro d'urgence européen",
+      "tip": "Gratuits 24h/24 depuis n'importe quel téléphone."
+    },
+    {
+      "id": "fc-48",
+      "category": "Société & Quotidien",
+      "tag": "Violences & Enfance",
+      "front": "Quels sont les numéros d'urgence pour les violences conjugales et l'enfance en danger ?",
+      "back": "• 3919 : Violences faites aux femmes (gratuit et anonyme)\n• 119 : Enfance en danger",
+      "tip": "Le 114 est le numéro d'urgence par SMS pour les sourds et malentendants."
+    },
+    {
+      "id": "fc-49",
+      "category": "Société & Quotidien",
+      "tag": "Droit du travail",
+      "front": "Quelles sont les durées légales du travail et des congés payés en France ?",
+      "back": "• 35 heures par semaine\n• 5 semaines de congés payés par an (2,5 jours par mois)",
+      "tip": "Le CDI est la forme normale du contrat de travail."
+    },
+    {
+      "id": "fc-50",
+      "category": "Société & Quotidien",
+      "tag": "École",
+      "front": "Quelles sont les règles de l'école républicaine en France ?",
+      "back": "• Obligatoire de 3 à 16 ans\n• Gratuite et laïque dans le secteur public\n• Mixte (filles et garçons suivent les mêmes cours)",
+      "tip": "La présence à tous les cours (dont sport et SVT) est obligatoire."
+    },
+    {
+      "id": "fc-51",
+      "category": "Société & Quotidien",
+      "tag": "Mariage",
+      "front": "Quel mariage a une valeur légale en France et qu'en est-il de la polygamie ?",
+      "back": "• Seul le mariage civil en mairie est légalement reconnu.\n• La polygamie est strictement interdite et punie par la loi.",
+      "tip": "Le mariage religieux avant le civil est une infraction pénale."
+    },
+    {
+      "id": "fc-52",
+      "category": "Réforme 2026",
+      "tag": "Nouveautés 2026",
+      "front": "Quels sont les deux grands changements de la réforme 2026 pour la naturalisation ?",
+      "back": "1. Exigence du niveau B2 oral et écrit du CECRL (au lieu de B1)\n2. Mise en place de l'Examen Civique officiel pour constituer son dossier avant l'entretien.",
+      "tip": "Énoncé dans l'Avant-propos de l'édition 2026 du Livret du Citoyen."
+    }
+  ]
+}

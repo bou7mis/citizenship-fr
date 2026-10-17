@@ -1,0 +1,1002 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Generator script to produce comprehensive Quizzes and Examen Civique 2026 dataset
+(data/quizzes.json) based on the official 'LIVRET DU CITOYEN 2026'.
+"""
+
+import json
+import os
+
+all_questions = [
+    # ------------------ PRINCIPES, SYMBOLES & VALEURS ------------------
+    {
+        "id": "q-symb-1",
+        "category": "symboles",
+        "question": "Quelle est la devise officielle de la République française ?",
+        "options": [
+            "Liberté, Égalité, Solidarité",
+            "Liberté, Égalité, Fraternité",
+            "Travail, Famille, Patrie",
+            "Unité, Démocratie, Progrès"
+        ],
+        "answerIndex": 1,
+        "explanation": "La devise de la République française est « Liberté, Égalité, Fraternité ». Elle est inscrite à l'article 2 de la Constitution de 1958 et au fronton des édifices publics.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-symb-2",
+        "category": "symboles",
+        "question": "Quelles sont les trois couleurs du drapeau français, de gauche à droite ?",
+        "options": [
+            "Rouge, Blanc, Bleu",
+            "Bleu, Blanc, Rouge",
+            "Bleu, Rouge, Blanc",
+            "Blanc, Rouge, Bleu"
+        ],
+        "answerIndex": 1,
+        "explanation": "Le drapeau tricolore est composé de trois bandes verticales d'égales dimensions : Bleu, Blanc, Rouge. Le bleu et le rouge sont les couleurs historiques de Paris, et le blanc était la couleur de la monarchie.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-symb-3",
+        "category": "symboles",
+        "question": "Que porte Marianne sur la tête et que symbolise ce couvre-chef ?",
+        "options": [
+            "Une couronne de lauriers, symbolisant la victoire militaire",
+            "Un béret républicain, symbolisant le peuple travailleur",
+            "Le bonnet phrygien, symbolisant la liberté et l'affranchissement des esclaves",
+            "Un casque de guerre, symbolisant la résistance à l'oppression"
+        ],
+        "answerIndex": 2,
+        "explanation": "Marianne est coiffée du bonnet phrygien, emblème de liberté porté sous l'Antiquité romaine par les esclaves affranchis, repris par les révolutionnaires de 1789.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-symb-4",
+        "category": "symboles",
+        "question": "Qui a composé l'hymne national français 'La Marseillaise' et en quelle année ?",
+        "options": [
+            "Victor Hugo en 1848",
+            "Claude Joseph Rouget de Lisle en 1792",
+            "Hector Berlioz en 1830",
+            "Napoléon Bonaparte en 1799"
+        ],
+        "answerIndex": 1,
+        "explanation": "La Marseillaise a été composée dans la nuit du 25 au 26 avril 1792 par Rouget de Lisle à Strasbourg, initialement sous le titre de 'Chant de guerre pour l'armée du Rhin'.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-symb-5",
+        "category": "symboles",
+        "question": "Quels sont les deux événements historiques commémorés le 14 juillet lors de la fête nationale ?",
+        "options": [
+            "La fin de la guerre de Cent Ans et la prise de la Bastille",
+            "La prise de la Bastille (1789) et la Fête de la Fédération (1790)",
+            "L'armistice de 1918 et la proclamation de la République de 1848",
+            "Le débarquement de Normandie (1944) et la victoire de 1945"
+        ],
+        "answerIndex": 1,
+        "explanation": "Instituée en 1880, la fête nationale commémore le 14 juillet 1789 (prise de la Bastille) et le 14 juillet 1790 (Fête de la Fédération, consacrant l'union de la Nation autour de la loi).",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-symb-6",
+        "category": "symboles",
+        "question": "Quel animal symbolise traditionnellement la France et ses origines gauloises ?",
+        "options": [
+            "L'aigle impérial",
+            "Le lion",
+            "Le coq",
+            "Le cheval"
+        ],
+        "answerIndex": 2,
+        "explanation": "Le coq est un symbole républicain ancien issu d'un jeu de mot latin : 'gallus' signifie à la fois 'coq' et 'gaulois'. Il symbolise la fierté et la vigilance.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-symb-7",
+        "category": "principes",
+        "question": "Quels sont les 4 principes de la République proclamés à l'article 1er de la Constitution de 1958 ?",
+        "options": [
+            "Indivisible, souveraine, juste et écologique",
+            "Indivisible, laïque, démocratique et sociale",
+            "Laïque, fédérale, égalitaire et libérale",
+            "Libre, égale, fraternelle et solidaire"
+        ],
+        "answerIndex": 1,
+        "explanation": "L'article 1er de la Constitution énonce : « La France est une République indivisible, laïque, démocratique et sociale ».",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-princ-8",
+        "category": "principes",
+        "question": "Que signifie le principe d'indivisibilité de la République ?",
+        "options": [
+            "Le territoire métropolitain ne peut avoir aucune frontière extérieure",
+            "La même loi et la même langue s'appliquent sur tout le territoire national, sans privilège de groupe ou d'ethnie",
+            "Le pouvoir ne peut être exercé que par un seul parti politique",
+            "Toutes les communes de France ont obligatoirement le même budget"
+        ],
+        "answerIndex": 1,
+        "explanation": "L'indivisibilité garantit l'unité du peuple français et l'application uniforme des lois républicaines sur tout le territoire national sans distinction d'origine ou de communauté.",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-princ-9",
+        "category": "laicite",
+        "question": "Quelle grande loi a instauré la séparation des Églises et de l'État en France ?",
+        "options": [
+            "La loi du 14 juillet 1789",
+            "La loi du 9 décembre 1905",
+            "La loi du 15 mars 2004",
+            "La Constitution du 4 octobre 1958"
+        ],
+        "answerIndex": 1,
+        "explanation": "La loi du 9 décembre 1905 dispose en son article 2 que « La République ne reconnaît, ne salarie ni ne subventionne aucun culte » tout en garantissant le libre exercice de la foi.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-princ-10",
+        "category": "laicite",
+        "question": "Un fonctionnaire ou agent du service public peut-il porter un signe religieux ostensible dans son travail ?",
+        "options": [
+            "Oui, s'il a obtenu l'accord préalable de son supérieur",
+            "Oui, si le signe est discret",
+            "Non, les agents publics ont une obligation stricte de neutralité religieuse et politique",
+            "Oui, uniquement le vendredi et le dimanche"
+        ],
+        "answerIndex": 2,
+        "explanation": "Les agents publics exerçant une mission de service public sont soumis à une obligation stricte de neutralité. Ils ne doivent manifester aucune appartenance religieuse ou opinion philosophique.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-princ-11",
+        "category": "laicite",
+        "question": "Que prévoit la loi du 15 mars 2004 concernant les élèves dans les écoles publiques ?",
+        "options": [
+            "L'interdiction des cours d'histoire des religions",
+            "L'interdiction du port de signes ou tenues manifestant ostensiblement une appartenance religieuse",
+            "L'obligation de porter un uniforme scolaire",
+            "L'autorisation des prières collectives dans les cours de récréation"
+        ],
+        "answerIndex": 1,
+        "explanation": "La loi du 15 mars 2004 préserve l'école publique comme lieu d'apprentissage et d'émancipation en interdisant le port de signes ou tenues religieux ostensibles pour les élèves des écoles, collèges et lycées publics.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-princ-12",
+        "category": "laicite",
+        "question": "Le délit de blasphème existe-t-il dans le droit pénal français ?",
+        "options": [
+            "Oui, il est puni d'une forte amende",
+            "Non, le blasphème n'est pas un délit ; on a le droit de critiquer ou de caricaturer les religions et doctrines",
+            "Oui, mais seulement envers les religions reconnues",
+            "Oui, depuis la loi de 2010"
+        ],
+        "answerIndex": 1,
+        "explanation": "En France, pays laïque et de liberté d'expression, le délit de blasphème n'existe pas. En revanche, l'injure, la diffamation et l'incitation à la haine envers des personnes en raison de leur religion sont sévèrement punies.",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-princ-13",
+        "category": "principes",
+        "question": "Depuis quelle année l'égalité entre les femmes et les hommes est-elle garantie par le texte constitutionnel en France ?",
+        "options": [
+            "Depuis la Déclaration des Droits de l'Homme de 1789",
+            "Depuis le Préambule de la Constitution de 1946",
+            "Depuis la loi de 1981",
+            "Depuis l'an 2000"
+        ],
+        "answerIndex": 1,
+        "explanation": "Le Préambule de la Constitution de 1946 dispose : « La loi garantit à la femme, dans tous les domaines, des droits égaux à ceux de l'homme ». Ce principe a valeur constitutionnelle.",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-princ-14",
+        "category": "laicite",
+        "question": "À l'hôpital public, un patient peut-il exiger d'être soigné uniquement par un médecin de son sexe pour des motifs religieux ?",
+        "options": [
+            "Oui, le patient a toujours le droit de choisir en toutes circonstances",
+            "Non, en situation d'urgence ou d'organisation du service hospitalier, les règles médicales s'imposent à tous",
+            "Oui, s'il dépose une demande écrite à la direction",
+            "Oui, sous réserve de payer un supplément financier"
+        ],
+        "answerIndex": 1,
+        "explanation": "Le bon fonctionnement du service public de santé et l'urgence vitale priment sur toute exigence religieuse. Aucun usager ne peut imposer de discrimination de genre au personnel médical.",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-princ-15",
+        "category": "symboles",
+        "question": "Quelle phrase célèbre d'Abraham Lincoln résume le principe démocratique inscrit dans la Constitution française ?",
+        "options": [
+            "« L'État, c'est moi »",
+            "« Le gouvernement du peuple, par le peuple et pour le peuple »",
+            "« Force doit rester à la loi »",
+            "« Un pour tous, tous pour un »"
+        ],
+        "answerIndex": 1,
+        "explanation": "L'article 2 de la Constitution de 1958 reprend expressément cette formule : le principe de la République est « gouvernement du peuple, par le peuple et pour le peuple ».",
+        "difficulty": "facile"
+    },
+
+    # ------------------ INSTITUTIONS & SYSTÈME POLITIQUE ------------------
+    {
+        "id": "q-inst-16",
+        "category": "institutions",
+        "question": "Qui a formulé la théorie de la séparation des pouvoirs (exécutif, législatif, judiciaire) ?",
+        "options": [
+            "Jean-Jacques Rousseau",
+            "Montesquieu",
+            "Voltaire",
+            "Denis Diderot"
+        ],
+        "answerIndex": 1,
+        "explanation": "C'est Montesquieu qui a développé la théorie de la séparation des pouvoirs dans 'De l'esprit des lois' (1748) afin de protéger la liberté politique et d'éviter l'arbitraire.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-inst-17",
+        "category": "institutions",
+        "question": "Pour quelle durée est élu le Président de la République française ?",
+        "options": [
+            "4 ans",
+            "5 ans (quinquennat)",
+            "6 ans",
+            "7 ans (septennat)"
+        ],
+        "answerIndex": 1,
+        "explanation": "Depuis la réforme constitutionnelle de l'an 2000, le Président de la République est élu pour 5 ans (quinquennat) au suffrage universel direct. Il ne peut exercer plus de deux mandats consécutifs.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-inst-18",
+        "category": "institutions",
+        "question": "Où réside officiellement le Premier ministre français ?",
+        "options": [
+            "Au Palais de l'Élysée",
+            "À l'Hôtel de Matignon",
+            "Au Palais Bourbon",
+            "Au Palais du Luxembourg"
+        ],
+        "answerIndex": 1,
+        "explanation": "Le Premier ministre réside et travaille à l'Hôtel de Matignon à Paris. Le Président réside au Palais de l'Élysée.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-inst-19",
+        "category": "institutions",
+        "question": "Quelles sont les deux chambres qui composent le Parlement français ?",
+        "options": [
+            "Le Sénat et le Conseil d'État",
+            "L'Assemblée nationale et le Sénat",
+            "L'Assemblée nationale et le Conseil constitutionnel",
+            "Le Congrès et la Chambre des députés"
+        ],
+        "answerIndex": 1,
+        "explanation": "Le Parlement français est bicaméral : il est composé de l'Assemblée nationale (577 députés au Palais Bourbon) et du Sénat (348 sénateurs au Palais du Luxembourg).",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-inst-20",
+        "category": "institutions",
+        "question": "Combien de députés siègent à l'Assemblée nationale et quel est leur mode d'élection ?",
+        "options": [
+            "348 députés élus au suffrage indirect",
+            "577 députés élus au suffrage universel direct pour 5 ans",
+            "450 députés nommés par le Président",
+            "600 députés élus pour 6 ans"
+        ],
+        "answerIndex": 1,
+        "explanation": "L'Assemblée nationale compte 577 députés, élus au suffrage universel direct pour un mandat de 5 ans au scrutin majoritaire uninominal à deux tours.",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-inst-21",
+        "category": "institutions",
+        "question": "Qui assure l'intérim de la présidence de la République en cas de vacance ou de démission du Président ?",
+        "options": [
+            "Le Premier ministre",
+            "Le Président du Sénat",
+            "Le Président de l'Assemblée nationale",
+            "Le ministre de l'Intérieur"
+        ],
+        "answerIndex": 1,
+        "explanation": "En cas de vacance de la présidence (décès, démission ou empêchement constaté par le Conseil constitutionnel), l'intérim est assuré par le Président du Sénat.",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-inst-22",
+        "category": "institutions",
+        "question": "Quel est le rôle du Conseil constitutionnel ?",
+        "options": [
+            "Juger les litiges entre les citoyens et les entreprises",
+            "Vérifier la conformité des lois à la Constitution et veiller à la régularité des élections nationales",
+            "Rédiger le budget annuel de la Sécurité sociale",
+            "Nommer les ambassadeurs de France à l'étranger"
+        ],
+        "answerIndex": 1,
+        "explanation": "Le Conseil constitutionnel (composé de 9 membres nommés pour 9 ans) contrôle la constitutionnalité des lois votées par le Parlement et veille à la régularité des élections présidentielles, législatives et référendums.",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-inst-23",
+        "category": "territoires",
+        "question": "Combien de départements compte la France au total ?",
+        "options": [
+            "96 départements",
+            "100 départements",
+            "101 départements (96 en métropole et 5 en outre-mer)",
+            "110 départements"
+        ],
+        "answerIndex": 2,
+        "explanation": "La France compte 101 départements : 96 départements métropolitains et 5 départements d'outre-mer (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte).",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-inst-24",
+        "category": "territoires",
+        "question": "Combien y a-t-il de régions administratives en France (métropole et outre-mer) ?",
+        "options": [
+            "22 régions",
+            "18 régions (13 en métropole et 5 d'outre-mer)",
+            "15 régions",
+            "27 régions"
+        ],
+        "answerIndex": 1,
+        "explanation": "Depuis la réforme territoriale du 1er janvier 2016, la France compte 18 régions : 13 régions métropolitaines et 5 régions d'outre-mer.",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-inst-25",
+        "category": "europe",
+        "question": "Combien d'États membres compte l'Union Européenne actuellement ?",
+        "options": [
+            "25 pays",
+            "27 pays",
+            "28 pays",
+            "30 pays"
+        ],
+        "answerIndex": 1,
+        "explanation": "L'Union européenne compte 27 pays membres depuis la sortie effective du Royaume-Uni le 31 janvier 2020 (Brexit).",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-inst-26",
+        "category": "europe",
+        "question": "Où se situe le siège du Parlement européen ?",
+        "options": [
+            "À Bruxelles (Belgique)",
+            "À Strasbourg (France)",
+            "À Luxembourg",
+            "À Francfort (Allemagne)"
+        ],
+        "answerIndex": 1,
+        "explanation": "Le siège officiel du Parlement européen est établi à Strasbourg en France, où se tiennent les sessions plénières mensuelles.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-inst-27",
+        "category": "europe",
+        "question": "Quel traité historique signé en 1957 a institué la Communauté Économique Européenne (CEE) ?",
+        "options": [
+            "Le traité de Versailles",
+            "Le traité de Rome",
+            "Le traité de Maastricht",
+            "Le traité de Lisbonne"
+        ],
+        "answerIndex": 1,
+        "explanation": "Le traité de Rome, signé le 25 mars 1957 par la France, l'Allemagne de l'Ouest, l'Italie, la Belgique, les Pays-Bas et le Luxembourg, a créé le marché commun européen (CEE).",
+        "difficulty": "moyen"
+    },
+
+    # ------------------ DROITS & DEVOIRS DU CITOYEN ------------------
+    {
+        "id": "q-droit-28",
+        "category": "droits",
+        "question": "En quelle année la peine de mort a-t-elle été définitivement abolie en France ?",
+        "options": [
+            "En 1789 sous la Révolution",
+            "En 1945 à la Libération",
+            "En 1981 sous la présidence de François Mitterrand",
+            "En 2007 sous Jacques Chirac"
+        ],
+        "answerIndex": 2,
+        "explanation": "La peine de mort a été abolie par la loi du 9 octobre 1981 portée par le ministre de la Justice Robert Badinter, sous la présidence de François Mitterrand. Elle est aussi interdite par la Constitution (article 66-1).",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-droit-29",
+        "category": "droits",
+        "question": "Quelle liberté fondamentale a été explicitement inscrite dans la Constitution française en mars 2024 ?",
+        "options": [
+            "Le droit au télétravail",
+            "La liberté garantie pour les femmes de recourir à l'IVG (Interruption Volontaire de Grossesse)",
+            "Le droit de vote à partir de 16 ans",
+            "Le droit inconditionnel à un logement social"
+        ],
+        "answerIndex": 1,
+        "explanation": "Le 4 mars 2024, le Congrès du Parlement réuni à Versailles a voté l'inscription de la liberté garantie de la femme de recourir à l'IVG à l'article 34 de la Constitution.",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-devoir-30",
+        "category": "devoirs",
+        "question": "Qu'est-ce que le devoir de juré d'assises en France ?",
+        "options": [
+            "Un travail rémunéré à plein temps pour les juristes diplômés",
+            "Un devoir civique citoyen obligatoire où des citoyens tirés au sort jugent les crimes aux côtés des magistrats",
+            "Une mission réservée uniquement aux anciens policiers",
+            "Un engagement volontaire au sein d'une association de médiation"
+        ],
+        "answerIndex": 1,
+        "explanation": "Tout citoyen français âgé d'au moins 23 ans peut être tiré au sort sur les listes électorales pour être juré en cour d'assises. C'est une obligation civique dont le refus injustifié est puni d'amende.",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-devoir-31",
+        "category": "devoirs",
+        "question": "Qu'est-ce que la JDC (Journée Défense et Citoyenneté) ?",
+        "options": [
+            "Un défilé militaire réservé aux élèves officiers",
+            "Une journée civique et de sensibilisation à la défense nationale obligatoire pour tous les jeunes Français de 16 à 25 ans",
+            "Une épreuve sportive pour obtenir le permis de conduire",
+            "Un stage de formation aux premiers secours en entreprise"
+        ],
+        "answerIndex": 1,
+        "explanation": "La JDC découle du recensement citoyen obligatoire à 16 ans. Elle permet de sensibiliser les jeunes citoyens aux devoirs de défense, aux valeurs républicaines et au civisme.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-devoir-32",
+        "category": "devoirs",
+        "question": "Pourquoi le paiement de l'impôt est-il un devoir fondamental en France ?",
+        "options": [
+            "Pour enrichir le compte personnel des ministres",
+            "Pour financer les services publics (écoles, hôpitaux, routes, sécurité) et la solidarité nationale",
+            "Pour payer les dettes des pays voisins",
+            "Pour remplacer les dons associatifs"
+        ],
+        "answerIndex": 1,
+        "explanation": "L'article 13 de la DDHC de 1789 établit que la contribution commune est indispensable aux dépenses publiques d'administration, de santé, d'éducation et de défense.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-droit-33",
+        "category": "droits",
+        "question": "En quelle année les femmes françaises ont-elles obtenu le droit de vote ?",
+        "options": [
+            "En 1792 sous la Première République",
+            "En 1848 lors de la IIe République",
+            "En 1944 par ordonnance du général de Gaulle",
+            "En 1968"
+        ],
+        "answerIndex": 2,
+        "explanation": "Les femmes ont obtenu le droit de vote et d'éligibilité par l'ordonnance du 21 avril 1944 signée à Alger par le général de Gaulle. Elles ont voté pour la première fois le 29 avril 1945.",
+        "difficulty": "facile"
+    },
+
+    # ------------------ HISTOIRE DE FRANCE ------------------
+    {
+        "id": "q-hist-34",
+        "category": "histoire",
+        "question": "Qui était Vercingétorix ?",
+        "options": [
+            "Le premier roi chrétien de France",
+            "Le chef gaulois ayant unifié les tribus contre Jules César lors de la guerre des Gaules",
+            "Un philosophe du Siècle des Lumières",
+            "Le bâtisseur du château de Versailles"
+        ],
+        "answerIndex": 1,
+        "explanation": "Vercingétorix, chef des Arvernes, a réuni les peuples gaulois contre l'invasion romaine avant d'être assiégé et vaincu à Alésia en 52 avant J.-C.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-hist-35",
+        "category": "histoire",
+        "question": "Quel roi des Francs a été baptisé à Reims vers 496, scellant l'alliance avec l'Église ?",
+        "options": [
+            "Charlemagne",
+            "Clovis",
+            "Saint Louis",
+            "Hugues Capet"
+        ],
+        "answerIndex": 1,
+        "explanation": "Clovis, roi des Francs mérovingiens, s'est fait baptiser à Reims avec ses guerriers vers 496, faisant de lui le premier grand souverain chrétien du royaume des Francs.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-hist-36",
+        "category": "histoire",
+        "question": "En quelle année Charlemagne a-t-il été couronné empereur d'Occident à Rome ?",
+        "options": [
+            "En 52 av. J.-C.",
+            "En l'an 800",
+            "En 1492",
+            "En 1789"
+        ],
+        "answerIndex": 1,
+        "explanation": "Le jour de Noël de l'an 800, Charlemagne a été couronné empereur d'Occident à Rome par le pape Léon III. Il a développé l'administration impériale et les écoles.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-hist-37",
+        "category": "histoire",
+        "question": "Quelle héroïne française a délivré la ville d'Orléans assiégée par les Anglais en 1429 ?",
+        "options": [
+            "Olympe de Gouges",
+            "Jeanne d'Arc",
+            "Catherine de Médicis",
+            "Madame de Lafayette"
+        ],
+        "answerIndex": 1,
+        "explanation": "Jeanne d'Arc a conduit les armées françaises à la libération d'Orléans en 1429 et a fait sacrer le roi Charles VII à Reims pendant la guerre de Cent Ans.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-hist-38",
+        "category": "histoire",
+        "question": "Quel roi a promulgué l'ordonnance de Villers-Cotterêts en 1539 ?",
+        "options": [
+            "Louis XIV",
+            "François Ier",
+            "Henri IV",
+            "Charlemagne"
+        ],
+        "answerIndex": 1,
+        "explanation": "François Ier a signé en 1539 l'ordonnance de Villers-Cotterêts qui rend obligatoire l'usage du français à la place du latin pour tous les actes officiels et de justice.",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-hist-39",
+        "category": "histoire",
+        "question": "Quel roi a promulgué l'Édit de Nantes en 1598 pour pacifier les guerres de religion ?",
+        "options": [
+            "Louis XVI",
+            "Henri IV",
+            "François II",
+            "Charles IX"
+        ],
+        "answerIndex": 1,
+        "explanation": "Henri IV a signé l'Édit de Nantes en 1598, accordant la liberté de culte aux protestants et rétablissant la paix civile après des décennies de guerres de religion.",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-hist-40",
+        "category": "histoire",
+        "question": "Quel souverain français était surnommé le « Roi-Soleil » ?",
+        "options": [
+            "Saint Louis (Louis IX)",
+            "Louis XIV",
+            "Louis XVI",
+            "Napoléon III"
+        ],
+        "answerIndex": 1,
+        "explanation": "Louis XIV (qui régna de 1643 à 1715) est le Roi-Soleil, incarnation de la monarchie absolue de droit divin. Il a fait construire le somptueux château de Versailles.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-hist-41",
+        "category": "histoire",
+        "question": "Que s'est-il passé le 14 juillet 1789 à Paris ?",
+        "options": [
+            "La signature de la première Constitution",
+            "La prise de la Bastille par le peuple de Paris",
+            "Le couronnement de Napoléon Ier",
+            "La proclamation de la République"
+        ],
+        "answerIndex": 1,
+        "explanation": "Le 14 juillet 1789, les Parisiens en révolte prennent d'assaut la forteresse de la Bastille, symbole de l'arbitraire et de la tyrannie royale. Cela marque le début de la Révolution française.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-hist-42",
+        "category": "histoire",
+        "question": "Quelles institutions majeures ont été créées par Napoléon Bonaparte sous le Consulat et l'Empire ?",
+        "options": [
+            "La Sécurité sociale et les congés payés",
+            "Le Code civil, les préfectures, les lycées et la Banque de France",
+            "L'école laïque et gratuite et la loi de 1901",
+            "L'Assemblée nationale et le Conseil constitutionnel"
+        ],
+        "answerIndex": 1,
+        "explanation": "Napoléon Ier a profondément structuré l'État moderne français : Code civil de 1804 ('Code Napoléon'), préfets, lycées publics, Banque de France et Légion d'honneur.",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-hist-43",
+        "category": "histoire",
+        "question": "Qui a fait voter l'abolition définitive de l'esclavage dans les colonies françaises en 1848 ?",
+        "options": [
+            "Jean Jaurès",
+            "Victor Schœlcher",
+            "Lafayette",
+            "Jules Ferry"
+        ],
+        "answerIndex": 1,
+        "explanation": "Sous la IIe République en 1848, Victor Schœlcher, sous-secrétaire d'État aux Colonies, rédige le décret d'abolition définitive de l'esclavage en France.",
+        "difficulty": "moyen"
+    },
+    {
+        "id": "q-hist-44",
+        "category": "histoire",
+        "question": "Quel ministre de la IIIe République a rendu l'école primaire gratuite, laïque et obligatoire ?",
+        "options": [
+            "Georges Clemenceau",
+            "Jules Ferry",
+            "Léon Blum",
+            "Aristide Briand"
+        ],
+        "answerIndex": 1,
+        "explanation": "Jules Ferry a fait voter les grandes lois scolaires de 1881-1882 instaurant la gratuité, la laïcité et l'obligation de l'instruction primaire pour tous les enfants.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-hist-45",
+        "category": "histoire",
+        "question": "Quelle grande bataille de la Première Guerre mondiale a duré près de 10 mois en 1916 ?",
+        "options": [
+            "La bataille de Waterloo",
+            "La bataille de Verdun",
+            "La bataille d'Austerlitz",
+            "Le débarquement de Provence"
+        ],
+        "answerIndex": 1,
+        "explanation": "La bataille de Verdun en 1916 fut l'un des affrontements les plus meurtriers et héroïques de la Grande Guerre, symbole du courage des 'Poilus' défendant le territoire français.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-hist-46",
+        "category": "histoire",
+        "question": "Quel événement a eu lieu le 18 juin 1940 ?",
+        "options": [
+            "La signature de l'armistice avec l'Allemagne nazie",
+            "L'Appel à la résistance lancé depuis Londres par le général Charles de Gaulle",
+            "La libération de Paris",
+            "L'élection du premier président de la République"
+        ],
+        "answerIndex": 1,
+        "explanation": "Le 18 juin 1940, sur les ondes de la BBC à Londres, le général de Gaulle lance son célèbre appel radiophonique refusant la défaite et fondant la France Libre.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-hist-47",
+        "category": "histoire",
+        "question": "Qui a créé la Ve République en 1958 ?",
+        "options": [
+            "François Mitterrand",
+            "Charles de Gaulle",
+            "Georges Pompidou",
+            "Jean Moulin"
+        ],
+        "answerIndex": 1,
+        "explanation": "Face à la crise algérienne et à l'instabilité de la IVe République, le général de Gaulle revient au pouvoir en 1958 et fait approuver par référendum la Constitution du 4 octobre 1958 instaurant la Ve République.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-hist-48",
+        "category": "histoire",
+        "question": "Qui a été le premier président de la Ve République issu de la gauche en 1981 ?",
+        "options": [
+            "Jacques Chirac",
+            "François Mitterrand",
+            "Lionel Jospin",
+            "François Hollande"
+        ],
+        "answerIndex": 1,
+        "explanation": "François Mitterrand a été élu en mai 1981, inaugurant la première alternance politique sous la Ve République. Il a accompli deux septennats complets (1981-1995).",
+        "difficulty": "facile"
+    },
+
+    # ------------------ GÉOGRAPHIE & TERRITOIRES ------------------
+    {
+        "id": "q-geo-49",
+        "category": "geographie",
+        "question": "Quel est le plus long fleuve entièrement ou en grande partie situé en France ?",
+        "options": [
+            "La Seine",
+            "La Loire",
+            "Le Rhône",
+            "La Garonne"
+        ],
+        "answerIndex": 1,
+        "explanation": "La Loire est le plus long fleuve de France avec une longueur de 1 006 km. Elle prend sa source au mont Gerbier-de-Jonc et se jette dans l'océan Atlantique à Saint-Nazaire.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-geo-50",
+        "category": "geographie",
+        "question": "Quel fleuve traverse Paris ?",
+        "options": [
+            "La Loire",
+            "La Seine",
+            "Le Rhône",
+            "La Marne"
+        ],
+        "answerIndex": 1,
+        "explanation": "La Seine (777 km) traverse Troyes, Paris et Rouen avant de se jeter dans la Manche entre Le Havre et Honfleur.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-geo-51",
+        "category": "geographie",
+        "question": "Quel est le point culminant de la France et de l'Europe occidentale ?",
+        "options": [
+            "Le Pic du Midi",
+            "Le Mont Blanc (4 807 mètres)",
+            "Le Puy de Sancy",
+            "Le Mont Ventoux"
+        ],
+        "answerIndex": 1,
+        "explanation": "Le Mont Blanc, situé dans les Alpes à la frontière franco-italienne, culmine à environ 4 807 mètres d'altitude.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-geo-52",
+        "category": "geographie",
+        "question": "Quelle chaîne de montagnes forme la frontière naturelle entre la France et l'Espagne ?",
+        "options": [
+            "Les Alpes",
+            "Les Pyrénées",
+            "Le Jura",
+            "Les Vosges"
+        ],
+        "answerIndex": 1,
+        "explanation": "Les Pyrénées forment une barrière montagneuse continue séparant la France et la péninsule ibérique (Espagne et Andorre).",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-geo-53",
+        "category": "geographie",
+        "question": "Lequel de ces territoires est un DROM (Département et Région d'Outre-Mer) situé en Amérique du Sud ?",
+        "options": [
+            "La Martinique",
+            "La Guyane",
+            "La Réunion",
+            "Mayotte"
+        ],
+        "answerIndex": 1,
+        "explanation": "La Guyane est le plus grand département français par sa superficie. Située en Amérique du Sud entre le Brésil et le Suriname, elle abrite le centre spatial européen de Kourou.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-geo-54",
+        "category": "geographie",
+        "question": "La France métropolitaine est bordée par combien de mers et océans principaux ?",
+        "options": [
+            "1 seule mer",
+            "3 : la Manche/Mer du Nord, l'océan Atlantique et la mer Méditerranée",
+            "5 océans",
+            "Aucune mer directe"
+        ],
+        "answerIndex": 1,
+        "explanation": "La France métropolitaine bénéficie de trois façades maritimes majeures : la Mer du Nord et la Manche au nord/nord-ouest, l'Océan Atlantique à l'ouest, et la Mer Méditerranée au sud.",
+        "difficulty": "moyen"
+    },
+
+    # ------------------ CULTURE, SOCIÉTÉ & VIE QUOTIDIENNE ------------------
+    {
+        "id": "q-cult-55",
+        "category": "culture",
+        "question": "Qui a peint le célèbre tableau 'La Liberté guidant le peuple' (1830) exposé au Louvre ?",
+        "options": [
+            "Claude Monet",
+            "Eugène Delacroix",
+            "Auguste Renoir",
+            "Pablo Picasso"
+        ],
+        "answerIndex": 1,
+        "explanation": "Eugène Delacroix a peint ce chef-d'œuvre romantique représentant une femme aux seins nus coiffée d'un bonnet phrygien et brandissant le drapeau tricolore sur les barricades de 1830.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-cult-56",
+        "category": "culture",
+        "question": "Qui était Marie Curie ?",
+        "options": [
+            "La première présidente de la République",
+            "Une grande scientifique d'origine polonaise naturalisée française, double prix Nobel de physique et chimie",
+            "Une célèbre actrice de théâtre du XIXe siècle",
+            "L'architecte de la tour Eiffel"
+        ],
+        "answerIndex": 1,
+        "explanation": "Marie Curie (née Skłodowska) est une physicienne et chimiste d'exception ayant découvert le polonium et le radium. Elle est la première femme panthéonisée pour ses propres mérites.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-cult-57",
+        "category": "culture",
+        "question": "Pour quelle occasion historique la Tour Eiffel a-t-elle été construite ?",
+        "options": [
+            "Pour célébrer la fin de la Première Guerre mondiale",
+            "Pour l'Exposition universelle de Paris en 1889 (centenaire de la Révolution)",
+            "Pour abriter le premier émetteur de télévision",
+            "Pour servir de résidence d'été au Président"
+        ],
+        "answerIndex": 1,
+        "explanation": "La Tour Eiffel a été érigée par l'ingénieur Gustave Eiffel pour l'Exposition universelle de 1889, commémorant le centenaire de la prise de la Bastille et de la Révolution.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-cult-58",
+        "category": "culture",
+        "question": "Quel savant français a mis au point le vaccin contre la rage en 1885 ?",
+        "options": [
+            "René Laennec",
+            "Louis Pasteur",
+            "Claude Bernard",
+            "Antoine Lavoisier"
+        ],
+        "answerIndex": 1,
+        "explanation": "Louis Pasteur est le père de la microbiologie et de la pasteurisation. Son vaccin contre la rage a sauvé le jeune Joseph Meister en 1885.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-soc-59",
+        "category": "societe",
+        "question": "Quel est le numéro de téléphone gratuit d'urgence du SAMU en France ?",
+        "options": [
+            "Le 15",
+            "Le 17",
+            "Le 18",
+            "Le 112"
+        ],
+        "answerIndex": 0,
+        "explanation": "Le 15 est le numéro du SAMU (Service d'Aide Médicale Urgente) pour toute urgence médicale grave. Le 17 est pour la Police/Gendarmerie et le 18 pour les Sapeurs-Pompiers.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-soc-60",
+        "category": "societe",
+        "question": "Quel est le numéro d'urgence unique valable dans toute l'Union Européenne ?",
+        "options": [
+            "Le 15",
+            "Le 112",
+            "Le 911",
+            "Le 114"
+        ],
+        "answerIndex": 1,
+        "explanation": "Le 112 est le numéro d'appel d'urgence européen unique, joignable gratuitement depuis tout téléphone fixe ou mobile dans l'ensemble des pays de l'Union européenne.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-soc-61",
+        "category": "societe",
+        "question": "Quel numéro d'écoute national anonyme et gratuit est dédié aux femmes victimes de violences ?",
+        "options": [
+            "Le 119",
+            "Le 3919",
+            "Le 114",
+            "Le 3117"
+        ],
+        "answerIndex": 1,
+        "explanation": "Le 3919 (Violences Femmes Info) est le numéro national d'écoute, d'orientation et d'information destiné aux femmes victimes de violences conjugales ou sexistes.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-soc-62",
+        "category": "societe",
+        "question": "Quelle est la durée légale hebdomadaire du travail pour un salarié à temps plein en France ?",
+        "options": [
+            "30 heures",
+            "35 heures",
+            "39 heures",
+            "40 heures"
+        ],
+        "answerIndex": 1,
+        "explanation": "La durée légale hebdomadaire du temps de travail effectif des salariés en France est fixée à 35 heures par semaine.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-soc-63",
+        "category": "societe",
+        "question": "À partir de quel âge et jusqu'à quel âge l'instruction est-elle obligatoire en France ?",
+        "options": [
+            "De 6 à 16 ans",
+            "De 3 à 16 ans (filles et garçons)",
+            "De 5 à 18 ans",
+            "De 2 à 15 ans"
+        ],
+        "answerIndex": 1,
+        "explanation": "Depuis la loi de 2019, l'instruction est obligatoire dès l'âge de 3 ans (école maternelle) jusqu'à 16 ans pour tous les enfants, sans distinction de sexe ni de nationalité.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-soc-64",
+        "category": "societe",
+        "question": "Quel mariage est le seul légalement reconnu par la République française ?",
+        "options": [
+            "Le mariage religieux célébré dans un lieu de culte",
+            "Le mariage coutumier célébré en famille",
+            "Le mariage civil célébré en mairie par un officier de l'état civil",
+            "Un simple accord devant notaire"
+        ],
+        "answerIndex": 2,
+        "explanation": "En France, seul le mariage civil célébré à la mairie a une valeur juridique légale. Un ministre du culte ne peut pas célébrer un mariage religieux avant le mariage civil.",
+        "difficulty": "facile"
+    },
+    {
+        "id": "q-reforme-65",
+        "category": "reforme2026",
+        "question": "Selon la réforme 2026, quel niveau de maîtrise du français (oral et écrit) est exigé pour la naturalisation ?",
+        "options": [
+            "Niveau A2 (débutant autonome)",
+            "Niveau B1 (seuil intermédiaire)",
+            "Niveau B2 (utilisateur indépendant avancé, oral et écrit)",
+            "Niveau C1 (utilisateur expérimenté)"
+        ],
+        "answerIndex": 2,
+        "explanation": "L'édition 2026 du Livret du Citoyen précise expressément : « L'assimilation implique une maîtrise de la langue française correspondant au niveau B2 oral et écrit du CECRL ».",
+        "difficulty": "moyen"
+    }
+]
+
+# Build quiz packages
+quizzes_data = {
+    "version": "2026.1",
+    "totalQuestions": len(all_questions),
+    "modules": [
+        {
+            "id": "quiz-m1",
+            "title": "Quiz Module 1 : Principes & Valeurs Républicaines",
+            "description": "Testez vos connaissances sur la devise, les symboles républicains, la laïcité et l'égalité femmes-hommes.",
+            "category": "module-1",
+            "questionCount": 15,
+            "passScore": 12,
+            "questionIds": [q["id"] for q in all_questions if q["category"] in ["symboles", "principes", "laicite"]][:15]
+        },
+        {
+            "id": "quiz-m2",
+            "title": "Quiz Module 2 : Institutions & Politique",
+            "description": "Évaluez votre compréhension du Président, du Parlement, des départements et de l'Union européenne.",
+            "category": "module-2",
+            "questionCount": 12,
+            "passScore": 10,
+            "questionIds": [q["id"] for q in all_questions if q["category"] in ["institutions", "territoires", "europe"]]
+        },
+        {
+            "id": "quiz-m3",
+            "title": "Quiz Module 3 : Droits & Devoirs du Citoyen",
+            "description": "Les libertés fondamentales, le vote, les impôts, la JDC et le devoir de juré d'assises.",
+            "category": "module-3",
+            "questionCount": 6,
+            "passScore": 5,
+            "questionIds": [q["id"] for q in all_questions if q["category"] in ["droits", "devoirs"]]
+        },
+        {
+            "id": "quiz-m4",
+            "title": "Quiz Module 4 : Histoire & Géographie de la France",
+            "description": "Des Gaulois à nos jours : rois, Révolution, guerres, fleuves, montagnes et patrimoine.",
+            "category": "module-4",
+            "questionCount": 21,
+            "passScore": 17,
+            "questionIds": [q["id"] for q in all_questions if q["category"] in ["histoire", "geographie"]]
+        },
+        {
+            "id": "quiz-m5",
+            "title": "Quiz Module 5 : Culture & Société Française",
+            "description": "Numéros d'urgence, droit du travail, école républicaine et culture.",
+            "category": "module-5",
+            "questionCount": 11,
+            "passScore": 9,
+            "questionIds": [q["id"] for q in all_questions if q["category"] in ["culture", "societe", "reforme2026"]]
+        }
+    ],
+    "mockExam": {
+        "id": "examen-blanc-2026",
+        "title": "Examen Blanc Civique Officiel 2026",
+        "subtitle": "Simulation conforme aux nouvelles exigences d'évaluation pour la naturalisation",
+        "durationMinutes": 45,
+        "totalQuestions": 40,
+        "passingThreshold": 32, # 80%
+        "description": "40 questions tirées au sort sur l'ensemble du programme. Score minimum de 32/40 (80%) exigé pour réussir dans les conditions réelles de l'examen civique 2026.",
+        "pool": [q["id"] for q in all_questions]
+    },
+    "questions": all_questions
+}
+
+with open('data/quizzes.json', 'w', encoding='utf-8') as f:
+    json.dump(quizzes_data, f, ensure_ascii=False, indent=2)
+
+print(f'Generated data/quizzes.json with {len(all_questions)} questions.')

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Livret du Citoyen 2026 – Préparation Complète à la Naturalisation Française</title>
+  <meta name="description" content="Application officielle de préparation à l'examen civique 2026 et à l'entretien de naturalisation en préfecture. Cours modulaire illustré, quiz, examen blanc chronométré, flashcards 3D et suivi de progression.">
+  <meta name="theme-color" content="#002349">
+
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Republican Ribbon (Bleu, Blanc, Rouge) -->
+  <div class="republic-ribbon" role="presentation"></div>
+
+  <!-- Header Section -->
+  <header class="app-header" role="banner">
+    <div class="brand-wrapper">
+      <div class="brand-cocarde" aria-label="Cocarde tricolore République Française"></div>
+      <div class="brand-titles">
+        <h1 class="brand-title">
+          Livret du Citoyen
+          <span class="edition-badge">Édition 2026</span>
+        </h1>
+        <span class="brand-subtitle">Préparation à l'Examen Civique & Entretien de Naturalisation</span>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs" id="main-nav-tabs" role="navigation" aria-label="Navigation principale">
+      <button class="nav-tab-btn active" data-tab="dashboard" id="tab-btn-dashboard">
+        <i class="fa-solid fa-gauge-high"></i>
+        <span>Tableau de bord</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="course" id="tab-btn-course">
+        <i class="fa-solid fa-book-open"></i>
+        <span>Le Cours</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="quizzes" id="tab-btn-quizzes">
+        <i class="fa-solid fa-list-check"></i>
+        <span>Quiz & Examen</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="flashcards" id="tab-btn-flashcards">
+        <i class="fa-solid fa-layer-group"></i>
+        <span>Flashcards</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="interview" id="tab-btn-interview">
+        <i class="fa-solid fa-user-tie"></i>
+        <span>Simulateur Entretien</span>
+      </button>
+      <button class="nav-tab-btn" data-tab="progress" id="tab-btn-progress">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Progression</span>
+      </button>
+    </nav>
+
+    <!-- Header Actions (Theme Toggle & Search) -->
+    <div class="header-actions">
+      <button class="action-btn" id="btn-theme-toggle" onclick="toggleTheme()" title="Basculer Mode Clair / Sombre" aria-label="Basculer le thème">
+        <i class="fa-solid fa-moon" id="theme-icon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main View Container -->
+  <main class="app-container" role="main">
+
+    <!-- ========================================================
+         VIEW 1: TABLEAU DE BORD (DASHBOARD)
+         ======================================================== -->
+    <section class="view-section active" id="view-dashboard">
+      <div class="dashboard-grid">
+        
+        <!-- Hero Banner with Circular Readiness Gauge -->
+        <div class="hero-banner">
+          <div class="hero-content">
+            <div class="hero-text">
+              <div class="hero-tag">
+                <i class="fa-solid fa-shield-halved"></i> Préparation Officielle 2026
+              </div>
+              <h2 class="hero-title">
+                Réussissez votre <span>Examen Civique</span> et votre Entretien
+              </h2>
+              <p class="hero-desc">
+                Conforme au nouveau <strong>Livret du Citoyen (Édition mai 2026)</strong>. Maîtrisez les valeurs de la République, les institutions, l'histoire et la société françaises pour obtenir la nationalité avec sérénité.
+              </p>
+
+              <div class="hero-stats-row">
+                <div class="hero-stat-item">
+                  <i class="fa-solid fa-book-bookmark"></i>
+                  <span>Chapitres : <strong id="kpi-chapters-count">0 / 14</strong></span>
+                </div>
+                <div class="hero-stat-item">
+                  <i class="fa-solid fa-award"></i>
+                  <span>Quiz validés : <strong id="kpi-quizzes-count">0 / 5</strong></span>
+                </div>
+                <div class="hero-stat-item">
+                  <i class="fa-solid fa-bolt"></i>
+                  <span>Cartes mémoires : <strong id="kpi-cards-count">0 / 52</strong></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Readiness Ring -->
+            <div class="hero-readiness-card">
+              <div class="progress-circle-wrapper">
+                <svg class="progress-circle-svg" viewBox="0 0 120 120">
+                  <circle class="progress-circle-bg" cx="60" cy="60" r="50"></circle>
+                  <circle class="progress-circle-fill" id="hero-readiness-circle" cx="60" cy="60" r="50"></circle>
+                </svg>
+                <div class="progress-circle-text" id="hero-readiness-text">0%</div>
+              </div>
+              <div class="readiness-label" id="hero-readiness-status">Préparation en cours</div>
+              <div class="readiness-sublabel">Indice d'assimilation civique</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2026 Reform Banner Callout -->
+        <div class="reform-alert-card">
+          <div class="reform-icon">
+            <i class="fa-solid fa-triangle-exclamation"></i>
+          </div>
+          <div class="reform-content">
+            <h3>Nouveautés Réforme 2026 de la Naturalisation</h3>
+            <p>
+              Deux évolutions majeures s'appliquent en 2026 : 
+              <strong>1. Examen civique obligatoire</strong> standardisé pour la recevabilité du dossier de naturalisation. 
+              <strong>2. Exigence de maîtrise du français au niveau B2</strong> oral et écrit (au lieu de B1). Notre plateforme vous entraîne spécifiquement à ces deux nouvelles exigences.
+            </p>
+          </div>
+        </div>
+
+        <!-- Quick Access Shortcuts -->
+        <div>
+          <div class="section-heading-row">
+            <h3 class="section-title"><i class="fa-solid fa-rocket" style="color:var(--fr-blue);"></i> Accès Rapide</h3>
+          </div>
+          <div class="quick-actions-grid">
+            <div class="action-card" onclick="switchTab('course')">
+              <div>
+                <div class="action-card-top">
+                  <div class="card-icon-box blue">
+                    <i class="fa-solid fa-book-open"></i>
+                  </div>
+                  <span class="reader-pill">Cours complet</span>
+                </div>
+                <h4>Le Cours Officiel</h4>
+                <p>5 modules structurés avec résumés « À retenir », illustrations originales et questions pièges décryptées.</p>
+              </div>
+              <div class="action-card-footer">
+                <span>Accéder au cours</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+
+            <div class="action-card" onclick="switchTab('quizzes'); startMockExam2026();">
+              <div>
+                <div class="action-card-top">
+                  <div class="card-icon-box red">
+                    <i class="fa-solid fa-stopwatch"></i>
+                  </div>
+                  <span class="reader-pill" style="color:var(--danger); background:var(--danger-bg);">Simulateur 2026</span>
+                </div>
+                <h4>Examen Blanc Officiel</h4>
+                <p>40 questions aléatoires, 45 minutes chrono et seuil de passage à 80% (32/40) dans les conditions réelles.</p>
+              </div>
+              <div class="action-card-footer" style="color:var(--danger);">
+                <span>Lancer l'examen blanc</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+
+            <div class="action-card" onclick="switchTab('flashcards')">
+              <div>
+                <div class="action-card-top">
+                  <div class="card-icon-box gold">
+                    <i class="fa-solid fa-layer-group"></i>
+                  </div>
+                  <span class="reader-pill">Répétition espacée</span>
+                </div>
+                <h4>Flashcards 3D</h4>
+                <p>52 cartes interactives à retourner avec synthèse vocale en français pour mémoriser dates, lois et symboles.</p>
+              </div>
+              <div class="action-card-footer" style="color:var(--fr-gold);">
+                <span>Réviser les cartes</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+
+            <div class="action-card" onclick="switchTab('interview')">
+              <div>
+                <div class="action-card-top">
+                  <div class="card-icon-box green">
+                    <i class="fa-solid fa-user-tie"></i>
+                  </div>
+                  <span class="reader-pill" style="color:var(--success); background:var(--success-bg);">Entretien</span>
+                </div>
+                <h4>Simulateur Préfectoral</h4>
+                <p>Entraînez-vous aux questions de l'agent : motivations, valeurs républicaines, pièges et réponses types.</p>
+              </div>
+              <div class="action-card-footer" style="color:var(--success);">
+                <span>Simuler l'entretien</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modules Progress Overview Grid -->
+        <div>
+          <div class="section-heading-row">
+            <h3 class="section-title"><i class="fa-solid fa-bars-progress" style="color:var(--fr-blue);"></i> Progression des Modules</h3>
+          </div>
+          <div class="modules-overview-grid" id="dashboard-modules-grid">
+            <!-- Dynamically populated by app.js -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         VIEW 2: COURS MODULAIRE (COURSE VIEW)
+         ======================================================== -->
+    <section class="view-section" id="view-course">
+      <div class="course-layout">
+        
+        <!-- Sidebar Navigation -->
+        <aside class="course-sidebar" role="complementary" aria-label="Sommaire du cours">
+          <div class="course-search-box">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="course-search-input" class="course-search-input" placeholder="Rechercher une notion, date, mot-clé...">
+          </div>
+          <div id="course-modules-accordion">
+            <!-- Populated by course.js -->
+          </div>
+        </aside>
+
+        <!-- Main Chapter Reader -->
+        <article class="course-reader" id="chapter-content-display" role="article">
+          <!-- Populated by course.js -->
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         VIEW 3: QUIZ & EXAMEN CIVIQUE 2026
+         ======================================================== -->
+    <section class="view-section" id="view-quizzes">
+      <div class="quiz-hub-grid" id="quiz-hub-view">
+        
+        <!-- Official Exam Banner -->
+        <div class="exam-hero-card">
+          <div class="exam-hero-info">
+            <span class="exam-badge">Épreuve Officielle Simulée</span>
+            <h2 class="exam-hero-title">Examen Blanc Civique 2026</h2>
+            <p class="exam-hero-desc">
+              Testez vos compétences dans les conditions réelles de l'examen civique : 40 questions tirées au sort sur l'ensemble du Livret du Citoyen, chrono de 45 minutes, seuil de réussite fixé à 80% (32/40 bonnes réponses).
+            </p>
+            <div class="exam-meta-pills">
+              <span class="exam-pill"><i class="fa-regular fa-clock"></i> 45 minutes</span>
+              <span class="exam-pill"><i class="fa-regular fa-circle-question"></i> 40 questions</span>
+              <span class="exam-pill"><i class="fa-solid fa-bullseye"></i> 32 / 40 pour valider</span>
+            </div>
+          </div>
+          <button class="btn-exam-start" onclick="startMockExam2026()">
+            <i class="fa-solid fa-play"></i> Passer l'Examen Blanc
+          </button>
+        </div>
+
+        <!-- Quick 10-Question Training Button -->
+        <div style="display:flex; justify-content:space-between; align-items:center; background:var(--bg-card); padding:1.25rem 1.75rem; border-radius:var(--radius-lg); border:1px solid var(--border-subtle);">
+          <div>
+            <h4 style="font-size:1.1rem; font-weight:700; color:var(--text-primary); margin-bottom:0.25rem;">
+              <i class="fa-solid fa-bolt" style="color:var(--fr-gold);"></i> Entraînement Rapide Express
+            </h4>
+            <p style="font-size:0.875rem; color:var(--text-secondary);">10 questions aléatoires avec explications pédagogiques immédiates.</p>
+          </div>
+          <button class="btn-sm-primary" onclick="startQuickPractice()" style="padding:0.6rem 1.25rem; font-size:0.9rem;">
+            Lancer le quiz rapide
+          </button>
+        </div>
+
+        <!-- Themed Quizzes Section -->
+        <div>
+          <div class="section-heading-row">
+            <h3 class="section-title"><i class="fa-solid fa-graduation-cap" style="color:var(--fr-blue);"></i> Quiz par Thématique</h3>
+          </div>
+          <div class="quizzes-list-grid" id="quizzes-cards-grid">
+            <!-- Populated by quiz.js -->
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Active Quiz Runner Container -->
+      <div class="quiz-active-container" id="quiz-active-container">
+        <div class="quiz-runner-header">
+          <div>
+            <span class="quiz-progress-text" id="quiz-session-title">Quiz</span>
+            <div id="quiz-question-counter" style="font-size:0.85rem; color:var(--text-muted); font-weight:600;">Question 1 / 10</div>
+          </div>
+          <div class="quiz-timer-badge" id="quiz-timer-display" style="display:none;">
+            <i class="fa-regular fa-clock"></i>
+            <span id="quiz-timer-text">45:00</span>
+          </div>
+        </div>
+
+        <div class="quiz-question-box">
+          <h3 class="quiz-question-title" id="quiz-question-text">Question en cours...</h3>
+          <div class="quiz-options-list" id="quiz-options-container">
+            <!-- Options A, B, C, D -->
+          </div>
+        </div>
+
+        <!-- Pedagogical Explanation Box (Training Mode) -->
+        <div class="quiz-explanation-box" id="quiz-explanation-display"></div>
+
+        <!-- Runner Navigation Buttons -->
+        <div class="quiz-runner-footer">
+          <button class="reader-nav-btn btn-secondary" id="btn-quiz-prev" onclick="navigateQuiz(-1)" style="display:none;">
+            <i class="fa-solid fa-arrow-left"></i> Précédente
+          </button>
+          <button class="reader-nav-btn btn-secondary" onclick="exitQuizToHub()">
+            <i class="fa-solid fa-xmark"></i> Quitter
+          </button>
+          <button class="reader-nav-btn btn-primary" id="btn-quiz-next" onclick="navigateQuiz(1)">
+            Suivante <i class="fa-solid fa-arrow-right"></i>
+          </button>
+          <button class="reader-nav-btn btn-success" id="btn-quiz-submit" onclick="submitQuizSession()" style="display:none;">
+            <i class="fa-solid fa-check"></i> Terminer et Voir les Résultats
+          </button>
+        </div>
+      </div>
+
+      <!-- Quiz Results View -->
+      <div class="quiz-results-container" id="quiz-results-container">
+        <div class="results-score-circle">
+          <span class="results-score-number" id="results-score-text">35</span>
+          <span class="results-score-total" id="results-total-text">/ 40</span>
+        </div>
+        <h2 class="results-verdict" id="results-verdict-text">RÉSULTAT</h2>
+        <p class="results-desc" id="results-desc-text"></p>
+
+        <div class="results-actions-row">
+          <button class="reader-nav-btn btn-primary" onclick="exitQuizToHub()">
+            <i class="fa-solid fa-list"></i> Retour aux Quiz
+          </button>
+          <button class="reader-nav-btn btn-secondary" onclick="switchTab('course')">
+            <i class="fa-solid fa-book-open"></i> Réviser dans le Cours
+          </button>
+        </div>
+
+        <!-- Detailed Question Review -->
+        <div style="margin-top: 3rem; text-align: left;">
+          <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 1.5rem; color: var(--text-primary);">
+            <i class="fa-solid fa-magnifying-glass"></i> Analyse Détaillée des Réponses
+          </h3>
+          <div id="results-questions-review"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         VIEW 4: FLASHCARDS (CARTES MÉMOIRE 3D)
+         ======================================================== -->
+    <section class="view-section" id="view-flashcards">
+      <div class="flashcards-layout">
+        
+        <!-- Category Toolbar -->
+        <div class="flashcards-toolbar">
+          <select id="flashcard-category-select" class="category-filter-select" aria-label="Filtrer par thématique">
+            <!-- Populated by flashcards.js -->
+          </select>
+          <div style="display:flex; align-items:center; gap:0.75rem;">
+            <span id="fc-mastery-status"></span>
+            <span class="fc-stats-badge" id="flashcard-counter-badge">1 / 52</span>
+          </div>
+        </div>
+
+        <!-- 3D Flip Card Scene -->
+        <div class="flashcard-3d-scene" id="flashcard-scene-wrapper" onclick="flipCard()">
+          <div class="flashcard-3d-card" id="main-flashcard-3d">
+            
+            <!-- Front Face (Question) -->
+            <div class="flashcard-face front">
+              <div class="fc-top-row">
+                <span class="fc-category-label" id="fc-front-category">Symboles & Valeurs</span>
+                <span class="reader-pill" id="fc-front-tag">Devise</span>
+              </div>
+              <div class="fc-content-center">
+                <p class="fc-question-text" id="fc-front-text">Question...</p>
+              </div>
+              <div class="fc-top-row">
+                <span class="fc-flip-hint"><i class="fa-solid fa-rotate"></i> Cliquez ou appuyez sur Espace pour retourner</span>
+                <button class="action-btn" onclick="event.stopPropagation(); pronounceCard();" title="Écouter la question">
+                  <i class="fa-solid fa-volume-high"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Back Face (Answer) -->
+            <div class="flashcard-face back">
+              <div class="fc-top-row">
+                <span class="fc-category-label" id="fc-back-category" style="color:var(--fr-red);">Réponse Officielle</span>
+                <span class="reader-pill" id="fc-back-tag"></span>
+              </div>
+              <div class="fc-content-center">
+                <p class="fc-answer-text" id="fc-back-text">Réponse...</p>
+              </div>
+              <div>
+                <div class="fc-tip-box" style="margin-bottom:0.75rem;">
+                  <i class="fa-solid fa-lightbulb"></i>
+                  <span id="fc-back-tip-text">Astuce d'entretien</span>
+                </div>
+                <div class="fc-top-row">
+                  <span class="fc-flip-hint"><i class="fa-solid fa-rotate"></i> Cliquez pour retourner</span>
+                  <button class="action-btn" onclick="event.stopPropagation(); pronounceCard();" title="Écouter la réponse">
+                    <i class="fa-solid fa-volume-high"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Empty State if filtered has 0 cards -->
+        <div id="flashcards-empty-state" style="display:none; text-align:center; padding:3rem; background:var(--bg-card); border-radius:var(--radius-xl); border:1px solid var(--border-subtle); width:100%;">
+          <i class="fa-regular fa-folder-open" style="font-size:3rem; color:var(--text-muted); margin-bottom:1rem;"></i>
+          <h4>Aucune carte dans cette catégorie</h4>
+          <p style="color:var(--text-secondary); margin-top:0.5rem;">Sélectionnez une autre catégorie pour poursuivre vos révisions.</p>
+        </div>
+
+        <!-- Spaced Repetition & Navigation Controls -->
+        <div class="flashcards-controls">
+          <button class="fc-btn fc-btn-again" onclick="markCardNeedsReview()">
+            <i class="fa-solid fa-triangle-exclamation"></i> À revoir
+          </button>
+          
+          <button class="action-btn" onclick="navigateFlashcards(-1)" title="Carte précédente (Flèche gauche)">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+
+          <button class="action-btn" onclick="shuffleFlashcards()" title="Mélanger les cartes">
+            <i class="fa-solid fa-shuffle"></i>
+          </button>
+
+          <button class="action-btn" onclick="navigateFlashcards(1)" title="Carte suivante (Flèche droite)">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <button class="fc-btn fc-btn-pass" onclick="markCardMastered()">
+            <i class="fa-solid fa-circle-check"></i> Maîtrisée
+          </button>
+        </div>
+
+        <div style="font-size:0.8rem; color:var(--text-muted); text-align:center;">
+          <kbd style="background:var(--bg-tertiary); padding:2px 6px; border-radius:4px;">Espace</kbd> pour retourner la carte • 
+          <kbd style="background:var(--bg-tertiary); padding:2px 6px; border-radius:4px;">←</kbd> / <kbd style="background:var(--bg-tertiary); padding:2px 6px; border-radius:4px;">→</kbd> pour naviguer
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         VIEW 5: SIMULATEUR D'ENTRETIEN PRÉFECTORAL
+         ======================================================== -->
+    <section class="view-section" id="view-interview">
+      <div class="interview-layout">
+        
+        <!-- Interactive Interview Card -->
+        <div class="interview-simulator-card" id="interview-qa-container">
+          <div class="interview-sim-header">
+            <div class="agent-avatar">
+              <i class="fa-solid fa-user-tie"></i>
+            </div>
+            <div class="agent-meta">
+              <div style="display:flex; align-items:center; gap:0.5rem;">
+                <h3>Agent Instructeur de la Préfecture</h3>
+                <span class="reader-pill badge-pill" id="sim-category-badge">Motivations</span>
+              </div>
+              <p>Entretien individuel d'évaluation de l'assimilation à la communauté française</p>
+            </div>
+          </div>
+
+          <!-- Question Bubble -->
+          <div class="sim-question-bubble">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.5rem;">
+              <span id="sim-counter-text" style="font-size:0.8rem; font-weight:700; color:var(--fr-blue); text-transform:uppercase;">Question 1 / 10</span>
+              <button class="action-btn" onclick="pronounceInterviewQuestion()" title="Écouter la question posée par l'agent">
+                <i class="fa-solid fa-volume-high"></i>
+              </button>
+            </div>
+            <h4 id="sim-question-text">Chargement de la question...</h4>
+            <div class="sim-question-intent" id="sim-intent-text"></div>
+          </div>
+
+          <!-- Candidate Practice Notes Area -->
+          <div class="sim-practice-area">
+            <label for="sim-user-notes" style="display:block; font-size:0.85rem; font-weight:700; color:var(--text-primary); margin-bottom:0.4rem;">
+              <i class="fa-solid fa-pen-nib"></i> Entraînez-vous à formuler votre réponse (oral ou écrit) :
+            </label>
+            <textarea id="sim-user-notes" class="sim-textarea" placeholder="Notez ici les arguments clés et mots de vocabulaire que vous utiliseriez pour répondre sereinement à l'agent..." oninput="saveInterviewNote()"></textarea>
+          </div>
+
+          <!-- Reveal Model Answer & Advice Button -->
+          <button class="reader-nav-btn btn-secondary" onclick="toggleRevealAnswer()" style="width:100%; justify-content:center; margin-bottom:1rem;">
+            <i class="fa-regular fa-eye"></i> <span id="sim-reveal-btn-label">Révéler la réponse type & conseils</span>
+          </button>
+
+          <!-- Model Answer Reveal Container -->
+          <div class="sim-answer-reveal-box" id="sim-answer-reveal-box">
+            <h5 class="sim-reveal-title">
+              <i class="fa-solid fa-certificate"></i> Réponse Modèle Attendue par l'Agent :
+            </h5>
+            <p class="sim-model-text" id="sim-model-answer-text"></p>
+
+            <div class="dos-donts-grid">
+              <div class="dos-col">
+                <h6>Ce qu'il faut faire :</h6>
+                <ul id="sim-dos-list"></ul>
+              </div>
+              <div class="donts-col">
+                <h6>Ce qu'il ne faut PAS faire :</h6>
+                <ul id="sim-donts-list"></ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Simulator Navigation -->
+          <div style="display:flex; justify-content:space-between; align-items:center; margin-top:1.5rem; padding-top:1.25rem; border-top:1px solid var(--border-subtle);">
+            <button class="reader-nav-btn btn-secondary" onclick="navigateInterview(-1)">
+              <i class="fa-solid fa-arrow-left"></i> Question précédente
+            </button>
+            <button class="reader-nav-btn btn-primary" onclick="navigateInterview(1)">
+              Question suivante <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Interview Preparation Checklist & Advice Sidebar -->
+        <aside class="interview-tips-sidebar" role="complementary" aria-label="Conseils pour l'entretien">
+          <div class="prep-checklist-card">
+            <h4><i class="fa-solid fa-list-check" style="color:var(--fr-blue);"></i> Checklist Essentielle</h4>
+            <div class="checklist-items" id="interview-checklist-container">
+              <!-- Checklist items -->
+            </div>
+          </div>
+
+          <div class="prep-checklist-card">
+            <h4><i class="fa-solid fa-lightbulb" style="color:var(--fr-gold);"></i> Conseils du Jour J</h4>
+            <div id="interview-advice-container">
+              <!-- Advice items -->
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- ========================================================
+         VIEW 6: PROGRESSION & STATISTIQUES (ANALYTICS)
+         ======================================================== -->
+    <section class="view-section" id="view-progress">
+      <div class="stats-dashboard-grid">
+        
+        <!-- Score Overview Card -->
+        <div style="background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-xl); padding:2rem; box-shadow:var(--shadow-sm); display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1.5rem;">
+          <div>
+            <span class="reader-pill badge-pill">Indicateur Global</span>
+            <h2 style="font-family:var(--font-heading); font-size:2rem; font-weight:800; margin:0.4rem 0; color:var(--text-primary);">
+              Taux d'Assimilation Républicaine : <span id="prog-readiness-percent" style="color:var(--fr-blue);">0%</span>
+            </h2>
+            <div id="prog-verdict-badge"></div>
+          </div>
+          <div style="min-width:280px; flex:1; max-width:400px;">
+            <div class="progress-bar-container" style="height:12px;">
+              <div class="progress-bar-fill" id="prog-readiness-bar" style="width:0%;"></div>
+            </div>
+            <div style="display:flex; justify-content:space-between; font-size:0.75rem; color:var(--text-muted); margin-top:0.4rem;">
+              <span>0% Début</span>
+              <span>80% Seuil Examen Civique</span>
+              <span>100% Maîtrise</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- KPI Cards Grid -->
+        <div class="stats-summary-row">
+          <div class="stat-kpi-card">
+            <div class="kpi-icon-box blue">
+              <i class="fa-solid fa-book-open"></i>
+            </div>
+            <div>
+              <div class="kpi-number" id="prog-stat-chapters">0 / 14</div>
+              <div class="kpi-label">Chapitres étudiés</div>
+            </div>
+          </div>
+
+          <div class="stat-kpi-card">
+            <div class="kpi-icon-box green">
+              <i class="fa-solid fa-award"></i>
+            </div>
+            <div>
+              <div class="kpi-number" id="prog-stat-quizzes">0 / 5</div>
+              <div class="kpi-label">Quiz thématiques validés</div>
+            </div>
+          </div>
+
+          <div class="stat-kpi-card">
+            <div class="kpi-icon-box gold">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <div>
+              <div class="kpi-number" id="prog-stat-flashcards">0 / 52</div>
+              <div class="kpi-label">Cartes mémoires maîtrisées</div>
+            </div>
+          </div>
+
+          <div class="stat-kpi-card">
+            <div class="kpi-icon-box red">
+              <i class="fa-solid fa-stopwatch"></i>
+            </div>
+            <div>
+              <div class="kpi-number" id="prog-stat-exams">0 réussi(s)</div>
+              <div class="kpi-label">Examens blancs réussis (≥80%)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Module Progress Table -->
+        <div class="stats-table-card">
+          <h3 class="section-title" style="margin-bottom:1.25rem;">
+            <i class="fa-solid fa-table-list" style="color:var(--fr-blue);"></i> Détail par Module d'Apprentissage
+          </h3>
+          <div class="reader-table-wrap">
+            <table class="reader-table">
+              <thead>
+                <tr>
+                  <th>Module</th>
+                  <th>Progression Lecture</th>
+                  <th>Score Quiz Thématique</th>
+                  <th>Statut</th>
+                </tr>
+              </thead>
+              <tbody id="prog-modules-table-body">
+                <!-- Populated by progress.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Exam History Table -->
+        <div class="stats-table-card">
+          <h3 class="section-title" style="margin-bottom:1.25rem;">
+            <i class="fa-solid fa-clock-rotate-left" style="color:var(--fr-blue);"></i> Historique des Examens Blancs 2026
+          </h3>
+          <div class="reader-table-wrap">
+            <table class="reader-table">
+              <thead>
+                <tr>
+                  <th>Tentative</th>
+                  <th>Date</th>
+                  <th>Score obtenu</th>
+                  <th>Pourcentage</th>
+                  <th>Résultat Examen Civique</th>
+                </tr>
+              </thead>
+              <tbody id="prog-exams-table-body">
+                <!-- Populated by progress.js -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Data Backup, Export & Reset Section -->
+        <div class="stats-actions-card">
+          <div>
+            <h4 style="font-weight:700; color:var(--text-primary); margin-bottom:0.25rem;">Sauvegarde & Gestion des Données</h4>
+            <p style="font-size:0.85rem; color:var(--text-secondary);">Exportez votre progression sur votre ordinateur ou importez une sauvegarde.</p>
+          </div>
+          <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
+            <button class="btn-sm-primary" onclick="exportProgress()">
+              <i class="fa-solid fa-download"></i> Exporter mes données
+            </button>
+            <button class="reader-nav-btn btn-secondary" onclick="triggerImportFile()" style="font-size:0.8rem; padding:0.4rem 0.9rem;">
+              <i class="fa-solid fa-upload"></i> Importer une sauvegarde
+            </button>
+            <button class="reader-nav-btn btn-secondary" onclick="resetAllProgress()" style="font-size:0.8rem; padding:0.4rem 0.9rem; color:var(--danger); border-color:var(--danger);">
+              <i class="fa-solid fa-trash-can"></i> Réinitialiser
+            </button>
+            <input type="file" id="prog-import-input" accept=".json" style="display:none;" onchange="handleImportFile(event)">
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+  <script src="js/course.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/flashcards.js"></script>
+  <script src="js/interview.js"></script>
+  <script src="js/progress.js"></script>
+</body>
+</html>

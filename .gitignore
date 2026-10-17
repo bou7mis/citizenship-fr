@@ -1,0 +1,14 @@
+# Environments & Dependencies
+.venv/
+__pycache__/
+*.pyc
+
+# Temporary & Dump files
+extracted_livret_text.txt
+full_livret_dump.txt
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+*.log

@@ -1,0 +1,181 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Generator script to produce authentic Prefecture Interview Questions & Simulator dataset
+(data/interview_prep.json).
+"""
+
+import json
+
+interview_questions = [
+    {
+        "id": "int-1",
+        "category": "Motivations & Parcours Personnel",
+        "difficulty": "essentielle",
+        "question": "Pourquoi souhaitez-vous devenir français(e) ?",
+        "intent": "L'agent vérifie votre attachement sincère à la France et la cohérence de votre projet de vie.",
+        "modelAnswer": "« Je souhaite devenir français(e) car la France est devenue ma patrie de cœur et de vie. J'adhère profondément aux valeurs républicaines de liberté, d'égalité, de fraternité et de laïcité. C'est ici que je construis mon avenir, ma vie professionnelle et familiale. Acquérir la nationalité française est pour moi l'aboutissement naturel de mon intégration et l'engagement d'exercer tous mes devoirs de citoyen, notamment le droit de vote pour participer à la vie démocratique du pays. »",
+        "dos": [
+            "Parlez de vos attaches réelles, de votre travail, de vos amis et de votre projet durable en France.",
+            "Mentionnez votre volonté de participer à la vie civique et démocratique (le vote).",
+            "Exprimez votre attachement aux valeurs républicaines avec des exemples concrets."
+        ],
+        "donts": [
+            "Ne dites JAMAIS que c'est « pour avoir un passeport plus facile pour voyager » ou « pour des raisons administratives ».",
+            "N'opposez pas agressivement votre pays d'origine à la France ; montrez un attachement positif et reconnaissant."
+        ]
+    },
+    {
+        "id": "int-2",
+        "category": "Motivations & Parcours Personnel",
+        "difficulty": "essentielle",
+        "question": "Qu'est-ce que la nationalité française va changer pour vous au quotidien ?",
+        "intent": "Vérifier que vous comprenez la dimension citoyenne et politique de la nationalité.",
+        "modelAnswer": "« Sur le plan des valeurs et de mon quotidien, je me sens déjà profondément intégré(e). Mais ce qui va changer de façon fondamentale, c'est l'accès à la pleine citoyenneté politique : le droit de vote et de participer aux élections nationales pour choisir nos représentants, ainsi que le devoir civique de contribuer activement au destin collectif de la Nation (comme pouvoir être juré d'assises ou accéder aux emplois de la fonction publique d'État). »",
+        "dos": [
+            "Mettez en avant le droit de vote et la participation civique.",
+            "Soulignez le sentiment d'appartenir formellement et à part entière à la communauté nationale."
+        ],
+        "donts": [
+            "Ne réduisez pas la réponse à des avantages matériels ou de voyage."
+        ]
+    },
+    {
+        "id": "int-3",
+        "category": "Valeurs & Laïcité",
+        "difficulty": "piege",
+        "question": "Que signifie la laïcité pour vous et comment la vivez-vous au quotidien ?",
+        "intent": "L'agent s'assure que vous ne confondez pas laïcité avec interdiction des religions, et que vous acceptez la primauté absolue des lois de la République.",
+        "modelAnswer": "« Pour moi, la laïcité est un principe fondamental de liberté et de paix sociale. Elle garantit à chacun la liberté de croire, de ne pas croire ou de changer de religion, tout en assurant la neutralité absolue de l'État et des services publics. Au quotidien, cela signifie que la religion relève de la sphère privée et ne peut jamais s'immiscer dans les règles publiques ou chercher à s'imposer aux autres. Les lois de la République s'appliquent à tous et sont au-dessus de toute conviction religieuse. »",
+        "dos": [
+            "Définissez les deux volets : liberté de conscience individuelle ET neutralité stricte de l'État.",
+            "Rappelez que les lois républicaines sont suprêmes."
+        ],
+        "donts": [
+            "N'hésitez pas un seul instant sur la supériorité de la loi républicaine sur les règles religieuses."
+        ]
+    },
+    {
+        "id": "int-4",
+        "category": "Valeurs & Laïcité",
+        "difficulty": "piege",
+        "question": "Si votre fille ou votre femme doit être soignée en urgence à l'hôpital par un médecin homme, que faites-vous ?",
+        "intent": "Test direct sur la laïcité et l'égalité femmes-hommes dans les services publics.",
+        "modelAnswer": "« J'accepte sans la moindre hésitation. À l'hôpital public, la priorité absolue est la santé et les soins médicaux, dispensés par des professionnels qualifiés quelle que soit leur identité. Le service public est neutre et on ne choisit pas le soignant en fonction de son sexe ou de motifs religieux. »",
+        "dos": [
+            "Répondez immédiatement 'Oui, bien sûr' avec clarté et sérénité."
+        ],
+        "donts": [
+            "Tout refus ou hésitation sur cette question entraîne un ajournement ou un rejet du dossier."
+        ]
+    },
+    {
+        "id": "int-5",
+        "category": "Valeurs & Laïcité",
+        "difficulty": "piege",
+        "question": "Les femmes et les hommes sont-ils égaux en France ? Donnez des exemples.",
+        "intent": "Vérifier l'assimilation du principe constitutionnel d'égalité femmes-hommes.",
+        "modelAnswer": "« Oui, absolument. L'égalité entre les femmes et les hommes est un principe à valeur constitutionnelle depuis 1946. Elle s'applique rigoureusement dans tous les domaines : liberté de travailler et d'étudier, même autorité parentale sur les enfants dans le foyer, égalité de salaire à poste égal, et parité dans la vie politique. »",
+        "dos": [
+            "Mentionnez l'autorité parentale partagée et l'égalité dans le travail."
+        ],
+        "donts": [
+            "Ne laissez entendre aucune supériorité de l'un sur l'autre."
+        ]
+    },
+    {
+        "id": "int-6",
+        "category": "Institutions & Connaissance Locale",
+        "difficulty": "essentielle",
+        "question": "Quel est le nom du maire de votre commune et le préfet de votre département ?",
+        "intent": "Tester votre intégration locale dans votre ville et votre département de résidence.",
+        "modelAnswer": "« Le maire de ma commune est [Nom du Maire] et le préfet de mon département est [Nom du Préfet]. »",
+        "dos": [
+            "Renseignez-vous impérativement la veille de l'entretien sur le site internet de votre mairie et préfecture."
+        ],
+        "donts": [
+            "Ne restez pas muet : ne pas connaître son maire dénote un manque d'intérêt pour sa commune."
+        ]
+    },
+    {
+        "id": "int-7",
+        "category": "Institutions & Connaissance Locale",
+        "difficulty": "essentielle",
+        "question": "Qui est le Président de la République et qui est le Premier ministre actuel ?",
+        "intent": "Vérifier le suivi de l'actualité politique nationale.",
+        "modelAnswer": "« Le Président de la République est Emmanuel Macron (élu en 2017 et réélu en 2022). Le Premier ministre actuel est [Nom du Premier Ministre en fonction]. »",
+        "dos": [
+            "Vérifiez l'actualité politique le jour même de votre convocation."
+        ],
+        "donts": [
+            "Ne confondez pas le Président (qui nomme) et le Premier ministre (qui applique)."
+        ]
+    },
+    {
+        "id": "int-8",
+        "category": "Histoire & Géographie",
+        "difficulty": "moyenne",
+        "question": "Citez 3 rois de France, 3 présidents de la Ve République et 3 fleuves français.",
+        "intent": "Évaluer vos connaissances fondamentales d'histoire et de géographie du Livret du Citoyen.",
+        "modelAnswer": "« Rois de France : Clovis, François Ier et Louis XIV (ou Henri IV, Saint Louis).\nPrésidents de la Ve République : Charles de Gaulle, François Mitterrand et Jacques Chirac.\nFleuves : La Loire (le plus long), la Seine (qui traverse Paris) et le Rhône. »",
+        "dos": [
+            "Répondez avec fluidité et précision en donnant quelques détails."
+        ],
+        "donts": [
+            "Ne confondez pas fleuves et rivières (un fleuve se jette dans la mer ou l'océan)."
+        ]
+    },
+    {
+        "id": "int-9",
+        "category": "Vie Quotidienne & Société",
+        "difficulty": "essentielle",
+        "question": "Quels sont les numéros d'urgence en France et à quoi correspondent-ils ?",
+        "intent": "Vérifier vos réflexes de sécurité et de civisme quotidien.",
+        "modelAnswer": "« Le 15 pour le SAMU (urgences médicales vitales), le 17 pour la Police ou la Gendarmerie (sécurité et infractions), le 18 pour les Sapeurs-Pompiers (incendies et accidents), et le 112 qui est le numéro d'urgence européen unique. »",
+        "dos": [
+            "Mentionnez aussi le 3919 pour les violences conjugales ou le 114 par SMS pour les sourds."
+        ],
+        "donts": [
+            "Ne pas hésiter sur les chiffres 15, 17, 18."
+        ]
+    },
+    {
+        "id": "int-10",
+        "category": "Vie Quotidienne & Société",
+        "difficulty": "moyenne",
+        "question": "Faites-vous partie d'une association ou pratiquez-vous des activités locales ?",
+        "intent": "Apprécier votre degré d'engagement dans la société civile et le lien social.",
+        "modelAnswer": "« Oui, je suis engagé(e) / je participe à des activités [sportives / culturelles / de quartier / de parents d'élèves / de bénévolat]. Cela me permet de tisser des liens avec mes concitoyens et de participer activement à la vie de mon quartier. »",
+        "dos": [
+            "Préparez une ou deux activités concrètes (club sportif, association caritative, fête des voisins, conseil d'école)."
+        ],
+        "donts": [
+            "Évitez de dire que vous ne faites rien en dehors du travail et de la maison."
+        ]
+    }
+]
+
+interview_data = {
+    "version": "2026.1",
+    "totalQuestions": len(interview_questions),
+    "questions": interview_questions,
+    "advice": [
+        {
+            "title": "Tenue vestimentaire et ponctualité",
+            "text": "Arrivez au moins 20 minutes en avance avec tous vos documents originaux classés. Adoptez une tenue soignée, professionnelle et sobre."
+        },
+        {
+            "title": "Niveau de langue et écoute",
+            "text": "Parlez calmement en articulant bien. Répondez précisément à la question posée sans digresser excessivement. Si vous n'avez pas compris une question, demandez poliment : « Pourriez-vous reformuler s'il vous plaît ? »."
+        },
+        {
+            "title": "Attitude républicaine",
+            "text": "Montrez un sourire, de la courtoisie et une adhésion sincère et spontanée aux valeurs de la République. Restez humble mais confiant(e)."
+        }
+    ]
+}
+
+with open('data/interview_prep.json', 'w', encoding='utf-8') as f:
+    json.dump(interview_data, f, ensure_ascii=False, indent=2)
+
+print('Generated data/interview_prep.json successfully.')

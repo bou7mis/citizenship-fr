@@ -2893,14 +2893,31 @@ img {
 .fc-stat-fill.easy { background: var(--success); }
 
 /* Speaking animation */
-.action-btn.speaking {
-  color: var(--fr-blue);
-  animation: speakingPulse 1s infinite alternate;
+.action-btn.speaking,
+.quiz-audio-btn.speaking {
+  color: #FFFFFF !important;
+  background: var(--fr-blue) !important;
+  box-shadow: 0 0 14px rgba(0, 85, 165, 0.5) !important;
+  animation: speakingPulse 1s infinite alternate ease-in-out;
 }
 
 @keyframes speakingPulse {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.15); }
+  0% { transform: scale(1); box-shadow: 0 0 6px rgba(0, 85, 165, 0.4); }
+  100% { transform: scale(1.16); box-shadow: 0 0 18px rgba(0, 85, 165, 0.8); }
+}
+
+.fc-voice-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: rgba(0, 85, 165, 0.08);
+  color: var(--fr-blue);
+  border: 1px solid rgba(0, 85, 165, 0.2);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  letter-spacing: 0.01em;
 }
 
 /* Responsive adjustments */

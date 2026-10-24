@@ -255,6 +255,10 @@ function renderFlashcard() {
   const controlsFront = document.getElementById('fc-controls-front');
   const controlsBack = document.getElementById('fc-controls-back');
 
+  if (window.FrenchAIReader) {
+    window.FrenchAIReader.stop();
+  }
+
   if (countdownIntervalId) {
     clearInterval(countdownIntervalId);
     countdownIntervalId = null;
@@ -402,6 +406,10 @@ function flipCard(event) {
   const controlsBack = document.getElementById('fc-controls-back');
 
   if (!cardElement) return;
+
+  if (window.FrenchAIReader) {
+    window.FrenchAIReader.stop();
+  }
 
   isCardFlipped = !isCardFlipped;
   cardElement.classList.toggle('flipped', isCardFlipped);
@@ -640,26 +648,31 @@ function updateStudyModeButton() {
 }
 
 /**
- * Text-to-Speech audio pronunciation
+ * Text-to-Speech audio pronunciation using French AI Voice Reader
+ * @param {'front'|'back'} [side]
  */
-function pronounceCard() {
+function pronounceCard(side) {
   const card = activeFlashcardsList[currentCardIndex];
-  if (!card || !('speechSynthesis' in window)) return;
+  if (!card) return;
 
-  const rawHtml = isCardFlipped ? card.back : card.front;
-  const cleanText = stripHtmlTags(rawHtml);
+  const targetSide = side || (isCardFlipped ? 'back' : 'front');
+  const btn = targetSide === 'back'
+    ? document.getElementById('fc-speak-back-btn')
+    : document.getElementById('fc-speak-front-btn');
 
-  window.speechSynthesis.cancel();
-  const utter = new SpeechSynthesisUtterance(cleanText);
-  utter.lang = 'fr-FR';
-  utter.rate = 0.95;
+  const textToRead = targetSide === 'back' ? card.back : card.front;
 
-  const btn = isCardFlipped ? document.getElementById('fc-speak-back-btn') : document.getElementById('fc-speak-front-btn');
-  if (btn) btn.classList.add('speaking');
-  utter.onend = () => { if (btn) btn.classList.remove('speaking'); };
-  utter.onerror = () => { if (btn) btn.classList.remove('speaking'); };
-
-  window.speechSynthesis.speak(utter);
+  if (window.FrenchAIReader) {
+    window.FrenchAIReader.speak(textToRead, {
+      buttonElement: btn,
+      rate: 0.94
+    });
+  } else if ('speechSynthesis' in window) {
+    window.speechSynthesis.cancel();
+    const utter = new SpeechSynthesisUtterance(stripHtmlTags(textToRead));
+    utter.lang = 'fr-FR';
+    window.speechSynthesis.speak(utter);
+  }
 }
 
 /**

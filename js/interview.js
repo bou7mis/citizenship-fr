@@ -86,12 +86,21 @@ function saveInterviewNote() {
 // Pronounce the interview question
 function pronounceInterviewQuestion() {
   const q = APP_STATE.interviewData.questions[currentInterviewIndex];
-  if (!q || !('speechSynthesis' in window)) return;
+  if (!q) return;
 
-  const utter = new SpeechSynthesisUtterance(q.question);
-  utter.lang = 'fr-FR';
-  utter.rate = 0.95;
-  window.speechSynthesis.speak(utter);
+  const btn = document.querySelector('.sim-question-bubble .action-btn');
+
+  if (window.FrenchAIReader) {
+    window.FrenchAIReader.speak(q.question, {
+      buttonElement: btn,
+      rate: 0.94
+    });
+  } else if ('speechSynthesis' in window) {
+    const utter = new SpeechSynthesisUtterance(q.question);
+    utter.lang = 'fr-FR';
+    utter.rate = 0.95;
+    window.speechSynthesis.speak(utter);
+  }
 }
 
 // Render personal checklist for the interview

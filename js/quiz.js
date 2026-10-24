@@ -157,6 +157,10 @@ function updateTimerDisplay() {
 
 // Render the active question in runner
 function renderCurrentQuestion() {
+  if (window.FrenchAIReader) {
+    window.FrenchAIReader.stop();
+  }
+
   const q = activeQuizSession.questions[activeQuizSession.currentIndex];
   if (!q) return;
 
@@ -232,6 +236,9 @@ function navigateQuiz(delta) {
 
 // Submit and compute results
 function submitQuizSession() {
+  if (window.FrenchAIReader) {
+    window.FrenchAIReader.stop();
+  }
   clearInterval(activeQuizSession.timerInterval);
 
   let correctCount = 0;
@@ -324,11 +331,34 @@ function submitQuizSession() {
 
 // Exit quiz results back to Hub
 function exitQuizToHub() {
+  if (window.FrenchAIReader) {
+    window.FrenchAIReader.stop();
+  }
   document.getElementById('quiz-results-container').classList.remove('active');
   document.getElementById('quiz-active-container').classList.remove('active');
   document.getElementById('quiz-hub-view').style.display = 'flex';
   renderQuizzesList();
   window.scrollTo({ top: 100, behavior: 'smooth' });
+}
+
+/**
+ * Speak the active quiz question and options using French AI Voice Reader
+ */
+function speakActiveQuizQuestion() {
+  const q = activeQuizSession?.questions?.[activeQuizSession.currentIndex];
+  if (!q) return;
+
+  const btn = document.getElementById('btn-quiz-audio');
+  const letters = ['A', 'B', 'C', 'D'];
+  const optionsText = q.options.map((opt, i) => `Choix ${letters[i]} : ${opt}`).join('. ');
+  const fullText = `Question : ${q.question}. ${optionsText}.`;
+
+  if (window.FrenchAIReader) {
+    window.FrenchAIReader.speak(fullText, {
+      buttonElement: btn,
+      rate: 0.94
+    });
+  }
 }
 
 window.initQuizHub = initQuizHub;
@@ -339,3 +369,4 @@ window.selectQuizOption = selectQuizOption;
 window.navigateQuiz = navigateQuiz;
 window.submitQuizSession = submitQuizSession;
 window.exitQuizToHub = exitQuizToHub;
+window.speakActiveQuizQuestion = speakActiveQuizQuestion;

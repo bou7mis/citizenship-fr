@@ -328,7 +328,12 @@
         </div>
 
         <div class="quiz-question-box">
-          <h3 class="quiz-question-title" id="quiz-question-text">Question en cours...</h3>
+          <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:1rem; margin-bottom:0.75rem;">
+            <h3 class="quiz-question-title" id="quiz-question-text" style="margin-bottom:0; flex:1;">Question en cours...</h3>
+            <button class="action-btn" id="btn-quiz-audio" onclick="speakActiveQuizQuestion()" title="Écouter la question (Voix IA française)">
+              <i class="fa-solid fa-volume-high"></i>
+            </button>
+          </div>
           <div class="quiz-options-list" id="quiz-options-container">
             <!-- Options A, B, C, D -->
           </div>
@@ -419,6 +424,7 @@
             <button id="fc-mode-toggle" class="fc-mode-btn active" onclick="toggleStudyMode()" title="Basculer entre Mode Répétition Espacée et Mode Consultation Libre">
               <i class="fa-solid fa-bolt"></i> <span id="fc-mode-text">Mode Espacé (Anki)</span>
             </button>
+            <span class="fc-voice-badge" title="Lecteur Audio IA Studio - Français B2 uniquement"><i class="fa-solid fa-sparkles"></i> Voix IA B2</span>
           </div>
           <div style="display:flex; align-items:center; gap:0.75rem;">
             <span id="fc-mastery-status"></span>
@@ -947,6 +953,7 @@
 
   <!-- Scripts -->
   <script src="js/app.js"></script>
+  <script src="js/ai_reader.js"></script>
   <script src="js/course.js"></script>
   <script src="js/video_player.js"></script>
   <script src="js/quiz.js"></script>

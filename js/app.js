@@ -86,7 +86,10 @@ function switchTab(tabId) {
     sec.classList.toggle('active', sec.id === `view-${tabId}`);
   });
 
-  // Stop lesson audio if leaving course
+  // Stop lesson audio or French AI Reader when switching views
+  if (window.FrenchAIReader) {
+    window.FrenchAIReader.stop();
+  }
   if (tabId !== 'course' && window.stopAudioReading) {
     window.stopAudioReading();
   }

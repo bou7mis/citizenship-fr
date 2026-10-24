@@ -424,6 +424,10 @@
             <button id="fc-mode-toggle" class="fc-mode-btn active" onclick="toggleStudyMode()" title="Basculer entre Mode Répétition Espacée et Mode Consultation Libre">
               <i class="fa-solid fa-bolt"></i> <span id="fc-mode-text">Mode Espacé (Anki)</span>
             </button>
+            <button id="fc-auto-read-toggle" class="fc-auto-read-btn" onclick="toggleAutoRead()" title="Activer/Désactiver l'auto-lecture vocale (Raccourci: A)" aria-pressed="false">
+              <i class="fa-solid fa-volume-high"></i> <span id="fc-auto-read-text">Auto-lecture</span>
+              <span class="fc-toggle-indicator" id="fc-auto-read-status">OFF</span>
+            </button>
             <span class="fc-voice-badge" title="Lecteur Audio IA Studio - Français B2 uniquement"><i class="fa-solid fa-sparkles"></i> Voix IA B2</span>
           </div>
           <div style="display:flex; align-items:center; gap:0.75rem;">
@@ -570,7 +574,8 @@
           <span><kbd>3</kbd> : Correct (10 min)</span> • 
           <span><kbd>4</kbd> : Facile (3 j)</span> • 
           <span><kbd>←</kbd> / <kbd>→</kbd> : Naviguer</span> • 
-          <span><kbd>R</kbd> : Audio</span>
+          <span><kbd>R</kbd> : Audio</span> • 
+          <span><kbd>A</kbd> : Auto-lecture</span>
         </div>
 
       </div>

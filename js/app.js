@@ -90,6 +90,9 @@ function switchTab(tabId) {
   if (window.FrenchAIReader) {
     window.FrenchAIReader.stop();
   }
+  if (window.cancelAutoReadTimer) {
+    window.cancelAutoReadTimer();
+  }
   if (tabId !== 'course' && window.stopAudioReading) {
     window.stopAudioReading();
   }

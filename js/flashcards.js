@@ -62,6 +62,8 @@ let isCardFlipped = false;
 let currentCategoryFilter = "all-due";
 let studyMode = "spaced"; // "spaced" (AnkiDroid Queue) or "browse" (Free Navigation)
 let countdownIntervalId = null;
+let isAutoReadEnabled = localStorage.getItem('citizenship_flashcards_auto_read') === 'true';
+let autoReadTimer = null;
 
 /**
  * Initialize the Flashcards view
@@ -86,6 +88,10 @@ function initFlashcardsView() {
 
   setupCategoryFilter();
   updateAnkiHeaderBadges();
+  if (APP_STATE.userProgress && APP_STATE.userProgress.flashcardAutoRead !== undefined) {
+    isAutoReadEnabled = !!APP_STATE.userProgress.flashcardAutoRead;
+  }
+  updateAutoReadButton();
   filterFlashcards(currentCategoryFilter);
   bindKeyboardShortcuts();
 }
@@ -255,6 +261,7 @@ function renderFlashcard() {
   const controlsFront = document.getElementById('fc-controls-front');
   const controlsBack = document.getElementById('fc-controls-back');
 
+  cancelAutoReadTimer();
   if (window.FrenchAIReader) {
     window.FrenchAIReader.stop();
   }
@@ -333,6 +340,11 @@ function renderFlashcard() {
   if (counterElement) {
     counterElement.textContent = `${currentCardIndex + 1} / ${activeFlashcardsList.length}`;
   }
+
+  // Trigger auto-reading if enabled
+  if (isAutoReadEnabled && APP_STATE.currentTab === 'flashcards') {
+    triggerAutoRead();
+  }
 }
 
 /**
@@ -407,6 +419,7 @@ function flipCard(event) {
 
   if (!cardElement) return;
 
+  cancelAutoReadTimer();
   if (window.FrenchAIReader) {
     window.FrenchAIReader.stop();
   }
@@ -424,6 +437,11 @@ function flipCard(event) {
     if (controlsBack) controlsBack.style.display = 'none';
     const frontContent = document.querySelector('.flashcard-face.front .fc-content-center');
     if (frontContent) frontContent.scrollTop = 0;
+  }
+
+  // Trigger auto-reading if enabled
+  if (isAutoReadEnabled && APP_STATE.currentTab === 'flashcards') {
+    triggerAutoRead();
   }
 }
 
@@ -648,6 +666,87 @@ function updateStudyModeButton() {
 }
 
 /**
+ * Cancel any pending auto-read timer
+ */
+function cancelAutoReadTimer() {
+  if (autoReadTimer) {
+    clearTimeout(autoReadTimer);
+    autoReadTimer = null;
+  }
+}
+window.cancelAutoReadTimer = cancelAutoReadTimer;
+
+/**
+ * Trigger French AI Reader speech on current card face with smooth debounce
+ */
+function triggerAutoRead() {
+  if (!isAutoReadEnabled) return;
+  if (APP_STATE.currentTab !== 'flashcards') return;
+  if (!activeFlashcardsList || activeFlashcardsList.length === 0) return;
+
+  cancelAutoReadTimer();
+
+  autoReadTimer = setTimeout(() => {
+    if (!isAutoReadEnabled || APP_STATE.currentTab !== 'flashcards') return;
+    pronounceCard(isCardFlipped ? 'back' : 'front');
+  }, 240);
+}
+
+/**
+ * Toggle auto reading for flashcards
+ * @param {boolean} [forceState]
+ */
+function toggleAutoRead(forceState) {
+  if (typeof forceState === 'boolean') {
+    isAutoReadEnabled = forceState;
+  } else {
+    isAutoReadEnabled = !isAutoReadEnabled;
+  }
+
+  localStorage.setItem('citizenship_flashcards_auto_read', isAutoReadEnabled ? 'true' : 'false');
+  if (APP_STATE.userProgress) {
+    APP_STATE.userProgress.flashcardAutoRead = isAutoReadEnabled;
+    saveUserProgress();
+  }
+
+  updateAutoReadButton();
+
+  if (isAutoReadEnabled) {
+    showToast("Auto-lecture vocale activée (question et réponse)", "success");
+    if (APP_STATE.currentTab === 'flashcards' && activeFlashcardsList.length > 0) {
+      triggerAutoRead();
+    }
+  } else {
+    cancelAutoReadTimer();
+    if (window.FrenchAIReader) {
+      window.FrenchAIReader.stop();
+    }
+    showToast("Auto-lecture vocale désactivée", "info");
+  }
+}
+
+/**
+ * Update the auto-read toggle button UI
+ */
+function updateAutoReadButton() {
+  const btn = document.getElementById('fc-auto-read-toggle');
+  const status = document.getElementById('fc-auto-read-status');
+  if (!btn) return;
+
+  if (isAutoReadEnabled) {
+    btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
+    btn.title = "Auto-lecture active : questions et réponses lues automatiquement (Raccourci: A)";
+    if (status) status.textContent = "ON";
+  } else {
+    btn.classList.remove('active');
+    btn.setAttribute('aria-pressed', 'false');
+    btn.title = "Auto-lecture désactivée : activez pour écouter automatiquement les cartes (Raccourci: A)";
+    if (status) status.textContent = "OFF";
+  }
+}
+
+/**
  * Text-to-Speech audio pronunciation using French AI Voice Reader
  * @param {'front'|'back'} [side]
  */
@@ -754,6 +853,9 @@ function bindKeyboardShortcuts() {
     } else if (e.key === 'r' || e.key === 'R') {
       e.preventDefault();
       pronounceCard();
+    } else if (e.key === 'a' || e.key === 'A') {
+      e.preventDefault();
+      toggleAutoRead();
     }
   });
 }
@@ -769,6 +871,9 @@ window.markCardNeedsReview = markCardNeedsReview;
 window.pronounceCard = pronounceCard;
 window.filterFlashcards = filterFlashcards;
 window.toggleStudyMode = toggleStudyMode;
+window.toggleAutoRead = toggleAutoRead;
+window.updateAutoReadButton = updateAutoReadButton;
+window.triggerAutoRead = triggerAutoRead;
 window.reviewAhead = reviewAhead;
 window.switchToFreeMode = switchToFreeMode;
 window.openFlashcardStatsModal = openFlashcardStatsModal;

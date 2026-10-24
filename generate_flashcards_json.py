@@ -521,7 +521,7 @@ if os.path.exists(extra_file):
         for broken_img, local_img in IMAGE_MAPPING.items():
             if broken_img in t:
                 t = t.replace(broken_img, local_img)
-        # Clean redundant style-inherit wrapper spans from Anki
+        # Clean redundant style-inherit wrapper spans from source export
         t = re.sub(r'<span style=[\'"]font-style:\s*inherit;\s*font-weight:\s*inherit;?[\'"]>([\s\S]*?)</span>', r'\1', t, flags=re.IGNORECASE)
         t = re.sub(r'<span style=[\'"]font-style:\s*inherit;\s*font-weight:\s*inherit;?[\'"]>([\s\S]*?)</span>', r'\1', t, flags=re.IGNORECASE)
         t = re.sub(r'<div>\s*(<br[^>]*>)?\s*</div>', '', t, flags=re.IGNORECASE)

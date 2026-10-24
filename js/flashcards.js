@@ -1,9 +1,9 @@
 /**
- * LIVRET DU CITOYEN 2026 - AnkiDroid Spaced Repetition Flashcards Engine
+ * LIVRET DU CITOYEN 2026 - Spaced Repetition Flashcards Engine
  * 
  * Features:
  * - Full HTML & Rich Text support on Front and Back
- * - AnkiDroid 4-button Feedback Mechanism:
+ * - 4-button Feedback Mechanism:
  *     - Again (À revoir) : Snooze 1 min (60,000 ms)
  *     - Hard (Difficile)  : Snooze 6 min (360,000 ms)
  *     - Good (Correct)    : Snooze 10 min (600,000 ms)
@@ -12,12 +12,12 @@
  * - Queue Management: Due Cards first, Live Countdown for snoozed cards
  * - Early Review mode & Free Navigation mode
  * - Natural French TTS Audio pronunciation (clean HTML stripping)
- * - AnkiDroid Queue Counters: 🔵 Nouveau, 🔴 À revoir, 🟢 Révision, ⏳ En attente
+ * - Queue Counters: 🔵 Nouveau, 🔴 À revoir, 🟢 Révision, ⏳ En attente
  * - Comprehensive Retention & Feedback Statistics Modal
  */
 
-// AnkiDroid Intervals Configuration
-const ANKI_INTERVALS = {
+// Spaced Repetition Intervals Configuration
+const REVIEW_INTERVALS = {
   again: {
     key: 'again',
     ms: 1 * 60 * 1000,
@@ -60,7 +60,7 @@ let activeFlashcardsList = [];
 let currentCardIndex = 0;
 let isCardFlipped = false;
 let currentCategoryFilter = "all-due";
-let studyMode = "spaced"; // "spaced" (AnkiDroid Queue) or "browse" (Free Navigation)
+let studyMode = "spaced"; // "spaced" (Spaced Repetition Queue) or "browse" (Free Navigation)
 let countdownIntervalId = null;
 let isAutoReadEnabled = localStorage.getItem('citizenship_flashcards_auto_read') === 'true';
 let autoReadTimer = null;
@@ -87,7 +87,7 @@ function initFlashcardsView() {
   }
 
   setupCategoryFilter();
-  updateAnkiHeaderBadges();
+  updateHeaderBadges();
   if (APP_STATE.userProgress && APP_STATE.userProgress.flashcardAutoRead !== undefined) {
     isAutoReadEnabled = !!APP_STATE.userProgress.flashcardAutoRead;
   }
@@ -127,9 +127,9 @@ function getCardScheduleState(cardId) {
 }
 
 /**
- * Update the AnkiDroid queue status badges
+ * Update the queue status badges
  */
-function updateAnkiHeaderBadges() {
+function updateHeaderBadges() {
   if (!APP_STATE.flashcardsData) return;
 
   const cards = APP_STATE.flashcardsData.cards;
@@ -178,7 +178,7 @@ function setupCategoryFilter() {
   const snoozedCount = APP_STATE.flashcardsData.cards.filter(c => !isCardDue(c.id)).length;
 
   select.innerHTML = `
-    <optgroup label="Files AnkiDroid">
+    <optgroup label="Files de Révision">
       <option value="all-due">⚡ Cartes à réviser maintenant (${dueCount})</option>
       <option value="all">📚 Toutes les cartes (${total})</option>
       <option value="snoozed">⏳ Cartes en attente / Snoozed (${snoozedCount})</option>
@@ -227,7 +227,7 @@ function filterFlashcards(filterKey) {
   currentCardIndex = 0;
   isCardFlipped = false;
   renderFlashcard();
-  updateAnkiHeaderBadges();
+  updateHeaderBadges();
 }
 
 /**
@@ -471,14 +471,14 @@ window.openImageLightbox = openImageLightbox;
 window.closeImageLightbox = closeImageLightbox;
 
 /**
- * Collect User Feedback and Snooze Card (AnkiDroid Spaced Repetition)
+ * Collect User Feedback and Snooze Card (Spaced Repetition)
  * @param {'again'|'hard'|'good'|'easy'} rating 
  */
 function rateFlashcard(rating) {
   const card = activeFlashcardsList[currentCardIndex];
   if (!card) return;
 
-  const intervalConfig = ANKI_INTERVALS[rating];
+  const intervalConfig = REVIEW_INTERVALS[rating];
   if (!intervalConfig) return;
 
   const now = Date.now();
@@ -542,7 +542,7 @@ function rateFlashcard(rating) {
     navigateFlashcards(1);
   }
 
-  updateAnkiHeaderBadges();
+  updateHeaderBadges();
 }
 
 /**
@@ -642,7 +642,7 @@ function toggleStudyMode() {
   updateStudyModeButton();
   if (studyMode === 'spaced') {
     filterFlashcards('all-due');
-    showToast("Mode Répétition Espacée activé (Anki)", "info");
+    showToast("Mode Répétition Espacée activé", "info");
   } else {
     filterFlashcards('all');
     showToast("Mode Consultation Libre activé (Toutes les cartes)", "info");
@@ -656,7 +656,7 @@ function updateStudyModeButton() {
 
   if (studyMode === 'spaced') {
     btn.classList.add('active');
-    txt.textContent = "Mode Espacé (Anki)";
+    txt.textContent = "Mode Répétition Espacée";
     btn.title = "Mode Répétition Espacée actif : révision prioritaire des cartes dues";
   } else {
     btn.classList.remove('active');
@@ -775,7 +775,7 @@ function pronounceCard(side) {
 }
 
 /**
- * Open AnkiDroid Retention & Statistics Modal
+ * Open Retention & Statistics Modal
  */
 function openFlashcardStatsModal() {
   const modal = document.getElementById('fc-stats-modal');

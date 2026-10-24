@@ -389,12 +389,12 @@
 
     <!-- ========================================================
     <!-- ========================================================
-         VIEW 4: FLASHCARDS (CARTES MÉMOIRE 3D ANKIDROID)
+         VIEW 4: FLASHCARDS (CARTES MÉMOIRE 3D & RÉPÉTITION ESPACÉE)
          ======================================================== -->
     <section class="view-section" id="view-flashcards">
       <div class="flashcards-layout">
         
-        <!-- AnkiDroid Queue Counters Bar -->
+        <!-- File de Révision & Compteurs Espacés -->
         <div class="fc-queue-bar">
           <div class="fc-queue-group">
             <span class="fc-queue-chip new" title="Nouvelles cartes non encore étudiées">
@@ -410,8 +410,8 @@
               <span class="fc-chip-dot"></span> En attente <strong id="fc-count-snoozed">0</strong>
             </span>
           </div>
-          <button class="fc-stats-pill-btn" onclick="openFlashcardStatsModal()" title="Voir les statistiques de mémorisation AnkiDroid">
-            <i class="fa-solid fa-chart-column"></i> Statistiques Anki
+          <button class="fc-stats-pill-btn" onclick="openFlashcardStatsModal()" title="Voir les statistiques de mémorisation et de révision">
+            <i class="fa-solid fa-chart-column"></i> Statistiques de Révision
           </button>
         </div>
 
@@ -422,7 +422,7 @@
               <!-- Populated by flashcards.js -->
             </select>
             <button id="fc-mode-toggle" class="fc-mode-btn active" onclick="toggleStudyMode()" title="Basculer entre Mode Répétition Espacée et Mode Consultation Libre">
-              <i class="fa-solid fa-bolt"></i> <span id="fc-mode-text">Mode Espacé (Anki)</span>
+              <i class="fa-solid fa-bolt"></i> <span id="fc-mode-text">Mode Répétition Espacée</span>
             </button>
             <button id="fc-auto-read-toggle" class="fc-auto-read-btn" onclick="toggleAutoRead()" title="Activer/Désactiver l'auto-lecture vocale (Raccourci: A)" aria-pressed="false">
               <i class="fa-solid fa-volume-high"></i> <span id="fc-auto-read-text">Auto-lecture</span>
@@ -493,11 +493,11 @@
           </div>
         </div>
 
-        <!-- AnkiDroid Session Complete Screen -->
+        <!-- Session Complete Screen -->
         <div id="flashcards-session-complete" class="fc-completion-card" style="display:none;">
           <div class="fc-completion-icon"><i class="fa-solid fa-circle-check"></i></div>
           <h3>Session terminée pour le moment !</h3>
-          <p style="color:var(--text-secondary); margin:0.5rem 0 1.25rem;">Toutes les cartes programmées ont été révisées selon l'algorithme AnkiDroid.</p>
+          <p style="color:var(--text-secondary); margin:0.5rem 0 1.25rem;">Toutes les cartes programmées ont été révisées selon l'algorithme de répétition espacée.</p>
           <div class="fc-countdown-pill" id="fc-next-due-countdown">Prochaine carte disponible dans : calcul...</div>
           <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap; margin-top:1.5rem;">
             <button class="btn-primary" onclick="reviewAhead()"><i class="fa-solid fa-forward"></i> Réviser à l'avance (snooze)</button>
@@ -534,34 +534,34 @@
             </button>
           </div>
 
-          <!-- Back Controls: AnkiDroid 4 Feedback Buttons (when card is flipped) -->
-          <div class="fc-anki-controls" id="fc-controls-back" style="display:none;">
-            <button class="fc-anki-btn fc-anki-again" onclick="rateFlashcard('again')" title="À revoir - Snooze pour 1 minute (Touche 1)">
-              <span class="fc-anki-interval">1 min</span>
-              <span class="fc-anki-title"><i class="fa-solid fa-rotate-left"></i> À revoir</span>
-              <span class="fc-anki-sub">Snooze 1 min</span>
-              <kbd class="fc-anki-badge">1</kbd>
+          <!-- Back Controls: 4 Feedback Buttons (when card is flipped) -->
+          <div class="fc-feedback-controls" id="fc-controls-back" style="display:none;">
+            <button class="fc-feedback-btn fc-feedback-again" onclick="rateFlashcard('again')" title="À revoir - Snooze pour 1 minute (Touche 1)">
+              <span class="fc-feedback-interval">1 min</span>
+              <span class="fc-feedback-title"><i class="fa-solid fa-rotate-left"></i> À revoir</span>
+              <span class="fc-feedback-sub">Snooze 1 min</span>
+              <kbd class="fc-feedback-badge">1</kbd>
             </button>
 
-            <button class="fc-anki-btn fc-anki-hard" onclick="rateFlashcard('hard')" title="Difficile - Snooze pour 6 minutes (Touche 2)">
-              <span class="fc-anki-interval">6 min</span>
-              <span class="fc-anki-title"><i class="fa-solid fa-triangle-exclamation"></i> Difficile</span>
-              <span class="fc-anki-sub">Snooze 6 min</span>
-              <kbd class="fc-anki-badge">2</kbd>
+            <button class="fc-feedback-btn fc-feedback-hard" onclick="rateFlashcard('hard')" title="Difficile - Snooze pour 6 minutes (Touche 2)">
+              <span class="fc-feedback-interval">6 min</span>
+              <span class="fc-feedback-title"><i class="fa-solid fa-triangle-exclamation"></i> Difficile</span>
+              <span class="fc-feedback-sub">Snooze 6 min</span>
+              <kbd class="fc-feedback-badge">2</kbd>
             </button>
 
-            <button class="fc-anki-btn fc-anki-good" onclick="rateFlashcard('good')" title="Correct - Snooze pour 10 minutes (Touche 3 ou Espace)">
-              <span class="fc-anki-interval">10 min</span>
-              <span class="fc-anki-title"><i class="fa-solid fa-thumbs-up"></i> Correct</span>
-              <span class="fc-anki-sub">Snooze 10 min</span>
-              <kbd class="fc-anki-badge">3 / Espace</kbd>
+            <button class="fc-feedback-btn fc-feedback-good" onclick="rateFlashcard('good')" title="Correct - Snooze pour 10 minutes (Touche 3 ou Espace)">
+              <span class="fc-feedback-interval">10 min</span>
+              <span class="fc-feedback-title"><i class="fa-solid fa-thumbs-up"></i> Correct</span>
+              <span class="fc-feedback-sub">Snooze 10 min</span>
+              <kbd class="fc-feedback-badge">3 / Espace</kbd>
             </button>
 
-            <button class="fc-anki-btn fc-anki-easy" onclick="rateFlashcard('easy')" title="Facile - Snooze pour 3 jours (Touche 4)">
-              <span class="fc-anki-interval">3 j</span>
-              <span class="fc-anki-title"><i class="fa-solid fa-circle-check"></i> Facile</span>
-              <span class="fc-anki-sub">Snooze 3 jours</span>
-              <kbd class="fc-anki-badge">4</kbd>
+            <button class="fc-feedback-btn fc-feedback-easy" onclick="rateFlashcard('easy')" title="Facile - Snooze pour 3 jours (Touche 4)">
+              <span class="fc-feedback-interval">3 j</span>
+              <span class="fc-feedback-title"><i class="fa-solid fa-circle-check"></i> Facile</span>
+              <span class="fc-feedback-sub">Snooze 3 jours</span>
+              <kbd class="fc-feedback-badge">4</kbd>
             </button>
           </div>
 
@@ -882,14 +882,14 @@
     </div>
   </div>
 
-  <!-- AnkiDroid Statistics & Retention Modal -->
+  <!-- Retention & Statistics Modal -->
   <div class="modal-overlay" id="fc-stats-modal" role="dialog" aria-modal="true" aria-label="Statistiques de répétition espacée" onclick="if(event.target === this) closeFlashcardStatsModal()">
     <div class="fc-stats-dialog">
       <div class="fc-stats-header">
         <div style="display:flex; align-items:center; gap:0.75rem;">
           <div class="fc-stats-icon"><i class="fa-solid fa-chart-pie"></i></div>
           <div>
-            <h3 style="margin:0; font-size:1.15rem; color:var(--text-primary);">Statistiques AnkiDroid</h3>
+            <h3 style="margin:0; font-size:1.15rem; color:var(--text-primary);">Statistiques de Mémorisation</h3>
             <p style="margin:0; font-size:0.8rem; color:var(--text-secondary);">Rétention et historique des répétitions espacées</p>
           </div>
         </div>

@@ -521,9 +521,13 @@ if os.path.exists(extra_file):
         for broken_img, local_img in IMAGE_MAPPING.items():
             if broken_img in t:
                 t = t.replace(broken_img, local_img)
+        # Clean redundant style-inherit wrapper spans from Anki
+        t = re.sub(r'<span style=[\'"]font-style:\s*inherit;\s*font-weight:\s*inherit;?[\'"]>([\s\S]*?)</span>', r'\1', t, flags=re.IGNORECASE)
+        t = re.sub(r'<span style=[\'"]font-style:\s*inherit;\s*font-weight:\s*inherit;?[\'"]>([\s\S]*?)</span>', r'\1', t, flags=re.IGNORECASE)
+        t = re.sub(r'<div>\s*(<br[^>]*>)?\s*</div>', '', t, flags=re.IGNORECASE)
         t = re.sub(r'(\s*<br[^>]*>\s*)+$', '', t, flags=re.IGNORECASE)
         t = re.sub(r'^(\s*<br[^>]*>\s*)+', '', t, flags=re.IGNORECASE)
-        t = re.sub(r'<img\s+([^>]*?)src=([\'"][^\'"]+[\'"])', r'<img class="flashcard-img" alt="Illustration" \1src=\2', t, flags=re.IGNORECASE)
+        t = re.sub(r'<img\s+([^>]*?)src=([\'"][^\'"]+[\'"])', r'<img class="flashcard-img" alt="Illustration" onclick="event.stopPropagation(); if(window.openImageLightbox) openImageLightbox(this.src, this.alt);" title="Cliquer pour agrandir l\'image" \1src=\2', t, flags=re.IGNORECASE)
         return t.strip()
 
     def extract_tag_and_category(q_raw, a_raw):

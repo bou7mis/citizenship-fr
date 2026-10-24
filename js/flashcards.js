@@ -225,6 +225,25 @@ function filterFlashcards(filterKey) {
 }
 
 /**
+ * Jump directly to a specific flashcard by ID
+ */
+function jumpToCard(cardId) {
+  if (!APP_STATE.flashcardsData || !APP_STATE.flashcardsData.cards) return;
+  const allCards = APP_STATE.flashcardsData.cards;
+  const idx = allCards.findIndex(c => c.id === cardId);
+  if (idx !== -1) {
+    currentCategoryFilter = 'all';
+    const select = document.getElementById('flashcard-category-select');
+    if (select) select.value = 'all';
+    activeFlashcardsList = [...allCards];
+    currentCardIndex = idx;
+    isCardFlipped = false;
+    renderFlashcard();
+  }
+}
+window.jumpToCard = jumpToCard;
+
+/**
  * Render the active card
  */
 function renderFlashcard() {
@@ -297,6 +316,12 @@ function renderFlashcard() {
   if (backText) backText.innerHTML = card.back;
   if (backTip) backTip.textContent = card.tip || "Point clé attendu lors de l'entretien.";
 
+  // Reset scroll positions so the new card always starts cleanly at the top
+  const frontContent = document.querySelector('.flashcard-face.front .fc-content-center');
+  const backContent = document.querySelector('.flashcard-face.back .fc-content-center');
+  if (frontContent) frontContent.scrollTop = 0;
+  if (backContent) backContent.scrollTop = 0;
+
   // Update schedule status pill on card
   renderScheduleBadge(card.id);
 
@@ -360,7 +385,18 @@ function renderScheduleBadge(cardId) {
 /**
  * 3D Flip Card Action
  */
-function flipCard() {
+function flipCard(event) {
+  // If user clicked inside an image, button, link, or was selecting text, ignore flip
+  if (event) {
+    if (event.target && event.target.closest('button, a, input, select, .flashcard-img')) {
+      return;
+    }
+    const selection = window.getSelection();
+    if (selection && selection.toString().length > 0) {
+      return;
+    }
+  }
+
   const cardElement = document.getElementById('main-flashcard-3d');
   const controlsFront = document.getElementById('fc-controls-front');
   const controlsBack = document.getElementById('fc-controls-back');
@@ -373,11 +409,40 @@ function flipCard() {
   if (isCardFlipped) {
     if (controlsFront) controlsFront.style.display = 'none';
     if (controlsBack) controlsBack.style.display = 'flex';
+    const backContent = document.querySelector('.flashcard-face.back .fc-content-center');
+    if (backContent) backContent.scrollTop = 0;
   } else {
     if (controlsFront) controlsFront.style.display = 'flex';
     if (controlsBack) controlsBack.style.display = 'none';
+    const frontContent = document.querySelector('.flashcard-face.front .fc-content-center');
+    if (frontContent) frontContent.scrollTop = 0;
   }
 }
+
+/**
+ * Open high-resolution lightbox for flashcard illustration
+ */
+function openImageLightbox(src, alt) {
+  const modal = document.getElementById('fc-image-modal');
+  const img = document.getElementById('fc-lightbox-img');
+  const caption = document.getElementById('fc-lightbox-caption');
+  if (modal && img) {
+    img.src = src;
+    img.alt = alt || "Illustration officielle";
+    if (caption) caption.textContent = alt || "Illustration officielle – Livret du Citoyen 2026";
+    modal.style.display = 'flex';
+  }
+}
+
+/**
+ * Close high-resolution lightbox
+ */
+function closeImageLightbox() {
+  const modal = document.getElementById('fc-image-modal');
+  if (modal) modal.style.display = 'none';
+}
+window.openImageLightbox = openImageLightbox;
+window.closeImageLightbox = closeImageLightbox;
 
 /**
  * Collect User Feedback and Snooze Card (AnkiDroid Spaced Repetition)

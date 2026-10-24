@@ -2374,9 +2374,16 @@ img {
 /* 3D Flip Card Container */
 .flashcard-3d-scene {
   width: 100%;
-  height: 440px;
+  height: 500px;
+  min-height: 480px;
   perspective: 1200px;
   cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+  .flashcard-3d-scene {
+    height: 520px;
+  }
 }
 
 .flashcard-3d-card {
@@ -2400,13 +2407,14 @@ img {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   border-radius: var(--radius-xl);
-  padding: 2rem 2.25rem;
+  padding: 1.35rem 1.75rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border: 1px solid var(--border-subtle);
   background: var(--bg-card);
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 .flashcard-face.front {
@@ -2425,6 +2433,7 @@ img {
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+  flex-shrink: 0;
 }
 
 .fc-category-label {
@@ -2469,69 +2478,111 @@ img {
 }
 
 .fc-content-center {
-  flex: 1;
+  flex: 1 1 0%;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   text-align: center;
-  padding: 0.75rem 0.5rem;
+  padding: 0.5rem 0.5rem;
   overflow-y: auto;
-  max-height: 310px;
+  overflow-x: hidden;
   width: 100%;
+  box-sizing: border-box;
   scrollbar-width: thin;
   scrollbar-color: var(--border-subtle) transparent;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.fc-content-center::-webkit-scrollbar {
+  width: 6px;
+}
+.fc-content-center::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: var(--radius-full);
+}
+.fc-content-center::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: var(--radius-full);
+}
+.fc-content-center::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
 }
 
 .fc-question-text {
   font-family: var(--font-heading);
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   font-weight: 700;
   color: var(--text-primary);
-  line-height: 1.4;
+  line-height: 1.45;
   word-break: break-word;
+  margin: auto 0;
+  width: 100%;
 }
 
 .fc-answer-text {
-  font-size: 1.1rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  font-weight: 500;
   color: var(--text-primary);
   line-height: 1.5;
   word-break: break-word;
+  margin: auto 0;
+  width: 100%;
+  text-align: center;
+}
+
+.fc-answer-text div:empty,
+.fc-question-text div:empty {
+  display: none;
+}
+
+.fc-answer-text ul,
+.fc-answer-text ol {
+  text-align: left;
+  display: inline-block;
+  margin: 0.5rem auto;
+  padding-left: 1.5rem;
 }
 
 .fc-question-text img,
 .fc-answer-text img,
 .flashcard-img {
   max-width: 100%;
-  max-height: 190px;
+  max-height: 155px;
   object-fit: contain;
   border-radius: var(--radius-md);
-  margin: 0.65rem auto;
+  margin: 0.5rem auto;
   display: block;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
   border: 1px solid var(--border-subtle);
   background: #ffffff;
-  transition: transform 0.2s ease;
+  cursor: zoom-in;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .fc-question-text img:hover,
 .fc-answer-text img:hover,
 .flashcard-img:hover {
   transform: scale(1.02);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .fc-tip-box {
   background: rgba(0, 85, 165, 0.08);
   border-radius: var(--radius-md);
-  padding: 0.65rem 1rem;
-  font-size: 0.85rem;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.825rem;
   color: var(--fr-blue);
   font-weight: 600;
   display: flex;
   align-items: center;
   gap: 0.5rem;
   width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 0.5rem !important;
+  flex-shrink: 0;
 }
 
 /* Controls Container */
@@ -2858,16 +2909,21 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
   .flashcard-3d-scene {
-    height: 480px;
+    height: 520px;
   }
   .flashcard-face {
-    padding: 1.5rem;
+    padding: 1.15rem 1.25rem;
   }
   .fc-question-text {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
   .fc-answer-text {
-    font-size: 1.05rem;
+    font-size: 0.98rem;
+  }
+  .fc-question-text img,
+  .fc-answer-text img,
+  .flashcard-img {
+    max-height: 135px;
   }
 }
 

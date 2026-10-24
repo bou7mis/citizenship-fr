@@ -106,7 +106,7 @@
                 </div>
                 <div class="hero-stat-item">
                   <i class="fa-solid fa-bolt"></i>
-                  <span>Cartes mémoires : <strong id="kpi-cards-count">0 / 52</strong></span>
+                  <span>Cartes mémoires : <strong id="kpi-cards-count">0 / 291</strong></span>
                 </div>
               </div>
 
@@ -383,19 +383,46 @@
     </section>
 
     <!-- ========================================================
-         VIEW 4: FLASHCARDS (CARTES MÉMOIRE 3D)
+    <!-- ========================================================
+         VIEW 4: FLASHCARDS (CARTES MÉMOIRE 3D ANKIDROID)
          ======================================================== -->
     <section class="view-section" id="view-flashcards">
       <div class="flashcards-layout">
         
-        <!-- Category Toolbar -->
+        <!-- AnkiDroid Queue Counters Bar -->
+        <div class="fc-queue-bar">
+          <div class="fc-queue-group">
+            <span class="fc-queue-chip new" title="Nouvelles cartes non encore étudiées">
+              <span class="fc-chip-dot"></span> Nouveau <strong id="fc-count-new">0</strong>
+            </span>
+            <span class="fc-queue-chip learning" title="Cartes à réviser (À revoir / Difficile)">
+              <span class="fc-chip-dot"></span> À revoir <strong id="fc-count-learning">0</strong>
+            </span>
+            <span class="fc-queue-chip review" title="Cartes en révision (Correct / Facile et dues)">
+              <span class="fc-chip-dot"></span> Révision <strong id="fc-count-review">0</strong>
+            </span>
+            <span class="fc-queue-chip snoozed" title="Cartes programmées pour plus tard (en attente)">
+              <span class="fc-chip-dot"></span> En attente <strong id="fc-count-snoozed">0</strong>
+            </span>
+          </div>
+          <button class="fc-stats-pill-btn" onclick="openFlashcardStatsModal()" title="Voir les statistiques de mémorisation AnkiDroid">
+            <i class="fa-solid fa-chart-column"></i> Statistiques Anki
+          </button>
+        </div>
+
+        <!-- Category & Mode Toolbar -->
         <div class="flashcards-toolbar">
-          <select id="flashcard-category-select" class="category-filter-select" aria-label="Filtrer par thématique">
-            <!-- Populated by flashcards.js -->
-          </select>
+          <div style="display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap;">
+            <select id="flashcard-category-select" class="category-filter-select" aria-label="Filtrer par thématique">
+              <!-- Populated by flashcards.js -->
+            </select>
+            <button id="fc-mode-toggle" class="fc-mode-btn active" onclick="toggleStudyMode()" title="Basculer entre Mode Répétition Espacée et Mode Consultation Libre">
+              <i class="fa-solid fa-bolt"></i> <span id="fc-mode-text">Mode Espacé (Anki)</span>
+            </button>
+          </div>
           <div style="display:flex; align-items:center; gap:0.75rem;">
             <span id="fc-mastery-status"></span>
-            <span class="fc-stats-badge" id="flashcard-counter-badge">1 / 52</span>
+            <span class="fc-stats-badge" id="flashcard-counter-badge">1 / 291</span>
           </div>
         </div>
 
@@ -406,28 +433,41 @@
             <!-- Front Face (Question) -->
             <div class="flashcard-face front">
               <div class="fc-top-row">
-                <span class="fc-category-label" id="fc-front-category">Symboles & Valeurs</span>
-                <span class="reader-pill" id="fc-front-tag">Devise</span>
+                <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+                  <span class="fc-category-label" id="fc-front-category">Symboles & Valeurs</span>
+                  <span class="reader-pill" id="fc-front-tag">Devise</span>
+                </div>
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                  <span id="fc-front-schedule-pill"></span>
+                  <button class="action-btn" id="fc-speak-front-btn" onclick="event.stopPropagation(); pronounceCard();" title="Écouter la question">
+                    <i class="fa-solid fa-volume-high"></i>
+                  </button>
+                </div>
               </div>
               <div class="fc-content-center">
-                <p class="fc-question-text" id="fc-front-text">Question...</p>
+                <div class="fc-question-text" id="fc-front-text">Question...</div>
               </div>
               <div class="fc-top-row">
-                <span class="fc-flip-hint"><i class="fa-solid fa-rotate"></i> Cliquez ou appuyez sur Espace pour retourner</span>
-                <button class="action-btn" onclick="event.stopPropagation(); pronounceCard();" title="Écouter la question">
-                  <i class="fa-solid fa-volume-high"></i>
-                </button>
+                <span class="fc-flip-hint"><i class="fa-solid fa-rotate"></i> Cliquez ou appuyez sur Espace pour afficher la réponse</span>
               </div>
             </div>
 
             <!-- Back Face (Answer) -->
             <div class="flashcard-face back">
               <div class="fc-top-row">
-                <span class="fc-category-label" id="fc-back-category" style="color:var(--fr-red);">Réponse Officielle</span>
-                <span class="reader-pill" id="fc-back-tag"></span>
+                <div style="display:flex; align-items:center; gap:0.5rem; flex-wrap:wrap;">
+                  <span class="fc-category-label" id="fc-back-category" style="color:var(--fr-red);">Réponse Officielle</span>
+                  <span class="reader-pill" id="fc-back-tag"></span>
+                </div>
+                <div style="display:flex; align-items:center; gap:0.5rem;">
+                  <span id="fc-back-schedule-pill"></span>
+                  <button class="action-btn" id="fc-speak-back-btn" onclick="event.stopPropagation(); pronounceCard();" title="Écouter la réponse">
+                    <i class="fa-solid fa-volume-high"></i>
+                  </button>
+                </div>
               </div>
               <div class="fc-content-center">
-                <p class="fc-answer-text" id="fc-back-text">Réponse...</p>
+                <div class="fc-answer-text" id="fc-back-text">Réponse...</div>
               </div>
               <div>
                 <div class="fc-tip-box" style="margin-bottom:0.75rem;">
@@ -435,10 +475,7 @@
                   <span id="fc-back-tip-text">Astuce d'entretien</span>
                 </div>
                 <div class="fc-top-row">
-                  <span class="fc-flip-hint"><i class="fa-solid fa-rotate"></i> Cliquez pour retourner</span>
-                  <button class="action-btn" onclick="event.stopPropagation(); pronounceCard();" title="Écouter la réponse">
-                    <i class="fa-solid fa-volume-high"></i>
-                  </button>
+                  <span class="fc-flip-hint"><i class="fa-solid fa-rotate"></i> Cliquez pour retourner sur la question</span>
                 </div>
               </div>
             </div>
@@ -446,39 +483,88 @@
           </div>
         </div>
 
+        <!-- AnkiDroid Session Complete Screen -->
+        <div id="flashcards-session-complete" class="fc-completion-card" style="display:none;">
+          <div class="fc-completion-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <h3>Session terminée pour le moment !</h3>
+          <p style="color:var(--text-secondary); margin:0.5rem 0 1.25rem;">Toutes les cartes programmées ont été révisées selon l'algorithme AnkiDroid.</p>
+          <div class="fc-countdown-pill" id="fc-next-due-countdown">Prochaine carte disponible dans : calcul...</div>
+          <div style="display:flex; gap:0.75rem; justify-content:center; flex-wrap:wrap; margin-top:1.5rem;">
+            <button class="btn-primary" onclick="reviewAhead()"><i class="fa-solid fa-forward"></i> Réviser à l'avance (snooze)</button>
+            <button class="btn-secondary" onclick="switchToFreeMode()"><i class="fa-solid fa-book-open"></i> Mode Consultation Libre</button>
+          </div>
+        </div>
+
         <!-- Empty State if filtered has 0 cards -->
         <div id="flashcards-empty-state" style="display:none; text-align:center; padding:3rem; background:var(--bg-card); border-radius:var(--radius-xl); border:1px solid var(--border-subtle); width:100%;">
           <i class="fa-regular fa-folder-open" style="font-size:3rem; color:var(--text-muted); margin-bottom:1rem;"></i>
-          <h4>Aucune carte dans cette catégorie</h4>
+          <h4>Aucune carte dans cette sélection</h4>
           <p style="color:var(--text-secondary); margin-top:0.5rem;">Sélectionnez une autre catégorie pour poursuivre vos révisions.</p>
         </div>
 
-        <!-- Spaced Repetition & Navigation Controls -->
-        <div class="flashcards-controls">
-          <button class="fc-btn fc-btn-again" onclick="markCardNeedsReview()">
-            <i class="fa-solid fa-triangle-exclamation"></i> À revoir
-          </button>
+        <!-- Controls Area -->
+        <div class="fc-controls-container">
           
-          <button class="action-btn" onclick="navigateFlashcards(-1)" title="Carte précédente (Flèche gauche)">
-            <i class="fa-solid fa-chevron-left"></i>
-          </button>
+          <!-- Front Controls (when card is not flipped) -->
+          <div class="flashcards-controls" id="fc-controls-front">
+            <button class="action-btn" onclick="navigateFlashcards(-1)" title="Carte précédente (Flèche gauche)">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            
+            <button class="fc-btn-show-answer" onclick="flipCard()" title="Afficher la réponse (Espace)">
+              <i class="fa-solid fa-eye"></i> Afficher la réponse <kbd>Espace</kbd>
+            </button>
 
-          <button class="action-btn" onclick="shuffleFlashcards()" title="Mélanger les cartes">
-            <i class="fa-solid fa-shuffle"></i>
-          </button>
+            <button class="action-btn" onclick="shuffleFlashcards()" title="Mélanger les cartes">
+              <i class="fa-solid fa-shuffle"></i>
+            </button>
 
-          <button class="action-btn" onclick="navigateFlashcards(1)" title="Carte suivante (Flèche droite)">
-            <i class="fa-solid fa-chevron-right"></i>
-          </button>
+            <button class="action-btn" onclick="navigateFlashcards(1)" title="Carte suivante (Flèche droite)">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
 
-          <button class="fc-btn fc-btn-pass" onclick="markCardMastered()">
-            <i class="fa-solid fa-circle-check"></i> Maîtrisée
-          </button>
+          <!-- Back Controls: AnkiDroid 4 Feedback Buttons (when card is flipped) -->
+          <div class="fc-anki-controls" id="fc-controls-back" style="display:none;">
+            <button class="fc-anki-btn fc-anki-again" onclick="rateFlashcard('again')" title="À revoir - Snooze pour 1 minute (Touche 1)">
+              <span class="fc-anki-interval">1 min</span>
+              <span class="fc-anki-title"><i class="fa-solid fa-rotate-left"></i> À revoir</span>
+              <span class="fc-anki-sub">Snooze 1 min</span>
+              <kbd class="fc-anki-badge">1</kbd>
+            </button>
+
+            <button class="fc-anki-btn fc-anki-hard" onclick="rateFlashcard('hard')" title="Difficile - Snooze pour 6 minutes (Touche 2)">
+              <span class="fc-anki-interval">6 min</span>
+              <span class="fc-anki-title"><i class="fa-solid fa-triangle-exclamation"></i> Difficile</span>
+              <span class="fc-anki-sub">Snooze 6 min</span>
+              <kbd class="fc-anki-badge">2</kbd>
+            </button>
+
+            <button class="fc-anki-btn fc-anki-good" onclick="rateFlashcard('good')" title="Correct - Snooze pour 10 minutes (Touche 3 ou Espace)">
+              <span class="fc-anki-interval">10 min</span>
+              <span class="fc-anki-title"><i class="fa-solid fa-thumbs-up"></i> Correct</span>
+              <span class="fc-anki-sub">Snooze 10 min</span>
+              <kbd class="fc-anki-badge">3 / Espace</kbd>
+            </button>
+
+            <button class="fc-anki-btn fc-anki-easy" onclick="rateFlashcard('easy')" title="Facile - Snooze pour 3 jours (Touche 4)">
+              <span class="fc-anki-interval">3 j</span>
+              <span class="fc-anki-title"><i class="fa-solid fa-circle-check"></i> Facile</span>
+              <span class="fc-anki-sub">Snooze 3 jours</span>
+              <kbd class="fc-anki-badge">4</kbd>
+            </button>
+          </div>
+
         </div>
 
-        <div style="font-size:0.8rem; color:var(--text-muted); text-align:center;">
-          <kbd style="background:var(--bg-tertiary); padding:2px 6px; border-radius:4px;">Espace</kbd> pour retourner la carte • 
-          <kbd style="background:var(--bg-tertiary); padding:2px 6px; border-radius:4px;">←</kbd> / <kbd style="background:var(--bg-tertiary); padding:2px 6px; border-radius:4px;">→</kbd> pour naviguer
+        <div class="fc-shortcuts-hint">
+          <span><kbd>Espace</kbd> : Afficher réponse / Correct</span> • 
+          <span><kbd>1</kbd> : À revoir (1 min)</span> • 
+          <span><kbd>2</kbd> : Difficile (6 min)</span> • 
+          <span><kbd>3</kbd> : Correct (10 min)</span> • 
+          <span><kbd>4</kbd> : Facile (3 j)</span> • 
+          <span><kbd>←</kbd> / <kbd>→</kbd> : Naviguer</span> • 
+          <span><kbd>R</kbd> : Audio</span>
         </div>
 
       </div>
@@ -634,7 +720,7 @@
               <i class="fa-solid fa-layer-group"></i>
             </div>
             <div>
-              <div class="kpi-number" id="prog-stat-flashcards">0 / 52</div>
+              <div class="kpi-number" id="prog-stat-flashcards">0 / 291</div>
               <div class="kpi-label">Cartes mémoires maîtrisées</div>
             </div>
           </div>
@@ -782,6 +868,71 @@
   <div class="modal-overlay video-modal-overlay" id="video-player-modal" role="dialog" aria-modal="true" aria-label="Lecteur Vidéo E-Learning" onclick="if(event.target === this) closeVideoLesson()">
     <div class="video-player-container" id="video-player-content">
       <!-- Populated dynamically by video_player.js -->
+    </div>
+  </div>
+
+  <!-- AnkiDroid Statistics & Retention Modal -->
+  <div class="modal-overlay" id="fc-stats-modal" role="dialog" aria-modal="true" aria-label="Statistiques de répétition espacée" onclick="if(event.target === this) closeFlashcardStatsModal()">
+    <div class="fc-stats-dialog">
+      <div class="fc-stats-header">
+        <div style="display:flex; align-items:center; gap:0.75rem;">
+          <div class="fc-stats-icon"><i class="fa-solid fa-chart-pie"></i></div>
+          <div>
+            <h3 style="margin:0; font-size:1.15rem; color:var(--text-primary);">Statistiques AnkiDroid</h3>
+            <p style="margin:0; font-size:0.8rem; color:var(--text-secondary);">Rétention et historique des répétitions espacées</p>
+          </div>
+        </div>
+        <button class="action-btn" onclick="closeFlashcardStatsModal()" title="Fermer"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="fc-stats-kpis">
+        <div class="fc-kpi-card">
+          <span class="fc-kpi-label">Répétitions totales</span>
+          <span class="fc-kpi-value" id="stat-total-reviews">0</span>
+        </div>
+        <div class="fc-kpi-card highlight">
+          <span class="fc-kpi-label">Taux de rétention</span>
+          <span class="fc-kpi-value" id="stat-retention-rate">0%</span>
+        </div>
+      </div>
+
+      <div class="fc-stats-bars">
+        <div class="fc-stat-row">
+          <div class="fc-stat-meta">
+            <span style="color:var(--danger); font-weight:700;"><i class="fa-solid fa-rotate-left"></i> À revoir (1 min)</span>
+            <span id="stat-count-again">0 (0%)</span>
+          </div>
+          <div class="fc-stat-track"><div class="fc-stat-fill again" id="stat-bar-again" style="width:0%;"></div></div>
+        </div>
+
+        <div class="fc-stat-row">
+          <div class="fc-stat-meta">
+            <span style="color:var(--warning); font-weight:700;"><i class="fa-solid fa-triangle-exclamation"></i> Difficile (6 min)</span>
+            <span id="stat-count-hard">0 (0%)</span>
+          </div>
+          <div class="fc-stat-track"><div class="fc-stat-fill hard" id="stat-bar-hard" style="width:0%;"></div></div>
+        </div>
+
+        <div class="fc-stat-row">
+          <div class="fc-stat-meta">
+            <span style="color:var(--fr-blue); font-weight:700;"><i class="fa-solid fa-thumbs-up"></i> Correct (10 min)</span>
+            <span id="stat-count-good">0 (0%)</span>
+          </div>
+          <div class="fc-stat-track"><div class="fc-stat-fill good" id="stat-bar-good" style="width:0%;"></div></div>
+        </div>
+
+        <div class="fc-stat-row">
+          <div class="fc-stat-meta">
+            <span style="color:var(--success); font-weight:700;"><i class="fa-solid fa-circle-check"></i> Facile (3 j)</span>
+            <span id="stat-count-easy">0 (0%)</span>
+          </div>
+          <div class="fc-stat-track"><div class="fc-stat-fill easy" id="stat-bar-easy" style="width:0%;"></div></div>
+        </div>
+      </div>
+
+      <div style="margin-top:1.5rem; display:flex; justify-content:flex-end;">
+        <button class="btn-primary" onclick="closeFlashcardStatsModal()" style="padding:0.6rem 1.5rem; border-radius:var(--radius-full); font-size:0.875rem;">Fermer</button>
+      </div>
     </div>
   </div>
 

@@ -438,10 +438,198 @@ flashcards = [
     }
 ]
 
+
+# Import additional cards from Nationalité text export if available
+import csv
+import re
+
+extra_file = 'Nationalité-20261024115852.txt'
+if not os.path.exists(extra_file):
+    extra_file = 'Nationalité-20261024115852.txt'
+
+IMAGE_MAPPING = {
+    # fc-70: Principaux responsables de l'État
+    'paste-5cdd01775544476cc25abf83924ebbd3b4c330fa.jpg': 'assets/images/flashcards/fc_responsables_etat.png',
+    # fc-155: Frontières de la France
+    'paste-d35ecd0cde3208fbd6be35d7455a62d1a0fc170c.jpg': 'assets/images/flashcards/fc_frontieres_france.png',
+    # fc-171: Devise de la République
+    'paste-6e6a84bed2a424a8103ac5938a4066685a6e6635.jpg': 'assets/images/flashcards/fc_devise_republique.png',
+    # fc-173: Laïcité
+    'paste-a623ca757b4adcc2dc017ca84cabc7c1fd245b07.jpg': 'assets/images/flashcards/fc_laicite.png',
+    # fc-176: Démocratie
+    'paste-61465234f543ad1305253dd82c7abc8aa132ab95.jpg': 'assets/images/flashcards/fc_democratie.png',
+    # fc-177: Droits et devoirs
+    'f45f5d_bc1b067ee1164058adc50ddee8e99233~mv2.jpg': 'assets/images/flashcards/fc_droits_devoirs.png',
+    # fc-180: Institutions françaises
+    'paste-e69f51c12b375f73a8d0356a92ab367571fcc7f6.jpg': 'assets/images/flashcards/fc_institutions.png',
+    # fc-181: Symboles de la France
+    'paste-279b2783bfb2e521f2c18cf2745c8a7c2a74eb07.jpg': 'assets/images/flashcards/fc_symboles_france.png',
+    # fc-182: Fleuves en France
+    'paste-45e6d5e44dac1875bb0f4e3157c5525f9f998179.jpg': 'assets/images/flashcards/fc_fleuves_france.png',
+    # fc-184: Qui est la Marianne
+    'paste-4bc0c28ad4de12e442719ca2dc69e11310102016.jpg': 'assets/images/flashcards/fc_marianne.png',
+    # fc-187: Régions françaises
+    'paste-4def89a914656854a9b28d1f511851edf0e3e682.jpg': 'assets/images/flashcards/fc_regions_france.png',
+    # fc-190: Drapeau tricolore
+    'paste-68563df0ae38d17fd3d5935eaf98a174b40c66b1.jpg': 'assets/images/flashcards/fc_drapeau_francais.png',
+    # fc-193: Chaînes de montagnes
+    'paste-d374db7e32538acbec966411e412a6a736ee702b.jpg': 'assets/images/flashcards/fc_montagnes_france.png',
+    # fc-195: Monuments parisiens
+    'paste-39650343a0bfdd9dc0232878bf2069f287e76faf.jpg': 'assets/images/flashcards/fc_monuments_parisiens.png',
+    # fc-198: Littéraires français
+    'paste-911200cf251189bfc5f29d011989570050f176a1.jpg': 'assets/images/flashcards/fc_litteraires_francais.png',
+    # fc-203: Alexandre Dumas / Trois Mousquetaires
+    'paste-ba7c8c5913829c7bd7d24d8adf20dd6335550c03.jpg': 'assets/images/flashcards/fc_alexandre_dumas.png',
+    # fc-205: Plats typiques français
+    'paste-1ea475ebfc0877049296ba776a6fe199970f707f.jpg': 'assets/images/flashcards/fc_plats_typiques.png',
+    # fc-208: Siège de l\'UE à Bruxelles
+    'paste-b2ec9bc60527bab916af9ab0b937487b160dbe53.jpg': 'assets/images/flashcards/fc_siege_ue_bruxelles.png',
+    # fc-212: Symboles de l\'Europe
+    'paste-9b6c65e1829c82a83b09da737c2880a42b62c063.jpg': 'assets/images/flashcards/fc_symboles_europe.png',
+    # fc-213: Questions sur l\'histoire de France (timeline)
+    'paste-910bee63646e4909fa468fc0755ce4e538f4e699.jpg': 'assets/images/flashcards/fc_histoire_france_timeline.png',
+    # fc-223: Plages du débarquement en Normandie
+    'paste-9c7cc609760a3e02f8a84a24975de8f3410b89a4.jpg': 'assets/images/flashcards/fc_debarquement_normandie.png',
+    # fc-229: Rois français
+    'paste-65004e3bb7151ba6ad1df4beae48e639cf8bab5e.jpg': 'assets/images/flashcards/fc_rois_francais.png',
+    # fc-230: Reines de France
+    'paste-5adf67ec0d00530c7ab33df3a63a92b0a7f38315.jpg': 'assets/images/flashcards/fc_reines_france.png',
+    # fc-231: Présidents de la Ve République
+    'paste-448e4c26c9786072aa6dbc0ff785f17707676f2f.jpg': 'assets/images/flashcards/fc_presidents_ve_republique.png',
+    # fc-246: Philosophes des Lumières
+    'paste-837fbcbcfd3376b97c26368a83746cca08b7f968.jpg': 'assets/images/flashcards/fc_philosophes_lumieres.png',
+    # fc-253: Siège de la Présidence (Palais de l\'Élysée)
+    'paste-78d5949b687782bd3e3d2a547f69fed01ebf2242.jpg': 'assets/images/flashcards/fc_palais_elysee.png',
+    # fc-263: Président du Sénat / Assemblée nationale
+    'paste-bd0793fa6e8ab25c754d7e6ac64e67aa0df8e001.jpg': 'assets/images/flashcards/fc_president_senat.png',
+    'paste-fc875a06c6a38a2ef853275833d5c3fd343dc566.jpg': 'assets/images/flashcards/fc_presidente_assemblee.png',
+    # fc-273: Dernière loi marquante
+    'paste-494d3aa3953efbd9879c2fae6560f3e96bde8f0e.jpg': 'assets/images/flashcards/fc_lois_marquantes.png',
+    # fc-281: Sièges des 3 pouvoirs
+    'paste-9b5b9544c1d436290bea0662229c199d9a9b9972.jpg': 'assets/images/flashcards/fc_sieges_pouvoirs.png',
+}
+
+if os.path.exists(extra_file):
+    with open(extra_file, 'r', encoding='utf-8') as f:
+        lines = [l for l in f if not l.startswith('#')]
+    rows = list(csv.reader(lines, delimiter='\t'))
+    
+    def clean_html(text):
+        t = text.strip()
+        if (t.startswith('"') and t.endswith('"')) or (t.startswith("'") and t.endswith("'")):
+            t = t[1:-1].strip()
+        for broken_img, local_img in IMAGE_MAPPING.items():
+            if broken_img in t:
+                t = t.replace(broken_img, local_img)
+        t = re.sub(r'(\s*<br[^>]*>\s*)+$', '', t, flags=re.IGNORECASE)
+        t = re.sub(r'^(\s*<br[^>]*>\s*)+', '', t, flags=re.IGNORECASE)
+        t = re.sub(r'<img\s+([^>]*?)src=([\'"][^\'"]+[\'"])', r'<img class="flashcard-img" alt="Illustration" \1src=\2', t, flags=re.IGNORECASE)
+        return t.strip()
+
+    def extract_tag_and_category(q_raw, a_raw):
+        text = (q_raw + ' ' + a_raw).lower()
+        if any(k in text for k in ['pourquoi voulez-vous devenir', 'pourquoi devenir français', 'vos liens en france', 'liens en france', 'votre entourage', 'argent à votre pays', 'votre ville de résidence', 'aubervilliers', 'avez-vous des liens', 'participez-vous à des associations']):
+            return 'Questions Entretien', 'Entretien'
+        if any(k in text for k in ['république est installée', 'première république a été proclamé', 'dates des républiques', 'déclaration des droits de l’homme', 'bastille', 'révolution', '1789', 'napoléon', 'bonaparte', 'guerre', '1914', '1939', '1945', 'de gaulle', 'moulin', 'monarchie', 'roi', 'louis', 'moyen âge', 'renaissance', 'débarquement', 'vichy', 'résistance', 'empire', 've république', 'reine', 'clovis', 'charlemagne', 'jeanne d\'arc', 'gaule', 'romains', 'esclavage', 'colonie', 'traité de verdun', 'bataille', 'histoire']):
+            tag = 'Histoire'
+            if 'révolution' in text or '1789' in text or 'bastille' in text: tag = 'Révolution'
+            elif 'napoléon' in text or 'bonaparte' in text: tag = 'Empire'
+            elif 'de gaulle' in text or 'résistance' in text or 'moulin' in text: tag = 'Résistance'
+            elif 'guerre' in text or '1914' in text or '1939' in text: tag = 'Guerres Mondiales'
+            elif 'roi' in text or 'monarchie' in text or 'louis' in text: tag = 'Monarchie'
+            return 'Histoire', tag
+        if any(k in text for k in ['principe de la france', 'gouvernement du peuple']):
+            return 'Principes Républicains', 'Principes'
+        if any(k in text for k in ['combien de pays compte l’ue', 'espace euro', 'commission européenne', 'parlement européen', 'union européenne', 'bruxelles', 'traité de maastricht', 'traité de rome']):
+            return 'Institutions', 'Europe'
+        if any(k in text for k in ['combien de personnes parlent le français', 'francophonie']):
+            return 'Culture & Sciences', 'Francophonie'
+        if any(k in text for k in ['spécialités gastronomiques', 'gastronomie', 'plat', 'fromage', 'vin']):
+            return 'Culture & Sciences', 'Gastronomie'
+        if any(k in text for k in ['fleuve', 'rivière', 'montagne', 'mont-blanc', 'mont blanc', 'alpes', 'pyrénées', 'jura', 'vosges', 'massif central', 'région', 'régions', 'departement', 'département', 'frontière', 'océan', 'mer ', 'mer,', 'mer.', 'mer\n', 'dom-tom', 'drom', 'outre-mer', 'capitale', 'climat', 'paris', 'strasbourg', 'territoire', 'point culminant', 'pays limitrophes', 'pays voisins', 'corse']):
+            tag = 'Géographie'
+            if 'fleuve' in text or 'rivière' in text: tag = 'Fleuves'
+            elif 'montagne' in text or 'mont-blanc' in text: tag = 'Relief'
+            elif 'région' in text: tag = 'Régions'
+            elif 'département' in text or 'departement' in text: tag = 'Départements'
+            elif 'frontière' in text or 'voisin' in text or 'limitrophe' in text: tag = 'Frontières'
+            elif 'outre-mer' in text or 'dom-tom' in text or 'drom' in text: tag = 'Outre-mer'
+            return 'Géographie', tag
+        if any(k in text for k in ['symbole', 'devise', 'drapeau', 'marianne', 'marseillaise', 'coq', '14 juillet', 'fête nationale', 'hymne', 'bleu blanc rouge', 'fleur de lys', 'sceau', 'pantheon', 'panthéon']):
+            tag = 'Symboles'
+            if 'marianne' in text: tag = 'Marianne'
+            elif 'devise' in text: tag = 'Devise'
+            elif 'drapeau' in text: tag = 'Drapeau'
+            elif 'marseillaise' in text or 'hymne' in text: tag = 'Hymne'
+            elif '14 juillet' in text or 'fête' in text: tag = 'Fête Nationale'
+            return 'Symboles & Valeurs', tag
+        if any(k in text for k in ['laïcité', 'laicite', 'liberté', 'égalité', 'fraternité', 'droits et devoirs', 'devoir', 'droit', 'démocratie', 'démocratique', 'citoyen', 'solidarité', 'discrimination', 'suffrage universel', 'droit de vote', 'signes religieux', 'séparation des églises', 'loi de 1905', 'charte de la laïcité']):
+            tag = 'Principes'
+            if 'laïcité' in text or 'laicite' in text or '1905' in text or 'religieux' in text: tag = 'Laïcité'
+            elif 'devoir' in text or 'droit' in text: tag = 'Droits & Devoirs'
+            elif 'vote' in text or 'suffrage' in text or 'démocratie' in text: tag = 'Démocratie'
+            return 'Principes Républicains', tag
+        if any(k in text for k in ['président', 'premier ministre', 'ministre', 'parlement', 'assemblée nationale', 'sénat', 'député', 'sénateur', 'constitution', 'pouvoir exécutif', 'pouvoir législatif', 'pouvoir judiciaire', 'loi', 'maire', 'commune', 'élection', 'elysée', 'matignon', 'conseil constitutionnel', 'conseil d\'état', 'monnaie', 'euro', 'responsables de l’état', 'hôtel de ville', 'cohésion', 'dissolution', 'justice', 'magistrat']):
+            tag = 'Institutions'
+            if 'président' in text or 'elysée' in text: tag = 'Présidence'
+            elif 'premier ministre' in text or 'matignon' in text: tag = 'Gouvernement'
+            elif 'assemblée' in text or 'député' in text or 'sénat' in text: tag = 'Parlement'
+            elif 'justice' in text or 'magistrat' in text: tag = 'Justice'
+            elif 'commune' in text or 'maire' in text or 'ville' in text: tag = 'Collectivités'
+            return 'Institutions', tag
+        if any(k in text for k in ['peintre', 'peinture', 'lascaux', 'écrivain', 'auteur', 'musique', 'chanson', 'chanteur', 'acteur', 'cinéma', 'musée', 'monument', 'tour eiffel', 'arc de triomphe', 'versailles', 'louvre', 'mont-saint-michel', 'victor hugo', 'molière', 'pasteur', 'curie', 'sport', 'sportif', 'prix nobel', 'festival', 'littérature', 'philosoph', 'lumières', 'dumas', 'voltaire', 'rousseau', 'mousquetaires', 'château', 'cathédrale', 'académie']):
+            tag = 'Culture'
+            if 'musée' in text or 'monument' in text or 'tour eiffel' in text or 'versailles' in text or 'louvre' in text: tag = 'Patrimoine'
+            elif 'écrivain' in text or 'auteur' in text or 'littérature' in text or 'victor hugo' in text: tag = 'Littérature'
+            elif 'chanteur' in text or 'musique' in text or 'chanson' in text: tag = 'Musique'
+            elif 'acteur' in text or 'cinéma' in text: tag = 'Cinéma'
+            elif 'sport' in text or 'sportif' in text: tag = 'Sport'
+            elif 'science' in text or 'pasteur' in text or 'curie' in text: tag = 'Sciences'
+            return 'Culture & Sciences', tag
+        if any(k in text for k in ['sécurité sociale', 'école', 'jules ferry', 'santé', 'impôt', 'travail', 'femme', 'femmes', 'féminine', 'ivg', 'peine de mort', 'majorité', 'mariage', 'quotidien', 'smic', 'caf', 'syndicat', 'grève', 'congés payés', '35 heures', 'retraite', 'remboursement', 'habitant', 'population', 'secteurs d’activité']):
+            tag = 'Société'
+            if 'sécurité sociale' in text or 'santé' in text: tag = 'Protection Sociale'
+            elif 'école' in text or 'jules ferry' in text: tag = 'Éducation'
+            elif 'femme' in text or 'ivg' in text: tag = 'Droits des Femmes'
+            elif 'travail' in text or 'smic' in text or 'syndicat' in text: tag = 'Travail'
+            elif 'impôt' in text: tag = 'Impôts'
+            return 'Société & Quotidien', tag
+        return 'Questions Entretien', 'Entretien'
+
+    start_id = len(flashcards) + 1
+    for i, (q, a) in enumerate(rows):
+        cat, tag = extract_tag_and_category(q, a)
+        card_id = f'fc-{start_id + i}'
+        tip = "Question fréquente lors de l'entretien de naturalisation."
+        if cat == 'Questions Entretien':
+            tip = "Exprimez-vous avec clarté, sincérité et en démontrant votre attachement aux valeurs françaises."
+        elif cat == 'Symboles & Valeurs':
+            tip = "Connaissez la définition exacte inscrite dans la Constitution de 1958."
+        elif cat == 'Principes Républicains':
+            tip = "La laïcité et l'égalité femmes-hommes sont particulièrement testées lors de l'entretien."
+        elif cat == 'Institutions':
+            tip = "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+        elif cat == 'Histoire':
+            tip = "Retenez les dates repères et les figures historiques majeures."
+        elif cat == 'Géographie':
+            tip = "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+        elif cat == 'Culture & Sciences':
+            tip = "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+        elif cat == 'Société & Quotidien':
+            tip = "Montrez votre bonne insertion sociale, professionnelle et civique."
+        flashcards.append({
+            'id': card_id,
+            'category': cat,
+            'tag': tag,
+            'front': clean_html(q),
+            'back': clean_html(a),
+            'tip': tip
+        })
+
 categories = sorted(list(set(fc["category"] for fc in flashcards)))
 
 flashcards_data = {
-    "version": "2026.1",
+    "version": "2026.2",
     "totalCards": len(flashcards),
     "categories": categories,
     "cards": flashcards
@@ -449,5 +637,9 @@ flashcards_data = {
 
 with open('data/flashcards.json', 'w', encoding='utf-8') as f:
     json.dump(flashcards_data, f, ensure_ascii=False, indent=2)
+
+if os.path.exists('dist/data'):
+    with open('dist/data/flashcards.json', 'w', encoding='utf-8') as f:
+        json.dump(output_data if 'output_data' in locals() else flashcards_data, f, ensure_ascii=False, indent=2)
 
 print(f'Generated data/flashcards.json with {len(flashcards)} flashcards across {len(categories)} categories.')

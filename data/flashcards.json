@@ -1,12 +1,13 @@
 {
-  "version": "2026.1",
-  "totalCards": 52,
+  "version": "2026.2",
+  "totalCards": 291,
   "categories": [
     "Culture & Sciences",
     "Géographie",
     "Histoire",
     "Institutions",
     "Principes Républicains",
+    "Questions Entretien",
     "Réforme 2026",
     "Société & Quotidien",
     "Symboles & Valeurs"
@@ -427,6 +428,1918 @@
       "front": "Quels sont les deux grands changements de la réforme 2026 pour la naturalisation ?",
       "back": "1. Exigence du niveau B2 oral et écrit du CECRL (au lieu de B1)\n2. Mise en place de l'Examen Civique officiel pour constituer son dossier avant l'entretien.",
       "tip": "Énoncé dans l'Avant-propos de l'édition 2026 du Livret du Citoyen."
+    },
+    {
+      "id": "fc-53",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<span class=\"fontstyle0\">Ça veut dire quoi que (la France est une démocratie) ?</span>",
+      "back": "<span class=\"fontstyle0\">Ça veut dire que les dirigeants de l’état sont élus au suffrage universel et que tous les<br>citoyens, hommes et femmes, ont le droit de vote.</span>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-54",
+      "category": "Histoire",
+      "tag": "Révolution",
+      "front": "<span class=\"fontstyle0\">Les symboles de la république&nbsp;</span>",
+      "back": "<span class=\"fontstyle0\">Le 14 juillet, l’hymne national ‘La Marseillaise’. La Marianne est le symbole de la République.<br>Sa statue, placée dans toutes les mairies, rappelle la Révolution française. Le drapeau<br>tricolore, bleu, blanc, rouge, date également de la Révolution. La langue de la République est<br>le français. La devise : liberté, égalité et fraternité.</span>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-55",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<span class=\"fontstyle0\">Avez-vous le droit de tout dire, de tout exprimer publiquement</span>",
+      "back": "<span class=\"fontstyle0\">La liberté d’expression est un droit fondamental. Cependant, elle a des limites, pour<br>respecter les droits des autres. Il est ainsi interdit de diffuser des injures, des propos<br>diffamatoires, des provocations à la haine, ou de faire l’apologie de crimes contre<br>l’humanité.</span>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-56",
+      "category": "Histoire",
+      "tag": "Histoire",
+      "front": "<span class=\"fontstyle0\">Quand la République est installée de façon stable ?</span>",
+      "back": "<span class=\"fontstyle0\">En 1875.</span>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-57",
+      "category": "Institutions",
+      "tag": "Collectivités",
+      "front": "<span class=\"fontstyle0\">Quand l’école primaire devient obligatoire et l’école publique devient gratuite et laïque et grâce<br>à qui ?</span>",
+      "back": "<span class=\"fontstyle0\">Dans les années 1881 – 1882 grâce à la loi Jules Ferry (nom du ministre de l'Instruction<br>publique).</span>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-58",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<span class=\"fontstyle0\">C'est quoi la définition de l’égalité ?</span>",
+      "back": "<span class=\"fontstyle0\">Tous les citoyens ont les mêmes droits et les mêmes devoirs quels que soient leurs sexes,<br>leurs origines, leurs religions, leurs opinions ou leurs orientations sexuelle.</span>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-59",
+      "category": "Histoire",
+      "tag": "Révolution",
+      "front": "<span class=\"fontstyle0\">Quand a été La Déclaration des Droits de l’Homme et du Citoyen ?</span>",
+      "back": "<span class=\"fontstyle0\">Le 5 Octobre 1789 par Louis XVI - 16 et elle assure la liberté et l’égalité de tous les citoyens</span>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-60",
+      "category": "Principes Républicains",
+      "tag": "Principes",
+      "front": "<span class=\"fontstyle0\">C'est quoi la définition de la fraternité&nbsp;</span>",
+      "back": "<span class=\"fontstyle0\">La France est fondée sur la volonté de vivre ensemble des citoyens français. Cette volonté se<br>traduit par la solidarité entre les citoyens.</span>",
+      "tip": "La laïcité et l'égalité femmes-hommes sont particulièrement testées lors de l'entretien."
+    },
+    {
+      "id": "fc-61",
+      "category": "Histoire",
+      "tag": "Histoire",
+      "front": "<span class=\"fontstyle0\">Quand a été créé le système de sécurité sociale et qui le finance ?</span>",
+      "back": "<span class=\"fontstyle0\">Depuis 1945, le système de sécurité sociale, financé par les entreprises et tous ceux qui<br>travaillent en France.</span>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-62",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<span class=\"fontstyle0\">C'est quoi la laïcité ?</span>",
+      "back": "<span class=\"fontstyle0\">La laïcité est un principe fondamental de la République.<br>+ C’est le principe de séparation de la société civile et de la société religieuse</span><br><span class=\"fontstyle0\">- Elle signifie deux choses :<br>• L’État est neutre envers les religions. Il n’aide aucune religion. La religion relève de la vie privée de<br>chacun ;<br>• L’État garantit la liberté religieuse. Chacun est libre de croire ou de ne pas croire et d’adopter la<br>religion qu’il souhaite</span>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-63",
+      "category": "Principes Républicains",
+      "tag": "Laïcité",
+      "front": "<span class=\"fontstyle0\">Quand a été séparé les Églises de l’État ?</span>",
+      "back": "<span class=\"fontstyle0\">Par la loi de 1905.</span>",
+      "tip": "La laïcité et l'égalité femmes-hommes sont particulièrement testées lors de l'entretien."
+    },
+    {
+      "id": "fc-64",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<span class=\"fontstyle0\">Les droits et les devoirs des citoyens de la république ?</span>",
+      "back": "<span class=\"fontstyle0\">- </span><span class=\"fontstyle0\" style=\"color:rgb(255,0,0);\">DEVOIR : </span><span class=\"fontstyle0\">Chacun doit respecter les lois et les règlements. Les règles essentielles applicables<br>entre les personnes sont définies par le Code civil. Il existe aussi des règles collectives, qui<br>portent sur la vie en société et qui sont inscrites dans la loi. Par exemple, le code pénal<br>définit les délits et les peines qui correspondent à leur sanction.<br>- </span><span class=\"fontstyle0\" style=\"color:rgb(255,0,0);\">DEVOIR : </span><span class=\"fontstyle0\">LES CITOYENS CONTRIBUENT AU FINANCEMENT DES SERVICES PUBLICS : Tous les<br>citoyens doivent participer à la hauteur de leurs moyens au financement des services publics<br>en payant des impôts. Ils participent au financement de la protection sociale par les<br>cotisations prélevées sur leur salaire.<br>- </span><span class=\"fontstyle0\" style=\"color:rgb(255,0,0);\">DEVOIR : </span><span class=\"fontstyle0\">Déclarer ses revenus et payer ses impôts est obligatoire.<br>- </span><span class=\"fontstyle0\" style=\"color:rgb(255,0,0);\">DEVOIR : </span><span class=\"fontstyle0\">LES CITOYENS CONTRIBUENT À LA DÉFENSE NATIONALE.<br>- </span><span class=\"fontstyle0\" style=\"color:rgb(0,176,80);\">DROIT : </span><span class=\"fontstyle0\">TOUS LES CITOYENS ONT ACCÈS AUX EMPLOIS PUBLICS<br>- </span><span class=\"fontstyle0\" style=\"color:rgb(0,176,80);\">DROIT : </span><span class=\"fontstyle0\">tous les citoyens ont le droit de voter.</span>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-65",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<span class=\"fontstyle0\">A partir de quand les élèves des écoles, collèges et lycées n’ont-ils plus le droit de porter des<br>signes religieux trop visibles dans les établissements scolaires ?</span>",
+      "back": "<span class=\"fontstyle0\">La loi du 15 mars 2004 interdit de porter à l’école des signes ou des tenues qui manifestent<br>ostensiblement (de manière trop visible) l’appartenance à une religion</span>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-66",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<span class=\"fontstyle0\">Pourquoi les élèves des écoles, collèges et lycées n’ont-ils plus le droit de porter des signes<br>religieux trop visibles dans les établissements scolaires ?</span>",
+      "back": "<span class=\"fontstyle0\">En effet, l’école est une institution publique qui forme tous les citoyens : elle doit donc être<br>neutre face aux religions. L’interdiction de porter des signes religieux ostensibles contribue à<br>cette neutralité. Pour les mêmes raisons, les agents publics ne doivent pas montrer leur<br>appartenance à une religion</span>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-67",
+      "category": "Principes Républicains",
+      "tag": "Principes",
+      "front": "<span class=\"fontstyle0\">C'est quoi le principe de la France ?</span>",
+      "back": "<span class=\"fontstyle0\">Gouvernement du peuple, par le peuple et pour le peuple.</span>",
+      "tip": "La laïcité et l'égalité femmes-hommes sont particulièrement testées lors de l'entretien."
+    },
+    {
+      "id": "fc-68",
+      "category": "Institutions",
+      "tag": "Institutions",
+      "front": "<span class=\"fontstyle0\">Quand la constitution de la république a été adoptée ?</span>",
+      "back": "<span class=\"fontstyle0\">L’organisation de l’État est définie par un texte, la Constitution. Notre constitution actuelle<br>est celle de la Vème République, adoptée en 1958.</span>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-69",
+      "category": "Questions Entretien",
+      "tag": "Entretien",
+      "front": "<span class=\"fontstyle0\">C'est quoi le principe sur lequel les institutions sont fondées ?</span>",
+      "back": "<span class=\"fontstyle0\">- Nos institutions sont fondées sur la séparation des pouvoirs exécutif, législatif et judiciaire :<br>tous les pouvoirs ne doivent pas être exercés par la même autorité.</span>",
+      "tip": "Exprimez-vous avec clarté, sincérité et en démontrant votre attachement aux valeurs françaises."
+    },
+    {
+      "id": "fc-70",
+      "category": "Principes Républicains",
+      "tag": "Démocratie",
+      "front": "Ils sont qui LES PRINCIPAUX RESPONSABLES DE L’ÉTAT",
+      "back": "• Le Président de la République est élu au suffrage universel pour cinq ans. Il propose le premier<br>ministre qui est généralement élu par le Parlement, ce dernier nomme les ministres du<br>gouvernement.<br>• Le Parlement, composé de l’Assemblée nationale et du Sénat, vote les lois et contrôle le<br>Gouvernement. Les députés à l’Assemblée nationale sont élus tous les cinq ans aux élections<br>législatives.<br>• La justice est exercée par les magistrats. Elle sanctionne les infractions à la loi, par la prison ou les<br>autres peines prévues par la loi. Elle règle les litiges entre les particuliers ou les entreprises, et entre<br>les citoyens et l’administration\n<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_responsables_etat.png\">",
+      "tip": "La laïcité et l'égalité femmes-hommes sont particulièrement testées lors de l'entretien."
+    },
+    {
+      "id": "fc-71",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "Les élections en France :",
+      "back": "Attention : les députés de l’assemblée nationale sont élus par les citoyens aux élections législatives<br>direct par contre les sénateurs du Sénat sont élus par les conseillers ci-dessus.<br>+ Qui nomme le président de l'Assemblée nationale ?<br>- Lors de sa première séance, l'Assemblée nouvellement élue est présidée par son doyen<br>d'âge et élit son nouveau Président. Cette élection, acquise pour toute la durée de la<br>législature, a lieu au scrutin secret à la tribune.<br>+ Qui nomme le président du Sénat ?<br>- Le Président du Sénat est élu par l'ensemble des sénateurs, tous les trois ans, après chaque<br>renouvellement partiel de l'assemblée.<br>+ Combien de députés et de sénateurs y-a-t-il dans l’Assemblée nationale et le Sénat en France ?<br>- 577 députés dans l’Assemblée nationale et 348 sénateurs dans le Sénat.<br>+ C’est quoi les noms des présidents de l’Assemblée nationale et du Sénat ?<br>- En 2021 : Sénat M. Gérard LARCHER du parti politique (les républicains) et l’Assemblée<br>nationale M. Richard Ferrand du parti politique (En Marche).<br>+ Citez le nom du premier ministre actuel et 3 ministres de son gouvernement ?<br>- Le premier ministre actuel en février 2021 : M. Jean Castex.<br>- Ministre de l’intérieur : M. Gérald Darmanin, ministre des solidarités et de la santé : M.<br>Olivier Véran, ministre de la Transition écologique : Mme. Barbara Pompili.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-72",
+      "category": "Géographie",
+      "tag": "Régions",
+      "front": "Combien de région y a-t-il en France ?",
+      "back": "A partir de 2016, la France compte 13 régions métropolitaines et 5 régions d’outre-mer",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-73",
+      "category": "Géographie",
+      "tag": "Régions",
+      "front": "Citez 5 régions métropolitaines ?",
+      "back": "Grand est, haut de France, Île-de-France, Normandie, Bretagne, nouvelle Aquitaine",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-74",
+      "category": "Géographie",
+      "tag": "Régions",
+      "front": "Cites les régions d’outre-mer ?",
+      "back": "Guadeloupe, Guyane, Martinique, Mayotte, réunions",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-75",
+      "category": "Géographie",
+      "tag": "Régions",
+      "front": "Qui administre les régions ?",
+      "back": "les régions sont administrées par les conseils régionaux.",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-76",
+      "category": "Géographie",
+      "tag": "Régions",
+      "front": "Quelles responsabilités de chaque région en France ?",
+      "back": "Elles sont en charge notamment des transports publics, de la formation professionnelle, de<br>la construction et de l’entretien des lycées.",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-77",
+      "category": "Géographie",
+      "tag": "Départements",
+      "front": "Combien de département y a-t-il en France ?",
+      "back": "101 départements, 96 en métropole et 5 départements d’outre-mer",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-78",
+      "category": "Géographie",
+      "tag": "Départements",
+      "front": "Citez 5 départements en France ?",
+      "back": "Seine-Saint-Denis, Paris, Hauts-de-Seine, Nord , Oise,marne",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-79",
+      "category": "Géographie",
+      "tag": "Départements",
+      "front": "Qui administre les départements ?",
+      "back": "Ils sont administrés par les conseils départementaux.",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-80",
+      "category": "Géographie",
+      "tag": "Départements",
+      "front": "Quelles responsabilités de chaque département en France ?",
+      "back": "Ils sont responsables, notamment, des collèges, de la protection de l’enfance, de l’aide aux<br>personnes âgées.",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-81",
+      "category": "Institutions",
+      "tag": "Collectivités",
+      "front": "Combien de commune y a-t-il en France ?",
+      "back": "=~~35000",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-82",
+      "category": "Institutions",
+      "tag": "Collectivités",
+      "front": "Qui administre les communes ?",
+      "back": "Elles sont administrées par un maire et un conseil municipal.",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-83",
+      "category": "Institutions",
+      "tag": "Collectivités",
+      "front": "Quelles responsabilités de chaque commune en France ?",
+      "back": "Elles sont responsables, notamment, des écoles maternelles et primaires, des activités<br>sportives et culturelles, de l’entretien des rues. Elles tiennent l’état civil, c’est-à-dire qu’elles<br>enregistrent les naissances, les mariages, les décès.",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-84",
+      "category": "Géographie",
+      "tag": "Régions",
+      "front": "Qui représente l’Etat dans les départements et les régions de métropole et d’outre-mer ?",
+      "back": "Les préfets.",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-85",
+      "category": "Histoire",
+      "tag": "Histoire",
+      "front": "C’est quoi l’importance de la grotte de Lascaux ?",
+      "back": "Elle est connue par la qualité de ses peintures qui date de la préhistoire elle a été découverte en France",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-86",
+      "category": "Histoire",
+      "tag": "Histoire",
+      "front": "A partir de quand l’installation des Romains a eu une influence en France ?",
+      "back": "A partir des années 50 avant J.-C., l’installation des Romains a eu une influence durable car<br>les populations locales adoptent leur mode de vie et la culture latine",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-87",
+      "category": "Histoire",
+      "tag": "Histoire",
+      "front": "Qui est Clovis ? 5 -ème siècle (466-511)",
+      "back": "C’est la personne qui a unifie les royaumes des différents peuples francs. C’est une étape<br>importante dans la construction de l’unité du territoire français. Il adopte la religion<br>chrétienne.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-88",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "Qui est Jeanne d’Arc ?",
+      "back": "15 -ème siècle (1412-1431)<br><br>- C’est une jeune paysanne qui conduisait les troupes françaises à la liberté pendant la guerre<br>de cent ans contre l’Angleterre.<br>- Elle est considérée comme un symbole du courage de l’histoire française.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-89",
+      "category": "Principes Républicains",
+      "tag": "Principes",
+      "front": "Qui est Henri VI ?",
+      "back": "16 -ème siècle (1553-1610)<br>C’est la personne qui a accordé aux protestants la liberté d’exercer leur religion et rétablit la<br>paix religieuse par l’édit de Nantes de 1598.",
+      "tip": "La laïcité et l'égalité femmes-hommes sont particulièrement testées lors de l'entretien."
+    },
+    {
+      "id": "fc-90",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "Qui est Molière ?",
+      "back": "17 -ème siècle (1622-1673)<br>C’est le plus célèbre auteur de théâtre français, il a vécu au temps de Louis 14 On lui doit<br>des comédies comme l’Avare",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-91",
+      "category": "Principes Républicains",
+      "tag": "Principes",
+      "front": "Citez 3 philosophes des Lumières ? 18 -ème siècle",
+      "back": "Rousseau, Voltaire, Diderot, combattent à travers leurs œuvres pour la tolérance et la liberté<br>de pensée",
+      "tip": "La laïcité et l'égalité femmes-hommes sont particulièrement testées lors de l'entretien."
+    },
+    {
+      "id": "fc-92",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "Parlez du règne de Louis 14 ?",
+      "back": "(1643-1715) 18 -ème siècle<br>À cette époque, la France était dirigée par une monarchie absolue. Le roi concentre tous les<br>pouvoirs. À cette époque, se met en place un État puissant et centralisé dans la capitale",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-93",
+      "category": "Histoire",
+      "tag": "Révolution",
+      "front": "Quand a été la révolution française et la Déclaration des Droits de l’Homme et du Citoyen ?",
+      "back": "En 1789, le peuple se révolte contre la monarchie absolue",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-94",
+      "category": "Histoire",
+      "tag": "Histoire",
+      "front": "Quand la première république a été proclamé ?",
+      "back": "En 1792, la 1ère République est proclamée",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-95",
+      "category": "Histoire",
+      "tag": "Empire",
+      "front": "Qui est Napoléone et c’est quoi la chose la plus importante qu’il a fait ?",
+      "back": "(1769- 1821) Empire<br><br>C’est la personne qui a dirigé la France pendant près de 15 ans. Il mène de nombreuses<br>guerres en Europe. On lui doit notamment le Code civil.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-96",
+      "category": "Histoire",
+      "tag": "Histoire",
+      "front": "Qui est Victor Hugo, citez quelques réalisations ? (1802-1885) 19 -ème siècle",
+      "back": "- C’est l’un des plus grands écrivains français, s’est engagé contre les inégalités sociales et la<br>peine de mort. Il a écrit Les Misérables et Notre-Dame de Paris.<br>+ Victor Hugo est un poète, dramaturge, écrivain, romancier et dessinateur romantique français,<br>né le (26 février 1802) à Besançon et mort le 22 mai 1885 à Paris. Il est considéré comme l'un<br>des plus importants écrivains de langue française. Il est aussi une personnalité politique et un<br>intellectuel engagé qui a eu un rôle idéologique majeur et occupe une place marquante dans<br>l'histoire des lettres françaises au XIX -ème siècle, dans des genres et des domaines d’une<br>remarquable variété",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-97",
+      "category": "Institutions",
+      "tag": "Institutions",
+      "front": "Quand a été la naissance de la III république et qui est Jules Ferry ?",
+      "back": "- En 1870, mais en 1875 la forme républicaine du gouvernement a été établie de façon stable.<br>Jules Ferry, ministre de l’Instruction publique au début des années 1880 est à l’origine de<br>l’enseignement public, gratuit, obligatoire et laïc.<br>+ Il a été considéré, comme un des pères fondateurs de l'identité républicaine.",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-98",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "C’est quoi la date du début et la fin de la première guerre mondiale ?",
+      "back": "- De 1914 à 1918. Les combats ont fait plus de 9 millions de morts. Le 11 novembre est un<br>jour férié en commémoration de la fin de la Première Guerre Mondiale.<br><br>l'armistice",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-99",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "C’est quoi la date du début et la fin de la deuxième guerre mondiale ?",
+      "back": "- De 1939 à 1945. Adolf Hitler, dictateur nazi au pouvoir en Allemagne, déclenche la Seconde<br>Guerre Mondiale. Il envahit notamment la France. Les nazis mènent des persécutions contre<br>des opposants politiques, et exterminent des millions de Juifs, Tziganes, homosexuels et<br>handicapés. Les historiens estiment que la guerre a fait plus de 50 millions de morts, dont<br>une majorité de civils. Le 8 mai est un jour férié en commémoration de la fin de la Seconde<br>Guerre Mondiale.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-100",
+      "category": "Histoire",
+      "tag": "Histoire",
+      "front": "Quelle régime était en France entre 1940 – 1944 ?",
+      "back": "- Le régime de Vichy : suite à la défaite française face à l’Allemagne, le maréchal Pétain met<br>en place un régime antidémocratique dont la capitale est Vichy. Le régime collabore avec<br>l’Allemagne nazie et a donc une part de responsabilité dans la déportation des Juifs.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-101",
+      "category": "Histoire",
+      "tag": "Résistance",
+      "front": "Qui est Charles de Gaulle ?",
+      "back": "- Il est né en 1890 et mort en 1970. Chef de la résistance française contre les armées<br>allemandes qui occupent notre pays, il est l’artisan de la libération de la France. Bien après la<br>guerre et le premier présidant de la V -ème république.\n<br><br>- Charles de Gaules est un militaire, résistant et homme politique français, il est l’instigateur<br>de la V -ème république et a été son premier présidant de 1959 à 1969.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-102",
+      "category": "Histoire",
+      "tag": "Résistance",
+      "front": "Quand a été lancé la Vème république ? et grâce à qui ?",
+      "back": "En 1958, Charles de Gaulle est à l’origine de nos institutions actuelles (la Ve République)",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-103",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "En quelle période était la décolonisation française ?",
+      "back": "Entre 1950 et 1962. La décolonisation française débute en Asie et s’étend à l’Afrique. Ce<br>processus a donné lieu à des guerres comme celles d’Indochine et d’Algérie",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-104",
+      "category": "Histoire",
+      "tag": "Résistance",
+      "front": "Que-t-il passé en 1968 ?",
+      "back": "En mars 1968 a commencé le mouvement social, il est initié par des étudiants. Il s’étend aux<br>salariés et au monde ouvrier. Ces grèves et ces manifestations sont parmi les plus<br>importantes du 20e siècle, le 27 mai 1968 le général de Gaulle a signé l’accord avec les<br>syndicats avec une hausse de salaires minimums de 35%",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-105",
+      "category": "Société & Quotidien",
+      "tag": "Société",
+      "front": "A quelle date l’âge de la majorité a été fixé à 18 ans ?",
+      "back": "En 1974.",
+      "tip": "Montrez votre bonne insertion sociale, professionnelle et civique."
+    },
+    {
+      "id": "fc-106",
+      "category": "Institutions",
+      "tag": "Institutions",
+      "front": "Quand a été la création de la communauté économique européenne ?",
+      "back": "En 1957.",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-107",
+      "category": "Institutions",
+      "tag": "Institutions",
+      "front": "Quand l’avortement (Loi sur l’interruption volontaire de grossesse) a été publié ?",
+      "back": "En 1975 par Simone Veil (il faudra lire un résumé de sa vie)",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-108",
+      "category": "Société & Quotidien",
+      "tag": "Société",
+      "front": "Quand a été l’abolition de la peine de mort En France ?",
+      "back": "En 1981",
+      "tip": "Montrez votre bonne insertion sociale, professionnelle et civique."
+    },
+    {
+      "id": "fc-109",
+      "category": "Symboles & Valeurs",
+      "tag": "Symboles",
+      "front": "Citez 3 étrangers naturalisés ?",
+      "back": "- Marie Curie (1867 - 1934) : physicienne née en Pologne. On lui doit la découverte de<br>l’atome, au début du XXe siècle. Elle est inhumée au Panthéon.<br><br>Zinedine Zidane ; origine algérien<br><br>jean reno; origine Espagnol (LEON FILM)<br><br><br><br>- Andrée Chedid (1920 - 2011) : née en Égypte, au Caire, d’une mère syrienne et d’un père<br>libanais, c’est une femme de lettres et poète française.<br>- Valérie Benguigui (1961 - 2013) : d’origine algérienne, cette actrice a tourné dans plusieurs<br>films (Le prénom...) et séries-télévisées (Avocats et associés...).",
+      "tip": "Connaissez la définition exacte inscrite dans la Constitution de 1958."
+    },
+    {
+      "id": "fc-110",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "Quand a été créé l’UE ? La Charte des droits fondamentaux a été adopté ?",
+      "back": "En 1992 l’UE a été créée, et en 2000 la charte des droits fondamentaux a été adopté",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-111",
+      "category": "Institutions",
+      "tag": "Europe",
+      "front": "Combien de pays compte l’UE en 2024 ?",
+      "back": "27 pays.",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-112",
+      "category": "Institutions",
+      "tag": "Europe",
+      "front": "Combien de pays compte l’espace euro ?",
+      "back": "20 pays.",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-113",
+      "category": "Institutions",
+      "tag": "Europe",
+      "front": "Où se trouve le Parlement européen ?",
+      "back": "A Strasbourg",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-114",
+      "category": "Culture & Sciences",
+      "tag": "Francophonie",
+      "front": "Combien de personnes parlent le français ? et dans combien de pays ?",
+      "back": "Vers 200 millions personnes dans 70 pays.",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-115",
+      "category": "Société & Quotidien",
+      "tag": "Société",
+      "front": "Ce sont quoi les secteurs d’activité les plus marquants de la France ?",
+      "back": "L’aéronautique, le luxe et le tourisme.",
+      "tip": "Montrez votre bonne insertion sociale, professionnelle et civique."
+    },
+    {
+      "id": "fc-116",
+      "category": "Société & Quotidien",
+      "tag": "Société",
+      "front": "Combien d’habitant compte la France ?",
+      "back": "En 2019 : 67,07 millions.",
+      "tip": "Montrez votre bonne insertion sociale, professionnelle et civique."
+    },
+    {
+      "id": "fc-117",
+      "category": "Géographie",
+      "tag": "Outre-mer",
+      "front": "Combien de km compte le territoire français ?",
+      "back": "Le territoire français s’étend sur 675 000 km², en métropole et outre-mer",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-118",
+      "category": "Géographie",
+      "tag": "Relief",
+      "front": "Où se trouve le point le plus haut en France ?",
+      "back": "Le Mont-Blanc, sommet de la chaîne des Alpes, est la plus haute montagne d’Europe (4 810<br>m).",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-119",
+      "category": "Culture & Sciences",
+      "tag": "Culture",
+      "front": "Où se trouve le Mont-Saint-Michel ?",
+      "back": "Le Mont-Saint-Michel est un îlot rocheux situé en Normandie dans une baie, sur lequel<br>s’élève une abbaye. Il est classé au patrimoine mondial de l’humanité par l’UNESCO",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-120",
+      "category": "Géographie",
+      "tag": "Fleuves",
+      "front": "Parlez des fleuves de la France ?",
+      "back": "- La Loire, la Seine, la Garonne, le Rhône, le Rhin et la somme.<br>- La Loire est le plus long fleuve français.",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-121",
+      "category": "Questions Entretien",
+      "tag": "Entretien",
+      "front": "Pourquoi voulez-vous devenir français ?",
+      "back": "- Dans la réponse de cette question, il faudra surtout montrer votre adhération aux valeurs de<br>la république et sa devise liberté, égalité et fraternité.<br>- Je vous conseille de donner des exemples réels qui justifie votre adhération et que vous vous<br>sentez français/française plus que votre nationalité d’origine.",
+      "tip": "Exprimez-vous avec clarté, sincérité et en démontrant votre attachement aux valeurs françaises."
+    },
+    {
+      "id": "fc-122",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "Qui a écrit la Marseillaise et à quelle date ?",
+      "back": "L’auteur de la Marseillaise est Claude-Joseph Rouget en 1792 à Strasbourg à la suite de la<br>déclaration de guerre du roi d'Autriche.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-123",
+      "category": "Symboles & Valeurs",
+      "tag": "Hymne",
+      "front": "Le premier couplet de la Marseillaise ?",
+      "back": "- Allons enfants de la Patrie<br>Le jour de gloire est arrivé<br>Contre nous de la tyrannie<br>L'étendard sanglant est levé<br>Entendez-vous dans les campagnes<br>Mugir ces féroces soldats<br>Ils viennent jusque dans vos bras.<br>Égorger vos fils, vos compagnes<br>- Aux armes citoyens<br>Formez vos bataillons<br>Marchons, marchons<br>Qu'un sang impur<br>Abreuve nos sillons",
+      "tip": "Connaissez la définition exacte inscrite dans la Constitution de 1958."
+    },
+    {
+      "id": "fc-124",
+      "category": "Histoire",
+      "tag": "Empire",
+      "front": "Citez les réalisations les plus importantes de Napoléon Bonaparte et quand a été sacré<br>empereur ?",
+      "back": "- En France, Napoléon réorganise l’administration et place des préfets à la tête des<br>départements ; il crée en 1800 la Banque de France ; en 1802, la Légion d’honneur ; en 1803,<br>une nouvelle monnaie, le franc ; en 1804 il est sacré Empereur sous le nom de Napoléon Ier,<br>et il fait publier le Code civil. (Résumé de sa vie en index).",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-125",
+      "category": "Histoire",
+      "tag": "Révolution",
+      "front": "Qui est le roi Soleil et pourquoi est-il connu ?",
+      "back": "- C’est le roi Louis XIV&nbsp; 14 , il est connu car pour la durée de son règne qui fut le plus long de<br>l’histoire en France et il est aussi le symbole de la monarchie absolue qui a été abandonné après la<br>révolution.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-126",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "Citez des rois et des reines de France ?",
+      "back": "- Rois : Charlemagne, François Ier, Henri IV&nbsp; 4 , Louis XIV 14.<br>- Reines : Marie-Antoinette d'Autriche, épouse du roi Louis XVI&nbsp; 16 , Marie-Thérèse d'Autriche,<br>épouse du roi Louis XIV&nbsp; &nbsp;14",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-127",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "Citez quelques partis politiques en France ?",
+      "back": "-\tLa France insoumise (Jean-Luc Mélenchon) gauche : défend des politiques sociales<br>-\tLe Rassemblement national droite (Marine le Pen) : Défend des positions identitaires et protectionnistes<br>-\tLa république en marche : Emmanuel Macron centriste",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-128",
+      "category": "Histoire",
+      "tag": "Résistance",
+      "front": "Citez les présidents de la V -ème république ?",
+      "back": "- Charles de Gaulle (1959 - 1969).<br>- Georges Pompidou (1969 - 1974).<br>- Valéry Giscard d'Estaing (1974 - 1981).<br>- François Mitterrand (1981 - 1995).<br>- Jacques Chirac (1995 - 2007).<br>- Nicolas Sarkozy (2007 - 2012).<br>- François Hollande (2012 - 2017).<br>- Emmanuel Macron (2017 – aujourd’hui).",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-129",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "C’est quoi la cause de la première guerre mondiale ?",
+      "back": "- L’Autriche-Hongrie déclare la guerre à la Serbie (un serbe a tué l’héritier au trône de<br>l’Autriche) après un moment de tension entre les alliances en Europe.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-130",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "C’est quoi la raison principale de la deuxième guerre mondiale&nbsp;",
+      "back": "- Suite à la première guerre mondiale, l’Allemagne et son alliance ont été vaincus et sont<br>rendus seul responsable de la guerre, et donc l’Allemagne devait rembourser une dette<br>irraisonnable, l’économie allemande passe une période assez fragile, en 1933 l’arrivée d’un<br>parti Nazi avec Adolphe Hitler à sa tête.<br>- En 1939 l’Allemagne annexe l’Autriche et déclare la guerre contre la Tchécoslovaquie et<br>autres pays.<br>- Le royaume uni et la France déclare la guerre contre l’Allemagne.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-131",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "Comment s’est terminé la deuxième guerre mondiale ?",
+      "back": "- Le 6 Juin 1944, les forces des alliés débarquent en Normandie et elles libèrent Paris, et puis<br>au fur et à mesure ça s’étend jusqu’à elle arrive à Berlin où Hitler se suicide le 30 avril 1945.<br>- Suite à la défaite du Japon, le 15 août 1945 a été la fin de la deuxième guerre mondiale.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-132",
+      "category": "Histoire",
+      "tag": "Résistance",
+      "front": "Quand et comment les femmes ont obtenu le droit de vote ?",
+      "back": "- Le 21 avril 1944, le général de Gaulle octroie par ordonnance dans le cadre du<br>gouvernement provisoire d'Alger, le droit de vote aux femmes françaises.\n<br><br>- Le 29 avril 1945, ces françaises exercent ce droit pour la première fois dans le cadre des<br>élections municipales",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-133",
+      "category": "Histoire",
+      "tag": "Résistance",
+      "front": "Qui es Jean Moulin ?",
+      "back": "- Préfet de l'Aveyron puis d'Eure-et-Loir, refusant l'occupation de la France par l'Allemagne<br>pendant la Seconde Guerre mondiale, il rejoint en septembre 1941 la France libre à Londres<br>en passant par l’Espagne et le Portugal. Il est reçu par Charles de Gaulle, à qui il fait un<br>compte-rendu de l’état de la résistance en France et de ses besoins, notamment financiers<br>et en armement.<br>- Envoyé à Lyon par Charles de Gaulle pour unifier les mouvements résistants, il crée et dirige<br>le Conseil national de la Résistance. Il est arrêté à Caluire-et-Cuire, dans la banlieue de Lyon,<br>le 21 juin 1943 il a été conduit au siège de la Gestapo à Lyon, où il est torturé ; il est ensuite<br>transféré à la Gestapo de Paris. Il meurt dans le train qui le transporte en Allemagne peu<br>avant le passage de la frontière, le 8 juillet 1943. Son décès est enregistré en gare de Metz.<br>- Considéré comme l'un des principaux héros de la Résistance",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-134",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "Quelle est la signification du drapeau français et quand est-il devenu officiellement l’emblème<br>de la France ?",
+      "back": "- Il associe les couleurs de la ville de Paris, le bleu et le rouge, au blanc qui symbolise la<br>monarchie.<br>- C'est en 1794 qu'il est officiellement devenu l'emblème de la France.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-135",
+      "category": "Institutions",
+      "tag": "Collectivités",
+      "front": "C’est quoi le nom du maire de votre commune ?",
+      "back": "Karine Franclet",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-136",
+      "category": "Symboles & Valeurs",
+      "tag": "Marianne",
+      "front": "Qui est la Marianne ?",
+      "back": "- Marianne est une figure symbolique de la République française. Sous l’apparence d’une<br>femme coiffée d’un bonnet phrygien, elle représente la République française et ses valeurs<br>contenues dans la devise : Liberté, Égalité, Fraternité.",
+      "tip": "Connaissez la définition exacte inscrite dans la Constitution de 1958."
+    },
+    {
+      "id": "fc-137",
+      "category": "Institutions",
+      "tag": "Présidence",
+      "front": "Qui est le chef de l’armée ?",
+      "back": "Le président de la république.",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-138",
+      "category": "Géographie",
+      "tag": "Géographie",
+      "front": "Citez 5 écrivains français et 1 œuvre de chacun ?",
+      "back": "- Victor Hugo (Les Misérables et Notre-Dame de Paris), Voltaire (Les lettres philosophiques),<br>Jules Verne (De la terre à la lune), Madame de la Fayette (La Princesse de Clèves) et Molière<br>(Les Précieuses ridicules).",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-139",
+      "category": "Géographie",
+      "tag": "Géographie",
+      "front": "Qui a construit la tour Eiffel, à quelles date et occasion et que signifie actuellement ?",
+      "back": "- La tour Eiffel a été construit par Gustave Eiffel et ses collaborateurs pour l’Exposition<br>universelle de Paris de 1889 dans le 7ème arrondissement de Paris, elle est devenue le<br>symbole de la capitale française et un site touristique de premier plan.",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-140",
+      "category": "Histoire",
+      "tag": "Empire",
+      "front": "Parlez le de l’Arc de triomphe ?",
+      "back": "- Sa construction, décidée par l'empereur Napoléon Ier afin de commémorer un général<br>vainqueur défilant à la tête de ses troupes, la construction a débuté en 1806 et s’est terminé<br>en 1836 sous le règne de Louis-Philippe.<br>- Un monument situé à Paris, en un point haut à la jonction des territoires des 8e, 16e et 17e<br>arrondissements, notamment au sommet de l'avenue des Champs-Élysées.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-141",
+      "category": "Histoire",
+      "tag": "Révolution",
+      "front": "Parlez de la Bastille ?",
+      "back": "- C’est une forteresse construite entre 1370 et 1383 sous le règne de Charles V, afin de<br>protéger la partie est de la ville, à l'emplacement du débouché de la rue Saint-Antoine sur<br>l’actuelle place de la Bastille à Paris. Sous le règne de Louis XIV, la Bastille devenue une<br>prison, elle fut totalement détruite lors de la Révolution française, après l'événement<br>déclencheur devenu une fête nationale en France, la prise de la Bastille du 14 juillet 1789",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-142",
+      "category": "Géographie",
+      "tag": "Géographie",
+      "front": "Parlez de l’Élysée ?",
+      "back": "- L'Élysée, est un ancien hôtel particulier parisien, situé dans le 8e arrondissement de Paris. Il<br>est le siège de la présidence de la République française et la résidence officielle du président<br>de la République depuis la IIe République.",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-143",
+      "category": "Géographie",
+      "tag": "Géographie",
+      "front": "Parlez du musée du Louvre ?",
+      "back": "- Ce musée été inauguré en 1793 sous l'appellation de Musée central des arts de la<br>République dans le palais du Louvre, ancienne résidence royale située au centre au 1er<br>arrondissement de Paris, et il est aujourd'hui le plus grand musée d'art et d'antiquités au<br>monde.",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-144",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "Parlez du château de Versailles ?",
+      "back": "- Le château de Versailles est un château et un monument historique français qui se situe à<br>Versailles, dans les Yvelines, en France. Construit par le roi Louis XIV, il fut la résidence des<br>rois de France Louis XIV&nbsp; &nbsp;14 , Louis XV&nbsp; 15 et Louis XVI 16",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-145",
+      "category": "Géographie",
+      "tag": "Géographie",
+      "front": "Parlez de la cathédrale Notre-Dame de Paris ?",
+      "back": "- C’est l'un des monuments les plus emblématiques de Paris et de la France. Sa construction<br>s'étend sur plus de deux siècles, de 1163 au milieu du XIVe siècle. Elle est un lieu de culte<br>catholique, siège de l'archidiocèse de Paris, dédiée à la Vierge Marie",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-146",
+      "category": "Culture & Sciences",
+      "tag": "Culture",
+      "front": "Parlez du Mont-Saint-Michel ?",
+      "back": "- C’est un l'îlot rocheux consacré à saint Michel où s’élève aujourd’hui l’abbaye du MontSaint-Michel dans une baie en Normandie.<br>- L’architecture du Mont-Saint-Michel et sa baie en font le site touristique le plus fréquenté<br>de Normandie et l'un des dix plus fréquentés en France.",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-147",
+      "category": "Culture & Sciences",
+      "tag": "Gastronomie",
+      "front": "Citez quelques spécialités gastronomiques françaises ?",
+      "back": "- escargot <br>- tartare de boeuf <br>- moules frites <br>- crêpes <br>- mousse au chocolat",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-148",
+      "category": "Culture & Sciences",
+      "tag": "Cinéma",
+      "front": "Citez quelques acteurs français ?",
+      "back": "- gile le louche<br>- jean du jardin<br>- Gérald Depardieu <br>- eva green<br>- Mélanie Laurent",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-149",
+      "category": "Culture & Sciences",
+      "tag": "Musique",
+      "front": "Citez quelques chanteurs français ?",
+      "back": "- Hélène Segara <br>-Charles Aznavour <br>- Indila",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-150",
+      "category": "Culture & Sciences",
+      "tag": "Sport",
+      "front": "Citez un grand événement sportif en France",
+      "back": "Le Tour de France.",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-151",
+      "category": "Société & Quotidien",
+      "tag": "Travail",
+      "front": "Que représente le 1er mai ?",
+      "back": "La fête du travail",
+      "tip": "Montrez votre bonne insertion sociale, professionnelle et civique."
+    },
+    {
+      "id": "fc-152",
+      "category": "Culture & Sciences",
+      "tag": "Patrimoine",
+      "front": "Citez quelques monuments en France ?",
+      "back": "La Tour Eiffel, le Château de Chambord, le Palais idéal du Facteur Cheval et le pont du Gard.",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-153",
+      "category": "Culture & Sciences",
+      "tag": "Sport",
+      "front": "Citez des sportifs/ves français ou françaises ?",
+      "back": "Zinédine Zidane Thierry Henry mbappe",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-154",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "Qu'en pensez-vous de la parité ?",
+      "back": "- Je pense que les femmes et les hommes sont égaux, et devraient donc avoir les même droits<br>et obligations, En France cette égalité est garantie par l’article premier de la Constitution,<br>toutefois, on ne peut pas dire qu’on ait atteins la parité dans tous les domaines, par<br>exemple, on dit qu’il nous faudra encore plus de 200 ans avant de parvenir à l’égalité<br>salariale entre les femmes et les hommes et que les femmes gagnent en moyenne moins<br>que les hommes",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-155",
+      "category": "Géographie",
+      "tag": "Frontières",
+      "front": "Citez les pays avec lesquels la France partage ses frontières ?",
+      "back": "L’Espagne, l’Andorre, Monaco, l’Italie, la Suisse, L’Allemagne, Le Luxembourg et La Belgique.\n<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_frontieres_france.png\">",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-156",
+      "category": "Géographie",
+      "tag": "Relief",
+      "front": "Citez quelques chaînes de montagnes en France ?",
+      "back": "- Les Alpes.<br>- le Jura<br>- Pyrénées<br><br><br>-massif central",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-157",
+      "category": "Géographie",
+      "tag": "Géographie",
+      "front": "Quelles mers et océan bordent la France ?",
+      "back": "-la Méditerranée <br>-la mer du Nord <br>-la manche<br>-la mère Atlantique",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-158",
+      "category": "Géographie",
+      "tag": "Régions",
+      "front": "Quels sont les types de collectivités en France",
+      "back": "Régions, Départements, Communes",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-159",
+      "category": "Symboles & Valeurs",
+      "tag": "Devise",
+      "front": "C’est quoi la devise de l’UE ?",
+      "back": "Unie dans la diversité",
+      "tip": "Connaissez la définition exacte inscrite dans la Constitution de 1958."
+    },
+    {
+      "id": "fc-160",
+      "category": "Institutions",
+      "tag": "Europe",
+      "front": "Où se trouve le siège de la commission européenne",
+      "back": "A Bruxelles",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-161",
+      "category": "Symboles & Valeurs",
+      "tag": "Drapeau",
+      "front": "Quelle est la signification du drapeau européen ?",
+      "back": "- Le drapeau européen est constitué d'un cercle de douze étoiles dorées sur fond bleu. Les<br>étoiles symbolisent les d'unité, la solidarité et d'harmonie entre les peuples<br>d'Europe.",
+      "tip": "Connaissez la définition exacte inscrite dans la Constitution de 1958."
+    },
+    {
+      "id": "fc-162",
+      "category": "Principes Républicains",
+      "tag": "Principes",
+      "front": "Quelle est l’intérêt de faire partie de l’UE ?",
+      "back": "- La paix, une monnaie forte, liberté de circulation et le partage des valeurs",
+      "tip": "La laïcité et l'égalité femmes-hommes sont particulièrement testées lors de l'entretien."
+    },
+    {
+      "id": "fc-163",
+      "category": "Institutions",
+      "tag": "Europe",
+      "front": "Quel est l’hymne national de l’union européenne ?",
+      "back": "L’Ode à la joie de Beethoven.",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-164",
+      "category": "Questions Entretien",
+      "tag": "Entretien",
+      "front": "<strong>Pourquoi voulez-vous devenir français?&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">C’est la première question qu’on vous pose systématiquement, donc préparez bien la réponse. Vous  pouvez citer : </span></span></div><div></div><ul><li><div>les valeurs de la France auxquelles vous adhérez  </div></li><li><div>un projet personnel ou  professionnel que vous voudriez construire en France </div></li><li><div>votre mode de vie actuel que vous appréciez beaucoup </div></li><li><div>la place de la France sur le paysage mondial : 3ème économie mondiale, leader  aéronautique, agroalimentaire, industrie du luxe … </div></li><li><div>Richesse de la culture en France : science, Arts, littérature…&nbsp;</div></li></ul>",
+      "tip": "Exprimez-vous avec clarté, sincérité et en démontrant votre attachement aux valeurs françaises."
+    },
+    {
+      "id": "fc-165",
+      "category": "Questions Entretien",
+      "tag": "Entretien",
+      "front": "<strong>Avez-vous des liens en France ?&nbsp;</strong>",
+      "back": "Parlez de vos amis, de votre famille si vous en avez en France. Parlez de vos liens, vos habitudes pour montrer votre intégration et vos liens forts en France.",
+      "tip": "Exprimez-vous avec clarté, sincérité et en démontrant votre attachement aux valeurs françaises."
+    },
+    {
+      "id": "fc-166",
+      "category": "Société & Quotidien",
+      "tag": "Travail",
+      "front": "<strong>&nbsp;Quelles langues parlez-vous au travail?&nbsp;</strong>",
+      "back": "Le français visiblement, si ce n'est pas le cas, mettez en avant les moments ou projets où vous devez interagir en français.",
+      "tip": "Montrez votre bonne insertion sociale, professionnelle et civique."
+    },
+    {
+      "id": "fc-167",
+      "category": "Questions Entretien",
+      "tag": "Entretien",
+      "front": "<strong>Quelles sont les nationalités des personnes de votre entourage ?&nbsp;</strong>",
+      "back": "Soyez honnête mais mettez en avant vos amis, collègues et connaissances françaises.",
+      "tip": "Exprimez-vous avec clarté, sincérité et en démontrant votre attachement aux valeurs françaises."
+    },
+    {
+      "id": "fc-168",
+      "category": "Questions Entretien",
+      "tag": "Entretien",
+      "front": "<strong>Envoyez-vous de l’argent à votre pays d’origine?&nbsp;</strong>",
+      "back": "verifier mes impot&nbsp;",
+      "tip": "Exprimez-vous avec clarté, sincérité et en démontrant votre attachement aux valeurs françaises."
+    },
+    {
+      "id": "fc-169",
+      "category": "Géographie",
+      "tag": "Géographie",
+      "front": "<strong>Quelles sont les villes de France que vous avez visitées ?&nbsp;</strong>",
+      "back": "- Lille&nbsp;<br>- Strasbourg<br>- Dunkerque<br>- Etretat<br>- Saint augustin<br>- GranVille<br>- Saint-Malot<br>- Fontainebleau<br>- Reims<br>- Chantilly",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-170",
+      "category": "Principes Républicains",
+      "tag": "Principes",
+      "front": "<strong>Qu’avez-vous en plus en France que vous n’avez pas dans votre pays ?</strong>",
+      "back": "La liberté d’expression, l’accès à l’emploi, l’accès aux soins, l’accès à l’instruction, etc.",
+      "tip": "La laïcité et l'égalité femmes-hommes sont particulièrement testées lors de l'entretien."
+    },
+    {
+      "id": "fc-171",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<strong>Quelle est la devise de la République ?&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\"><strong>Liberté:</strong> Les libertés fondamentales sont garanties : liberté de pensée, de croyance, de  s’exprimer, de se réunir…… </span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\"><strong>Egalité: </strong>Tous les citoyens ont les mêmes droits et les mêmes devoirs quelques soit  leur sexe, leur origine, leur religion, leurs opinions ou leur orientation sexuelle </span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\"><strong>Fraternité:</strong> La Fraternité évoque la solidarité entre les citoyens </span></span></div><div></div><div><div><div><div><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_devise_republique.png\"><br></div></div></div></div>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-172",
+      "category": "Principes Républicains",
+      "tag": "Laïcité",
+      "front": "<strong>Peut-on rajouter une 4ème valeur?</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">La laïcité </span></span></div><div></div><div><br></div>",
+      "tip": "La laïcité et l'égalité femmes-hommes sont particulièrement testées lors de l'entretien."
+    },
+    {
+      "id": "fc-173",
+      "category": "Culture & Sciences",
+      "tag": "Gastronomie",
+      "front": "<strong>C’est quoi la laïcité ?&nbsp;</strong>",
+      "back": "La laïcité est régie par 3 principes : liberté de conscience, la séparation entre les  pouvoirs publics et religieux, et l’égalité devant la loi quel que soit la religion. La  France devint laïque en le 9 Décembre 1905.<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_laicite.png\">",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-174",
+      "category": "Principes Républicains",
+      "tag": "Démocratie",
+      "front": "<strong>Qu’est-ce que la démocratie ?</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">C’est un régime politique où le pouvoir est détenu par le peuple. Les démocraties peuvent être indirectes quand le pouvoir est exercé par des représentants élus lors du  suffrage universel. </span></span></div><div></div><div><br></div>",
+      "tip": "La laïcité et l'égalité femmes-hommes sont particulièrement testées lors de l'entretien."
+    },
+    {
+      "id": "fc-175",
+      "category": "Principes Républicains",
+      "tag": "Principes",
+      "front": "<strong>Depuis quand la France est devenue démocratique ?&nbsp;</strong>",
+      "back": "1792",
+      "tip": "La laïcité et l'égalité femmes-hommes sont particulièrement testées lors de l'entretien."
+    },
+    {
+      "id": "fc-176",
+      "category": "Principes Républicains",
+      "tag": "Démocratie",
+      "front": "<strong>&nbsp;Etes-vous d’accord avec la démocratie ?&nbsp;</strong>",
+      "back": "EVIDEMMENT➔ Car pour moi il n’ y a pas de meilleur régime qu’un régime démocratique parce que la loi y est la même pour tous et seule la démocratie instaure et garantit les libertés individuelles. De plus c’est le peuple qui élit ses représentant.&nbsp;<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_democratie.png\">",
+      "tip": "La laïcité et l'égalité femmes-hommes sont particulièrement testées lors de l'entretien."
+    },
+    {
+      "id": "fc-177",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<strong>Quels sont les droits et les devoirs du citoyen français ?&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Les droits : accès aux emplois publics, éducation, droit de vote </span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Les devoirs : Respect des lois et règlements, contribution au financement des services  publics, contribution à la défense nationale. </span></span></div><div></div><div><div><div><div><img class=\"flashcard-img\" alt=\"Illustration\" alt=\"\" src=\"assets/images/flashcards/fc_droits_devoirs.png\"></div></div></div></div>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-178",
+      "category": "Questions Entretien",
+      "tag": "Entretien",
+      "front": "<strong>Quelle est la population de votre ville de résidence ?</strong>",
+      "back": "85000 a Aubervilliers",
+      "tip": "Exprimez-vous avec clarté, sincérité et en démontrant votre attachement aux valeurs françaises."
+    },
+    {
+      "id": "fc-179",
+      "category": "Géographie",
+      "tag": "Régions",
+      "front": "<strong>Si on vous accorde la nationalité française vous allez pouvoir voter à quelles  élections ?</strong>",
+      "back": "Municipales (6ans-2026), <br><br>Présidentielles (5ans-2027)<br><br>Départementales (6ans- 2028),<br><br>régionales (6ans 2028), <br><br>législatives (5ans-2029), <br><br>Européennes (5ans-2029)",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-180",
+      "category": "Institutions",
+      "tag": "Présidence",
+      "front": "<strong>Quelles sont les institutions françaises&nbsp;&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">- Exécutif : constitué par le président et le gouvernement </span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">- Législatif : constitué par le Sénat (Sénateurs) et l’assemblée Nationale (Députés) </span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">- Judiciaire : exercé par les juges et les magistrats&nbsp;</span></span></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\"><br></span></span></div><div><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_institutions.png\"><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\"><br></span></span></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-181",
+      "category": "Symboles & Valeurs",
+      "tag": "Marianne",
+      "front": "<strong>Quels sont les symboles de la France ?&nbsp;</strong>",
+      "back": "Le Drapeau Tricolore (Bleu , Blanc, Rouge), l’Hymne national (La marseillaise), la Marianne, la devise de la France, le 14 Juillet, le coq, le Faisceau de licteur, le sceau et la fleur de Lys.<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_symboles_france.png\">",
+      "tip": "Connaissez la définition exacte inscrite dans la Constitution de 1958."
+    },
+    {
+      "id": "fc-182",
+      "category": "Géographie",
+      "tag": "Fleuves",
+      "front": "<strong>Citez des fleuves en France&nbsp;</strong>",
+      "back": "La Seine, La Loire, La Garonne, Le Rhône, La Marne, La Dordogne……<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_fleuves_france.png\">",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-183",
+      "category": "Histoire",
+      "tag": "Empire",
+      "front": "<strong>Enumérez des personnages français connus</strong>",
+      "back": "<ul><li><div><strong>Littérature:</strong> Honoré de Balzac, Victor Hugo, Emile Zola, Albert Camus</div></li><li><div><strong>Philosophie:</strong> Voltaire, Jean- Paul Sartre, Jean-Jacques Rousseau</div></li><li><div><strong>Peinture: </strong>Paul Cézanne, Claude Monet </div></li><li><div><strong>Musique: </strong>Johnny Hallyday, Charles Aznavour, Edith Piaf</div></li><li><div><strong>Science:</strong> D’Alembert, Coulomb, Marie Curie, René Decartes </div></li><li><div><strong>Sport: </strong>Zidane, Platini, Yannick Noah, Mbappé</div></li><li><div><strong>Guerre:</strong> Napoléon, Jeanne d’Arc</div></li><li><div><strong>Architecture:</strong> Gustave Eiffel, Jean Nouvel&nbsp;</div></li></ul>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-184",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<strong>Qui est la Marianne ?&nbsp;</strong>",
+      "back": "C’est un des symboles de la France, paysanne au bonnet phrygien qui incarne la  République et les valeurs de la liberté et de démocratie. Elle existe sur les pièces de  monnaie. Elle apparaît sur le tableau de Eugène Delacroix.&nbsp;<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_marianne.png\">",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-185",
+      "category": "Histoire",
+      "tag": "Révolution",
+      "front": "<strong>Quel est l’hymne national de la France ?&nbsp;</strong>",
+      "back": "C’est La Marseillaise, qui est à la base un chant patriotique de la Révolution écrit par Rouget de L’Isle en 1792 quand la France a déclaré la guerre à l’Autriche.&nbsp;",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-186",
+      "category": "Géographie",
+      "tag": "Régions",
+      "front": "<strong>Quelles sont les 3 types de collectivités en France ?&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">– 35 000 Communes</span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">– 101 Départements: 96 en France métropolitaine + 5 outre-mer</span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">– 18 Régions:12 en Métropole + la corse qui n’est pas une région mais qui en a les  compétences et 5 en outre-mer</span></span></div>",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-187",
+      "category": "Géographie",
+      "tag": "Régions",
+      "front": "<strong>Donnez des exemples de Régions françaises&nbsp;</strong>",
+      "back": "Bretagne, Normandie, Corse, Haut de France, Auvergne Rhône-Alpes, etc<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_regions_france.png\">",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-188",
+      "category": "Géographie",
+      "tag": "Régions",
+      "front": "<strong>Pouvez-vous citer des régions d’outre-mer</strong>",
+      "back": "Les 5 régions sont: Guadeloupe, Martinique, Guyane, Réunion et Mayotte&nbsp;",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-189",
+      "category": "Géographie",
+      "tag": "Géographie",
+      "front": "<strong>Donnez des noms de grandes villes françaises&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Paris, Marseille, Lyon, Bordeaux, Toulouse …. </span></span></div><div></div><div><br></div>",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-190",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<strong>Quel est l’emblème de la France et que signifie ses couleurs ?</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">L’emblème de la France est le drapeau tricolore, bleu, blanc et rouge. Le blanc est la couleur des rois, le bleu est la couleur de Paris et le rouge fait référence au sang versé pour la libération du peuple.</span></span></div><div></div><div><div><div><div><br></div></div></div></div><div><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_drapeau_francais.png\"><br></div>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-191",
+      "category": "Société & Quotidien",
+      "tag": "Travail",
+      "front": "<strong>Que fête-t-on le 1er mai ?&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">La fête du travail, c’est un jour férié </span></span></div><div></div><div><br></div>",
+      "tip": "Montrez votre bonne insertion sociale, professionnelle et civique."
+    },
+    {
+      "id": "fc-192",
+      "category": "Culture & Sciences",
+      "tag": "Patrimoine",
+      "front": "<strong>Citez 3 monuments historiques</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">La grotte de Lascaux, Château de Versailles, le Louvre, Château de Chambord, Palais  du Luxembourg … </span></span></div><div></div><div><br></div>",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-193",
+      "category": "Géographie",
+      "tag": "Relief",
+      "front": "<strong>&nbsp;Citez des chaînes de montagnes en France&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Alpes, Pyrénées, Vosges, Jura, Massif central … </span></span></div><div></div><div><div><div><div><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_montagnes_france.png\"><br></div></div></div></div>",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-194",
+      "category": "Géographie",
+      "tag": "Géographie",
+      "front": "<strong>Quel est le point culminant en France ?&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Le Mont Blanc </span></span></div><div></div><div><br></div>",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-195",
+      "category": "Géographie",
+      "tag": "Géographie",
+      "front": "<strong>Citez des monuments parisiens&nbsp;</strong>",
+      "back": "Le musée du Louvre, le Sacré-Cœur, La cathédrale Notre Dame, La tour Eiffel, L’arc  de triomphe&nbsp;<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_monuments_parisiens.png\">",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-196",
+      "category": "Institutions",
+      "tag": "Europe",
+      "front": "<strong>Combien de pays comporte l’Union Européenne ?&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">27 Depuis la sortie du royaume uni en Janvier 2020 </span></span></div><div></div><div><br></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-197",
+      "category": "Culture & Sciences",
+      "tag": "Sciences",
+      "front": "<strong>Citez des personnes naturalisées&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Marie Curie (physicienne Polonaise) </span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Dalida (Chanteuse et mannequin d’origine italienne et égyptienne)&nbsp;</span></span></div>",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-198",
+      "category": "Culture & Sciences",
+      "tag": "Littérature",
+      "front": "<strong>Donnez le nom de littéraires français et les titres de leurs écrits&nbsp;</strong>",
+      "back": "<ul><li><div>Baudelaire, Fleurs du mal </div></li><li><div>Emile Zola, L’argent</div></li><li><div>Victor Hugo, les  Misérables<br><br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_litteraires_francais.png\">&nbsp;</div></li></ul>",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-199",
+      "category": "Société & Quotidien",
+      "tag": "Éducation",
+      "front": "<strong>Quel est l’âge obligatoire de l’école en France</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">De 3 à 16 ans révolus.</span></span></div><div></div><div><br></div>",
+      "tip": "Montrez votre bonne insertion sociale, professionnelle et civique."
+    },
+    {
+      "id": "fc-200",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "<strong>Que représente le jour du 11 novembre ?&nbsp;</strong>",
+      "back": "C’est l’Armistice de 1918, signé le 11 novembre et qui marque la fin de la 1ère guerre  mondiale.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-201",
+      "category": "Culture & Sciences",
+      "tag": "Cinéma",
+      "front": "<strong>Qui est Brigitte Bardot</strong>",
+      "back": "C’est une actrice de cinéma, chanteuse et militante pour la cause animale. Tu peux citer quelques-uns de ses titres, comme « Moi je joue » et « Harley Davidson ».",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-202",
+      "category": "Institutions",
+      "tag": "Collectivités",
+      "front": "<strong>C’est quoi l’Hôtel de Ville ?</strong>",
+      "back": "La mairie principale d’une ville importante.",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-203",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<strong>Qui a écrit « Les Trois Mousquetaires »?&nbsp;</strong>",
+      "back": "Alexandre Dumas<br><br><br>&nbsp;<img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_alexandre_dumas.png\">",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-204",
+      "category": "Culture & Sciences",
+      "tag": "Sport",
+      "front": "<strong>Citez un grand événement sportif français</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Le Tour de France : une épreuve cycliste </span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Roland Garros : tournoi de Tennis</span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Ls 24h du Mans: compétition automobile</span></span></div>",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-205",
+      "category": "Culture & Sciences",
+      "tag": "Gastronomie",
+      "front": "<strong>Citez des plats typiques français&nbsp;</strong>",
+      "back": "Quiche lorraine (Lorraine / Nancy), Bouillabaisse (Bouche du Rhône / Marseille),  Choucroute (Alsace / Strasbourg), Tartiflette (Savoie / Chambéry), Coq au Vin.<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_plats_typiques.png\">",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-206",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<strong>A-t-on le droit de porter des signes religieux en public</strong>",
+      "back": "Oui sauf dans les écoles, les collèges et les lycées publics selon la loi de 2004",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-207",
+      "category": "Institutions",
+      "tag": "Europe",
+      "front": "<strong>Où se trouve le siège du parlement européen</strong>",
+      "back": "Strasbourg&nbsp;",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-208",
+      "category": "Institutions",
+      "tag": "Europe",
+      "front": "<strong>Ou se trouve le siège de l’union européen?</strong>",
+      "back": "Bruxelles<br><br>&nbsp;<img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_siege_ue_bruxelles.png\">",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-209",
+      "category": "Symboles & Valeurs",
+      "tag": "Drapeau",
+      "front": "<strong>Combien d’étoiles comporte le drapeau de l’Europe ?</strong>",
+      "back": "12",
+      "tip": "Connaissez la définition exacte inscrite dans la Constitution de 1958."
+    },
+    {
+      "id": "fc-210",
+      "category": "Symboles & Valeurs",
+      "tag": "Devise",
+      "front": "<strong>Quelle est la devise de l’Europe&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Unis dans la diversité </span></span></div><div></div><h3><br></h3>",
+      "tip": "Connaissez la définition exacte inscrite dans la Constitution de 1958."
+    },
+    {
+      "id": "fc-211",
+      "category": "Symboles & Valeurs",
+      "tag": "Hymne",
+      "front": "<strong>Quelle est l’Hymne Européen</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">L’ode à la joie (de Beethoven) </span></span></div><div></div><h3><br></h3>",
+      "tip": "Connaissez la définition exacte inscrite dans la Constitution de 1958."
+    },
+    {
+      "id": "fc-212",
+      "category": "Symboles & Valeurs",
+      "tag": "Devise",
+      "front": "<strong>Quelles sont les symboles de l’Europe&nbsp;</strong>",
+      "back": "L’euro, le drapeau, la devise, l’hymne européen et la journée de l’Europe (9 Mai).<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_symboles_europe.png\">",
+      "tip": "Connaissez la définition exacte inscrite dans la Constitution de 1958."
+    },
+    {
+      "id": "fc-213",
+      "category": "Histoire",
+      "tag": "Histoire",
+      "front": "<u><span style=\"font-style: inherit; font-weight: inherit;\">Questions sur l'histoire de France pour la naturalisation</span></u>",
+      "back": "<img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_histoire_france_timeline.png\">",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-214",
+      "category": "Histoire",
+      "tag": "Révolution",
+      "front": "<strong>Quel événement de l’histoire de France vous a-t-il marqué</strong>",
+      "back": "Vous pouvez citer la coupe du Monde de 2018 ou la révolution française ou encore les samedis des gilets jaunes par exemple.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-215",
+      "category": "Histoire",
+      "tag": "Révolution",
+      "front": "<strong>Quel événement marquant de la Révolution ? Et dans quel contexte elle a émergé</strong>",
+      "back": "Le 14 Juillet 1789 a marqué la prise de la prison de la Bastille, événement inaugural du  début de la Révolution. Elle a eu lieu suite à une crise agricole qui a donné lieu à une  grande crise économique et une inflation importante qui se confrontait à des décisions  de hausse d’impôts prises par le roi.&nbsp;",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-216",
+      "category": "Histoire",
+      "tag": "Révolution",
+      "front": "<strong>Qui était le roi pendant la Révolution</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">C’était le roi Louis XVI qui a été guillotiné. </span></span></div><div></div><div><br></div>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-217",
+      "category": "Histoire",
+      "tag": "Révolution",
+      "front": "<strong>A quoi servait la Bastille avant sa démolition ?&nbsp;</strong>",
+      "back": "Elle servait comme prison d’état dans laquelle a été emprisonné Voltaire, Sade …&nbsp;",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-218",
+      "category": "Histoire",
+      "tag": "Résistance",
+      "front": "<strong>Qui est Jean Moulin</strong>",
+      "back": "Ce fut un haut fonctionnaire et une icône de la résistance française à l’occupant nazi. Pendant la 2nde guerre mondiale. Il mourut en gare de Metz suite aux tortures et mauvais traitements subis par les Allemands.&nbsp;",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-219",
+      "category": "Culture & Sciences",
+      "tag": "Culture",
+      "front": "<strong>Dans quelle époque ont été bâties les cathédrales gothiques</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Au Moyen-âge. </span></span></div><div></div><div><br></div>",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-220",
+      "category": "Institutions",
+      "tag": "Institutions",
+      "front": "<strong>Quand a eu lieu la Vème République et quel fait marquant ?&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">La constitution de la Vème République a été adoptée en 1958 et a marqué la séparation  entre le pouvoir exécutif, législatif et judiciaire. </span></span></div><div></div><div><br></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-221",
+      "category": "Histoire",
+      "tag": "Révolution",
+      "front": "<strong>Quand a eu lieu la déclaration des droits de l’homme et du citoyen&nbsp;</strong>",
+      "back": "La même année que la révolution française, le 26 août 1789 ➔ auteur jul: Champion de Cicé Nommé garde des sceaux par Louis  XVI.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-222",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "<strong>Donnez-moi les dates des 2 guerres mondiales&nbsp;</strong>",
+      "back": "<ul><li><div>1ère guerre : de 1914 au 11 novembre 1918 </div></li><li><div>2ème guerre : de 1939 au 8 mai 1945&nbsp;</div></li></ul>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-223",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "<strong>Où se trouve les plages du débarquement des alliés pendant la 2eme guerre mondiale</strong> ?",
+      "back": "En Normandie (Opération NEPTUNE, le 6 Juin 1944 ➔ Utah Beach, Omaha Beach,  Gold Beach, Juno Beach…..)&nbsp;<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_debarquement_normandie.png\">",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-224",
+      "category": "Histoire",
+      "tag": "Résistance",
+      "front": "<strong>Dans quelle République sommes-nous&nbsp;</strong>",
+      "back": "C’est la Vème République fondée en 1958 par Charles de Gaulle. Charles de Gaulle était un général et chef de la France Libre. Il s’est réfugié en Angleterre quand  l’Allemagne a attaqué la France pendant la 2nde guerre mondiale&nbsp;",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-225",
+      "category": "Histoire",
+      "tag": "Révolution",
+      "front": "<strong>En quelle année fut fondée la 1ère République ?&nbsp;</strong>",
+      "back": "En 1792, 3 ans après la révolution",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-226",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "<strong>Le nom des soldats français pendant la 1ère guerre ?</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Les poilus </span></span></div><div></div><div><a href=\"https://zanzibarsurmesure.com/\"><div><div><br></div></div></a></div>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-227",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "<strong>Qui sont les alliés pendant les 2 guerres mondiales ?&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">– 1ère guerre : France, Angleterre, Russie, US </span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">– 2ème guerre : France, Angleterre, URSS, US </span></span></div><div></div><div><br></div>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-228",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "<strong>Qui sont les ennemis pendant les 2 guerres mondiales ?&nbsp;&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">– 1ère guerre : Allemagne, Autriche Hongrie, Empire Ottoman </span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">– 2ème guerre : Allemagne, Japon, Italie&nbsp;</span></span></div>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-229",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<strong>&nbsp;Donnez le nom de rois français&nbsp;</strong>",
+      "back": "Charlemagne, Clovis, Louis XIV, Louis XVI …&nbsp;<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_rois_francais.png\">",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-230",
+      "category": "Histoire",
+      "tag": "Histoire",
+      "front": "<strong>Donnez le nom de reines de France&nbsp;</strong>",
+      "back": "Anne d’Autriche, Marie-Antoinette d’Autriche, Joséphine de la Pagerie, Anne de  Bretagne, Aliénor d’Aquitaine, Catherine de Médicis, Anne de Médicis..&nbsp;<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_reines_france.png\">",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-231",
+      "category": "Histoire",
+      "tag": "Résistance",
+      "front": "<strong>&nbsp;Citez-moi les présidents de la Vème république dans l’ordre</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Charles de Gaulle, George Pompidou, Valerie Giscard d’Estaing, François Mitterrand,  Jacques Chirac, Nicolas Sarkozy, François Hollande, Emanuel Macron</span></span></div><div></div><div><div><div><div><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_presidents_ve_republique.png\"><br></div></div></div></div>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-232",
+      "category": "Histoire",
+      "tag": "Empire",
+      "front": "<strong>Citez-moi des personnes qui ont marqué l’histoire de la France&nbsp;</strong>",
+      "back": "Napoléon, De Gaulle, Charlemagne, Jeanne D’Arc …&nbsp;",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-233",
+      "category": "Histoire",
+      "tag": "Empire",
+      "front": "<strong>Qui a instauré le code civil en France ?&nbsp;</strong>",
+      "back": "Napoléon Bonaparte en 1804 sous la gouvernance de Napoléon 1er, 12 ans après la fondation de la première république.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-234",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<strong>Qui a construit le château de Versailles ?</strong>",
+      "back": "Louis XIV&nbsp;",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-235",
+      "category": "Histoire",
+      "tag": "Empire",
+      "front": "<strong>&nbsp;Qui a construit l’Arc de triomphe&nbsp;</strong>",
+      "back": "Napoléon Ier en 1806&nbsp;",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-236",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "<strong>C’est quoi la guerre des 100 ans ?&nbsp;</strong>",
+      "back": "Il s’agit d’un conflit entre les rois de France et de l’Angleterre pendant un siècle  pendant le Moyen-Age. Cette guerre a d’ailleurs duré 116 ans plutôt !&nbsp;",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-237",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "<strong>Quelle est la bataille de Verdun</strong>",
+      "back": "Bataille qui s’est déroulée en 1916 entre l’armée française et allemande à Lorraine, pendant la 1ère guerre mondiale. Elle a fait beaucoup de victimes des deux camps et le résultat militaire fut nul.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-238",
+      "category": "Géographie",
+      "tag": "Géographie",
+      "front": "<strong>La Tour Eiffel a été construite pour quel événement ?&nbsp;</strong>",
+      "back": "Pour l’exposition universelle de Paris en 1889&nbsp;",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-239",
+      "category": "Histoire",
+      "tag": "Guerres Mondiales",
+      "front": "<strong>A quelle année les femmes ont eu le droit de voter en France&nbsp;</strong>",
+      "back": "21 Avril 1944, durant la seconde guerre mondiale, un siècle après le droit de vote masculin.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-240",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<strong>A quelle année les Hommes ont eu le droit de voter en France</strong>",
+      "back": "1848 (pendant la 2eme République, Age minimum 21 ans).",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-241",
+      "category": "Institutions",
+      "tag": "Institutions",
+      "front": "<strong>A quel homme politique se rattache la création de l’école publique ?&nbsp;</strong>",
+      "back": "Jules Ferry (Depuis la Loi Jules Ferry du 28 Mars 1882) a crée l'école publique, laïque, gratuite et obligatoire.",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-242",
+      "category": "Histoire",
+      "tag": "Histoire",
+      "front": "<strong>Citez 3 pays qui ont fait partie de l’Empire colonial français&nbsp;</strong>",
+      "back": "La Tunisie, l’Algérie, Côte d’Ivoire, Mali, Sénégal , Congo Brazzaville…&nbsp;",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-243",
+      "category": "Histoire",
+      "tag": "Histoire",
+      "front": "<strong>En quelle année a eu lieu l’abolition de l’esclavage en France ?</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">En 1848, la même année où la France est devenue démocratique via le votes masculins.</span></span></div><div></div><div><br></div>",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-244",
+      "category": "Culture & Sciences",
+      "tag": "Littérature",
+      "front": "<strong>Qui est Voltaire ? Qu’a-t-il écrit?&nbsp;</strong>",
+      "back": "Voltaire est un écrivain et philosophe français qui a marqué le 18ème siècle, appelé siècle des Lumières. Il a écrit « Traité sur la tolérance » et « l’Ingénu » …",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-245",
+      "category": "Institutions",
+      "tag": "Institutions",
+      "front": "<strong>Qu’est-ce que la philosophie des Lumières?&nbsp;</strong>",
+      "back": "C’est un mouvement philosophique qui a émergé dans le 18ème siècle en Europe où  des philosophes européens avaient pour objectif de combattre l’obscurantisme,  l’ignorance et diffuser les connaissances&nbsp;",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-246",
+      "category": "Culture & Sciences",
+      "tag": "Culture",
+      "front": "<strong>Citez quelques philosophes français des lumières</strong>",
+      "back": "Montesquieu, Voltaire, Rousseau, Diderot …<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_philosophes_lumieres.png\">",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-247",
+      "category": "Institutions",
+      "tag": "Présidence",
+      "front": "<strong>Quel est le nom du Président actuel et le précédent ?&nbsp;</strong>",
+      "back": "Le président actuel est Emmanuel Macron et le précédent est François Hollande.",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-248",
+      "category": "Institutions",
+      "tag": "Présidence",
+      "front": "<strong>Qui est le chef des armées ?&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Le Président de la République</span></span></div><div></div><div><br></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-249",
+      "category": "Institutions",
+      "tag": "Présidence",
+      "front": "<strong>Qu’est-ce que le pouvoir exécutif ?&nbsp;</strong>",
+      "back": "Le pouvoir exécutif est partagé entre le président de la République (chef de l’État) et le  gouvernement dirigé par le Premier ministre. Le rôle du pouvoir exécutif est d’exécuter les lois et décisions de justice. Il dirige la police, la force militaire, l’administration, la diplomatie.&nbsp;",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-250",
+      "category": "Institutions",
+      "tag": "Parlement",
+      "front": "<strong>Qu’est-ce que le pouvoir législatif ?&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Constitué du Sénat et de l’assemblée Nationale :</span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">• Il vote les Lois sur une proposition émanant du gouvernement (Projet de loi) ou des parlementaires (Propositions de loi) </span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">• Il a un pouvoir de contrôle sur le pouvoir exécutif </span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">• Il vote le budget de l’état&nbsp;&nbsp;</span></span></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-251",
+      "category": "Institutions",
+      "tag": "Justice",
+      "front": "<strong>Qu’est-ce que le pouvoir Judiciaire ?&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Ce pouvoir est confié aux Juges et Magistrats </span></span></div><div></div><div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Il a pour rôle de contrôler l’application de la loi et sanctionne son non-respect.</span></span></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-252",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<strong>&nbsp;Pour combien de temps est élu le Président, par quel scrutin et qui a le droit de  voter ?</strong>",
+      "back": "Le Président est élu pour 5 ans au suffrage universel direct, par un scrutin à la majorité  absolue à 2 tours. Ceux qui peuvent voter sont les citoyens français majeurs.&nbsp;",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-253",
+      "category": "Institutions",
+      "tag": "Présidence",
+      "front": "<strong>Quel est le siège de la Présidence&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Le palais de l’Elysée </span></span></div><div></div><div><div><div><div><br></div></div></div></div><div><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_palais_elysee.png\"><br></div><div><br></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-254",
+      "category": "Institutions",
+      "tag": "Parlement",
+      "front": "<strong>&nbsp;Qu’est-ce que le parlement&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Le parlement est composé de 2 chambres : la chambre basse L’ASSEMBLÉE  NATIONALE (les députés) et la chambre haute LE SÉNAT (les sénateurs). Le parlement détient le pouvoir législatif (vote des lois).</span></span></div><div></div><div><br></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-255",
+      "category": "Institutions",
+      "tag": "Parlement",
+      "front": "<strong>Qu’est-ce que l’assemblée nationale ?</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">On l’appelle aussi la chambre basse où siègent les 577 députés de l’Assemblée  Nationale. Ils détiennent le pouvoir législatif avec le Sénat. </span></span></div><div></div><div><br></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-256",
+      "category": "Principes Républicains",
+      "tag": "Démocratie",
+      "front": "<strong>Pour combien de temps sont élus les députés et par quel scrutin</strong>",
+      "back": "ls sont élus pour 5 ans au suffrage universel direct uninominal majoritaire à deux tours.",
+      "tip": "La laïcité et l'égalité femmes-hommes sont particulièrement testées lors de l'entretien."
+    },
+    {
+      "id": "fc-257",
+      "category": "Institutions",
+      "tag": "Parlement",
+      "front": "<strong>Quel est le siège de l’Assemblée nationale</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Au Palais Bourbon</span></span></div><div></div><div><br></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-258",
+      "category": "Institutions",
+      "tag": "Parlement",
+      "front": "<strong>Quel est le siège de l’Assemblée nationale&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Au Palais Bourbon</span></span></div><div></div><div><br></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-259",
+      "category": "Institutions",
+      "tag": "Parlement",
+      "front": "<strong>Quel est le siège du sénat&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Au Palais de Luxembourg </span></span></div><div></div><div><br></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-260",
+      "category": "Institutions",
+      "tag": "Parlement",
+      "front": "<strong>Qu’est-ce que le Sénat</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">On l’appelle aussi la chambre haute où siègent les 348 sénateurs, ils détiennent une partie du pouvoir législatif avec l’assemblé national. </span></span></div><div></div><div><br></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-261",
+      "category": "Principes Républicains",
+      "tag": "Démocratie",
+      "front": "<strong>Comment sont élus les sénateurs&nbsp;</strong>",
+      "back": "Ils sont élus au suffrage universel indirect par 150 000 grands électeurs (maires,  conseillers généraux…)&nbsp;",
+      "tip": "La laïcité et l'égalité femmes-hommes sont particulièrement testées lors de l'entretien."
+    },
+    {
+      "id": "fc-262",
+      "category": "Institutions",
+      "tag": "Présidence",
+      "front": "<strong>Qui a le pouvoir de diriger la France en cas de décès du Président</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">C’est le président du Sénat. </span></span></div><div></div><div><br></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-263",
+      "category": "Institutions",
+      "tag": "Présidence",
+      "front": "<strong>Quel est le nom du président actuel du Sénat&nbsp; /&nbsp;</strong>l'Assemblée nationale",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Gérard Larcher (depuis 2014)</span></span></div><div></div><div><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_president_senat.png\"><br></div><div><br></div><div><br></div><div>Yaël Braun-Pivet<br></div><div><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_presidente_assemblee.png\"><br></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-264",
+      "category": "Géographie",
+      "tag": "Géographie",
+      "front": "<strong>&nbsp;Qu’est-ce que la cohabitation&nbsp;</strong>",
+      "back": "C’est quand le Président est dans l’obligation de nommer un Premier Ministre qui  n’appartient pas au même parti politique que lui. La situation s’impose quand la majorité des députés ne sont pas du même parti politique que le Président. Ex :  Mitterrand/Chirac ou Chirac/Jospin.",
+      "tip": "Sachez situer les fleuves majeurs, les pays frontaliers et votre propre région."
+    },
+    {
+      "id": "fc-265",
+      "category": "Institutions",
+      "tag": "Présidence",
+      "front": "<strong>Comment devient-on Ministre ou Premier Ministre&nbsp;</strong>",
+      "back": "Le Président nomme son premier ministre, le premier ministre définit son gouvernement et le suggère au Président.",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-266",
+      "category": "Institutions",
+      "tag": "Gouvernement",
+      "front": "<strong>&nbsp;Où sont les bureaux du Premier Ministre</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">A l’hôtel Matignon. </span></span></div><div></div><div><br></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-267",
+      "category": "Institutions",
+      "tag": "Présidence",
+      "front": "<strong>Quels sont les 4 premiers personnages de l’état</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Le président, le premier ministre, le président du sénat et enfin le président de l’assemblée nationale.</span></span></div><div></div><div><br></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-268",
+      "category": "Institutions",
+      "tag": "Collectivités",
+      "front": "<strong>Comment fonctionnent les élections municipales&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Pour les communes de plus de 1 000 habitants, les conseillers municipaux sont élus au  scrutin proportionnel à deux tours.</span></span></div><div></div><div><br></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-269",
+      "category": "Société & Quotidien",
+      "tag": "Société",
+      "front": "<strong>Donnez le nom d’une personnalité féminine politique&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Simone Veil, Ségolène Royal, Martine Aubry … </span></span></div><div></div><div><br></div>",
+      "tip": "Montrez votre bonne insertion sociale, professionnelle et civique."
+    },
+    {
+      "id": "fc-270",
+      "category": "Histoire",
+      "tag": "Monarchie",
+      "front": "<strong>Qu’est-ce que la loi Veil&nbsp;</strong>",
+      "back": "C’est le droit à l’avortement et la contraception pour les femmes qui a été préparée et  défendue par Simone Veil ministre de la santé sous la présidence de Valery Giscard  d’Estaing.",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-271",
+      "category": "Institutions",
+      "tag": "Institutions",
+      "front": "<strong>Quelle personne décide de vous octroyer la nationalité française&nbsp;</strong>",
+      "back": "<div><span style=\"font-style: inherit; font-weight: inherit;\"><span style=\"font-style: inherit; font-weight: inherit;\">Ministre de l’intérieur</span></span></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-272",
+      "category": "Institutions",
+      "tag": "Institutions",
+      "front": "<strong>Qui gère les relations entre l’état et les institutions religieuses</strong>",
+      "back": "Le ministère du culte, charge du ministre de l’intérieur.",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-273",
+      "category": "Institutions",
+      "tag": "Institutions",
+      "front": "<strong>C’est quoi la dernière loi qui a marqué l’opinion publique&nbsp;</strong>",
+      "back": "Allez vérifier sur internet mais actuellement, il s'agit des lois sur la réforme globale des retraites.<br><br><img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_lois_marquantes.png\">",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-274",
+      "category": "Histoire",
+      "tag": "Histoire",
+      "front": "Les dates des républiques",
+      "back": "-1792 la Première République <br>-1848 la deuxième république en parallèle avec l'abolition de l'esclavage <br>-1870 la 3e république <br>-1946 la 4e République <br>-1958 la 5e République",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-275",
+      "category": "Symboles & Valeurs",
+      "tag": "Symboles",
+      "front": "Nom du premier ministre et 2 ou 3 autre ministre",
+      "back": "- Michel Barnier : 1ere ministre a la place de Garbriel attal<br>- Rachida dati : Ministre de la culture et du patrimoine&nbsp;<br>- Bruno Retailleau ministre de l'Intérieur&nbsp;<br>- Valérie létard : Ministre du Logement et rénovation&nbsp;<br>- Didier Migaud :&nbsp;Garde des Sceaux, ministre de la Justice",
+      "tip": "Connaissez la définition exacte inscrite dans la Constitution de 1958."
+    },
+    {
+      "id": "fc-276",
+      "category": "Questions Entretien",
+      "tag": "Entretien",
+      "front": "- Le nom de la mair d'aubervilliers<br>- Le nom du prefet de seine saint denis",
+      "back": "- Karine Franclet<br>- Julien Charles",
+      "tip": "Exprimez-vous avec clarté, sincérité et en démontrant votre attachement aux valeurs françaises."
+    },
+    {
+      "id": "fc-277",
+      "category": "Institutions",
+      "tag": "Europe",
+      "front": "Espace schengen",
+      "back": "La zone Schengen, <b>29 pays</b><br><br>&nbsp;c'est un espace où on peut circuler librement sans contrôle aux frontières<br>La zone Schengen et l'Union européenne ne sont pas exactement les mêmes. Tous les pays de l'Union européenne ne font pas partie de la zone Schengen, et il y a quelques pays qui font partie de la zone Schengen sans faire partie de l'Union européenne.<br>la France et l'Allemagne font partie des deux. Mais l'Irlande, par contre, fait partie de l'Union européenne, mais pas de la zone Schengen.<br><br>Et il y a aussi des pays qui font partie de la zone Schengen sans faire partie de l'Union européenne. C'est le cas de la Suisse, par exemple.",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-278",
+      "category": "Institutions",
+      "tag": "Parlement",
+      "front": "Nombre de députés dans l'Assemblée générale et nombre des sénateurs dont le Sénat&nbsp;",
+      "back": "577 deputés<br>348 senateurs",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-279",
+      "category": "Institutions",
+      "tag": "Présidence",
+      "front": "ou siège le président&nbsp;",
+      "back": "Au palais de l'Elysée&nbsp;",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-280",
+      "category": "Institutions",
+      "tag": "Parlement",
+      "front": "Au siège de Sénat&nbsp;",
+      "back": "Palais du Luxembourg&nbsp;",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-281",
+      "category": "Institutions",
+      "tag": "Institutions",
+      "front": "Pour le pouvoir exécutif législatif et judiciaire donner là au siège chaque pouvoir&nbsp;",
+      "back": "<img class=\"flashcard-img\" alt=\"Illustration\" src=\"assets/images/flashcards/fc_sieges_pouvoirs.png\">",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-282",
+      "category": "Histoire",
+      "tag": "Empire",
+      "front": "Les dates des differents republique",
+      "back": "★&nbsp;La première République Septembre 1792 - mai 1804 / Fin : La Première<br>République prend fin avec le coup d'État de Napoléon Bonaparte en 1804, qui<br>se proclame empereur.<br>★ Deuxième République (1848-1852) / Fin : La Deuxième République est<br>renversée par un coup d'État mené par Louis-Napoléon Bonaparte (neveu de<br>Napoléon Ier) en décembre 1851, qui établit le Second Empire.<br>★ Troisième République (1870-1940) / Fin : La Troisième République prend fin<br>avec l'invasion allemande en 1940 et la formation du régime de Vichy.<br>★ 4. Quatrième République (1946-1958) / Fin : La Quatrième République est<br>fragilisée par des crises politiques et la guerre d'Algérie, menant à la<br>démission de Pierre Mendès-France et à l'établissement de la Cinquième<br>République.<br>★ 5. Cinquième République (1958-présent)",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-283",
+      "category": "Histoire",
+      "tag": "Résistance",
+      "front": "Présidents de la Cinquième République",
+      "back": "1. Charles de Gaulle (1959-1969)<br>2. Georges Pompidou (1969-1974)<br>3. Valéry Giscard d'Estaing (1974-1981)<br>4. François Mitterrand (1981-1995)<br>5. Jacques Chirac (1995-2007)<br>6. Nicolas Sarkozy (2007-2012)<br>7. François Hollande (2012-2017)<br>8. Emmanuel Macron (2017-présent)",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-284",
+      "category": "Institutions",
+      "tag": "Collectivités",
+      "front": "Comment fonctionne le système éducatif français ?",
+      "back": "1. L'enseignement pré-élémentaire : l'école maternelle Âge : 3 à 6 ans<br>2. L'enseignement élémentaire : l'école primaire Âge : 6 à 11 ans<br>3. L'enseignement secondaire : le collège Âge : 11 à 15 ans<br>4. L'enseignement secondaire : le lycée Âge : 15 à 18 an<br>5. L'enseignement supérieur Accessible après le baccalauréat",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-285",
+      "category": "Culture & Sciences",
+      "tag": "Francophonie",
+      "front": "Qu'est-ce que la Francophonie ?",
+      "back": "Un ensemble d'organisations et de pays qui partagent la langue<br>française et certaines valeurs culturelles et politiques.",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-286",
+      "category": "Culture & Sciences",
+      "tag": "Culture",
+      "front": "Personnalité célèbre&nbsp;",
+      "back": "Claude Lelouch c'est unscénariste Et producteur qui vient de gagner la palme d'or dans le festival de Cannes avec 10 films français&nbsp;",
+      "tip": "Citez au moins 2 à 3 personnalités célèbres dans ce domaine."
+    },
+    {
+      "id": "fc-287",
+      "category": "Histoire",
+      "tag": "Résistance",
+      "front": "Qu'est ce que c'est La bataille de verdun et son importance&nbsp;",
+      "back": "C'est l'une des batailles les plus longues et les plus sanglantes de la Première Guerre mondiale symbolisent la résistance française&nbsp;",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-288",
+      "category": "Histoire",
+      "tag": "Histoire",
+      "front": "Quand est ce que la France est devenue démocratique&nbsp;",
+      "back": "1848 avec la 2e République, Il y avait aussi l'abolition de l'esclavage&nbsp;",
+      "tip": "Retenez les dates repères et les figures historiques majeures."
+    },
+    {
+      "id": "fc-289",
+      "category": "Institutions",
+      "tag": "Présidence",
+      "front": "Qui est le président du conseil constitutionnel",
+      "back": "<div><div><div>Laurent Fabius</div></div></div><div><div><br></div></div>",
+      "tip": "Maîtrisez la séparation des pouvoirs (exécutif, législatif, judiciaire)."
+    },
+    {
+      "id": "fc-290",
+      "category": "Symboles & Valeurs",
+      "tag": "Symboles",
+      "front": "Garde des sceaux de France",
+      "back": "le garde des Sceaux est l'autre nom du ministre de la Justice",
+      "tip": "Connaissez la définition exacte inscrite dans la Constitution de 1958."
+    },
+    {
+      "id": "fc-291",
+      "category": "Société & Quotidien",
+      "tag": "Droits des Femmes",
+      "front": "IVG avec quel president<br>Peine de mort quel president ( A CORRGIER)",
+      "back": "IVG =&gt; Valery Gescard<br>Peine de mort =&gt; François metterrant&nbsp;",
+      "tip": "Montrez votre bonne insertion sociale, professionnelle et civique."
     }
   ]
 }

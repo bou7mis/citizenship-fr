@@ -18,6 +18,8 @@ const APP_STATE = {
       mastered: [],
       needsReview: []
     },
+    flashcardSchedule: {}, // { cardId: { due, intervalMs, intervalLabel, lastRating, lastReviewed, reps } }
+    flashcardFeedback: { again: 0, hard: 0, good: 0, easy: 0, totalReviews: 0, history: [] },
     checklist: {}
   }
 };
@@ -29,6 +31,15 @@ function loadUserProgress() {
     try {
       const parsed = JSON.parse(saved);
       APP_STATE.userProgress = Object.assign(APP_STATE.userProgress, parsed);
+      if (!APP_STATE.userProgress.flashcardStats) {
+        APP_STATE.userProgress.flashcardStats = { mastered: [], needsReview: [] };
+      }
+      if (!APP_STATE.userProgress.flashcardSchedule) {
+        APP_STATE.userProgress.flashcardSchedule = {};
+      }
+      if (!APP_STATE.userProgress.flashcardFeedback) {
+        APP_STATE.userProgress.flashcardFeedback = { again: 0, hard: 0, good: 0, easy: 0, totalReviews: 0, history: [] };
+      }
     } catch (e) {
       console.error('Error loading progress:', e);
     }

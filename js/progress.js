@@ -164,6 +164,8 @@ function resetAllProgress() {
       quizScores: {},
       examAttempts: [],
       flashcardStats: { mastered: [], needsReview: [] },
+      flashcardSchedule: {},
+      flashcardFeedback: { again: 0, hard: 0, good: 0, easy: 0, totalReviews: 0, history: [] },
       checklist: {}
     };
     saveUserProgress();

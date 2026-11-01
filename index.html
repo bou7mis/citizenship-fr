@@ -71,11 +71,15 @@
       </button>
     </nav>
 
-    <!-- Header Actions (PWA Install, Timeline & Theme Toggle) -->
+    <!-- Header Actions (PWA Install, Timeline, Geography & Theme Toggle) -->
     <div class="header-actions">
       <button class="action-btn pwa-install-btn" id="btn-pwa-install" onclick="triggerPwaInstall()" style="display:none;" title="Installer l'application sur votre appareil" aria-label="Installer l'application">
         <i class="fa-solid fa-download"></i>
         <span class="action-btn-label">Installer</span>
+      </button>
+      <button class="action-btn geo-nav-btn" id="btn-header-geo" onclick="openGeographyModal()" title="Carte Interactive de Géographie" aria-label="Carte de France">
+        <i class="fa-solid fa-map-location-dot"></i>
+        <span class="action-btn-label">Carte de France</span>
       </button>
       <button class="action-btn timeline-nav-btn" id="btn-header-timeline" onclick="openTimelineModal()" title="Frise Chronologique des Dates Clés" aria-label="Dates Clés">
         <i class="fa-solid fa-timeline"></i>
@@ -235,6 +239,23 @@
               </div>
               <div class="action-card-footer" style="color:var(--timeline-purple, #7c3aed);">
                 <span>Explorer la frise</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+
+            <div class="action-card" onclick="openGeographyModal()">
+              <div>
+                <div class="action-card-top">
+                  <div class="card-icon-box teal">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                  </div>
+                  <span class="reader-pill" style="color:#0d9488; background:rgba(13, 148, 136, 0.1);">Géographie</span>
+                </div>
+                <h4>Carte de France & Repères</h4>
+                <p>13 Régions, 5 Fleuves, 5 Massifs et DROM-COM avec mode Quiz Carte « Pointer & Trouver » pour l'entretien.</p>
+              </div>
+              <div class="action-card-footer" style="color:#0d9488;">
+                <span>Explorer la carte</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </div>
@@ -1070,6 +1091,40 @@
     </div>
   </div>
 
+  <!-- Interactive Geography & Map Modal -->
+  <div class="modal-overlay geo-modal-overlay" id="geography-modal" role="dialog" aria-modal="true" aria-labelledby="geo-modal-title" onclick="if(event.target === this) closeGeographyModal()">
+    <div class="geo-modal-container">
+      <div class="geo-modal-header">
+        <div class="geo-header-titles">
+          <div class="geo-header-badge"><i class="fa-solid fa-earth-europe"></i> Géographie Officielle 2026</div>
+          <h2 id="geo-modal-title">Carte Interactive de France & Repères Républicains</h2>
+          <p class="geo-header-sub">Maîtrisez les 13 régions, les 5 fleuves, les massifs montagneux et les DROM-COM pour réussir l'entretien</p>
+        </div>
+        <button type="button" class="action-btn geo-close-btn" onclick="closeGeographyModal()" title="Fermer la carte" aria-label="Fermer la carte">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Top Navigation Tabs (Exploration / Quiz Carte / Tableaux Repères) -->
+      <div class="geo-tabs-bar">
+        <button type="button" class="geo-tab-pill active" data-tab="exploration" onclick="switchGeoTab('exploration')">
+          <i class="fa-solid fa-map"></i> <span>Mode Exploration</span>
+        </button>
+        <button type="button" class="geo-tab-pill" data-tab="quiz" onclick="switchGeoTab('quiz')">
+          <i class="fa-solid fa-crosshairs"></i> <span>Quiz Carte (« Pointer & Trouver »)</span>
+        </button>
+        <button type="button" class="geo-tab-pill" data-tab="reperes" onclick="switchGeoTab('reperes')">
+          <i class="fa-solid fa-table-list"></i> <span>Fiches Repères & Frontières</span>
+        </button>
+      </div>
+
+      <!-- Modal Body Content rendered by js/geography.js -->
+      <div class="geo-modal-body" id="geo-modal-body">
+        <!-- Populated dynamically by js/geography.js -->
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="js/app.js"></script>
   <script src="js/ai_reader.js"></script>
@@ -1078,6 +1133,7 @@
   <script src="js/quiz.js"></script>
   <script src="js/flashcards.js"></script>
   <script src="js/timeline.js"></script>
+  <script src="js/geography.js"></script>
   <script src="js/interview.js"></script>
   <script src="js/progress.js"></script>
 </body>

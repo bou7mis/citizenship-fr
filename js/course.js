@@ -224,6 +224,30 @@ function renderChapter(modId, chapId) {
     `;
   }
 
+  // Geography Interactive Map Callout for Geography Chapter
+  if (chap.id === 'm4-c4' || chap.title.toLowerCase().includes('géographie')) {
+    html += `
+      <div class="chapter-video-callout" onclick="openGeographyModal()" style="border-left: 4px solid var(--teal, #0d9488); margin: 1.5rem 0; cursor: pointer;">
+        <div class="video-callout-main">
+          <div class="video-callout-icon" style="background: linear-gradient(135deg, #0d9488 0%, #14b8a6 100%);">
+            <i class="fa-solid fa-map-location-dot"></i>
+          </div>
+          <div>
+            <div class="video-callout-badge" style="color: var(--teal, #0d9488); background: var(--teal-bg, rgba(13,148,136,0.1));">
+              <i class="fa-solid fa-earth-europe"></i> Outil Interactif Officiel
+            </div>
+            <h4 class="video-callout-title">Explorer la Carte Interactive de France & Mode Quiz</h4>
+            <p class="video-callout-desc">Visualisez les 13 régions, les 5 fleuves, les massifs montagneux et les DROM-COM avec synthèse vocale et quiz « Pointer & Trouver ».</p>
+          </div>
+        </div>
+        <button class="btn-watch-video" style="background: var(--teal, #0d9488); border-color: var(--teal, #0d9488);">
+          <span>Ouvrir la carte</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    `;
+  }
+
   // Main Content Blocks
   if (chap.content) {
     chap.content.forEach(block => {

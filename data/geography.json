@@ -1,0 +1,430 @@
+{
+  "version": "2026.1",
+  "title": "Carte Interactive et Géographie de la République Française",
+  "description": "Repères géographiques officiels exigés lors de l'Examen Civique et de l'Entretien de Naturalisation (Régions, Fleuves, Massifs, DROM-COM, Pays frontaliers).",
+  "regions": [
+    {
+      "id": "idf",
+      "name": "Île-de-France",
+      "chefLieu": "Paris",
+      "departmentsCount": 8,
+      "departments": "Paris (75), Seine-et-Marne (77), Yvelines (78), Essonne (91), Hauts-de-Seine (92), Seine-Saint-Denis (93), Val-de-Marne (94), Val-d'Oise (95)",
+      "description": "Cœur politique et économique de la Nation, abritant la capitale Paris, le Palais de l'Élysée, l'Assemblée nationale et le Sénat. Région la plus peuplée de France (plus de 12 millions d'habitants).",
+      "interviewTip": "Capitale de la France : Paris. La Seine la traverse. Siège de tous les pouvoirs républicains.",
+      "color": "#3b82f6",
+      "center": { "x": 485, "y": 200 }
+    },
+    {
+      "id": "ara",
+      "name": "Auvergne-Rhône-Alpes",
+      "chefLieu": "Lyon",
+      "departmentsCount": 12,
+      "departments": "Ain, Allier, Ardèche, Cantal, Drôme, Isère, Loire, Haute-Loire, Puy-de-Dôme, Rhône, Savoie, Haute-Savoie",
+      "description": "Deuxième région économique et démographique de France. Englobe le Massif central (volcans d'Auvergne) et les Alpes du Nord avec le Mont Blanc (4 808 m).",
+      "interviewTip": "Lyon est la 3e ville de France et ancienne capitale des Gaules. Le Rhône la traverse.",
+      "color": "#6366f1",
+      "center": { "x": 620, "y": 420 }
+    },
+    {
+      "id": "naq",
+      "name": "Nouvelle-Aquitaine",
+      "chefLieu": "Bordeaux",
+      "departmentsCount": 12,
+      "departments": "Charente, Charente-Maritime, Corrèze, Creuse, Dordogne, Gironde, Landes, Lot-et-Garonne, Pyrénées-Atlantiques, Deux-Sèvres, Vienne, Haute-Vienne",
+      "description": "La plus vaste région de France métropolitaine par sa superficie. Bordée par l'Océan Atlantique, traversée par la Garonne et bordée au sud par les Pyrénées.",
+      "interviewTip": "Plus grande région en superficie. Vignobles renommés de Bordeaux et bassin d'Arcachon.",
+      "color": "#10b981",
+      "center": { "x": 340, "y": 460 }
+    },
+    {
+      "id": "occ",
+      "name": "Occitanie",
+      "chefLieu": "Toulouse",
+      "departmentsCount": 13,
+      "departments": "Ariège, Aude, Aveyron, Gard, Haute-Garonne, Gers, Hérault, Lot, Lozère, Hautes-Pyrénées, Pyrénées-Orientales, Tarn, Tarn-et-Garonne",
+      "description": "Bordée par la mer Méditerranée et l'Espagne via les Pyrénées. Capitale européenne de l'aéronautique et de l'espace (Toulouse) et ville historique de Montpellier.",
+      "interviewTip": "Frontalière avec l'Espagne et l'Andorre. Toulouse est la 'Ville Rose'.",
+      "color": "#f59e0b",
+      "center": { "x": 470, "y": 570 }
+    },
+    {
+      "id": "paca",
+      "name": "Provence-Alpes-Côte d'Azur",
+      "chefLieu": "Marseille",
+      "departmentsCount": 6,
+      "departments": "Alpes-de-Haute-Provence, Hautes-Alpes, Alpes-Maritimes, Bouches-du-Rhône, Var, Vaucluse",
+      "description": "Façade maritime méditerranéenne majeure abritant Marseille (2e ville de France et plus ancien port fondé vers 600 av. J.-C.) et Nice. Frontalière avec l'Italie et Monaco.",
+      "interviewTip": "Marseille est la plus ancienne grande ville de France et le 1er port maritime français.",
+      "color": "#ec4899",
+      "center": { "x": 670, "y": 550 }
+    },
+    {
+      "id": "hdf",
+      "name": "Hauts-de-France",
+      "chefLieu": "Lille",
+      "departmentsCount": 5,
+      "departments": "Aisne, Nord, Oise, Pas-de-Calais, Somme",
+      "description": "Carrefour stratégique du Nord de l'Europe, frontalier avec la Belgique et relié au Royaume-Uni par le tunnel sous la Manche. Terre d'histoire industrielle et de mémoire des deux guerres mondiales.",
+      "interviewTip": "Frontière terrestre avec la Belgique. Lille est la capitale des Flandres françaises.",
+      "color": "#06b6d4",
+      "center": { "x": 500, "y": 95 }
+    },
+    {
+      "id": "ges",
+      "name": "Grand Est",
+      "chefLieu": "Strasbourg",
+      "departmentsCount": 10,
+      "departments": "Ardennes, Aube, Marne, Haute-Marne, Meurthe-et-Moselle, Meuse, Moselle, Bas-Rhin, Haut-Rhin, Vosges",
+      "description": "Frontalière avec la Belgique, le Luxembourg, l'Allemagne et la Suisse. Strasbourg est le siège officiel du Parlement Européen, symbole de la réconciliation franco-allemande.",
+      "interviewTip": "Strasbourg est l'une des capitales européennes et abrite le Parlement Européen.",
+      "color": "#8b5cf6",
+      "center": { "x": 680, "y": 190 }
+    },
+    {
+      "id": "bre",
+      "name": "Bretagne",
+      "chefLieu": "Rennes",
+      "departmentsCount": 4,
+      "departments": "Côtes-d'Armor, Finistère, Ille-et-Vilaine, Morbihan",
+      "description": "Péninsule avancée dans l'Océan Atlantique et la Manche, riche d'une identité maritime et culturelle forte. Plus long littoral de France métropolitaine.",
+      "interviewTip": "Région maritime majeure, Rennes est son chef-lieu.",
+      "color": "#14b8a6",
+      "center": { "x": 220, "y": 240 }
+    },
+    {
+      "id": "pdl",
+      "name": "Pays de la Loire",
+      "chefLieu": "Nantes",
+      "departmentsCount": 5,
+      "departments": "Loire-Atlantique, Maine-et-Loire, Mayenne, Sarthe, Vendée",
+      "description": "Bordée par l'Océan Atlantique, traversée par l'estuaire de la Loire. Grand pôle de construction navale (Saint-Nazaire) et d'agriculture.",
+      "interviewTip": "Nantes est le chef-lieu, la Loire s'y jette dans l'Atlantique à Saint-Nazaire.",
+      "color": "#84cc16",
+      "center": { "x": 310, "y": 300 }
+    },
+    {
+      "id": "nor",
+      "name": "Normandie",
+      "chefLieu": "Rouen",
+      "departmentsCount": 5,
+      "departments": "Calvados, Eure, Manche, Orne, Seine-Maritime",
+      "description": "Bordée par la Manche, célèbre pour ses falaises d'Étretat, le Mont-Saint-Michel à sa lisière et les plages du Débarquement du 6 juin 1944.",
+      "interviewTip": "Le Débarquement allié du 6 juin 1944 s'est déroulé sur les côtes normandes.",
+      "color": "#f97316",
+      "center": { "x": 360, "y": 160 }
+    },
+    {
+      "id": "bfc",
+      "name": "Bourgogne-Franche-Comté",
+      "chefLieu": "Dijon",
+      "departmentsCount": 8,
+      "departments": "Côte-d'Or, Doubs, Jura, Nièvre, Haute-Saône, Saône-et-Loire, Yonne, Territoire de Belfort",
+      "description": "Région de passage entre le Bassin parisien et la vallée du Rhône, frontalière avec la Suisse par le massif du Jura. Réputée pour ses grands crus et son patrimoine historique.",
+      "interviewTip": "Frontalière avec la Suisse par les montagnes du Jura. Dijon est le chef-lieu.",
+      "color": "#eab308",
+      "center": { "x": 580, "y": 290 }
+    },
+    {
+      "id": "cvl",
+      "name": "Centre-Val de Loire",
+      "chefLieu": "Orléans",
+      "departmentsCount": 6,
+      "departments": "Cher, Eure-et-Loir, Indre, Indre-et-Loire, Loir-et-Cher, Loiret",
+      "description": "Cœur historique des Rois de France et berceau des Châteaux de la Loire (Chambord, Chenonceau). Orléans est célèbre pour son héroïne Jeanne d'Arc qui libéra la ville en 1429.",
+      "interviewTip": "Jeanne d'Arc a délivré Orléans en 1429. Châteaux de la Loire renommés dans le monde entier.",
+      "color": "#0ea5e9",
+      "center": { "x": 440, "y": 300 }
+    },
+    {
+      "id": "cor",
+      "name": "Corse",
+      "chefLieu": "Ajaccio",
+      "departmentsCount": 2,
+      "departments": "Corse-du-Sud (2A), Haute-Corse (2B)",
+      "description": "Île méditerranéenne surnommée « Île de Beauté », dotée d'un statut de collectivité territoriale unique. Ville natale de Napoléon Bonaparte (Ajaccio, 1769). Point culminant : Monte Cinto (2 706 m).",
+      "interviewTip": "Napoléon Bonaparte est né à Ajaccio en 1769. Le Monte Cinto est son sommet le plus haut.",
+      "color": "#d946ef",
+      "center": { "x": 780, "y": 660 }
+    }
+  ],
+  "rivers": [
+    {
+      "id": "loire",
+      "name": "La Loire",
+      "length": "1 006 km",
+      "badge": "Le plus long fleuve",
+      "source": "Mont Gerbier de Jonc (Massif central, Ardèche)",
+      "mouth": "Océan Atlantique (Estuaire de Saint-Nazaire)",
+      "cities": "Orléans, Tours, Angers, Nantes, Saint-Nazaire",
+      "description": "Le plus long fleuve de France, entièrement situé sur le territoire national. Célèbre pour le Val de Loire inscrit au patrimoine mondial de l'UNESCO et ses prestigieux châteaux royaux.",
+      "interviewTip": "Question classique : 'Quel est le plus long fleuve de France ?' -> Réponse : La Loire (1 006 km)."
+    },
+    {
+      "id": "seine",
+      "name": "La Seine",
+      "length": "777 km",
+      "badge": "Fleuve de la Capitale",
+      "source": "Plateau de Langres (Bourgogne, Côte-d'Or)",
+      "mouth": "La Manche (entre Le Havre et Honfleur)",
+      "cities": "Troyes, Paris, Rouen, Le Havre",
+      "description": "Le fleuve emblématique traversant Paris, divisant la capitale entre Rive Droite et Rive Gauche. Axe commercial fluvial majeur vers le port du Havre.",
+      "interviewTip": "Question classique : 'Quel fleuve traverse Paris ?' -> Réponse : La Seine."
+    },
+    {
+      "id": "rhone",
+      "name": "Le Rhône",
+      "length": "812 km (dont 545 km en France)",
+      "badge": "Le plus puissant fleuve",
+      "source": "Glacier du Rhône (Suisse, Alpes)",
+      "mouth": "Mer Méditerranée (Delta de Camargue)",
+      "cities": "Genève (Suisse), Lyon, Vienne, Valence, Avignon, Arles",
+      "description": "Prend sa source en Suisse, traverse le lac Léman puis Lyon où il reçoit la Saône. C'est le fleuve français au débit le plus puissant, canalisé pour la production hydroélectrique.",
+      "interviewTip": "Question classique : 'Quel fleuve se jette dans la mer Méditerranée ?' -> Réponse : Le Rhône (par la Camargue)."
+    },
+    {
+      "id": "garonne",
+      "name": "La Garonne",
+      "length": "529 km (dont 472 km en France)",
+      "badge": "Fleuve du Sud-Ouest",
+      "source": "Val d'Aran (Pyrénées espagnoles)",
+      "mouth": "Océan Atlantique (Estuaire de la Gironde avec la Dordogne)",
+      "cities": "Toulouse, Agen, Bordeaux",
+      "description": "Prend sa source en Espagne dans les Pyrénées, arrose Toulouse et Bordeaux, puis s'unit à la Dordogne au bec d'Ambès pour former le plus vaste estuaire d'Europe : l'estuaire de la Gironde.",
+      "interviewTip": "Traverse Toulouse et Bordeaux avant de rejoindre l'Océan Atlantique via l'estuaire de la Gironde."
+    },
+    {
+      "id": "rhin",
+      "name": "Le Rhin",
+      "length": "1 233 km (dont 188 km de frontière française)",
+      "badge": "Fleuve Frontalier Européen",
+      "source": "Alpes suisses",
+      "mouth": "Mer du Nord (Pays-Bas)",
+      "cities": "Bâle, Strasbourg (port autonome), Cologne, Rotterdam",
+      "description": "Grand fleuve européen délimitant la frontière naturelle entre la France (Alsace) et l'Allemagne. Artère commerciale majeure reliant l'Europe centrale à la mer du Nord.",
+      "interviewTip": "Sert de frontière naturelle entre la France et l'Allemagne en Alsace."
+    }
+  ],
+  "mountains": [
+    {
+      "id": "alpes",
+      "name": "Les Alpes",
+      "highestPeak": "Mont Blanc (4 808 m)",
+      "borders": "Italie, Suisse",
+      "regions": "Auvergne-Rhône-Alpes, Provence-Alpes-Côte d'Azur",
+      "description": "Plus haute chaîne de montagnes de France et d'Europe occidentale. Le Mont Blanc culmine à 4 808 m sur la frontière franco-italienne. Zone de parcs nationaux (Vanoise, Écrins, Mercantour).",
+      "interviewTip": "Question piège n°1 : 'Quel est le point culminant de France ?' -> Le Mont Blanc (4 808 m dans les Alpes)."
+    },
+    {
+      "id": "pyrenees",
+      "name": "Les Pyrénées",
+      "highestPeak": "Pic d'Aneto (3 404 m, Espagne) / Vignemale (3 298 m, France)",
+      "borders": "Espagne, Andorre",
+      "regions": "Occitanie, Nouvelle-Aquitaine",
+      "description": "Barrière naturelle et frontière montagneuse séparant la France et la péninsule ibérique (Espagne et principauté d'Andorre), s'étendant de l'Atlantique à la Méditerranée.",
+      "interviewTip": "Chaîne de montagnes qui sépare la France de l'Espagne."
+    },
+    {
+      "id": "massif-central",
+      "name": "Le Massif central",
+      "highestPeak": "Puy de Sancy (1 885 m)",
+      "borders": "Intérieur de la France (aucun pays frontalier)",
+      "regions": "Auvergne-Rhône-Alpes, Occitanie, Nouvelle-Aquitaine",
+      "description": "Vaste massif ancien de moyenne montagne occupant le centre-sud de la France. Célèbre pour sa chaîne des Puys (volcans éteints d'Auvergne, dont le Puy de Dôme). Source de la Loire.",
+      "interviewTip": "Massif de volcans éteints au centre de la France, source de la Loire au Mont Gerbier de Jonc."
+    },
+    {
+      "id": "jura",
+      "name": "Le Jura",
+      "highestPeak": "Crêt de la Neige (1 720 m)",
+      "borders": "Suisse",
+      "regions": "Bourgogne-Franche-Comté, Auvergne-Rhône-Alpes",
+      "description": "Massif préalpin en forme de croissant le long de la frontière franco-suisse. Réputé pour ses forêts d'épicéas, ses lacs et son artisanat d'horlogerie et de lunetterie.",
+      "interviewTip": "Massif montagneux formant une frontière naturelle avec la Suisse."
+    },
+    {
+      "id": "vosges",
+      "name": "Les Vosges",
+      "highestPeak": "Grand Ballon (1 424 m)",
+      "borders": "Proche Allemagne",
+      "regions": "Grand Est",
+      "description": "Massif de moyenne montagne aux sommets arrondis appelés « ballons », séparant la Lorraine et la plaine d'Alsace.",
+      "interviewTip": "Massif du Nord-Est séparant l'Alsace et la Lorraine."
+    }
+  ],
+  "outremer": [
+    {
+      "id": "guadeloupe",
+      "name": "Guadeloupe",
+      "statut": "DROM (Département et Région d'Outre-Mer)",
+      "chefLieu": "Basse-Terre",
+      "ocean": "Océan Atlantique (Mer des Caraïbes / Antilles)",
+      "code": "971",
+      "highlights": "Archipel en forme de papillon (Grande-Terre et Basse-Terre). Volcan actif de La Soufrière.",
+      "interviewTip": "Chef-lieu : Basse-Terre (et non Pointe-à-Pitre). Fait partie de l'Union européenne."
+    },
+    {
+      "id": "martinique",
+      "name": "Martinique",
+      "statut": "DROM (Collectivité Territoriale Unique)",
+      "chefLieu": "Fort-de-France",
+      "ocean": "Océan Atlantique (Mer des Caraïbes / Petites Antilles)",
+      "code": "972",
+      "highlights": "Surnommée « l'île aux fleurs ». Célèbre pour le volcan de la Montagne Pelée (éruption de 1902) et le poète Aimé Césaire.",
+      "interviewTip": "Chef-lieu : Fort-de-France. Écrivain et homme politique illustre : Aimé Césaire."
+    },
+    {
+      "id": "guyane",
+      "name": "Guyane",
+      "statut": "DROM (Collectivité Territoriale Unique)",
+      "chefLieu": "Cayenne",
+      "ocean": "Océan Atlantique (Amérique du Sud)",
+      "code": "973",
+      "highlights": "Plus grand département français en superficie. Recouvert à 95% par la forêt équatoriale amazonienne. Frontières avec le Brésil et le Suriname. Abrite le Centre Spatial Guyanais à Kourou.",
+      "interviewTip": "Frontière terrestre avec le Brésil (la plus longue de France : 730 km !) et base spatiale de Kourou."
+    },
+    {
+      "id": "reunion",
+      "name": "La Réunion",
+      "statut": "DROM (Département et Région d'Outre-Mer)",
+      "chefLieu": "Saint-Denis",
+      "ocean": "Océan Indien",
+      "code": "974",
+      "highlights": "Île volcanique de l'Océan Indien à l'est de Madagascar. Célèbre pour le Piton de la Fournaise (l'un des volcans les plus actifs du monde) et le Piton des Neiges (3 070 m).",
+      "interviewTip": "Chef-lieu : Saint-Denis. Située dans l'océan Indien."
+    },
+    {
+      "id": "mayotte",
+      "name": "Mayotte",
+      "statut": "DROM (101e département de France depuis 2011)",
+      "chefLieu": "Mamoudzou (Dzaoudzi chef-lieu officiel)",
+      "ocean": "Océan Indien (Canal du Mozambique)",
+      "code": "976",
+      "highlights": "Archipel situé dans le canal du Mozambique entre Madagascar et l'Afrique. Devenu le 101e département français le 31 mars 2011.",
+      "interviewTip": "101e et plus jeune département français (depuis 2011). Situé dans l'océan Indien."
+    },
+    {
+      "id": "polynesie",
+      "name": "Polynésie française",
+      "statut": "COM (Collectivité d'Outre-Mer)",
+      "chefLieu": "Papeete",
+      "ocean": "Océan Pacifique",
+      "code": "987",
+      "highlights": "118 îles réparties en 5 archipels (Tahiti, Bora-Bora, etc.). Autonomie statutaire au sein de la République.",
+      "interviewTip": "Collectivité d'outre-mer (COM) située dans l'océan Pacifique."
+    },
+    {
+      "id": "nouvelle-caledonie",
+      "name": "Nouvelle-Calédonie",
+      "statut": "Collectivité sui generis",
+      "chefLieu": "Nouméa",
+      "ocean": "Océan Pacifique",
+      "code": "988",
+      "highlights": "Statut spécifique issu des accords de Nouméa (1998). Grand lagon inscrit à l'UNESCO.",
+      "interviewTip": "Statut particulier sui generis avec gouvernement local à Nouméa."
+    }
+  ],
+  "borders": [
+    { "name": "Belgique", "direction": "Nord", "type": "Terrestre (620 km)", "capital": "Bruxelles" },
+    { "name": "Luxembourg", "direction": "Nord-Est", "type": "Terrestre (73 km)", "capital": "Luxembourg" },
+    { "name": "Allemagne", "direction": "Nord-Est", "type": "Terrestre (448 km)", "capital": "Berlin" },
+    { "name": "Suisse", "direction": "Est", "type": "Terrestre (572 km)", "capital": "Berne" },
+    { "name": "Italie", "direction": "Sud-Est", "type": "Terrestre (476 km)", "capital": "Rome" },
+    { "name": "Monaco", "direction": "Sud-Est (enclavé)", "type": "Terrestre (4 km)", "capital": "Monaco" },
+    { "name": "Espagne", "direction": "Sud-Ouest", "type": "Terrestre (623 km)", "capital": "Madrid" },
+    { "name": "Andorre", "direction": "Sud-Ouest (Pyrénées)", "type": "Terrestre (57 km)", "capital": "Andorre-la-Vieille" },
+    { "name": "Brésil", "direction": "Guyane française", "type": "Terrestre (730 km - plus longue frontière française)", "capital": "Brasília" },
+    { "name": "Suriname", "direction": "Guyane française", "type": "Terrestre (510 km)", "capital": "Paramaribo" }
+  ],
+  "quizQuestions": [
+    {
+      "id": "geo-q1",
+      "targetType": "river",
+      "targetId": "loire",
+      "question": "Quel est le plus long fleuve de France (1 006 km), célèbre pour ses châteaux royaux ?",
+      "options": ["La Loire", "La Seine", "Le Rhône", "La Garonne"],
+      "correct": "La Loire",
+      "tip": "La Loire prend sa source au Mont Gerbier de Jonc et se jette dans l'Atlantique."
+    },
+    {
+      "id": "geo-q2",
+      "targetType": "mountain",
+      "targetId": "alpes",
+      "question": "Dans quel massif montagneux culmine le Mont Blanc (4 808 m), plus haut sommet de France ?",
+      "options": ["Les Alpes", "Les Pyrénées", "Le Massif central", "Le Jura"],
+      "correct": "Les Alpes",
+      "tip": "Le Mont Blanc (4 808 m) est situé dans les Alpes sur la frontière franco-italienne."
+    },
+    {
+      "id": "geo-q3",
+      "targetType": "region",
+      "targetId": "idf",
+      "question": "Quelle région abrite la capitale Paris et concentre le siège des institutions de la République ?",
+      "options": ["Île-de-France", "Hauts-de-France", "Grand Est", "Normandie"],
+      "correct": "Île-de-France",
+      "tip": "L'Île-de-France compte plus de 12 millions d'habitants et 8 départements."
+    },
+    {
+      "id": "geo-q4",
+      "targetType": "river",
+      "targetId": "seine",
+      "question": "Quel fleuve traverse Troyes, Paris, Rouen avant de se jeter dans la Manche au Havre ?",
+      "options": ["La Seine", "La Loire", "Le Rhône", "Le Rhin"],
+      "correct": "La Seine",
+      "tip": "La Seine mesure 777 km et traverse le cœur historique de Paris."
+    },
+    {
+      "id": "geo-q5",
+      "targetType": "outremer",
+      "targetId": "guyane",
+      "question": "Quel territoire d'outre-mer situé en Amérique du Sud possède la plus longue frontière de France (avec le Brésil) ?",
+      "options": ["La Guyane", "La Guadeloupe", "La Martinique", "La Réunion"],
+      "correct": "La Guyane",
+      "tip": "La Guyane partage 730 km de frontière avec le Brésil et abrite le centre spatial de Kourou."
+    },
+    {
+      "id": "geo-q6",
+      "targetType": "river",
+      "targetId": "rhone",
+      "question": "Quel fleuve au débit le plus puissant traverse Lyon et se jette dans la mer Méditerranée par la Camargue ?",
+      "options": ["Le Rhône", "La Garonne", "La Loire", "La Seine"],
+      "correct": "Le Rhône",
+      "tip": "Le Rhône prend sa source en Suisse et se termine par le delta de Camargue."
+    },
+    {
+      "id": "geo-q7",
+      "targetType": "mountain",
+      "targetId": "pyrenees",
+      "question": "Quelle chaîne de montagnes forme la frontière naturelle séparant la France de l'Espagne ?",
+      "options": ["Les Pyrénées", "Les Alpes", "Le Jura", "Les Vosges"],
+      "correct": "Les Pyrénées",
+      "tip": "Les Pyrénées s'étendent de l'Océan Atlantique à la Mer Méditerranée."
+    },
+    {
+      "id": "geo-q8",
+      "targetType": "region",
+      "targetId": "paca",
+      "question": "Dans quelle région se situe Marseille, plus ancienne ville de France et premier port maritime ?",
+      "options": ["Provence-Alpes-Côte d'Azur", "Occitanie", "Auvergne-Rhône-Alpes", "Corse"],
+      "correct": "Provence-Alpes-Côte d'Azur",
+      "tip": "Marseille est le chef-lieu de la région PACA."
+    },
+    {
+      "id": "geo-q9",
+      "targetType": "outremer",
+      "targetId": "mayotte",
+      "question": "Quel est le 101e département français, devenu DROM le 31 mars 2011 dans l'océan Indien ?",
+      "options": ["Mayotte", "La Réunion", "Saint-Pierre-et-Miquelon", "Wallis-et-Futuna"],
+      "correct": "Mayotte",
+      "tip": "Mayotte est le plus récent département de France (101e département)."
+    },
+    {
+      "id": "geo-q10",
+      "targetType": "region",
+      "targetId": "ges",
+      "question": "Dans quelle région se situe Strasbourg, siège officiel du Parlement Européen ?",
+      "options": ["Grand Est", "Bourgogne-Franche-Comté", "Hauts-de-France", "Île-de-France"],
+      "correct": "Grand Est",
+      "tip": "Strasbourg est le chef-lieu de la région Grand Est et une capitale européenne."
+    }
+  ]
+}

@@ -7,6 +7,13 @@
   <meta name="description" content="Application officielle de préparation à l'examen civique 2026 et à l'entretien de naturalisation en préfecture. Cours modulaire illustré, quiz, examen blanc chronométré, flashcards 3D et suivi de progression.">
   <meta name="theme-color" content="#002349">
 
+  <!-- PWA & Mobile Web App Meta -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Citoyen 2026">
+
   <!-- Google Fonts: Inter & Outfit -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,8 +71,16 @@
       </button>
     </nav>
 
-    <!-- Header Actions (Theme Toggle & Search) -->
+    <!-- Header Actions (PWA Install, Timeline & Theme Toggle) -->
     <div class="header-actions">
+      <button class="action-btn pwa-install-btn" id="btn-pwa-install" onclick="triggerPwaInstall()" style="display:none;" title="Installer l'application sur votre appareil" aria-label="Installer l'application">
+        <i class="fa-solid fa-download"></i>
+        <span class="action-btn-label">Installer</span>
+      </button>
+      <button class="action-btn timeline-nav-btn" id="btn-header-timeline" onclick="openTimelineModal()" title="Frise Chronologique des Dates Clés" aria-label="Dates Clés">
+        <i class="fa-solid fa-timeline"></i>
+        <span class="action-btn-label">Dates Clés</span>
+      </button>
       <button class="action-btn" id="btn-theme-toggle" onclick="toggleTheme()" title="Basculer Mode Clair / Sombre" aria-label="Basculer le thème">
         <i class="fa-solid fa-moon" id="theme-icon"></i>
       </button>
@@ -199,10 +214,27 @@
                   <span class="reader-pill">Répétition espacée</span>
                 </div>
                 <h4>Flashcards 3D</h4>
-                <p>52 cartes interactives à retourner avec synthèse vocale en français pour mémoriser dates, lois et symboles.</p>
+                <p>291 cartes officielles avec recherche instantanée, favoris ⭐ et répétition espacée pour mémoriser durablement.</p>
               </div>
               <div class="action-card-footer" style="color:var(--fr-gold);">
                 <span>Réviser les cartes</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </div>
+
+            <div class="action-card" onclick="openTimelineModal()">
+              <div>
+                <div class="action-card-top">
+                  <div class="card-icon-box purple">
+                    <i class="fa-solid fa-timeline"></i>
+                  </div>
+                  <span class="reader-pill" style="color:var(--timeline-purple, #7c3aed); background:rgba(124, 58, 237, 0.1);">1789 – 2026</span>
+                </div>
+                <h4>Frise des Dates Clés</h4>
+                <p>Les 20 repères historiques et républicains majeurs avec synthèse vocale, astuces d'entretien et accès aux flashcards.</p>
+              </div>
+              <div class="action-card-footer" style="color:var(--timeline-purple, #7c3aed);">
+                <span>Explorer la frise</span>
                 <i class="fa-solid fa-arrow-right"></i>
               </div>
             </div>
@@ -289,8 +321,36 @@
           </button>
         </div>
 
+        <!-- Carnet d'Erreurs / Mistakes Review Card -->
+        <div class="mistakes-review-card" id="mistakes-hub-card">
+          <div class="mistakes-card-left">
+            <div class="mistakes-icon-box">
+              <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <div>
+              <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem; flex-wrap:wrap;">
+                <h4 style="font-size:1.1rem; font-weight:700; color:var(--text-primary); margin:0;">
+                  Carnet d'Erreurs Ciblées
+                </h4>
+                <span class="mistakes-count-pill" id="mistakes-badge-count">0 question</span>
+              </div>
+              <p style="font-size:0.875rem; color:var(--text-secondary); margin:0;" id="mistakes-desc-text">
+                Retravaillez spécifiquement les questions auxquelles vous avez mal répondu pour ne plus faire d'erreur lors de l'examen.
+              </p>
+            </div>
+          </div>
+          <div style="display:flex; gap:0.6rem; align-items:center; flex-wrap:wrap;">
+            <button class="btn-sm-primary btn-mistakes-action" id="btn-start-mistakes" onclick="startMistakesPractice()" style="background:#e11d48; border-color:#e11d48; padding:0.6rem 1.25rem; font-size:0.9rem;" disabled>
+              <i class="fa-solid fa-rotate-left"></i> Réviser mes erreurs
+            </button>
+            <button class="action-btn" id="btn-clear-mistakes" onclick="clearMistakesNotebook()" title="Vider le carnet d'erreurs" style="display:none;">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </div>
+        </div>
+
         <!-- Quick 10-Question Training Button -->
-        <div style="display:flex; justify-content:space-between; align-items:center; background:var(--bg-card); padding:1.25rem 1.75rem; border-radius:var(--radius-lg); border:1px solid var(--border-subtle);">
+        <div style="display:flex; justify-content:space-between; align-items:center; background:var(--bg-card); padding:1.25rem 1.75rem; border-radius:var(--radius-lg); border:1px solid var(--border-subtle); flex-wrap:wrap; gap:1rem;">
           <div>
             <h4 style="font-size:1.1rem; font-weight:700; color:var(--text-primary); margin-bottom:0.25rem;">
               <i class="fa-solid fa-bolt" style="color:var(--fr-gold);"></i> Entraînement Rapide Express
@@ -372,6 +432,9 @@
           <button class="reader-nav-btn btn-primary" onclick="exitQuizToHub()">
             <i class="fa-solid fa-list"></i> Retour aux Quiz
           </button>
+          <button class="reader-nav-btn" id="btn-results-mistakes" onclick="startMistakesPractice()" style="display:none; background:#e11d48; color:#fff; border-color:#e11d48;">
+            <i class="fa-solid fa-bullseye"></i> Rejouer mes erreurs
+          </button>
           <button class="reader-nav-btn btn-secondary" onclick="switchTab('course')">
             <i class="fa-solid fa-book-open"></i> Réviser dans le Cours
           </button>
@@ -417,7 +480,14 @@
 
         <!-- Category & Mode Toolbar -->
         <div class="flashcards-toolbar">
-          <div style="display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap;">
+          <div style="display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap; flex:1;">
+            <div class="fc-search-box">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input type="text" id="fc-search-input" class="fc-search-input" placeholder="Rechercher une carte (1789, laïcité, De Gaulle...)" oninput="handleFlashcardSearch(this.value)" autocomplete="off">
+              <button class="fc-search-clear-btn" id="fc-search-clear-btn" onclick="clearFlashcardSearch()" title="Effacer la recherche" style="display:none;">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
             <select id="flashcard-category-select" class="category-filter-select" aria-label="Filtrer par thématique">
               <!-- Populated by flashcards.js -->
             </select>
@@ -449,6 +519,9 @@
                 </div>
                 <div style="display:flex; align-items:center; gap:0.5rem;">
                   <span id="fc-front-schedule-pill"></span>
+                  <button class="action-btn fc-favorite-btn" id="fc-fav-front-btn" onclick="event.stopPropagation(); toggleFavoriteActiveCard();" title="Ajouter aux favoris (Touche F)">
+                    <i class="fa-regular fa-star"></i>
+                  </button>
                   <button class="action-btn" id="fc-speak-front-btn" onclick="event.stopPropagation(); pronounceCard();" title="Écouter la question">
                     <i class="fa-solid fa-volume-high"></i>
                   </button>
@@ -471,6 +544,9 @@
                 </div>
                 <div style="display:flex; align-items:center; gap:0.5rem;">
                   <span id="fc-back-schedule-pill"></span>
+                  <button class="action-btn fc-favorite-btn" id="fc-fav-back-btn" onclick="event.stopPropagation(); toggleFavoriteActiveCard();" title="Ajouter aux favoris (Touche F)">
+                    <i class="fa-regular fa-star"></i>
+                  </button>
                   <button class="action-btn" id="fc-speak-back-btn" onclick="event.stopPropagation(); pronounceCard();" title="Écouter la réponse">
                     <i class="fa-solid fa-volume-high"></i>
                   </button>
@@ -575,7 +651,8 @@
           <span><kbd>4</kbd> : Facile (3 j)</span> • 
           <span><kbd>←</kbd> / <kbd>→</kbd> : Naviguer</span> • 
           <span><kbd>R</kbd> : Audio</span> • 
-          <span><kbd>A</kbd> : Auto-lecture</span>
+          <span><kbd>A</kbd> : Auto-lecture</span> • 
+          <span><kbd>F</kbd> : Favori ⭐</span>
         </div>
 
       </div>
@@ -956,6 +1033,43 @@
     </div>
   </div>
 
+  <!-- Republican Key Dates Timeline Modal -->
+  <div class="modal-overlay timeline-modal-overlay" id="timeline-modal" role="dialog" aria-modal="true" aria-labelledby="timeline-modal-title" onclick="if(event.target === this) closeTimelineModal()">
+    <div class="timeline-modal-container">
+      <div class="timeline-modal-header">
+        <div class="timeline-header-titles">
+          <div class="timeline-header-badge"><i class="fa-solid fa-landmark"></i> Repères Républicains</div>
+          <h2 id="timeline-modal-title">Frise Chronologique des Dates Clés</h2>
+          <p class="timeline-header-sub">Les 20 dates indispensables pour réussir l'Examen Civique et l'Entretien de Naturalisation</p>
+        </div>
+        <button type="button" class="action-btn timeline-close-btn" onclick="closeTimelineModal()" title="Fermer la frise" aria-label="Fermer la frise">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Controls: Category Pills & Search -->
+      <div class="timeline-controls-bar">
+        <div class="timeline-search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="timeline-search-input" placeholder="Rechercher une année, un événement, une personnalité..." oninput="handleTimelineSearch(this.value)">
+          <button type="button" id="timeline-search-clear" onclick="clearTimelineSearch()" style="display:none;" title="Effacer"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+
+        <div class="timeline-filter-row">
+          <div class="timeline-categories-scroll" id="timeline-categories-bar" role="tablist">
+            <!-- Populated dynamically by js/timeline.js -->
+          </div>
+          <div class="timeline-results-badge" id="timeline-results-count">20 repères</div>
+        </div>
+      </div>
+
+      <!-- Stream of milestones -->
+      <div class="timeline-scroll-body" id="timeline-stream-container">
+        <!-- Rendered by js/timeline.js -->
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="js/app.js"></script>
   <script src="js/ai_reader.js"></script>
@@ -963,6 +1077,7 @@
   <script src="js/video_player.js"></script>
   <script src="js/quiz.js"></script>
   <script src="js/flashcards.js"></script>
+  <script src="js/timeline.js"></script>
   <script src="js/interview.js"></script>
   <script src="js/progress.js"></script>
 </body>

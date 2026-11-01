@@ -1,0 +1,49 @@
+{
+  "name": "Livret du Citoyen 2026 – Naturalisation Française",
+  "short_name": "Citoyen 2026",
+  "description": "Préparation officielle à l'examen civique 2026 et entretien de naturalisation française : cours, quiz, carnet d'erreurs, 291 flashcards et frise chronologique.",
+  "lang": "fr-FR",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#002349",
+  "theme_color": "#002349",
+  "categories": ["education", "government", "books"],
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Flashcards 3D",
+      "url": "./index.html#flashcards",
+      "description": "Réviser les 291 flashcards avec répétition espacée"
+    },
+    {
+      "name": "Examen Blanc 2026",
+      "url": "./index.html#quizzes",
+      "description": "Passer le simulateur officiel d'examen civique"
+    },
+    {
+      "name": "Dates Clés",
+      "url": "./index.html#timeline",
+      "description": "Consulter la frise chronologique républicaine"
+    }
+  ]
+}

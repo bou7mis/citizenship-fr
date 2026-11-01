@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#002349" />
+      <stop offset="100%" stop-color="#001428" />
+    </linearGradient>
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5D061" />
+      <stop offset="50%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#AA7C11" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#bg-grad)" />
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="url(#gold-grad)" stroke-width="4" opacity="0.6" />
+
+  <!-- Tricolor Cocarde with Drop Shadow -->
+  <g filter="url(#shadow)" transform="translate(256, 230)">
+    <!-- Gold accent outer rim -->
+    <circle r="164" fill="url(#gold-grad)" />
+    <!-- Red Outer Ring -->
+    <circle r="156" fill="#C8102E" />
+    <!-- White Middle Ring -->
+    <circle r="106" fill="#FFFFFF" />
+    <!-- Blue Inner Disc -->
+    <circle r="56" fill="#0055A5" />
+    <!-- Golden Republic Star in Center -->
+    <path d="M 0,-24 L 7,-7 L 25,-7 L 11,4 L 16,21 L 0,11 L -16,21 L -11,4 L -25,-7 L -7,-7 Z" fill="url(#gold-grad)" />
+  </g>
+
+  <!-- Edition 2026 Label -->
+  <g transform="translate(256, 440)">
+    <rect x="-110" y="-28" width="220" height="46" rx="23" fill="#0055A5" stroke="url(#gold-grad)" stroke-width="2.5" />
+    <text text-anchor="middle" y="4" font-family="'Outfit', 'Inter', system-ui, sans-serif" font-weight="800" font-size="24" fill="#FFFFFF" letter-spacing="3">RÉPUBLIQUE</text>
+  </g>
+</svg>

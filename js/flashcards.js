@@ -64,6 +64,7 @@ let studyMode = "spaced"; // "spaced" (Spaced Repetition Queue) or "browse" (Fre
 let countdownIntervalId = null;
 let isAutoReadEnabled = localStorage.getItem('citizenship_flashcards_auto_read') === 'true';
 let autoReadTimer = null;
+let flashcardSearchQuery = "";
 
 /**
  * Initialize the Flashcards view
@@ -85,6 +86,9 @@ function initFlashcardsView() {
       history: []
     };
   }
+  if (!APP_STATE.userProgress.flashcardFavorites) {
+    APP_STATE.userProgress.flashcardFavorites = [];
+  }
 
   setupCategoryFilter();
   updateHeaderBadges();
@@ -104,6 +108,14 @@ function stripHtmlTags(html) {
   const tmp = document.createElement("div");
   tmp.innerHTML = html;
   return tmp.textContent || tmp.innerText || "";
+}
+
+/**
+ * Helper to normalize string for accent-insensitive and case-insensitive search
+ */
+function normalizeSearchText(str) {
+  if (!str) return "";
+  return stripHtmlTags(str).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
 /**
@@ -176,11 +188,13 @@ function setupCategoryFilter() {
   // Calculate current due count
   const dueCount = APP_STATE.flashcardsData.cards.filter(c => isCardDue(c.id)).length;
   const snoozedCount = APP_STATE.flashcardsData.cards.filter(c => !isCardDue(c.id)).length;
+  const favCount = (APP_STATE.userProgress.flashcardFavorites || []).length;
 
   select.innerHTML = `
     <optgroup label="Files de Révision">
       <option value="all-due">⚡ Cartes à réviser maintenant (${dueCount})</option>
       <option value="all">📚 Toutes les cartes (${total})</option>
+      <option value="favorites">⭐ Cartes favorites (${favCount})</option>
       <option value="snoozed">⏳ Cartes en attente / Snoozed (${snoozedCount})</option>
       <option value="needs-review">⚠️ Cartes difficiles (À revoir / Again)</option>
       <option value="mastered">✓ Cartes maîtrisées (Good / Easy)</option>
@@ -208,6 +222,9 @@ function filterFlashcards(filterKey) {
     activeFlashcardsList = allCards.filter(c => isCardDue(c.id));
   } else if (filterKey === 'all') {
     activeFlashcardsList = [...allCards];
+  } else if (filterKey === 'favorites') {
+    const favs = APP_STATE.userProgress.flashcardFavorites || [];
+    activeFlashcardsList = allCards.filter(c => favs.includes(c.id));
   } else if (filterKey === 'snoozed') {
     activeFlashcardsList = allCards.filter(c => !isCardDue(c.id));
   } else if (filterKey === 'needs-review') {
@@ -222,6 +239,17 @@ function filterFlashcards(filterKey) {
     } else {
       activeFlashcardsList = allCards.filter(c => c.category === filterKey);
     }
+  }
+
+  // Apply search query filter if active
+  if (flashcardSearchQuery.trim()) {
+    const q = normalizeSearchText(flashcardSearchQuery);
+    activeFlashcardsList = activeFlashcardsList.filter(card => {
+      return normalizeSearchText(card.front).includes(q) ||
+             normalizeSearchText(card.back).includes(q) ||
+             normalizeSearchText(card.category).includes(q) ||
+             normalizeSearchText(card.tag || '').includes(q);
+    });
   }
 
   currentCardIndex = 0;
@@ -335,6 +363,9 @@ function renderFlashcard() {
 
   // Update schedule status pill on card
   renderScheduleBadge(card.id);
+
+  // Update favorite button state
+  renderFavoriteButton(card.id);
 
   // Update Counter
   if (counterElement) {
@@ -856,6 +887,81 @@ function bindKeyboardShortcuts() {
     } else if (e.key === 'a' || e.key === 'A') {
       e.preventDefault();
       toggleAutoRead();
+    } else if (e.key === 'f' || e.key === 'F') {
+      e.preventDefault();
+      toggleFavoriteActiveCard();
+    }
+  });
+}
+
+/**
+ * Handle instantaneous flashcard search
+ */
+function handleFlashcardSearch(val) {
+  flashcardSearchQuery = val || "";
+  const clearBtn = document.getElementById('fc-search-clear-btn');
+  if (clearBtn) {
+    clearBtn.style.display = flashcardSearchQuery.trim().length > 0 ? 'inline-flex' : 'none';
+  }
+  filterFlashcards(currentCategoryFilter);
+}
+
+function clearFlashcardSearch() {
+  const input = document.getElementById('fc-search-input');
+  if (input) input.value = '';
+  handleFlashcardSearch('');
+}
+
+/**
+ * Toggle favorite status of current active card
+ */
+function toggleFavoriteActiveCard() {
+  const card = activeFlashcardsList[currentCardIndex];
+  if (!card) return;
+
+  if (!APP_STATE.userProgress.flashcardFavorites) {
+    APP_STATE.userProgress.flashcardFavorites = [];
+  }
+
+  const favs = APP_STATE.userProgress.flashcardFavorites;
+  const idx = favs.indexOf(card.id);
+
+  if (idx !== -1) {
+    favs.splice(idx, 1);
+    showToast("Carte retirée des favoris", "info");
+  } else {
+    favs.push(card.id);
+    showToast("Carte ajoutée aux favoris ⭐", "success");
+  }
+
+  saveUserProgress();
+  renderFavoriteButton(card.id);
+  setupCategoryFilter();
+
+  if (currentCategoryFilter === 'favorites') {
+    filterFlashcards('favorites');
+  }
+}
+
+/**
+ * Render Favorite star button UI
+ */
+function renderFavoriteButton(cardId) {
+  const favs = APP_STATE.userProgress.flashcardFavorites || [];
+  const isFav = favs.includes(cardId);
+  const btnFront = document.getElementById('fc-fav-front-btn');
+  const btnBack = document.getElementById('fc-fav-back-btn');
+
+  [btnFront, btnBack].forEach(btn => {
+    if (!btn) return;
+    if (isFav) {
+      btn.classList.add('active');
+      btn.innerHTML = '<i class="fa-solid fa-star"></i>';
+      btn.title = "Retirer des favoris (Touche F)";
+    } else {
+      btn.classList.remove('active');
+      btn.innerHTML = '<i class="fa-regular fa-star"></i>';
+      btn.title = "Ajouter aux favoris (Touche F)";
     }
   });
 }
@@ -874,6 +980,9 @@ window.toggleStudyMode = toggleStudyMode;
 window.toggleAutoRead = toggleAutoRead;
 window.updateAutoReadButton = updateAutoReadButton;
 window.triggerAutoRead = triggerAutoRead;
+window.handleFlashcardSearch = handleFlashcardSearch;
+window.clearFlashcardSearch = clearFlashcardSearch;
+window.toggleFavoriteActiveCard = toggleFavoriteActiveCard;
 window.reviewAhead = reviewAhead;
 window.switchToFreeMode = switchToFreeMode;
 window.openFlashcardStatsModal = openFlashcardStatsModal;

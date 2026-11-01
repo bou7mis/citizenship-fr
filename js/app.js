@@ -20,6 +20,8 @@ const APP_STATE = {
     },
     flashcardSchedule: {}, // { cardId: { due, intervalMs, intervalLabel, lastRating, lastReviewed, reps } }
     flashcardFeedback: { again: 0, hard: 0, good: 0, easy: 0, totalReviews: 0, history: [] },
+    flashcardFavorites: [], // [ cardId ]
+    missedQuestions: [], // [ questionId ]
     checklist: {}
   }
 };
@@ -39,6 +41,12 @@ function loadUserProgress() {
       }
       if (!APP_STATE.userProgress.flashcardFeedback) {
         APP_STATE.userProgress.flashcardFeedback = { again: 0, hard: 0, good: 0, easy: 0, totalReviews: 0, history: [] };
+      }
+      if (!APP_STATE.userProgress.flashcardFavorites) {
+        APP_STATE.userProgress.flashcardFavorites = [];
+      }
+      if (!APP_STATE.userProgress.missedQuestions) {
+        APP_STATE.userProgress.missedQuestions = [];
       }
     } catch (e) {
       console.error('Error loading progress:', e);
@@ -302,6 +310,73 @@ async function initApp() {
   document.querySelectorAll('[data-goto]').forEach(el => {
     el.addEventListener('click', () => switchTab(el.dataset.goto));
   });
+
+  // Enregistrement du Service Worker pour le Mode Hors-Ligne (PWA)
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(reg => {
+        console.log('[PWA] Service Worker enregistré avec succès :', reg.scope);
+      })
+      .catch(err => {
+        console.log('[PWA] Échec enregistrement Service Worker :', err);
+      });
+  }
 }
 
+// Gestion de l'installation PWA (Écran d'accueil)
+let deferredPwaPrompt = null;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPwaPrompt = e;
+  
+  const headerInstallBtn = document.getElementById('btn-pwa-install');
+  if (headerInstallBtn) {
+    headerInstallBtn.style.display = 'inline-flex';
+  }
+  const heroInstallBtn = document.getElementById('hero-pwa-install-btn');
+  if (heroInstallBtn) {
+    heroInstallBtn.style.display = 'inline-flex';
+  }
+});
+
+async function triggerPwaInstall() {
+  if (!deferredPwaPrompt) {
+    showToast('Pour installer l\'application sur votre téléphone, appuyez sur "Partager" puis "Sur l\'écran d\'accueil" (iOS) ou sur le menu ⋮ de Chrome (Android).', 'info');
+    return;
+  }
+
+  deferredPwaPrompt.prompt();
+  const choice = await deferredPwaPrompt.userChoice;
+  if (choice && choice.outcome === 'accepted') {
+    showToast('Installation de l\'application en cours...', 'success');
+  }
+  deferredPwaPrompt = null;
+  
+  const headerInstallBtn = document.getElementById('btn-pwa-install');
+  if (headerInstallBtn) headerInstallBtn.style.display = 'none';
+  const heroInstallBtn = document.getElementById('hero-pwa-install-btn');
+  if (heroInstallBtn) heroInstallBtn.style.display = 'none';
+}
+
+window.addEventListener('appinstalled', () => {
+  showToast('Application installée avec succès ! Révision hors-ligne disponible.', 'success');
+  const headerInstallBtn = document.getElementById('btn-pwa-install');
+  if (headerInstallBtn) headerInstallBtn.style.display = 'none';
+  const heroInstallBtn = document.getElementById('hero-pwa-install-btn');
+  if (heroInstallBtn) heroInstallBtn.style.display = 'none';
+});
+
+// Notifications Réseau En Ligne / Hors-Ligne
+window.addEventListener('offline', () => {
+  showToast('Mode hors-ligne activé. Vos cours et flashcards restent disponibles !', 'warning');
+});
+
+window.addEventListener('online', () => {
+  showToast('Connexion Internet rétablie.', 'success');
+});
+
+window.triggerPwaInstall = triggerPwaInstall;
+
 document.addEventListener('DOMContentLoaded', initApp);
+

@@ -16,10 +16,12 @@ let activeQuizSession = {
 function initQuizHub() {
   if (!APP_STATE.quizzesData) return;
   renderQuizzesList();
+  renderMistakesHubCard();
 }
 
 // Render available quizzes cards in the hub
 function renderQuizzesList() {
+  renderMistakesHubCard();
   const container = document.getElementById('quizzes-cards-grid');
   if (!container || !APP_STATE.quizzesData) return;
 
@@ -270,14 +272,34 @@ function submitQuizSession() {
       passed: isPassed,
       date: new Date().toLocaleDateString('fr-FR')
     };
+  // Update Missed Questions (Carnet d'Erreurs)
+  if (!APP_STATE.userProgress.missedQuestions) {
+    APP_STATE.userProgress.missedQuestions = [];
   }
+  const missedSet = new Set(APP_STATE.userProgress.missedQuestions);
+  activeQuizSession.questions.forEach((q, idx) => {
+    if (activeQuizSession.userAnswers[idx] === q.answerIndex) {
+      // Question answered correctly -> remove from mistakes
+      missedSet.delete(q.id);
+    } else {
+      // Question answered wrongly or not answered -> record as mistake
+      missedSet.add(q.id);
+    }
+  });
+  APP_STATE.userProgress.missedQuestions = Array.from(missedSet);
 
   saveUserProgress();
+  renderMistakesHubCard();
 
   // Hide Runner, Show Results View
   document.getElementById('quiz-active-container').classList.remove('active');
   const resultsContainer = document.getElementById('quiz-results-container');
   resultsContainer.classList.add('active');
+
+  const btnResultsMistakes = document.getElementById('btn-results-mistakes');
+  if (btnResultsMistakes) {
+    btnResultsMistakes.style.display = APP_STATE.userProgress.missedQuestions.length > 0 ? 'inline-flex' : 'none';
+  }
 
   // Populate Results View
   document.getElementById('results-score-text').textContent = correctCount;
@@ -361,6 +383,88 @@ function speakActiveQuizQuestion() {
   }
 }
 
+/**
+ * Render Carnet d'Erreurs Hub Card
+ */
+function renderMistakesHubCard() {
+  const countBadge = document.getElementById('mistakes-badge-count');
+  const descText = document.getElementById('mistakes-desc-text');
+  const startBtn = document.getElementById('btn-start-mistakes');
+  const clearBtn = document.getElementById('btn-clear-mistakes');
+
+  const count = (APP_STATE.userProgress && APP_STATE.userProgress.missedQuestions) 
+    ? APP_STATE.userProgress.missedQuestions.length 
+    : 0;
+
+  if (countBadge) {
+    countBadge.textContent = `${count} question${count > 1 ? 's' : ''}`;
+    countBadge.className = `mistakes-count-pill ${count > 0 ? 'has-errors' : 'no-errors'}`;
+  }
+
+  if (descText) {
+    if (count > 0) {
+      descText.textContent = `Vous avez ${count} question${count > 1 ? 's' : ''} à retravailler issues de vos quiz et examens passés.`;
+    } else {
+      descText.textContent = "Aucune erreur enregistrée ! Vous avez réussi toutes vos questions ou n'avez pas encore passé de test.";
+    }
+  }
+
+  if (startBtn) {
+    startBtn.disabled = count === 0;
+    startBtn.title = count > 0 ? `Lancer l'entraînement sur vos ${count} erreurs` : "Aucune erreur à réviser";
+  }
+
+  if (clearBtn) {
+    clearBtn.style.display = count > 0 ? 'inline-flex' : 'none';
+  }
+}
+
+/**
+ * Start practice session focusing exclusively on past mistakes
+ */
+function startMistakesPractice() {
+  if (!APP_STATE.quizzesData) return;
+  const missedIds = APP_STATE.userProgress.missedQuestions || [];
+
+  if (missedIds.length === 0) {
+    showToast("Bravo ! Aucune erreur à réviser pour le moment.", "success");
+    return;
+  }
+
+  const allQuestions = APP_STATE.quizzesData.questions || [];
+  const mistakesQuestions = missedIds
+    .map(id => allQuestions.find(q => q.id === id))
+    .filter(Boolean);
+
+  if (mistakesQuestions.length === 0) {
+    showToast("Aucune question trouvée dans le carnet.", "info");
+    return;
+  }
+
+  // Shuffle for better active recall
+  const shuffledMistakes = [...mistakesQuestions].sort(() => 0.5 - Math.random());
+
+  startQuizSession({
+    isExamMode: false,
+    title: `Carnet d'Erreurs (${shuffledMistakes.length} questions)`,
+    quizId: "carnet-erreurs",
+    questions: shuffledMistakes,
+    timeLimitSeconds: 0
+  });
+}
+
+/**
+ * Reset/Clear all questions from Mistakes Notebook
+ */
+function clearMistakesNotebook() {
+  if (confirm("Voulez-vous réinitialiser votre carnet d'erreurs ?")) {
+    APP_STATE.userProgress.missedQuestions = [];
+    saveUserProgress();
+    renderMistakesHubCard();
+    showToast("Carnet d'erreurs réinitialisé.", "info");
+  }
+}
+
 window.initQuizHub = initQuizHub;
 window.startModuleQuiz = startModuleQuiz;
 window.startMockExam2026 = startMockExam2026;
@@ -370,3 +474,6 @@ window.navigateQuiz = navigateQuiz;
 window.submitQuizSession = submitQuizSession;
 window.exitQuizToHub = exitQuizToHub;
 window.speakActiveQuizQuestion = speakActiveQuizQuestion;
+window.renderMistakesHubCard = renderMistakesHubCard;
+window.startMistakesPractice = startMistakesPractice;
+window.clearMistakesNotebook = clearMistakesNotebook;
